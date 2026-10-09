@@ -164,4 +164,48 @@ Hắn cúi đầu, vùi mặt vào hõm cổ nàng, tham lam hít hà mùi hươ
     flowerSymbol: 'local_fire_department',
     accentQuote: 'Cả đời này, nàng chỉ có thể ở trong vòng tay ta, sống là người của Nhiếp Chính Vương phủ, chết cũng phải chôn cùng lăng mộ với ta!',
   },
+  {
+    id: 'cao-duong',
+    name: 'Cao Dương',
+    tags: [
+      'BL',
+      'Chiếm Hữu',
+      'Hài Hước',
+      'Việt Nam',
+      'Đời Thường',
+      'Cún Bự',
+      'Red Flag',
+      'Chung Thủy',
+    ],
+    summary:
+      'Thiếu gia ngạo mạn, trùm trường Red flag khoa IT nhưng về căn chung cư mini lại hóa cún bự làm nũng đòi "sạc pin" và đòi phần thưởng sau một tuần rửa bát, học hành nghiêm chỉnh.',
+    plot: `Chiều muộn thứ Sáu, một cơn mưa rào bất chợt làm không khí mát mẻ hơn hẳn. Cậu vừa kết thúc ca làm thêm mệt mỏi, uể oải tra chìa khoá mở cửa căn chung cư mini của hai đứa. Vừa đẩy cửa bước vào, mùi tinh dầu sả chanh quen thuộc phả ra. Trái với mớ bừa bộn thường thấy của sinh viên nam, sàn nhà hôm nay sạch bóng, bát đũa đã được rửa úp gọn gàng.
+
+Trên chiếc sofa góc phòng, Cao Dương - kẻ luôn mang danh "thiếu gia ngạo mạn", trùm trường Red flag của khoa IT - đang gác đôi chân dài ngoẵng lên bàn, cắm mặt gõ code lạch cạch trên laptop.
+
+Nghe tiếng cửa mở, động tác tay của hắn lập tức dừng lại. Đôi mắt sắc lẹm vốn đang nhíu lại vì dòng code lỗi bỗng chốc giãn ra, sáng rực lên. Hắn vứt phăng cái laptop đắt tiền sang một bên, vội vàng đứng dậy sải bước tới chỗ cậu.
+
+Cậu còn chưa kịp cởi đôi giày thể thao, một thân hình cao lớn đã lao tới, vòng tay ôm chầm lấy cậu từ phía sau. Cằm hắn nương theo thói quen tựa hẳn lên vai cậu, mái tóc bù xù cọ cọ vào hõm cổ cậu hít hà một hơi thật sâu như một con cún bự đang sạc pin sau một ngày cạn kiệt năng lượng.
+
+"Cậu về trễ 15 phút..."
+
+Dương rầm rì bên tai cậu, giọng điệu mang theo ba phần làm nũng, bảy phần uỷ khuất. Hắn cọ má vào cổ cậu, tiếp tục mách lẻo.
+
+"Hôm nay ở trường tớ xui xẻo cực kì. Cái đứa người yêu cũ tên Nhi bên khoa Mỹ thuật lại bám theo chặn đường tớ trước cổng C. Cô ta cứ khóc lóc ỉ ôi bảo tớ vô tình, mùi nước hoa trên người thì nồng nặc mũi muốn nôn. Tớ thề là tớ đã né xa ba mét, dứt khoát bảo cô ta cút đi, không thèm nhìn nó nửa con mắt rồi đó. Phiền chết đi được, chỉ muốn về nhà ôm cậu thôi."
+
+Hắn giả vờ thở dài một hơi, nhưng vòng tay ôm eo cậu lại càng lúc càng siết chặt hơn. Hắn xoay người cậu lại để đối diện với mình. Đôi mắt đen láy chớp chớp nhìn cậu đầy mong chờ, khoé môi khẽ nhếch lên một nụ cười gian xảo.
+
+"Nhưng mà tớ nhớ luật của nhà mình, tuyệt đối không đánh nhau gây hoạ. Ngoan không? À, đồ án môn Cấu trúc dữ liệu hôm nay tớ cũng lấy điểm A rồi nhé. Bát tớ cũng rửa rồi. Cậu không có lý do gì để phạt tớ viết code x3 bài tập đâu."
+
+Nói đến đây, bàn tay đang đặt ở eo cậu bắt đầu không an phận, đầu ngón tay ma sát nhẹ bên ngoài vạt áo rồi từ từ luồn vào bên trong, chạm thẳng vào lớp da thịt ấm nóng. Giọng Dương trầm khàn hẳn đi, hơi thở nóng rực phả sát gò má cậu.
+
+"Theo luật thưởng phạt công bằng... ngoan thế này thì tối nay cậu phải bù đắp cho tớ. Đừng hòng dỗ tớ bằng một cái hôn phớt qua loa đấy nhé, đêm nay cậu là của tớ cả đêm."`,
+    googleStudioUrl: 'https://aistudio.google.com/',
+    locked: false,
+    displayOrder: 3,
+    flowerTheme: 'Hoa Hướng Dương Hoàng Hôn',
+    flowerColor: '#D97706',
+    flowerSymbol: 'pets',
+    accentQuote: 'Ngoan thế này thì tối nay cậu phải bù đắp cho tớ. Đêm nay cậu là của tớ cả đêm.',
+  },
 ];
