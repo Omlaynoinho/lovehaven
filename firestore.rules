@@ -37,8 +37,11 @@ service cloud.firestore {
       // Anyone can post a letter to the mailbox as long as it adheres to data boundaries
       allow create: if isValidId(letterId) && isValidLetter(incoming());
 
-      // Letters cannot be modified or deleted by clients once posted
-      allow update, delete: if false;
+      // Allow deleting letters
+      allow delete: if true;
+
+      // Letters cannot be modified
+      allow update: if false;
     }
   }
 }
