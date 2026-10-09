@@ -23,26 +23,6 @@ if (!existsSync(dataDir)) {
   }
 }
 
-// In-memory rate limiting map: ip -> timestamps[]
-const rateLimitMap = new Map<string, number[]>();
-
-function checkRateLimit(ip: string): boolean {
-  const now = Date.now();
-  const windowMs = 10 * 60 * 1000; // 10 minutes
-  const maxRequests = 5;
-
-  const timestamps = rateLimitMap.get(ip) || [];
-  const recent = timestamps.filter((t) => now - t < windowMs);
-
-  if (recent.length >= maxRequests) {
-    return false;
-  }
-
-  recent.push(now);
-  rateLimitMap.set(ip, recent);
-  return true;
-}
-
 function normalizeText(text: string): string {
   return (text || '')
     .trim()
@@ -152,44 +132,68 @@ app.post('/api/characters/verify-unlock', (req, res) => {
   }
 });
 
-// 4. Save Mailbox Letters securely to server storage
+// 4. Get Public Mailbox Letters and Total Senders count
+app.get('/api/mailbox', (_req, res) => {
+  try {
+    let letters: MailboxLetter[] = [];
+    if (existsSync(lettersFilePath)) {
+      try {
+        const raw = readFileSync(lettersFilePath, 'utf8');
+        letters = JSON.parse(raw);
+      } catch {
+        letters = [];
+      }
+    }
+
+    const publicLetters = letters.map((l) => ({
+      id: l.id,
+      nickname: l.nickname,
+      title: l.title,
+      content: l.content,
+      createdAt: l.createdAt,
+    })).reverse();
+
+    res.json({
+      letters: publicLetters,
+      totalSenders: letters.length,
+    });
+  } catch (err) {
+    console.error('Lỗi khi đọc hòm thư:', err);
+    res.status(500).json({
+      letters: [],
+      totalSenders: 0,
+      message: 'Không thể đọc danh sách thư từ khu vườn.',
+    });
+  }
+});
+
+// 5. Save Public Mailbox Letters securely to server storage
 app.post('/api/mailbox', (req, res) => {
   const ip = req.ip || req.socket.remoteAddress || 'unknown';
-  if (!checkRateLimit(ip)) {
-    res.status(429).json({
-      success: false,
-      message: 'Bạn đã gửi nhiều thư trong thời gian ngắn. Vui lòng dừng chân nghỉ ngơi trong vườn một chút nhé.',
-    });
-    return;
-  }
-
   const {nickname, title, content} = req.body || {};
 
-  if (!title || typeof title !== 'string' || title.trim().length < 2 || title.trim().length > 120) {
+  const cleanContent = typeof content === 'string' ? content.trim() : '';
+  if (!cleanContent) {
     res.status(400).json({
       success: false,
-      message: 'Tiêu đề thư cần từ 2 đến 120 ký tự.',
+      message: 'Vui lòng nhập nội dung thư.',
     });
     return;
   }
 
-  if (!content || typeof content !== 'string' || content.trim().length < 5 || content.trim().length > 3000) {
-    res.status(400).json({
-      success: false,
-      message: 'Nội dung thư cần từ 5 đến 3000 ký tự.',
-    });
-    return;
-  }
+  const cleanNickname = typeof nickname === 'string' && nickname.trim()
+    ? nickname.trim().slice(0, 50)
+    : 'Người lữ khách vô danh';
 
-  const cleanNickname = typeof nickname === 'string' && nickname.trim() ? nickname.trim().slice(0, 50) : 'Người lữ khách vô danh';
-  const cleanTitle = title.trim();
-  const cleanContent = content.trim();
+  const cleanTitle = typeof title === 'string' && title.trim()
+    ? title.trim().slice(0, 120)
+    : (cleanContent.length > 25 ? cleanContent.slice(0, 25) + '...' : 'Thư gửi khu vườn');
 
   const newLetter: MailboxLetter = {
     id: `letter-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`,
     nickname: cleanNickname,
     title: cleanTitle,
-    content: cleanContent,
+    content: cleanContent.slice(0, 5000),
     createdAt: new Date().toISOString(),
     ip,
   };
@@ -207,10 +211,19 @@ app.post('/api/mailbox', (req, res) => {
     letters.push(newLetter);
     writeFileSync(lettersFilePath, JSON.stringify(letters, null, 2), 'utf8');
 
+    const cleanPublicLetter = {
+      id: newLetter.id,
+      nickname: newLetter.nickname,
+      title: newLetter.title,
+      content: newLetter.content,
+      createdAt: newLetter.createdAt,
+    };
+
     res.json({
       success: true,
-      message: 'Lá thư của bạn đã được trao gửi an yên vào hòm thư LOVE HAVE.',
-      letterId: newLetter.id,
+      message: 'Lá thư của bạn đã được trao gửi công khai vào hòm thư LOVE HAVE.',
+      letter: cleanPublicLetter,
+      totalSenders: letters.length,
     });
   } catch (err) {
     console.error('Lỗi khi lưu thư:', err);

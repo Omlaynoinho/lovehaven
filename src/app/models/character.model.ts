@@ -44,6 +44,19 @@ export interface MailboxLetter {
   ip?: string;
 }
 
+export interface PublicMailboxLetter {
+  id: string;
+  nickname: string;
+  title: string;
+  content: string;
+  createdAt: string;
+}
+
+export interface MailboxResponseData {
+  letters: PublicMailboxLetter[];
+  totalSenders: number;
+}
+
 export interface SiteConfig {
   youtubeMusicUrl: string;
   siteName: string;

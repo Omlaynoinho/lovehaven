@@ -2,7 +2,7 @@ import { Injectable, inject, signal, computed } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
-import { PublicCharacter, SiteConfig } from '../models/character.model';
+import { PublicCharacter, SiteConfig, PublicMailboxLetter, MailboxResponseData } from '../models/character.model';
 import { CHARACTERS_DATA, DEFAULT_SITE_CONFIG } from '../../data/characters.data';
 
 export interface UnlockResponse {
@@ -17,6 +17,8 @@ export interface MailboxResponse {
   success: boolean;
   message: string;
   letterId?: string;
+  letter?: PublicMailboxLetter;
+  totalSenders?: number;
 }
 
 @Injectable({
@@ -34,6 +36,11 @@ export class CharacterService {
   public readonly isDetailOpen = signal<boolean>(false);
   public readonly isLoading = signal<boolean>(false);
   public readonly siteConfig = signal<SiteConfig>(DEFAULT_SITE_CONFIG);
+
+  // Public mailbox letters & total senders count
+  public readonly publicLetters = signal<PublicMailboxLetter[]>([]);
+  public readonly totalSenders = signal<number>(0);
+  public readonly isLoadingLetters = signal<boolean>(false);
 
   // Available unique tags from character dataset
   public readonly availableTags = computed(() => {
@@ -74,6 +81,18 @@ export class CharacterService {
     this.loadCachedUnlockedState();
     this.loadInitialCharacters();
     this.loadSiteConfig();
+    this.loadLetters();
+  }
+
+  public loadLetters(): void {
+    this.isLoadingLetters.set(true);
+    this.http.get<MailboxResponseData>('/api/mailbox').pipe(
+      catchError(() => of({ letters: [], totalSenders: 0 }))
+    ).subscribe((data) => {
+      this.publicLetters.set(data.letters || []);
+      this.totalSenders.set(data.totalSenders || 0);
+      this.isLoadingLetters.set(false);
+    });
   }
 
   private loadCachedUnlockedState(): void {
@@ -208,6 +227,16 @@ export class CharacterService {
       title,
       content,
     }).pipe(
+      tap((res) => {
+        if (res.success && res.letter) {
+          this.publicLetters.update((list) => [res.letter!, ...list]);
+          if (typeof res.totalSenders === 'number') {
+            this.totalSenders.set(res.totalSenders);
+          } else {
+            this.totalSenders.update((c) => c + 1);
+          }
+        }
+      }),
       catchError((err) => {
         const errorMsg = err?.error?.message || 'Không thể gửi thư đến khu vườn. Vui lòng kiểm tra lại kết nối mạng.';
         return of({ success: false, message: errorMsg });
