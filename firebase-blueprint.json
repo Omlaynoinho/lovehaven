@@ -1,0 +1,42 @@
+{
+  "entities": {
+    "Letter": {
+      "title": "Letter",
+      "description": "Public letter submitted to the LOVE HAVE garden mailbox",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the letter"
+        },
+        "nickname": {
+          "type": "string",
+          "description": "Sender nickname or alias",
+          "maxLength": 100
+        },
+        "title": {
+          "type": "string",
+          "description": "Subject or title of the letter",
+          "maxLength": 200
+        },
+        "content": {
+          "type": "string",
+          "description": "Message content of the letter",
+          "maxLength": 5000
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Creation timestamp in ISO format"
+        }
+      },
+      "required": ["title", "content", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/letters/{letterId}": {
+      "schema": "#/entities/Letter",
+      "description": "Collection of public letters shared by visitors to the garden"
+    }
+  }
+}

@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { PublicCharacter, SiteConfig, PublicMailboxLetter, MailboxResponseData } from '../models/character.model';
 import { CHARACTERS_DATA, DEFAULT_SITE_CONFIG } from '../../data/characters.data';
+import { testConnection, subscribeToLetters, saveLetterToFirestore } from './firebase';
 
 export interface UnlockResponse {
   success: boolean;
@@ -82,6 +83,28 @@ export class CharacterService {
     this.loadInitialCharacters();
     this.loadSiteConfig();
     this.loadLetters();
+    this.initFirestoreSync();
+  }
+
+  private initFirestoreSync(): void {
+    if (typeof window === 'undefined') return;
+    testConnection().then(() => {
+      try {
+        subscribeToLetters(
+          (firestoreLetters) => {
+            if (firestoreLetters && firestoreLetters.length > 0) {
+              this.publicLetters.set(firestoreLetters);
+              this.totalSenders.set(firestoreLetters.length);
+            }
+          },
+          (err) => {
+            console.warn('Firestore subscription fallback:', err);
+          }
+        );
+      } catch (err) {
+        console.warn('Unable to subscribe to Firestore:', err);
+      }
+    });
   }
 
   public loadLetters(): void {
@@ -89,8 +112,11 @@ export class CharacterService {
     this.http.get<MailboxResponseData>('/api/mailbox').pipe(
       catchError(() => of({ letters: [], totalSenders: 0 }))
     ).subscribe((data) => {
-      this.publicLetters.set(data.letters || []);
-      this.totalSenders.set(data.totalSenders || 0);
+      // If Firestore hasn't already loaded letters, use the server letters
+      if (this.publicLetters().length === 0 && data.letters && data.letters.length > 0) {
+        this.publicLetters.set(data.letters);
+        this.totalSenders.set(data.totalSenders || data.letters.length);
+      }
       this.isLoadingLetters.set(false);
     });
   }
@@ -222,14 +248,37 @@ export class CharacterService {
   }
 
   public sendMail(nickname: string, title: string, content: string): Observable<MailboxResponse> {
+    const letterId = `letter-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+    const finalNickname = nickname.trim() || 'Người lữ khách vô danh';
+    const finalTitle = title.trim() || (content.length > 25 ? content.slice(0, 25) + '...' : 'Thư gửi khu vườn');
+    const createdAt = new Date().toISOString();
+
+    const publicLetter: PublicMailboxLetter = {
+      id: letterId,
+      nickname: finalNickname,
+      title: finalTitle,
+      content: content.trim(),
+      createdAt,
+    };
+
+    // Save directly to Firestore for real-time live propagation
+    if (typeof window !== 'undefined') {
+      saveLetterToFirestore(publicLetter).catch((err) => {
+        console.warn('Firestore direct write fallback:', err);
+      });
+    }
+
     return this.http.post<MailboxResponse>('/api/mailbox', {
-      nickname,
-      title,
+      nickname: finalNickname,
+      title: finalTitle,
       content,
     }).pipe(
       tap((res) => {
         if (res.success && res.letter) {
-          this.publicLetters.update((list) => [res.letter!, ...list]);
+          this.publicLetters.update((list) => {
+            if (list.some((l) => l.id === res.letter!.id)) return list;
+            return [res.letter!, ...list];
+          });
           if (typeof res.totalSenders === 'number') {
             this.totalSenders.set(res.totalSenders);
           } else {
