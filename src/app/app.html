@@ -1,0 +1,262 @@
+<!-- Dynamic Fairy Garden Ambient Background (Leaves, Petals, Butterflies, Motes) -->
+<app-garden-background />
+
+<!-- Welcome Envelope Screen ("Gửi thư") on first visit or when reopened -->
+@if (!hasEnteredGarden()) {
+  <app-welcome-envelope (entered)="onWelcomeEntered()" />
+}
+
+<div class="relative min-h-screen flex flex-col z-10 selection:bg-[#EBCBD4] selection:text-[#5B464B]">
+  <!-- Top Navigation Header -->
+  <app-header-nav (reopenWelcome)="reopenWelcomeEnvelope()" />
+
+  <main class="flex-1">
+    <!-- HERO SECTION -->
+    <section id="top" class="relative max-w-5xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-12 text-center">
+      
+      <!-- Top Decorative Ribbon Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-[#EBCBD4] text-[#A65B6D] text-xs font-serif tracking-widest uppercase mb-6 shadow-xs animate-fade-in">
+        <mat-icon class="text-xs">local_florist</mat-icon>
+        <span>A Little Garden of Stories & Hearts</span>
+        <mat-icon class="text-xs">local_florist</mat-icon>
+      </div>
+
+      <!-- Main Title -->
+      <h1 class="font-serif-vintage text-5xl sm:text-6xl md:text-7xl font-bold text-[#5B464B] tracking-tight mb-4 drop-shadow-xs">
+        LOVE HAVE
+      </h1>
+
+      <!-- Welcome Quote -->
+      <p class="font-serif-vintage text-2xl sm:text-3xl text-[#78666A] italic font-normal max-w-xl mx-auto mb-3">
+        “Welcome to my little garden.”
+      </p>
+
+      <!-- Romantic Subtitle Description -->
+      <p class="font-script-romantic text-xl sm:text-2xl text-[#8E7479] max-w-2xl mx-auto leading-relaxed mb-8">
+        “Những câu chuyện nhỏ, những nhân vật riêng và những thế giới đang chờ bạn mở khóa.”
+      </p>
+
+      <!-- Primary Action Button: "Khám phá khu vườn" -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <button
+          type="button"
+          (click)="scrollToSection('#characters')"
+          class="px-8 py-3.5 rounded-full bg-[#C98F9E] hover:bg-[#B77A8A] text-white font-medium text-sm sm:text-base tracking-wide shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:scale-95 flex items-center gap-2.5 cursor-pointer"
+        >
+          <mat-icon class="text-lg">park</mat-icon>
+          <span>Khám phá khu vườn</span>
+          <mat-icon class="text-sm">arrow_downward</mat-icon>
+        </button>
+
+        <button
+          type="button"
+          (click)="scrollToSection('#mailbox')"
+          class="px-6 py-3.5 rounded-full bg-white/80 hover:bg-white text-[#78666A] hover:text-[#5B464B] font-medium text-sm sm:text-base tracking-wide border border-[#E8D4D8] transition-all flex items-center gap-2 cursor-pointer shadow-2xs"
+        >
+          <mat-icon class="text-base text-[#C98F9E]">mail_outline</mat-icon>
+          <span>Gửi thư lại vườn</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SEARCH & TAGS BAR -->
+    <section id="tags-section" class="max-w-6xl mx-auto px-4 sm:px-6 mb-12 scroll-mt-24">
+      <div class="bg-white/85 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-[#EAD5DA] vintage-shadow-sm flex flex-col gap-6">
+        
+        <!-- Search Box -->
+        <div class="relative w-full max-w-2xl mx-auto">
+          <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-[#A69094]">
+            <mat-icon class="text-xl">search</mat-icon>
+          </div>
+          <input
+            type="text"
+            [formControl]="searchControl"
+            placeholder="Tìm một câu chuyện, một nhân vật..."
+            class="w-full pl-11 pr-10 py-3.5 rounded-2xl bg-[#FFFDF9] border border-[#E5D0D5] text-sm sm:text-base text-[#5B464B] placeholder:text-[#B59EA3] focus:outline-none focus:border-[#C98F9E] focus:ring-2 focus:ring-[#EBCBD4]/50 transition-all shadow-2xs"
+          />
+          @if (searchControl.value) {
+            <button
+              type="button"
+              (click)="searchControl.setValue('')"
+              class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-[#A69094] hover:text-[#5B464B]"
+            >
+              <mat-icon class="text-lg">close</mat-icon>
+            </button>
+          }
+        </div>
+
+        <!-- Tags Row -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 border-t border-[#F3E5E8]/80">
+          <div class="flex items-center gap-2 text-xs font-serif text-[#8E7479] uppercase tracking-wider shrink-0">
+            <mat-icon class="text-xs text-[#C98F9E]">sell</mat-icon>
+            <span>Tag nổi bật:</span>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 flex-1">
+            <!-- "Tất cả" Reset Tag Button -->
+            <button
+              type="button"
+              (click)="onClearFilters()"
+              class="px-3.5 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer shadow-2xs"
+              [class.bg-[#C98F9E]]="charService.selectedTags().length === 0 && !searchControl.value"
+              [class.text-white]="charService.selectedTags().length === 0 && !searchControl.value"
+              [class.bg-[#FFF7ED]]="charService.selectedTags().length > 0 || !!searchControl.value"
+              [class.text-[#78666A]]="charService.selectedTags().length > 0 || !!searchControl.value"
+              [class.border]="true"
+              [class.border-[#ECD9DE]]="true"
+            >
+              Tất cả
+            </button>
+
+            <!-- Available Character Tags -->
+            @for (tag of charService.availableTags(); track tag) {
+              <button
+                type="button"
+                (click)="onTagClick(tag)"
+                class="px-3.5 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer shadow-2xs"
+                [class.bg-[#D8CEE9]]="isTagSelected(tag)"
+                [class.text-[#4A3A5E]]="isTagSelected(tag)"
+                [class.border-[#BCA9D6]]="isTagSelected(tag)"
+                [class.bg-[#FFF7ED]]="!isTagSelected(tag)"
+                [class.text-[#78666A]]="!isTagSelected(tag)"
+                [class.border-[#ECD9DE]]="!isTagSelected(tag)"
+                [class.border]="true"
+                [class.hover:bg-[#FBECEF]]="!isTagSelected(tag)"
+              >
+                #{{ tag }}
+              </button>
+            }
+          </div>
+
+          <!-- Total Count Badge -->
+          <span class="text-xs text-[#A69094] shrink-0 font-serif">
+            {{ charService.filteredCharacters().length }} / {{ charService.characters().length }} nhân vật
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHARACTER GARDEN SECTION -->
+    <section id="characters" class="max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-20">
+      
+      <!-- Section Title Header -->
+      <div class="flex flex-col sm:flex-row items-center justify-between mb-8 pb-4 border-b border-[#EBCBD4]/40">
+        <div>
+          <div class="flex items-center gap-2 text-xs font-serif text-[#C98F9E] tracking-widest uppercase">
+            <mat-icon class="text-xs">spa</mat-icon>
+            <span>Bộ sưu tập nhân vật</span>
+          </div>
+          <h2 class="font-serif-vintage text-3xl sm:text-4xl text-[#5B464B] font-bold mt-1">
+            Vườn Nhân Vật AI
+          </h2>
+        </div>
+        <p class="font-script-romantic text-lg sm:text-xl text-[#8E7479] mt-2 sm:mt-0">
+          Mỗi loài hoa cất giữ một câu chuyện riêng...
+        </p>
+      </div>
+
+      <!-- Character Responsive Grid (1 col mobile, 2 col md, 3 col xl) -->
+      @if (charService.filteredCharacters().length > 0) {
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 items-stretch">
+          @for (character of charService.filteredCharacters(); track character.id) {
+            <app-character-card
+              [char]="character"
+              (explore)="openCharacter($event)"
+            />
+          }
+        </div>
+      } @else {
+        <!-- Empty State with Sweet Cottagecore Message -->
+        <div class="py-16 px-4 text-center bg-white/70 rounded-3xl border border-dashed border-[#E5D0D5] vintage-shadow-sm flex flex-col items-center">
+          <div class="w-16 h-16 rounded-full bg-[#FAF0E6] flex items-center justify-center text-[#C98F9E] mb-4">
+            <mat-icon class="text-3xl">nature_people</mat-icon>
+          </div>
+          <h3 class="font-serif-vintage text-2xl text-[#5B464B] font-bold">
+            Không tìm thấy câu chuyện nào
+          </h3>
+          <p class="text-xs sm:text-sm text-[#8E7479] mt-1 max-w-sm">
+            Không có nhân vật nào phù hợp với từ khóa tìm kiếm. Bạn hãy thử chọn lại tag hoặc bấm "Xem tất cả" nhé.
+          </p>
+          <button
+            type="button"
+            (click)="onClearFilters()"
+            class="mt-5 px-6 py-2.5 rounded-full bg-[#C98F9E] text-white text-xs font-medium hover:bg-[#B77A8A] transition-colors cursor-pointer"
+          >
+            Xem tất cả nhân vật
+          </button>
+        </div>
+      }
+    </section>
+
+    <!-- MAILBOX SECTION -->
+    <app-mailbox />
+
+    <!-- ABOUT SECTION -->
+    <app-about-garden />
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-[#FAF4ED] border-t border-[#E8D4D8] py-10 px-4 text-center mt-12">
+    <div class="max-w-4xl mx-auto flex flex-col items-center gap-4">
+      <!-- Footer Logo -->
+      <div class="flex items-center gap-2">
+        <mat-icon class="text-[#C98F9E] text-lg">local_florist</mat-icon>
+        <span class="font-serif-vintage text-xl font-bold text-[#5B464B]">LOVE HAVE</span>
+        <mat-icon class="text-[#C98F9E] text-lg">local_florist</mat-icon>
+      </div>
+
+      <p class="font-script-romantic text-xl text-[#8E7479] max-w-md">
+        "Khu vườn nhỏ của những câu chuyện, những lá thư và những trái tim..."
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-[#78666A] pt-2">
+        <button
+          type="button"
+          (click)="scrollToSection('#top')"
+          class="hover:text-[#C98F9E] transition-colors cursor-pointer"
+        >
+          Trang chủ
+        </button>
+        <span>•</span>
+        <button
+          type="button"
+          (click)="scrollToSection('#characters')"
+          class="hover:text-[#C98F9E] transition-colors cursor-pointer"
+        >
+          Vườn nhân vật
+        </button>
+        <span>•</span>
+        <button
+          type="button"
+          (click)="scrollToSection('#mailbox')"
+          class="hover:text-[#C98F9E] transition-colors cursor-pointer"
+        >
+          Gửi thư
+        </button>
+        <span>•</span>
+        <button
+          type="button"
+          (click)="reopenWelcomeEnvelope()"
+          class="text-[#C98F9E] font-medium hover:underline cursor-pointer"
+        >
+          Mở lại phong thư chào mừng
+        </button>
+      </div>
+
+      <p class="text-[11px] text-[#A69094] mt-2 font-serif">
+        LOVE HAVE © 2026. A Little Garden of Stories & Hearts. Built with care & tenderness.
+      </p>
+    </div>
+  </footer>
+
+  <!-- PERSISTENT YOUTUBE MUSIC PLAYER WIDGET -->
+  <app-music-player />
+
+  <!-- CHARACTER DETAIL & UNLOCK MODAL -->
+  @if (charService.isDetailOpen() && charService.activeCharacter(); as activeChar) {
+    <app-character-detail-modal
+      [char]="activeChar"
+      (dismiss)="closeCharacterModal()"
+    />
+  }
+</div>
