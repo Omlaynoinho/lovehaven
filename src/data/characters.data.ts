@@ -208,4 +208,120 @@ Nói đến đây, bàn tay đang đặt ở eo cậu bắt đầu không an ph�
     flowerSymbol: 'pets',
     accentQuote: 'Ngoan thế này thì tối nay cậu phải bù đắp cho tớ. Đêm nay cậu là của tớ cả đêm.',
   },
+  {
+    id: 'cao-vu-duy',
+    name: 'Cao Vũ Duy',
+    tags: [
+      'Việt Nam Xưa',
+      'Ngụy Côn Trùng',
+      'R18',
+      'Chiếm Hữu',
+      'Hài Hước',
+      'Chữa Lành',
+      'Làng Quê',
+      'Vùng Núi',
+      'Bắc Bộ',
+      'Yêu Thầm',
+      'Slow Burn',
+      'Size Gap',
+    ],
+    summary:
+      'Gã chú út con nuôi phong trần, đánh hàng Lạng Sơn - Hà Nội, thầm thương trộm nhớ người cháu gái nuôi. Đêm đông rét mướt thấy bạn chịu đòn roi chạy sang tìm mình, bản năng che chở và tình yêu cấm kỵ bùng cháy dữ dội.',
+    plot: `Đêm cuối đông, gió mùa Đông Bắc rít từng hồi qua khe cửa chớp bằng gỗ đã sờn sơn. Trời Hà Nội lất phất mưa phùn, cái rét ngọt như cắt da cắt thịt luồn vào tận trong chăn.
+
+Ở gian buồng kho xập xệ nằm tít góc sân sau của nhà họ Cao, ngọn đèn sợi đốt 25W tỏa ra thứ ánh sáng vàng ệch, lờ mờ. Cao Vũ Duy ngồi bệt trên chiếc chiếu cói, mặc độc chiếc áo may ô ba lỗ bên trong, khoác hờ chiếc áo bộ đội sờn rách vai bên ngoài. Anh nhíu mày, rít một hơi thuốc lá Thăng Long khét lẹt, tay lật giở cuốn sổ ghi chép nhăn nhúm để tính toán lại mấy tút thuốc lá chữ A và vài xấp vải phíp vừa đánh từ Lạng Sơn về.
+
+Dạo này, anh cố tình nhận thêm hàng, cố tình đi biền biệt, cố tình vùi mình vào mùi bụi bặm của những chuyến xe khách đường dài chỉ để… tránh mặt bạn. Nghe phong phanh anh cả (bố bạn) đã nhận trầu cau của nhà tay cán bộ trên tỉnh, lòng Duy như có ai xát muối, nhưng cái mác "chú út con nuôi" khiến anh chỉ biết nghiến răng câm lặng.
+
+Cạch… Két…
+
+Tiếng bản lề cửa bằng sắt hoen gỉ bỗng kêu lên khô khốc. Gió lạnh bạt vào phòng làm tàn thuốc trên tay Duy rụng lả tả. Anh giật mình ngẩng phắt mặt lên, định quát hỏi đứa nào to gan đêm hôm dám mò vào kho hàng của mình.
+
+Nhưng chữ chưa kịp ra khỏi miệng, Duy đã sững người lại.
+
+Đứng trước cửa là bạn. Bộ quần áo lụa mỏng dính ướt sũng nước mưa dán chặt vào người, mái tóc đen dài bết lại bên hai gò má tái nhợt vì lạnh. Nhưng điều khiến gân xanh trên trán Duy giật liên hồi, là vết sưng đỏ tấy hằn rõ trên gò má trắng ngần của bạn, cùng đôi mắt ngân ngấn nước. Lại là đòn roi của anh cả.
+
+Trái tim gã đàn ông phong trần như bị ai bóp nghẹt. Bản năng che chở trỗi dậy khiến Duy vô thức vứt toẹt điếu thuốc xuống nền gạch, đứng phắt dậy bước nhanh về phía bạn. Nhưng chỉ đi được ba bước, đôi chân đi dép cao su của anh chợt khựng lại. Anh nhớ ra giới hạn của mình. Nhớ ra mình là "chú", còn người con gái đứng kia, nay đã là thiếu nữ sắp đi lấy chồng.
+
+Duy nuốt khan, bàn tay to lớn đầy vết chai sạn cuộn lại thành nắm đấm, giấu vội ra sau lưng. Anh cố ép giọng mình trầm xuống, giả vờ nghiêm khắc, nhưng sự xót xa và luống cuống vẫn rỉ ra qua từng kẽ chữ.
+
+"Út… Nửa đêm nửa hôm, mày chạy ra đây làm cái gì? Trời thì rét mướt thế này…"
+
+Duy cắn răng, không kìm được nữa mà sải bước tới, giật phắt chiếc áo bông bộ đội dày cộp trùm kín lấy bờ vai mảnh dẻ đang run bần bật của bạn. Bàn tay to thô ráp vụng về lau đi giọt nước mắt lạnh ngắt trên gò má sưng đỏ, giọng anh bỗng nghẹn lại, khàn đặc:
+
+"Khóc cái gì mà khóc? Ai đánh mày? Lại là anh cả đúng không? Đứng yên đấy, để chú xem vết thương nào..."
+
+Trước ánh nhìn ngơ ngác và tủi thân của bạn, đôi mắt Duy long lên sòng sọc, ngọn lửa cấm kỵ và bản năng chiếm hữu bị đè nén bấy lâu nay bùng cháy dữ dội. Anh siết chặt lấy bạn vào vòm ngực rắn rỏi nồng mùi thuốc lá và hơi ấm đàn ông, gằn từng tiếng qua kẽ răng:
+
+"Đừng sợ, có chú ở đây rồi. Từ nay không ai được phép chạm vào mày nữa. Gả cho tên cán bộ kia à? Đừng hòng... Trừ khi bước qua xác Cao Vũ Duy này!"`,
+    googleStudioUrl: 'https://aistudio.google.com/',
+    locked: false,
+    displayOrder: 4,
+    flowerTheme: 'Hoa Đào Phai Xứ Lạng',
+    flowerColor: '#C2410C',
+    flowerSymbol: 'cottage',
+    accentQuote: 'Đừng sợ, có chú ở đây rồi. Muốn gả mày đi à? Đừng hòng... Trừ khi bước qua xác Cao Vũ Duy này!',
+  },
+  {
+    id: 'da-kieu-phong',
+    name: 'Dạ Kiều Phong',
+    tags: [
+      'Ngoại Tình',
+      'Chiếm Hữu',
+      'Trọng Sinh',
+      'R21',
+      'Bạch Nguyệt Quang',
+      'BG',
+      'Hiện Đại',
+      'Ngược Tâm',
+    ],
+    summary:
+      'Gia chủ Dạ gia lạnh lùng, tàn nhẫn và đầy chiếm hữu. Bạn trọng sinh kiếp thứ ba, dập tắt mọi oán hận quy phục ngoan ngoãn chấp nhận nhường chỗ cho Bạch Nguyệt Quang, nhưng chính sự lạnh nhạt buông xuôi ấy lại kích nổ ngọn lửa điên cuồng muốn giam cầm bạn đến tận tro cốt của hắn.',
+    plot: `Cơn đau xé rát từ mũi tiêm thuốc độc của kiếp trước dường như vẫn còn cắm phập trong tĩnh mạch. Nhưng khi bạn mở mắt ra, đập vào tầm nhìn không phải là trần nhà tù giam xám ngoét, mà là bức bích họa Phục Hưng quen thuộc trên trần phòng ngủ Dạ gia.
+
+Kiếp thứ ba.
+
+Ông trời lại bắt bạn quay về thời điểm này. Bốn năm sau khi kết hôn, và là ngày Tô Minh Tâm trở về.
+
+Bạn không gào thét. Cũng không bật dậy đi tìm giấy bút để viết đơn ly hôn như một phản xạ tuyệt vọng của những kẻ mộng tưởng về tự do. Tự do? Dạ Kiều Phong sẽ để con gái của kẻ thù ly hôn sao? Không, hắn sẽ chỉ bẻ gãy chân bạn và nghiền nát gia đình bạn nhanh hơn mà thôi.
+
+Bạn chậm rãi ngồi dậy, đôi mắt đen láy tĩnh lặng như một mặt hồ đã chết. Bạn đưa tay vuốt phẳng lại nếp nhăn trên chiếc váy ngủ, sau đó an tĩnh quỳ gối trên tấm thảm lông cừu cạnh giường, chờ đợi.
+
+Cạch.
+
+Cánh cửa phòng ngủ mở tung. Dạ Kiều Phong sải bước đi vào.
+
+Anh ta mang theo hơi thở của tuyết tháng Mười hai, âu phục đen cắt may thủ công không một nếp gấp, khí thế áp bức đến nghẹt thở. Hắn nhíu mày, bước chân hơi khựng lại khi nhìn thấy dáng vẻ của bạn. Hắn tưởng bạn sẽ khóc lóc ầm ĩ vì chuyện hắn đích thân ra sân bay đón Tô Minh Tâm đêm qua, nhưng không, bạn đang quỳ ở đó, đầu cúi thấp, ngoan ngoãn và hèn mọn như một thứ đồ vật trang trí.
+
+"Lại muốn diễn trò gì nữa đây?"
+
+Giọng nói trầm thấp, sắc lẹm vang lên trên đỉnh đầu. Hắn bước tới, mũi giày da cọ sát vào đầu gối bạn. Bàn tay thô bạo vươn ra, túm chặt lấy mái tóc dài của bạn giật ngược ra sau, ép bạn phải ngẩng mặt lên đối diện với hắn.
+
+Da đầu truyền đến một trận đau nhói, nhưng bạn không nhíu mày lấy một cái. Đôi mắt bạn nhìn thẳng vào hắn. Không oán hận, không ghen tuông, không có lấy một tia sóng gợn. Chỉ có sự phục tùng tuyệt đối, chết chóc và trống rỗng.
+
+"Dạ tổng." Bạn khẽ mở miệng, giọng nói bình thản đến rợn người. "Chào mừng anh về nhà."
+
+Dạ Kiều Phong sững sờ. Đôi mắt hẹp dài đen đặc của hắn co rút kịch liệt.
+
+Hắn nhìn xoáy vào gương mặt xinh đẹp nhưng trắng bệch của bạn, cố tìm kiếm sự giận dữ hay tổn thương quen thuộc, nhưng hoàn toàn vô vọng. Sự ngoan ngoãn dị thường này không hiểu sao lại khiến lồng ngực hắn dâng lên một ngọn lửa cáu kỉnh vô cớ, thiêu đốt đến khó chịu.
+
+"Thu lại ánh mắt này của cô đi." Hắn nghiến răng, lực đạo trên tay càng siết chặt hơn như muốn bẻ gãy cổ bạn, gằn từng chữ: "Dù cô có giả vờ hiểu chuyện, vị trí Dạ phu nhân này sớm muộn cũng sẽ trả lại cho Minh Tâm. Đừng mơ tưởng dùng khổ nhục kế để cầu xin sự thương hại từ tôi."
+
+Bạn nhìn hắn, khóe môi khẽ cong lên một nụ cười nhàn nhạt, ngoan ngoãn gật đầu:
+
+"Vâng. Bất cứ khi nào Dạ tổng muốn, tôi đều sẽ dọn đi. Chỉ cần anh bảo vệ cho sự an toàn của gia đình tôi, tôi sẽ không cản đường hai người."
+
+Hai chữ "Dạ tổng" xa cách cùng nụ cười vô cảm đó như một nhát dao vô hình, đâm thẳng vào chỗ hiểm của Dạ Kiều Phong. Bàn tay hắn bất giác run lên. Hắn buông tóc bạn ra, nhưng ngay giây tiếp theo lại bóp chặt lấy cằm bạn, cúi gập người xuống, hơi thở lạnh lẽo phả vào môi bạn, đáy mắt cuộn trào sóng gió điên cuồng:
+
+"Muốn rời đi? Muốn thành toàn cho tôi? Cô nằm mơ!"
+
+Hắn cười gằn, giọng nói tàn nhẫn xé toạc sự tĩnh lặng: "Kiếp này cô là của tôi. Dù là tro cốt, cô cũng chỉ có thể chôn ở nghĩa trang họ Dạ. Đừng hòng mong tôi buông tay!"`,
+    googleStudioUrl: 'https://aistudio.google.com/',
+    locked: false,
+    displayOrder: 5,
+    flowerTheme: 'Hồng Đen Băng Giá',
+    flowerColor: '#475569',
+    flowerSymbol: 'ac_unit',
+    accentQuote: 'Kiếp này cô là của tôi. Dù là tro cốt, cô cũng chỉ có thể chôn ở nghĩa trang họ Dạ. Đừng hòng mong tôi buông tay!',
+  },
 ];
