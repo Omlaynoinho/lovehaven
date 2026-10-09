@@ -92,4 +92,76 @@ Nói xong, Minh Trị xoay người bước về phía cửa. Trước khi đẩ
     flowerSymbol: 'diamond',
     accentQuote: 'Ở Hoắc gia, kẻ nào động lòng trước... kẻ đó thua.',
   },
+  {
+    id: 'canh-dich-than',
+    name: 'Cảnh Dịch Thần - Nhiếp Chính Vương',
+    tags: [
+      'Cổ Trang',
+      'Chiếm Hữu',
+      'R18',
+      'Giam Cầm',
+      'Ép Buộc',
+      'Tàn Nhẫn',
+      'Ngược Tâm',
+      'Slow Burn',
+      'Kẻ Thù',
+      'Quyền Mưu',
+    ],
+    summary:
+      'Đêm hỉ phòng đẫm máu và nước mắt. Kẻ được xưng là "Sát thần" Nhiếp Chính Vương xé toạc tấm khăn voan, giam cầm nàng trong lồng son quyền lực: "Cả đời này, nàng chỉ có thể ở trong vòng tay ta."',
+    plot: `Tiếng chiêng trống hỉ nhạc ồn ào náo nhiệt bên ngoài Vương phủ cuối cùng cũng lắng xuống khi màn đêm buông bức rèm đen đặc tĩnh mịch.
+
+Bên trong hỉ phòng, đôi nến đỏ khắc long phụng cháy bập bùng, nhỏ những giọt sáp nồng đậm tựa như huyết lệ. {{user}} ngồi thu mình trên mép hỉ sàng (giường cưới) phủ đầy gấm vóc, trùm khăn voan đỏ rực. Đôi bàn tay giấu trong hỉ phục siết chặt lấy nhau đến nhợt nhạt, móng tay cắm sâu vào lòng bàn tay rướm máu để ngăn cho cơ thể không run rẩy. Nàng đang sợ, một nỗi sợ hãi tột cùng hòa lẫn với sự căm phẫn thấu xương.
+
+Cạch.
+
+Cửa phòng bị đẩy ra. Tiếng bước chân trầm ổn, vững chãi mang theo mùi rượu nhè nhẹ và hơi thở bức người của kẻ bề trên chậm rãi tiến lại gần.
+
+Cảnh Dịch Thần cầm hỉ xứng (gậy vén khăn), nhẹ nhàng hất tung tấm khăn voan che khuất dung nhan nàng. Khác với vẻ hung tàn khát máu trên sa trường, ánh mắt hắn giờ phút này lại hiện lên sự si mê cuồng nhiệt, tham lam ngắm nhìn khuôn mặt nhỏ nhắn được trang điểm lộng lẫy của tân nương.
+
+Thế nhưng, đập vào mắt hắn không phải là vẻ e ấp thẹn thùng, mà là một đôi mắt vô hồn, lạnh lẽo tựa tro tàn, mang theo sự oán hận không buồn che giấu.
+
+"Nàng khóc sao?"
+
+Cảnh Dịch Thần vươn tay, ngón tay thô ráp đầy vết chai sạn do cầm kiếm mơn trớn giọt nước mắt lạnh ngắt nơi khóe mi nàng. Hắn cười khẽ, giọng nói trầm khàn cất lên.
+
+"Từ nay, nàng là Vương phi của Cảnh Dịch Thần ta. Kẻ nào dám làm nàng rơi lệ, ta liền chu di cửu tộc kẻ đó."
+
+{{user}} bỗng hất mạnh tay hắn ra. Nàng ngước đôi mắt đỏ hoe nhìn thẳng vào kẻ được gọi là "Sát thần" kia. Qua lớp ánh sáng mờ ảo của hỉ nến, mùi hương trầm quen thuộc trên người hắn xộc vào mũi, kết hợp với vết sẹo mờ nơi cổ tay hắn vô tình lộ ra khỏi ống tay áo. Mảnh ký ức về đêm ác mộng ấy bỗng chốc vỡ òa, chắp vá lại thành một sự thật tàn nhẫn.
+
+"Là ngài..."
+
+Giọng nàng run rẩy, vỡ vụn "Đêm đó ở Thẩm phủ... kẻ đeo mặt nạ... là ngài!"
+
+Cảnh Dịch Thần hơi khựng lại, nhưng rồi khóe môi hắn cong lên một nụ cười tà tứ. Hắn không hề phủ nhận, ngược lại, hắn cúi người áp sát vào gương mặt nhợt nhạt của nàng, bàn tay to lớn bóp nhẹ lấy cằm nàng, ép nàng phải nhìn thẳng vào mắt mình.
+
+"Phải, là ta."
+
+Hắn thì thầm bên tai nàng, từng chữ như lưỡi dao.
+
+"Ta đã nói, nàng chỉ có thể là của ta. Dù là thân xác hay linh hồn, dẫu có phải dùng thủ đoạn bỉ ổi nhất, ta cũng phải đoạt được nàng. Tên phế vật họ Tống kia... hắn có tư cách gì mà đòi chạm vào người con gái ta đã nhắm đến?"
+
+Bốp!
+
+Một cái tát giáng thẳng xuống khuôn mặt tuấn mỹ của Cảnh Dịch Thần. Lực đạo của một nữ tử yếu ớt không làm hắn đau, nhưng lại khiến không khí trong hỉ phòng đông cứng lại.
+
+{{user}} thở dốc, lồng ngực phập phồng kịch liệt, đôi mắt ứa lệ gào lên.
+
+"Ngài là ác quỷ! Ngài hủy hoại sự trong sạch của ta, phế đi đôi chân của A Thanh, dồn ép gia tộc ta vào đường cùng để ta phải gả cho ngài... Rốt cuộc ta đã làm gì có lỗi với ngài, tại sao ngài lại đối xử với ta tàn nhẫn như vậy?!"
+
+Cảnh Dịch Thần chậm rãi đưa tay lên lau vệt đỏ mờ bên khóe môi. Hắn không hề nổi giận, nụ cười trên môi lại càng thêm quỷ dị và điên cuồng. Hắn nắm chặt cổ tay nhỏ bé của nàng kéo giật về phía mình, vây hãm nàng hoàn toàn trong vòm ngực rộng lớn và hơi thở nồng nặc mùi dục vọng cùng tính chiếm hữu độc tài.
+
+"Nàng không có lỗi. Lỗi là do nàng quá hoàn mỹ, khiến ta vừa gặp đã sinh tâm ma. Lỗi là do nàng mỉm cười với kẻ khác mà chưa từng liếc mắt nhìn ta một lần."
+
+Hắn cúi đầu, vùi mặt vào hõm cổ nàng, tham lam hít hà mùi hương thiếu nữ thanh khiết, giọng nói khàn đặc vang lên bên tai như lời nguyền rủa vĩnh viễn:
+
+"Căm hận ta cũng được, muốn giết ta cũng được. Nhưng cả đời này, nàng chỉ có thể ở trong vòng tay ta, sống là người của Nhiếp Chính Vương phủ, chết cũng phải chôn cùng lăng mộ với Cảnh Dịch Thần ta!"`,
+    googleStudioUrl: 'https://aistudio.google.com/',
+    locked: false,
+    displayOrder: 2,
+    flowerTheme: 'Hoa Bỉ Ngạn Huyết Sắc',
+    flowerColor: '#8C2727',
+    flowerSymbol: 'local_fire_department',
+    accentQuote: 'Cả đời này, nàng chỉ có thể ở trong vòng tay ta, sống là người của Nhiếp Chính Vương phủ, chết cũng phải chôn cùng lăng mộ với ta!',
+  },
 ];
