@@ -1,7 +1,7 @@
 import { Character, SiteConfig } from '../app/models/character.model';
 
 export const DEFAULT_SITE_CONFIG: SiteConfig = {
-  youtubeMusicUrl: 'https://www.youtube.com/watch?v=5qap5aO4i9A', // Relaxing Acoustic & Lofi Garden Piano
+  youtubeMusicUrl: 'https://youtu.be/MNb6hEKAS08?si=Lz8Kem3N9jptY7dv',
   siteName: 'LOVE HAVE',
   tagline: 'A Little Garden of Stories & Hearts.',
   welcomeGreeting: 'Có một khu vườn nhỏ đang chờ bạn khám phá...',

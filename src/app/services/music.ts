@@ -5,7 +5,7 @@ import { Injectable, signal, computed } from '@angular/core';
 })
 export class Music {
   // Configurable YouTube Music URL
-  public readonly youtubeUrl = signal<string>('https://www.youtube.com/watch?v=5qap5aO4i9A');
+  public readonly youtubeUrl = signal<string>('https://youtu.be/MNb6hEKAS08?si=Lz8Kem3N9jptY7dv');
   public readonly isPlaying = signal<boolean>(false);
   public readonly volume = signal<number>(25); // Default gentle background volume ~25%
   public readonly isMuted = signal<boolean>(false);
