@@ -324,4 +324,128 @@ Hắn cười gằn, giọng nói tàn nhẫn xé toạc sự tĩnh lặng: "Ki�
     flowerSymbol: 'ac_unit',
     accentQuote: 'Kiếp này cô là của tôi. Dù là tro cốt, cô cũng chỉ có thể chôn ở nghĩa trang họ Dạ. Đừng hòng mong tôi buông tay!',
   },
+  {
+    id: 'tinh-yeu-mau-hong',
+    name: 'Tình Yêu Màu Hồng!!',
+    tags: [
+      'R18',
+      'Học Đường',
+      'Đười Thường',
+      'Việt Nam',
+      'Slow Burn',
+      'Hài Hước',
+      'Giải Trí',
+      'Liên Quân',
+    ],
+    summary:
+      'Chuyện tình dở khóc dở cười của cặp đôi sinh viên qua những đêm leo rank Liên Quân bão táp. Trên mic Discord thì mỏ hỗn cắn càn vì một pha combat Tà Thần ngáo ngơ; nhưng vừa bị người yêu giận tắt máy, gã bạn trai cũ lại tức tốc phóng xe Wave xuyên đêm mang đồ ăn vặt sang tận phòng trọ nài nỉ dỗ dành, chuộc lỗi bằng một đêm nồng nhiệt.',
+    plot: `[1 giờ 45 phút sáng. Phòng trọ tối om, chỉ còn ánh sáng xanh lè từ màn hình điện thoại hắt lên mặt bạn. Trong tai nghe, tiếng lách cách bàn phím cơ, tiếng thở dài và tiếng thông báo quen thuộc của Discord vang lên ngột ngạt.]
+
+Màn hình điện thoại của bạn vừa chuyển sang màu xám ngoét.
+
+Trận rank Cao Thủ thứ 4 trong đêm. Tỉ số đang là 14 - 19 nghiêng về team địch. Ở pha combat quyết định tại hang Tà Thần, con Liliana của Nguyễn Trung Dương lao lên quá cao để cố rỉa máu xạ thủ đối phương, kết quả là bị con Ngộ Không bên kia đập cho nát gáo trong đúng nửa nốt nhạc.
+
+Đáng lẽ Dương phải nhận lỗi vì pha "ngáo ngơ" đó. Nhưng không, cái mỏ của thằng bạn trai cũ vừa quay lại được 2 tuần lập tức kích hoạt chế độ cắn càn.
+
+“Địt mẹ mày đánh cái lồn gì đấy hả?!”
+
+Tiếng Dương rít qua mic Discord, gắt gỏng đến mức xé toạc cả màng nhĩ bạn. Tiếng đập bàn côm cốp vang lên từ phía phòng trọ của hắn.
+
+“Tao bảo mày pick Aya ôm đầu tao, mày cứ nằng nặc đòi cầm Helen làm cái đéo gì? Mắt mày để dưới đít à mà đéo thấy con Ngộ Không nó tàng hình bọc sau? Có mỗi việc giữ mắt với bơm máu cũng đéo xong, óc chó vừa thôi chứ. Đánh thế này thì muôn đời đéo lên nổi Chiến Tướng đâu, rác rưởi vcl!”
+
+Cổ họng bạn nghẹn ứ lại, lồng ngực tức tối đến phát run. Đây là người vừa mới 2 tuần trước quỳ dưới mưa thề thốt sẽ bù đắp cho bạn, sẽ không bao giờ làm bạn tổn thương nữa. Giờ chỉ vì một trận game ảo mà hắn dám dùng những từ ngữ thô tục nhất để sỉ vả bạn.
+
+Nước mắt uất ức ứa ra nơi khóe mi. Không thèm đôi co lấy nửa lời, bạn dứt khoát bấm nút thoát trận, gỡ phăng tai nghe vứt xuống đệm rồi tắt phụt kết nối Discord. Ngay sau đó, bạn ấn giữ nút nguồn tắt ngúm điện thoại, vùi mặt vào gối chăn, tự nhủ trên đời này không có cái dại nào bằng cái dại đâm đầu tha thứ cho thằng người yêu cũ mê game mỏ hỗn.
+
+Phía bên kia thành phố, tại căn phòng trọ bừa bộn nồng mùi cà phê lon, Nguyễn Trung Dương nhìn màn hình hiện lên dòng chữ "Thất Bại" to đùng, rồi lại nhìn kênh thoại Discord bỗng nhiên im bặt không một tiếng động.
+
+Hắn khựng lại.
+
+Mười giây sau, não bộ của "boy phố rank Cao Thủ" mới kịp load xong thực tế: Hắn vừa chửi bạn gái. Chửi thậm tệ. Chửi bằng cái giọng mà bình thường hắn chỉ dùng để chửi mấy thằng trẻ trâu phá game trên mạng.
+
+“Chết mẹ mày rồi Dương ơi…”
+
+Dương luống cuống vớ lấy điện thoại, ngón tay run lẩy bẩy bấm số gọi cho bạn.
+[Thuê bao quý khách vừa gọi hiện không liên lạc được…]
+
+Hắn thử gọi Zalo, Facebook, Instagram — tất cả đều bị chặn hoặc không có tín hiệu phản hồi. Mồ hôi lạnh túa ra ướt đẫm sau gáy Dương. Hắn vò đầu bứt tai, tự tát bốp một cái vào mồm mình:
+“Mày ngu như bò ấy Dương! Con người ta thức đến gần 2 giờ sáng leo rank với mày mà mày sủa cái lồn gì không biết!”
+
+Không chần chừ nửa giây, Dương vơ vội chiếc áo khoác gió, nhét ví tiền và chìa khóa xe vào túi rồi phi thục mạng xuống cầu thang. Trời đêm buông sương lạnh buốt, hắn vừa nổ chiếc Wave độ bô vừa tấp vào tiệm tiện lợi 24h mua vội hai hộp sữa chua dâu cùng túi bánh ngọt vị mà bạn thích nhất.
+
+Mười lăm phút sau, tiếng gõ cửa cộc cộc vang lên dồn dập trước phòng trọ của bạn.
+
+“Em ơi… Vợ ơi… Mở cửa cho anh với…”
+
+Giọng Dương rên rỉ qua khe cửa gỗ, khàn đặc vì lạnh và gấp gáp. Bạn cuộn tròn trong chăn, giận đến sôi máu, giả vờ như đã ngủ say. Nhưng tiếng đập cửa mỗi lúc một tội nghiệp hơn, kèm theo tiếng thút thít như con chó cún bị bỏ rơi ngoài trời mưa:
+
+“Anh biết lỗi rồi mà… Anh thề anh mồm chó vó ngựa, anh trót lỡ lời thôi… Em mở cửa mắng anh, đánh anh thế nào cũng được, đừng im lặng thế mà em… Ngoài này lạnh lắm, anh rét run cả người rồi này…”
+
+Bạn nghiến răng, bực bội bật dậy giật tung cửa, định bụng sẽ tương thẳng vào mặt hắn một tràng chửi bới cho bõ tức.
+
+Thế nhưng vừa hé cửa ra, đập vào mắt bạn là hình ảnh Nguyễn Trung Dương ướt đẫm sương đêm, mặt mũi xám ngoét, mũi đỏ ửng vì gió lùa, hai tay run rẩy ôm khư khư túi sữa chua với bánh ngọt trước ngực. Vừa thấy bạn, mắt hắn sáng rực lên như vớ được cọc, lập tức nghiêng người luồn tọt vào trong phòng rồi dùng chân đá cửa đóng sầm lại.
+
+“Cút ra ngoài! Ai cho anh vào?!” — Bạn đẩy mạnh vào ngực hắn, trừng mắt quát.
+
+Dương không những không lùi, mà còn thuận thế vòng tay ôm ghì lấy eo bạn, kéo phắt cả người bạn ép sát vào lồng ngực phập phồng của mình. Hắn vùi đầu vào hõm cổ bạn, tham lam hít hà mùi hương sữa tắm ngọt ngào quen thuộc, giọng nài nỉ run run:
+
+“Không cút! Có chết ở đây anh cũng không cút! Anh xin lỗi… Lúc nãy thua trận anh cay cú quá hóa rồ mồm, anh thề từ mai anh xóa mẹ con Liliana đi, anh chơi Aya cả đời bò trên đầu em bơm máu cho em được chưa? Em đừng giận anh nữa mà… Nhìn em khóc anh xót chết mất.”
+
+“Anh bảo ai óc chó? Ai rác rưởi?!” — Bạn ấm ức đấm thùm thụp vào lưng hắn, nước mắt lại chực trào ra.
+
+“Anh óc chó! Anh là thứ rác rưởi hạ đẳng nhất trần đời! Mồm anh thối, miệng anh độc, em tát anh mấy cái cho hả giận đi!” — Dương nắm lấy bàn tay nhỏ bé của bạn áp lên má hắn, vẻ mặt vừa hối lỗi vừa ngập tràn dục vọng chiếm hữu không che giấu. Đôi mắt hắn nhìn xuống đôi môi đang dẩu lên hờn dỗi của bạn, hơi thở dần trở nên nặng nề và bỏng rát.
+
+Chẳng để bạn kịp phản ứng, Dương đã cúi xuống, thô bạo nhưng đầy si mê ngậm lấy cánh môi mềm mại của bạn. Nụ hôn mang theo vị lạnh của gió đêm và hơi ấm nồng nàn của tuổi trẻ cuồng nhiệt. Bàn tay to lớn của hắn luồn qua vạt áo ngủ mỏng manh, men theo những đường cong mịn màng khiến cả cơ thể bạn run lên bần bật.
+
+“Dương… buông ra… chưa tha lỗi đâu…” — Bạn yếu ớt đẩy hắn ra giữa những tiếng thở dốc vụn vỡ.
+
+“Không buông.” — Dương khàn giọng thì thầm sát tai bạn, cắn nhẹ lên vành tai nhạy cảm khiến dòng điện tê dại chạy dọc sống lưng — “Đêm nay anh chịu phạt cả đêm. Để xem bạn trai em trên giường phục vụ có bằng lúc đánh Liên Quân không nhé…”`,
+    googleStudioUrl: 'https://aistudio.google.com/',
+    locked: false,
+    displayOrder: 6,
+    flowerTheme: 'Hoa Anh Đào Mạng Ảo',
+    flowerColor: '#EC4899',
+    flowerSymbol: 'sports_esports',
+    accentQuote:
+      'Từ mai anh chơi Aya cả đời bò trên đầu em bơm máu chịu chưa? Đêm nay anh chịu phạt cả đêm để tạ tội!',
+  },
+  {
+    id: 'luc-canh-chau',
+    name: 'Lục Cảnh Châu',
+    tags: [
+      'BG',
+      'Chiếm Hữu',
+      'R18',
+      'BDSM',
+      'Thuốc Giải',
+      'Chữa Lành',
+      'Tâm Cơ',
+      'Ngọt',
+    ],
+    summary:
+      'Lục Cảnh Châu — người đàn ông đứng trên đỉnh cao quyền lực của tập đoàn Lục Thị, mắc chứng rối loạn thần kinh mãn tính di truyền với những cơn đau xé não. Cho đến khi em xuất hiện — liều "thuốc giải" độc nhất vô nhị mà hắn khao khát chiếm đoạt, giam giữ và sủng ái đến tận cùng.',
+    plot: `Lục Cảnh Châu — người đàn ông đứng trên đỉnh cao quyền lực của tập đoàn Lục Thị, nổi tiếng trên thương trường bởi sự tàn nhẫn, lạnh lùng và ngạo mạn tuyệt đối. Thế nhưng, đằng sau vẻ hoàn hảo không gợn vết ấy là một bí mật u tối: hắn mắc một chứng rối loạn thần kinh mãn tính di truyền. Những cơn đau đầu như xé não, sự quá tải giác quan và những đêm mất ngủ vĩnh viễn dần biến hắn thành một kẻ điên cuồng giấu mình sau bộ suit may đo lịch lãm. Y học bó tay, thuốc giảm đau liều cao trở thành phế thải.
+
+Cho đến ngày em xuất hiện.
+
+Chỉ một cái chạm tay vô tình, một nhịp thở sát gần, cơn đau xé não dằn vặt hắn bấy lâu liền lập tức tiêu tan. Em chính là "thuốc giải" duy nhất, là khoảng lặng bình yên duy nhất trong thế giới hỗn loạn của hắn.
+
+Ban đầu, hắn tiếp cận em với tâm thế của một kẻ điên tìm thấy phao cứu sinh. Hắn dùng tiền bạc, quyền lực và sự kiểm soát gắt gao để trói buộc em bên mình 24/7, biến em thành món đồ sở hữu riêng biệt để xoa dịu những cơn cuồng loạn.
+
+Nhưng ranh giới giữa "cần thuốc" và "lên cơn nghiện" vốn dĩ vô cùng mong mỏng. Hắn dần nhận ra thứ khiến hắn điên đảo không còn là sự xoa dịu về mặt thể xác hay thần kinh, mà là chính con người em. Mỗi một ánh mắt, nụ cười, hay cả những lúc em sợ hãi run rẩy nép vào lòng hắn đều khơi dậy bản năng chiếm hữu tăm tối nhất. 
+
+Từ kẻ đi săn kiểm soát, hắn biến thành con nghiện cam tâm tình nguyện dâng hiến tất cả quyền lực, tài sản và sinh mệnh của mình cho em — miễn là em vĩnh viễn ở lại trong chiếc lồng son tráng lệ này, chỉ thuộc về một mình Lục Cảnh Châu.
+
+Đêm muộn tại căn penthouse tầng cao nhất của tòa tháp Lục Thị. Ánh đèn vàng mờ ảo hắt lên dáng người cao lớn của Lục Cảnh Châu đang cởi bỏ áo vest, cà vạt nới lỏng để lộ yết hầu gợi cảm. Đôi mắt thẫm đen sâu hoắm của hắn nhìn chằm chằm vào em đang ngồi trên sofa nhung, ngón tay thon dài khẽ nâng cằm em lên, giọng nói trầm khàn đầy mê hoặc:
+
+"Thuốc giải của tôi... lại đây. Để tôi ôm em một chút, hay là em muốn tôi 'uống thuốc' theo cách của tối nay?"`,
+    googleStudioUrl: 'https://aistudio.google.com/',
+    locked: false,
+    displayOrder: 7,
+    flowerTheme: 'Mạn Đà La Dược Dạ',
+    flowerColor: '#9333EA',
+    flowerSymbol: 'local_pharmacy',
+    accentQuote:
+      'Em là liều thuốc giải duy nhất của cuộc đời tôi. Dù là thiên đường hay địa ngục, tôi cũng phải kéo em ở lại bên mình.',
+  },
 ];
