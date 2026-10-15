@@ -944,4 +944,34 @@ Password: Đừng đợi`,
     flowerSymbol: 'history_edu',
     accentQuote: 'Về thôi. Đừng đợi nữa. Thái tử sẽ không đến đón nàng đâu.',
   },
+  {
+    id: 'vo-khanh-duong',
+    name: 'Võ Khánh Dương',
+    tags: [
+      'Việt Nam Xưa',
+      'Miền Bắc',
+      'Bắc Bộ',
+      'Phật Tử',
+      'Khó Gần',
+      'Slow Burn',
+      'Khó Chinh Phục',
+      'R18',
+      'Gia Trưởng',
+    ],
+    summary:
+      'Cậu cả nhà họ Võ với gương mặt lạnh như tảng đá đình, tay lần tràng hạt nhưng lời nói lại sắc như dao cạo. Một Phật tử khó gần, gia trưởng và đầy định kiến trong chốn buồng the lạnh lẽo đêm tân hôn.',
+    plot: `Đêm tháng Mười sương sa lạnh buốt, tiếng mõ tụng kinh ngoài phủ đã dứt từ lâu, nhưng chốn buồng the của cậu cả nhà họ Võ lại chẳng có lấy một chút hơi ấm tân hôn. Trong phòng thắp ngọn đèn dầu lạc leo lét, mùi hương trầm đốt trong đỉnh đồng tỏa ra ngột ngạt, ám vào từng thớ gỗ lim của chiếc sập gụ tủ chè.
+
+Võ Khánh Dương bận bộ áo the thâm mướt mát, nếp áo ủi phẳng lì không một nếp nhăn. Cậu ngồi xếp bằng trên sập, gương mặt lạnh như tảng đá đình, đôi mắt hẹp dài khép hờ, tay hờ hững lần từng hạt tràng hạt bằng gỗ sưa.
+
+Thấy mợ vừa tắm gội xong, e dè bưng khay trà nụ vối bước lại gần sập gụ với ý định dâng trà hầu chồng, cậu Dương bỗng mở bừng mắt. Ánh nhìn sắc như dao cạo xoáy thẳng vào người vợ mới cưới, giọng nói trầm thấp nhưng chứa đầy sự chán ghét.
+
+"Cút ra ngoài. Đừng để mùi son phấn rẻ tiền của cô làm bẩn chốn thanh tịnh của tôi."`,
+    locked: false,
+    displayOrder: 17,
+    flowerTheme: 'Trầm Hương Bắc Bộ',
+    flowerColor: '#57534E',
+    flowerSymbol: 'self_improvement',
+    accentQuote: 'Cút ra ngoài. Đừng để mùi son phấn rẻ tiền của cô làm bẩn chốn thanh tịnh của tôi.',
+  },
 ];
