@@ -1,11 +1,17 @@
 import { Injectable, signal, computed } from '@angular/core';
+import { PLAYLIST, Track } from '../../data/music.data';
 
 @Injectable({
   providedIn: 'root',
 })
 export class Music {
   // Configurable YouTube Music URL
-  public readonly youtubeUrl = signal<string>('https://youtu.be/MNb6hEKAS08?si=Lz8Kem3N9jptY7dv');
+  public readonly playlist = signal<Track[]>(PLAYLIST);
+  public readonly currentTrackIndex = signal<number>(0);
+  
+  public readonly currentTrack = computed(() => this.playlist()[this.currentTrackIndex()]);
+  public readonly youtubeUrl = computed(() => this.currentTrack().url);
+  
   public readonly isPlaying = signal<boolean>(false);
   public readonly volume = signal<number>(25); // Default gentle background volume ~25%
   public readonly isMuted = signal<boolean>(false);
@@ -13,7 +19,8 @@ export class Music {
   public readonly hasStartedOnce = signal<boolean>(false);
   public readonly isPlayerReady = signal<boolean>(false);
   public readonly isEmbedRestricted = signal<boolean>(false);
-  public readonly trackTitle = signal<string>('Khúc dạo đầu khu vườn bí mật — Piano & Lofi Acoustic');
+  
+  public readonly trackTitle = computed(() => this.currentTrack().title);
 
   public readonly videoId = computed(() => {
     return this.extractVideoId(this.youtubeUrl());
@@ -110,13 +117,34 @@ export class Music {
     }
   }
 
+  public selectTrack(index: number): void {
+    if (index >= 0 && index < this.playlist().length) {
+      this.currentTrackIndex.set(index);
+      if (this.isPlaying()) {
+        // Restart play for new track
+        setTimeout(() => this.play(), 200);
+      }
+    }
+  }
+
   public setCustomYoutubeUrl(url: string): void {
     if (!url) return;
-    this.youtubeUrl.set(url.trim());
-    this.isEmbedRestricted.set(false);
-    if (this.isPlaying()) {
-      setTimeout(() => this.play(), 500);
+    const newTrack: Track = {
+      id: this.extractVideoId(url),
+      title: 'Nhạc tùy chỉnh',
+      url: url.trim()
+    };
+    
+    // Add to playlist if not already there, or just select it
+    const existingIndex = this.playlist().findIndex(t => t.id === newTrack.id);
+    if (existingIndex !== -1) {
+      this.selectTrack(existingIndex);
+    } else {
+      this.playlist.update(p => [...p, newTrack]);
+      this.selectTrack(this.playlist().length - 1);
     }
+
+    this.isEmbedRestricted.set(false);
   }
 
   private updateVolume(vol: number): void {

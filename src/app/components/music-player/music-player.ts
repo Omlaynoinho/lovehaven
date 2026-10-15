@@ -139,6 +139,26 @@ import { Sound } from '../../services/sound';
             </button>
           </div>
 
+          <!-- Playlist Selection -->
+          <div class="mt-2 mb-3 max-h-32 overflow-y-auto pr-1 flex flex-col gap-1 custom-scrollbar">
+            @for (track of music.playlist(); track track.id; let idx = $index) {
+              <button
+                type="button"
+                (click)="selectTrack(idx)"
+                class="flex items-center gap-2 p-1.5 rounded-lg text-left transition-all"
+                [class.bg-[#C98F9E]/10]="music.currentTrackIndex() === idx"
+                [class.text-[#C98F9E]]="music.currentTrackIndex() === idx"
+                [class.font-semibold]="music.currentTrackIndex() === idx"
+                [class.hover:bg-[#FDF2F4]]="music.currentTrackIndex() !== idx"
+              >
+                <mat-icon class="text-sm">
+                  {{ music.currentTrackIndex() === idx ? 'volume_up' : 'music_note' }}
+                </mat-icon>
+                <span class="text-[11px] truncate flex-1">{{ track.title }}</span>
+              </button>
+            }
+          </div>
+
           <!-- Custom YouTube URL Input -->
           @if (showUrlPrompt()) {
             <div class="mt-3 pt-3 border-t border-[#F2E5E8] flex flex-col gap-2">
@@ -258,6 +278,13 @@ export class MusicPlayer {
     const target = event.target as HTMLInputElement;
     const vol = parseInt(target.value, 10);
     this.music.setVolume(vol);
+  }
+
+  selectTrack(index: number): void {
+    if (this.music.currentTrackIndex() !== index) {
+      this.sound.playClick();
+      this.music.selectTrack(index);
+    }
   }
 
   applyCustomUrl(): void {
