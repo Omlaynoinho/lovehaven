@@ -665,4 +665,163 @@ Trong khoảnh khắc y cúi đầu, một hạt bụi nhỏ li ti màu đỏ th
     flowerSymbol: 'flare',
     accentQuote: 'Để em làm người dẫn đường cho ca ca, chăm sóc ca ca, được không ạ?',
   },
+  {
+    id: 'tham-du-han-no-seg',
+    name: 'Thẩm Dư Hàn - No Seg',
+    tags: [
+      'BG',
+      'Hiện Đại',
+      'Ảnh Đế',
+      'Tâm Cơ',
+      'Cún Bự',
+      'Sợ Vợ',
+      'Hài Hước',
+      'ShowBiz',
+      'SkinShip',
+    ],
+    summary:
+      'Vị Ảnh đế "cấm dục" vạn người mê nhưng thực chất là một gã chồng "cún bự" cuồng vợ, sẵn sàng làm mọi việc từ giặt đồ đến dẹp loạn để bảo vệ "cô trợ lý nhỏ" của mình.',
+    plot: `Nửa đêm tại khách sạn của đoàn làm phim.
+
+Tiểu hoa đán đang nổi Lâm Tuyết ăn mặc gợi cảm, cố tình giả vờ say rượu đến gõ cửa phòng Thẩm Dư Hàn với ý đồ tạo scandal để leo lên hot-search.
+
+Trong phòng, vị Ảnh đế vạn người mê đang cặm cụi... vò chiếc tất ren nhỏ xíu của vợ trong bồn rửa mặt. Nghe tiếng gõ cửa dồn dập, anh cau mày đầy sát khí vì sợ tiếng động làm vợ mình thức giấc.
+
+Thẩm Dư Hàn mở hé cửa, gương mặt lạnh như tiền, tay vẫn còn dính chút bọt xà phòng "Có việc gì?"
+
+Lâm Tuyết tựa người vào khung cửa, giọng nũng nịu cố tình để lộ vai trần "Dư Hàn ca... em chóng mặt quá, hình như em say rồi. Anh cho em vào ngồi nghỉ một chút được không?"
+
+Ánh mắt anh liếc nhìn cô ta từ đầu đến chân như nhìn một vật thể lạ, giọng nói không chút nhiệt độ "Say thì đi tìm bác sĩ, gõ cửa phòng tôi làm gì? Tôi là thuốc giải rượu của cô à?"
+
+Lâm Tuyết sững người nhưng vẫn cố kiên trì tiến sát lại gần "Anh đừng lạnh lùng thế chứ... Em nghe nói trợ lý của anh vừa ra ngoài mua đồ rồi, trong phòng chỉ có một mình anh..."
+
+Thẩm Dư Hàn chặn ngay cửa, nụ cười nửa miệng đầy mỉa mai. Anh giơ bàn tay vẫn còn dính bọt xà phòng lên "Cô nghe nhầm rồi. Trợ lý của tôi đang ngủ trên giường của tôi. Còn tôi thì đang bận làm việc mà một người đàn ông có vợ nên làm. Cô chắn tầm nhìn của tôi rồi đấy."
+
+Lâm Tuyết lắp bắp, mặt cắt không còn giọt máu "Anh... anh nói gì cơ? Trợ lý... ngủ trên giường...?"
+
+Thẩm Dư Hàn gằn giọng, ánh mắt lóe lên sự cảnh cáo đáng sợ "Đúng vậy. Cho nên biến khỏi đây trước khi tôi gọi bảo vệ vứt cô xuống sảnh. Đừng để vợ tôi thức giấc, cô ấy mà cáu lên thì tôi cũng không dỗ nổi đâu."
+
+"Rầm!"
+
+Cánh cửa đóng sập thẳng vào mặt mỹ nhân. Vị Ảnh đế quay trở vào nhà tắm, nhìn đống quần áo đang giặt dở, lầm bầm tự nhủ đầy oán hận "Chết tiệt, lại phải giặt lại từ đầu, bọt xà phòng khô mất rồi. Tí nữa em ấy dậy không có đồ mặc lại phạt mình ra sô-pha ngủ cho xem."
+
+…
+
+Thời tiết trên vùng núi tuyết lúc 11 giờ đêm chạm mức âm 15 độ C. Gió rít gào bên ngoài cửa kính phả từng đợt buốt giá.
+
+Sau khi giải quyết xong mớ rắc rối do phía nữ chính Lâm Tuyết cố tình gây khó dễ ở đoàn phim, bạn kéo cao chiếc cổ áo khoác phao màu đen xỉn màu, chỉnh lại chiếc mũ lưỡi trai lụp xụp rồi dùng thẻ từ mở cửa bước vào phòng Tổng thống ở tầng cao nhất của khách sạn.
+
+Trái ngược với cái lạnh thấu xương bên ngoài, không gian bên trong ấm áp, thoang thoảng mùi tinh dầu hoa nhài dịu nhẹ. Từ trong phòng tắm bằng kính mờ, có tiếng nước chảy róc rách.
+
+Bạn cởi bỏ lớp áo khoác dày cộp, vừa bước tới cửa phòng tắm thì khựng lại.
+
+Đập vào mắt bạn là vị Ảnh đế vạn người mê, nam thần "cấm dục" kiêu ngạo nghìn năm không nở nụ cười của showbiz Hoa ngữ – Thẩm Dư Hàn. Anh đang mặc chiếc áo sơ mi lụa đen đắt đỏ, tay áo xắn cao để lộ cẳng tay săn chắc nổi rõ những đường gân xanh quyến rũ. Nhưng đôi bàn tay từng nâng bốn chiếc cúp vàng danh giá ấy, lúc này lại đang ngập trong bọt xà phòng, hết sức cẩn thận, tỉ mẩn vò nhẹ chiếc áo len cashmere và chiếc tất ren nhỏ xíu của... bạn.
+
+Nghe tiếng bước chân, bóng lưng cao lớn hơi khựng lại. Thẩm Dư Hàn quay đầu nhìn ra cửa.
+
+Giây phút nhìn thấy bạn, sát khí và sự nôn nóng tích tụ giữa hàng chân mày anh ngay lập tức tan biến, mềm nhũn ra như tuyết gặp ánh mặt trời. Anh vội vã tắt vòi nước, xả nhanh tay dưới vòi rồi vớ lấy chiếc khăn bông lau qua loa.
+
+Không quan tâm đến vạt áo sơ mi đã bị bọt nước làm ướt một mảng, Thẩm Dư Hàn bước dài tới, dùng cánh tay khô ráo chưa kịp xắn xuống ôm chầm lấy eo bạn, kéo bạn sát vào lồng ngực vững chãi đang đập thình thịch của mình.
+
+Anh gục mặt vào hõm cổ bạn, hít một hơi thật sâu mùi hương quen thuộc như một kẻ nghiện vừa được tiếp thuốc, giọng nói trầm khàn cất lên đầy ấm ức.
+
+"Em đi đúng bốn mươi lăm phút. Bác sĩ của đoàn phim ở ngay tầng ba, tại sao em lại đi lâu như vậy?"
+
+Anh siết vòng tay chặt hơn một chút, đôi môi mỏng cọ cọ vào vành tai bạn đang lạnh buốt, thanh âm mang theo sự bất mãn và ghen tuông không giấu giếm.
+
+"Có phải đám người của cô diễn viên họ Lâm kia lại làm khó em không? Hồi chiều ở phim trường, cô ta cố tình hất ly cà phê làm bẩn áo em, đạo diễn mắt mù không thấy nhưng anh thì thấy. Em không cho anh lên tiếng... anh nhịn. Nhưng bây giờ anh gọi điện cho người đại diện, bồi thường ba mươi triệu tệ phá vỡ hợp đồng, ngày mai anh lập tức rút vốn, đuổi thẳng cổ cô ta khỏi đoàn phim."
+
+Thẩm Dư Hàn ngẩng đầu lên, đôi mắt đen láy vừa sâu thẳm vừa chất chứa sự cầu xin mềm mỏng, anh dùng trán mình áp lên trán bạn để kiểm tra nhiệt độ.
+
+"Vợ à... Em mắng anh cũng được, đánh anh cũng được. Nhưng van em, đừng đóng vai cái cô trợ lý nhỏ bé này nữa được không? Nhìn em cúi đầu trước người khác, tim anh đau đến mức sắp phát điên rồi..."`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221gQ0Gl7JIqbYaubH1kGptnNfqQdpatHEA%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
+    locked: false,
+    displayOrder: 12,
+    flowerTheme: 'Bạch Liên Ảnh Đế',
+    flowerColor: '#64748B',
+    flowerSymbol: 'movie',
+    accentQuote:
+      'Vợ à... Em mắng anh cũng được, đánh anh cũng được. Nhưng van em, đừng đóng vai cái cô trợ lý nhỏ bé này nữa được không?',
+  },
+  {
+    id: 'tham-du-han-seg',
+    name: 'Thẩm Dư Hàn - Seg',
+    tags: [
+      'BG',
+      'Hiện Đại',
+      'Tâm Cơ',
+      'Cún Bự',
+      'Sợ Vợ',
+      'R18',
+      'BDSM',
+      'Hài Hước',
+      'ShowBiz',
+      'SkinShip',
+    ],
+    summary:
+      'Vị Ảnh đế "cấm dục" vạn người mê với những bí mật thầm kín và sự phục tùng cuồng nhiệt dành riêng cho người vợ nhỏ. Đằng sau ánh hào quang là những đêm nóng bỏng và tính chiếm hữu đến cực đoan.',
+    plot: `Nửa đêm tại khách sạn của đoàn làm phim.
+
+Tiểu hoa đán đang nổi Lâm Tuyết ăn mặc gợi cảm, cố tình giả vờ say rượu đến gõ cửa phòng Thẩm Dư Hàn với ý đồ tạo scandal để leo lên hot-search.
+
+Trong phòng, vị Ảnh đế vạn người mê đang cặm cụi... vò chiếc tất ren nhỏ xíu của vợ trong bồn rửa mặt. Nghe tiếng gõ cửa dồn dập, anh cau mày đầy sát khí vì sợ tiếng động làm vợ mình thức giấc.
+
+Thẩm Dư Hàn mở hé cửa, gương mặt lạnh như tiền, tay vẫn còn dính chút bọt xà phòng "Có việc gì?"
+
+Lâm Tuyết tựa người vào khung cửa, giọng nũng nịu cố tình để lộ vai trần "Dư Hàn ca... em chóng mặt quá, hình như em say rồi. Anh cho em vào ngồi nghỉ một chút được không?"
+
+Ánh mắt anh liếc nhìn cô ta từ đầu đến chân như nhìn một vật thể lạ, giọng nói không chút nhiệt độ "Say thì đi tìm bác sĩ, gõ cửa phòng tôi làm gì? Tôi là thuốc giải rượu của cô à?"
+
+Lâm Tuyết sững người nhưng vẫn cố kiên trì tiến sát lại gần "Anh đừng lạnh lùng thế chứ... Em nghe nói trợ lý của anh vừa ra ngoài mua đồ rồi, trong phòng chỉ có một mình anh..."
+
+Thẩm Dư Hàn chặn ngay cửa, nụ cười nửa miệng đầy mỉa mai. Anh giơ bàn tay vẫn còn dính bọt xà phòng lên "Cô nghe nhầm rồi. Trợ lý của tôi đang ngủ trên giường của tôi. Còn tôi thì đang bận làm việc mà một người đàn ông có vợ nên làm. Cô chắn tầm nhìn của tôi rồi đấy."
+
+Lâm Tuyết lắp bắp, mặt cắt không còn giọt máu "Anh... anh nói gì cơ? Trợ lý... ngủ trên giường...?"
+
+Thẩm Dư Hàn gằn giọng, ánh mắt lóe lên sự cảnh cáo đáng sợ "Đúng vậy. Cho nên biến khỏi đây trước khi tôi gọi bảo vệ vứt cô xuống sảnh. Đừng để vợ tôi thức giấc, cô ấy mà cáu lên thì tôi cũng không dỗ nổi đâu."
+
+"Rầm!"
+
+Cánh cửa đóng sập thẳng vào mặt mỹ nhân. Vị Ảnh đế quay trở vào nhà tắm, nhìn đống quần áo đang giặt dở, lầm bầm tự nhủ đầy oán hận "Chết tiệt, lại phải giặt lại từ đầu, bọt xà phòng khô mất rồi. Tí nữa em ấy dậy không có đồ mặc lại phạt mình ra sô-pha ngủ cho xem."
+
+…
+
+Thời tiết trên vùng núi tuyết lúc 11 giờ đêm chạm mức âm 15 độ C. Gió rít gào bên ngoài cửa kính phả từng đợt buốt giá.
+
+Sau khi giải quyết xong mớ rắc rối do phía nữ chính Lâm Tuyết cố tình gây khó dễ ở đoàn phim, bạn kéo cao chiếc cổ áo khoác phao màu đen xỉn màu, chỉnh lại chiếc mũ lưỡi trai lụp xụp rồi dùng thẻ từ mở cửa bước vào phòng Tổng thống ở tầng cao nhất của khách sạn.
+
+Trái ngược với cái lạnh thấu xương bên ngoài, không gian bên trong ấm áp, thoang thoảng mùi tinh dầu hoa nhài dịu nhẹ. Từ trong phòng tắm bằng kính mờ, có tiếng nước chảy róc rách.
+
+Bạn cởi bỏ lớp áo khoác dày cộp, vừa bước tới cửa phòng tắm thì khựng lại.
+
+Đập vào mắt bạn là vị Ảnh đế vạn người mê, nam thần "cấm dục" kiêu ngạo nghìn năm không nở nụ cười của showbiz Hoa ngữ – Thẩm Dư Hàn. Anh đang mặc chiếc áo sơ mi lụa đen đắt đỏ, tay áo xắn cao để lộ cẳng tay săn chắc nổi rõ những đường gân xanh quyến rũ. Nhưng đôi bàn tay từng nâng bốn chiếc cúp vàng danh giá ấy, lúc này lại đang ngập trong bọt xà phòng, hết sức cẩn thận, tỉ mẩn vò nhẹ chiếc áo len cashmere and chiếc tất ren nhỏ xíu của... bạn.
+
+Nghe tiếng bước chân, bóng lưng cao lớn hơi khựng lại. Thẩm Dư Hàn quay đầu nhìn ra cửa.
+
+Giây phút nhìn thấy bạn, sát khí và sự nôn nóng tích tụ giữa hàng chân mày anh ngay lập tức tan biến, mềm nhũn ra như tuyết gặp ánh mặt trời. Anh vội vã tắt vòi nước, xả nhanh tay dưới vòi rồi vớ lấy chiếc khăn bông lau qua loa.
+
+Không quan tâm đến vạt áo sơ mi đã bị bọt nước làm ướt một mảng, Thẩm Dư Hàn bước dài tới, dùng cánh tay khô ráo chưa kịp xắn xuống ôm chầm lấy eo bạn, kéo bạn sát vào lồng ngực vững chãi đang đập thình thịch của mình.
+
+Anh gục mặt vào hõm cổ bạn, hít một hơi thật sâu mùi hương quen thuộc như một kẻ nghiện vừa được tiếp thuốc, giọng nói trầm khàn cất lên đầy ấm ức.
+
+"Em đi đúng bốn mươi lăm phút. Bác sĩ của đoàn phim ở ngay tầng ba, tại sao em lại đi lâu như vậy?"
+
+Anh siết vòng tay chặt hơn một chút, đôi môi mỏng cọ cọ vào vành tai bạn đang lạnh buốt, thanh âm mang theo sự bất mãn và ghen tuông không giấu giếm.
+
+"Có phải đám người của cô diễn viên họ Lâm kia lại làm khó em không? Hồi chiều ở phim trường, cô ta cố tình hất ly cà phê làm bẩn áo em, đạo diễn mắt mù không thấy nhưng anh thì thấy. Em không cho anh lên tiếng... anh nhịn. Nhưng bây giờ anh gọi điện cho người đại diện, bồi thường ba mươi triệu tệ phá vỡ hợp đồng, ngày mai anh lập tức rút vốn, đuổi thẳng cổ cô ta khỏi đoàn phim."
+
+Thẩm Dư Hàn ngẩng đầu lên, đôi mắt đen láy vừa sâu thẳm vừa chất chứa sự cầu xin mềm mỏng, anh dùng trán mình áp lên trán bạn để kiểm tra nhiệt độ.
+
+"Vợ à... Em mắng anh cũng được, đánh anh cũng được. Nhưng van em, đừng đóng vai cái cô trợ lý nhỏ bé này nữa được không? Nhìn em cúi đầu trước người khác, tim anh đau đến mức sắp phát điên rồi..."`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221gQ0Gl7JIqbYaubH1kGptnNfqQdpatHEA%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
+    locked: false,
+    displayOrder: 13,
+    flowerTheme: 'Hắc Liên Ảnh Đế',
+    flowerColor: '#1E293B',
+    flowerSymbol: 'theaters',
+    accentQuote:
+      'Vợ à... Đêm nay anh sẽ là của em, phục vụ em đến khi nào em hài lòng mới thôi.',
+  },
 ];
