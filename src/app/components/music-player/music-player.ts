@@ -19,6 +19,9 @@ import { Sound } from '../../services/sound';
   selector: 'app-music-player',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, MatIconModule, ReactiveFormsModule],
+  host: {
+    '(window:message)': 'onMessage($event)'
+  },
   template: `
     <!-- Hidden / Minimized YouTube IFrame Engine -->
     <div class="fixed -bottom-96 -right-96 w-10 h-10 pointer-events-none opacity-0 overflow-hidden" aria-hidden="true">
@@ -245,7 +248,9 @@ export class MusicPlayer {
 
   readonly trustedIframeSrc = computed<SafeResourceUrl>(() => {
     const id = this.music.videoId();
-    const url = `https://www.youtube-nocookie.com/embed/${id}?enablejsapi=1&version=3&loop=1&playlist=${id}&controls=0&showinfo=0&rel=0&iv_load_policy=3`;
+    const origin = typeof window !== 'undefined' ? window.location.origin : '';
+    // Removed loop=1&playlist=${id} to handle "ended" event manually
+    const url = `https://www.youtube-nocookie.com/embed/${id}?enablejsapi=1&version=3&controls=0&showinfo=0&rel=0&iv_load_policy=3&origin=${encodeURIComponent(origin)}`;
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   });
 
@@ -293,6 +298,21 @@ export class MusicPlayer {
       this.sound.playChime();
       this.music.setCustomYoutubeUrl(val);
       this.showUrlPrompt.set(false);
+    }
+  }
+
+  onMessage(event: MessageEvent): void {
+    // YouTube iframe API sends messages as JSON strings
+    if (typeof event.data === 'string') {
+      try {
+        const data = JSON.parse(event.data);
+        if (data.event === 'onStateChange' && data.info === 0) {
+          // info 0 is the "ENDED" state in YT API
+          this.music.nextTrack();
+        }
+      } catch {
+        // Not a valid JSON or not from YT
+      }
     }
   }
 }

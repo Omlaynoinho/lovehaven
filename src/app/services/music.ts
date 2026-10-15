@@ -147,6 +147,14 @@ export class Music {
     this.isEmbedRestricted.set(false);
   }
 
+  public nextTrack(): void {
+    let nextIndex = this.currentTrackIndex() + 1;
+    if (nextIndex >= this.playlist().length) {
+      nextIndex = 0; // Loop back to start
+    }
+    this.selectTrack(nextIndex);
+  }
+
   private updateVolume(vol: number): void {
     this.sendCommand('setVolume', [vol]);
   }
