@@ -1,17 +1,14 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  ElementRef,
   inject,
   signal,
-  computed,
-  viewChild,
   afterNextRender,
+  OnDestroy,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Music } from '../../services/music';
 import { Sound } from '../../services/sound';
 
@@ -19,30 +16,17 @@ import { Sound } from '../../services/sound';
   selector: 'app-music-player',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, MatIconModule, ReactiveFormsModule],
-  host: {
-    '(window:message)': 'onMessage($event)'
-  },
   template: `
-    <!-- Hidden / Minimized YouTube IFrame Engine -->
+    <!-- Hidden YouTube Player Container (managed by YT.Player API) -->
     <div class="fixed -bottom-96 -right-96 w-10 h-10 pointer-events-none opacity-0 overflow-hidden" aria-hidden="true">
-      <iframe
-        #ytIframe
-        id="love-have-yt-frame"
-        width="200"
-        height="200"
-        [src]="trustedIframeSrc()"
-        title="LOVE HAVE Garden Music"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+      <div id="love-have-yt-player"></div>
     </div>
 
     <!-- Floating Vintage Music Box Widget -->
     <div class="fixed bottom-4 right-4 z-40 transition-all duration-300">
       @if (isExpanded()) {
         <!-- Expanded Panel -->
-        <div class="w-72 sm:w-80 bg-white/95 backdrop-blur-md border border-[#E9D5DA] rounded-2xl p-4 vintage-shadow-lg text-[#78666A] animate-slide-up">
+        <div class="w-72 sm:w-84 bg-white/95 backdrop-blur-md border border-[#E9D5DA] rounded-2xl p-4 vintage-shadow-lg text-[#78666A] animate-slide-up">
           <!-- Header with Close/Minimize -->
           <div class="flex items-center justify-between border-b border-[#F2E5E8] pb-2 mb-3">
             <div class="flex items-center gap-2">
@@ -52,7 +36,7 @@ import { Sound } from '../../services/sound';
             <button
               type="button"
               (click)="toggleExpanded()"
-              class="w-6 h-6 rounded-full hover:bg-[#FDF2F4] flex items-center justify-center text-[#A69094] transition-colors"
+              class="w-6 h-6 rounded-full hover:bg-[#FDF2F4] flex items-center justify-center text-[#A69094] transition-colors cursor-pointer"
               title="Thu nhỏ"
             >
               <mat-icon class="text-sm">keyboard_arrow_down</mat-icon>
@@ -73,7 +57,7 @@ import { Sound } from '../../services/sound';
 
             <!-- Title & Status -->
             <div class="overflow-hidden flex-1">
-              <p class="text-xs font-medium text-[#5B464B] truncate" [title]="music.trackTitle()">
+              <p class="text-xs font-semibold text-[#5B464B] truncate" [title]="music.trackTitle()">
                 {{ music.trackTitle() }}
               </p>
               <p class="text-[11px] text-[#A69094] flex items-center gap-1 mt-0.5">
@@ -83,40 +67,74 @@ import { Sound } from '../../services/sound';
             </div>
           </div>
 
-          <!-- Controls: Play/Pause, Mute, Volume -->
-          <div class="flex items-center justify-between gap-2 bg-[#FFF7ED]/70 rounded-xl p-2 mb-3 border border-[#F3E5E8]">
-            <button
-              type="button"
-              (click)="togglePlay()"
-              class="w-9 h-9 rounded-full bg-[#C98F9E] hover:bg-[#B77A8A] text-white flex items-center justify-center shadow-xs transition-all active:scale-95"
-              [title]="music.isPlaying() ? 'Tạm dừng' : 'Phát nhạc'"
-            >
-              <mat-icon class="text-lg">
-                {{ music.isPlaying() ? 'pause' : 'play_arrow' }}
-              </mat-icon>
-            </button>
-
-            <!-- Volume Slider -->
-            <div class="flex items-center gap-1.5 flex-1 mx-2">
+          <!-- Controls: Prev, Play/Pause, Next & Volume -->
+          <div class="flex flex-col gap-2.5 bg-[#FFF7ED]/70 rounded-xl p-2.5 mb-3 border border-[#F3E5E8]">
+            <div class="flex items-center justify-between gap-2">
+              <!-- Prev Track Button -->
               <button
                 type="button"
-                (click)="toggleMute()"
-                class="text-[#A69094] hover:text-[#5B464B] transition-colors"
-                [title]="music.isMuted() ? 'Bật âm' : 'Tắt tiếng'"
+                (click)="onPrevTrack()"
+                class="w-8 h-8 rounded-full bg-white hover:bg-[#FDF2F4] text-[#78666A] flex items-center justify-center border border-[#E9D5DA] transition-all active:scale-95 cursor-pointer shadow-2xs"
+                title="Bài trước"
               >
-                <mat-icon class="text-base">
-                  {{ music.isMuted() || music.volume() === 0 ? 'volume_off' : music.volume() < 40 ? 'volume_down' : 'volume_up' }}
+                <mat-icon class="text-base">skip_previous</mat-icon>
+              </button>
+
+              <!-- Play/Pause Button -->
+              <button
+                type="button"
+                (click)="togglePlay()"
+                class="w-10 h-10 rounded-full bg-[#C98F9E] hover:bg-[#B77A8A] text-white flex items-center justify-center shadow-xs transition-all active:scale-95 cursor-pointer"
+                [title]="music.isPlaying() ? 'Tạm dừng' : 'Phát nhạc'"
+              >
+                <mat-icon class="text-xl">
+                  {{ music.isPlaying() ? 'pause' : 'play_arrow' }}
                 </mat-icon>
               </button>
-              <input
-                type="range"
-                min="0"
-                max="100"
-                [value]="music.volume()"
-                (input)="onVolumeChange($event)"
-                class="w-full h-1 bg-[#EBCBD4] rounded-lg appearance-none cursor-pointer accent-[#C98F9E]"
-              />
-              <span class="text-[10px] text-[#A69094] w-6 text-right font-mono">{{ music.volume() }}%</span>
+
+              <!-- Next Track Button -->
+              <button
+                type="button"
+                (click)="onNextTrack()"
+                class="w-8 h-8 rounded-full bg-white hover:bg-[#FDF2F4] text-[#78666A] flex items-center justify-center border border-[#E9D5DA] transition-all active:scale-95 cursor-pointer shadow-2xs"
+                title="Bài tiếp theo"
+              >
+                <mat-icon class="text-base">skip_next</mat-icon>
+              </button>
+
+              <!-- Volume & Mute -->
+              <div class="flex items-center gap-1.5 flex-1 ml-1.5">
+                <button
+                  type="button"
+                  (click)="toggleMute()"
+                  class="text-[#A69094] hover:text-[#5B464B] transition-colors cursor-pointer"
+                  [title]="music.isMuted() ? 'Bật âm' : 'Tắt tiếng'"
+                >
+                  <mat-icon class="text-base">
+                    {{ music.isMuted() || music.volume() === 0 ? 'volume_off' : music.volume() < 40 ? 'volume_down' : 'volume_up' }}
+                  </mat-icon>
+                </button>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  [value]="music.volume()"
+                  (input)="onVolumeChange($event)"
+                  class="w-full h-1 bg-[#EBCBD4] rounded-lg appearance-none cursor-pointer accent-[#C98F9E]"
+                />
+                <span class="text-[10px] text-[#A69094] w-6 text-right font-mono">{{ music.volume() }}%</span>
+              </div>
+            </div>
+
+            <!-- Auto-play & Auto-switch notification badge -->
+            <div class="flex items-center justify-between text-[10px] text-[#8E7479] pt-1 border-t border-[#F1E4E7]">
+              <span class="flex items-center gap-1">
+                <mat-icon class="text-[12px] text-[#C98F9E]">autorenew</mat-icon>
+                <span>Tự động chuyển bài khi hết nhạc</span>
+              </span>
+              <span class="text-[#2E7D32] bg-emerald-50 px-1.5 py-0.5 rounded text-[9px] font-medium border border-emerald-100">
+                Đang bật
+              </span>
             </div>
           </div>
 
@@ -136,35 +154,38 @@ import { Sound } from '../../services/sound';
             <button
               type="button"
               (click)="showUrlPrompt.set(!showUrlPrompt())"
-              class="hover:text-[#5B464B] text-[#C98F9E] font-medium transition-colors"
+              class="hover:text-[#5B464B] text-[#C98F9E] font-medium transition-colors cursor-pointer"
             >
               {{ showUrlPrompt() ? 'Đóng cài đặt' : 'Đổi link nhạc' }}
             </button>
           </div>
 
-          <!-- Playlist Selection -->
-          <div class="mt-2 mb-3 max-h-32 overflow-y-auto pr-1 flex flex-col gap-1 custom-scrollbar">
+          <!-- Playlist Selection (5 tracks) -->
+          <div class="mt-2 mb-2 max-h-36 overflow-y-auto pr-1 flex flex-col gap-1 custom-scrollbar">
             @for (track of music.playlist(); track track.id; let idx = $index) {
               <button
                 type="button"
                 (click)="selectTrack(idx)"
-                class="flex items-center gap-2 p-1.5 rounded-lg text-left transition-all"
+                class="flex items-center gap-2 p-1.5 rounded-lg text-left transition-all cursor-pointer"
                 [class.bg-[#C98F9E]/10]="music.currentTrackIndex() === idx"
                 [class.text-[#C98F9E]]="music.currentTrackIndex() === idx"
                 [class.font-semibold]="music.currentTrackIndex() === idx"
                 [class.hover:bg-[#FDF2F4]]="music.currentTrackIndex() !== idx"
               >
-                <mat-icon class="text-sm">
+                <mat-icon class="text-sm shrink-0">
                   {{ music.currentTrackIndex() === idx ? 'volume_up' : 'music_note' }}
                 </mat-icon>
-                <span class="text-[11px] truncate flex-1">{{ track.title }}</span>
+                <span class="text-[11px] truncate flex-1">{{ idx + 1 }}. {{ track.title }}</span>
+                @if (music.currentTrackIndex() === idx && music.isPlaying()) {
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#C98F9E] animate-ping shrink-0"></span>
+                }
               </button>
             }
           </div>
 
           <!-- Custom YouTube URL Input -->
           @if (showUrlPrompt()) {
-            <div class="mt-3 pt-3 border-t border-[#F2E5E8] flex flex-col gap-2">
+            <div class="mt-2 pt-2 border-t border-[#F2E5E8] flex flex-col gap-1.5">
               <label for="yt-music-input" class="text-[10px] text-[#8E7479] font-medium">Nhập đường dẫn YouTube mới:</label>
               <div class="flex gap-1.5">
                 <input
@@ -177,7 +198,7 @@ import { Sound } from '../../services/sound';
                 <button
                   type="button"
                   (click)="applyCustomUrl()"
-                  class="px-2.5 py-1 text-xs bg-[#C98F9E] text-white rounded-lg hover:bg-[#B77A8A] transition-colors"
+                  class="px-2.5 py-1 text-xs bg-[#C98F9E] text-white rounded-lg hover:bg-[#B77A8A] transition-colors cursor-pointer"
                 >
                   Lưu
                 </button>
@@ -187,28 +208,57 @@ import { Sound } from '../../services/sound';
         </div>
       } @else {
         <!-- Minimized Floating Pill Button -->
-        <button
-          type="button"
-          (click)="toggleExpanded()"
-          class="group flex items-center gap-2.5 px-3.5 py-2 rounded-full bg-white/90 hover:bg-white backdrop-blur-md border border-[#E9D5DA] text-[#5B464B] vintage-shadow hover:scale-105 active:scale-95 transition-all cursor-pointer"
-          title="Nhạc nền khu vườn"
-        >
-          <!-- Spinning Flower Disc Indicator -->
-          <div
-            class="w-6 h-6 rounded-full border border-[#C98F9E] flex items-center justify-center bg-[#FFF7ED]"
-            [class.animate-spin-slow]="music.isPlaying()"
+        <div class="flex items-center gap-1 bg-white/90 hover:bg-white backdrop-blur-md border border-[#E9D5DA] rounded-full p-1 pl-2.5 vintage-shadow hover:shadow-md transition-all">
+          <button
+            type="button"
+            (click)="toggleExpanded()"
+            class="group flex items-center gap-2 text-[#5B464B] cursor-pointer"
+            title="Mở bảng nhạc nền"
           >
-            <mat-icon class="text-xs text-[#C98F9E]">local_florist</mat-icon>
-          </div>
+            <!-- Spinning Flower Disc Indicator -->
+            <div
+              class="w-6 h-6 rounded-full border border-[#C98F9E] flex items-center justify-center bg-[#FFF7ED]"
+              [class.animate-spin-slow]="music.isPlaying()"
+            >
+              <mat-icon class="text-xs text-[#C98F9E]">local_florist</mat-icon>
+            </div>
 
-          <span class="text-xs font-serif-vintage font-medium hidden sm:inline">
-            {{ music.isPlaying() ? 'Nhạc vườn ♫' : 'Bật nhạc ♪' }}
-          </span>
+            <span class="text-xs font-serif-vintage font-medium hidden sm:inline max-w-[110px] truncate">
+              {{ music.trackTitle() }}
+            </span>
+          </button>
 
-          <mat-icon class="text-sm text-[#A69094] group-hover:text-[#C98F9E] transition-colors">
-            {{ music.isPlaying() ? 'volume_up' : 'volume_mute' }}
-          </mat-icon>
-        </button>
+          <!-- Quick Toggle Play Button in Pill -->
+          <button
+            type="button"
+            (click)="togglePlay()"
+            class="w-7 h-7 rounded-full hover:bg-[#FDF2F4] flex items-center justify-center text-[#C98F9E] transition-colors cursor-pointer"
+            [title]="music.isPlaying() ? 'Tạm dừng' : 'Phát nhạc'"
+          >
+            <mat-icon class="text-base">
+              {{ music.isPlaying() ? 'pause' : 'play_arrow' }}
+            </mat-icon>
+          </button>
+
+          <!-- Quick Next Track Button in Pill -->
+          <button
+            type="button"
+            (click)="onNextTrack()"
+            class="w-7 h-7 rounded-full hover:bg-[#FDF2F4] flex items-center justify-center text-[#A69094] hover:text-[#5B464B] transition-colors cursor-pointer"
+            title="Chuyển bài tiếp theo"
+          >
+            <mat-icon class="text-sm">skip_next</mat-icon>
+          </button>
+
+          <button
+            type="button"
+            (click)="toggleExpanded()"
+            class="w-6 h-7 rounded-r-full hover:bg-[#FDF2F4] flex items-center justify-center text-[#A69094] cursor-pointer pr-1"
+            title="Mở danh sách nhạc"
+          >
+            <mat-icon class="text-xs">expand_less</mat-icon>
+          </button>
+        </div>
       }
     </div>
   `,
@@ -235,33 +285,156 @@ import { Sound } from '../../services/sound';
     }
   `],
 })
-export class MusicPlayer {
+export class MusicPlayer implements OnDestroy {
   readonly music = inject(Music);
   private sound = inject(Sound);
-  private sanitizer = inject(DomSanitizer);
-
-  readonly iframeRef = viewChild<ElementRef<HTMLIFrameElement>>('ytIframe');
 
   readonly isExpanded = signal<boolean>(false);
   readonly showUrlPrompt = signal<boolean>(false);
   readonly customUrlControl = new FormControl('');
 
-  readonly trustedIframeSrc = computed<SafeResourceUrl>(() => {
-    const id = this.music.videoId();
-    const origin = typeof window !== 'undefined' ? window.location.origin : '';
-    // Removed loop=1&playlist=${id} to handle "ended" event manually
-    const url = `https://www.youtube-nocookie.com/embed/${id}?enablejsapi=1&version=3&controls=0&showinfo=0&rel=0&iv_load_policy=3&origin=${encodeURIComponent(origin)}`;
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private ytPlayerInstance: any = null;
+  private unlockListener: (() => void) | null = null;
+  private checkInterval: ReturnType<typeof setInterval> | null = null;
 
   constructor() {
     afterNextRender(() => {
-      const el = this.iframeRef()?.nativeElement;
-      if (el) {
-        this.music.registerIframe(el);
-      }
       this.customUrlControl.setValue(this.music.youtubeUrl());
+      this.initYouTubePlayer();
+      this.setupAutoplayUnlockGesture();
     });
+  }
+
+  ngOnDestroy(): void {
+    if (this.checkInterval) {
+      clearInterval(this.checkInterval);
+    }
+    if (this.unlockListener && typeof window !== 'undefined') {
+      window.removeEventListener('click', this.unlockListener);
+      window.removeEventListener('touchstart', this.unlockListener);
+      window.removeEventListener('keydown', this.unlockListener);
+    }
+  }
+
+  private initYouTubePlayer(): void {
+    if (typeof window === 'undefined') return;
+
+    const createPlayer = () => {
+      if (this.ytPlayerInstance) return;
+      try {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const YT = (window as any).YT;
+        if (!YT || !YT.Player) return;
+
+        this.ytPlayerInstance = new YT.Player('love-have-yt-player', {
+          height: '200',
+          width: '200',
+          videoId: this.music.currentTrack().id,
+          playerVars: {
+            autoplay: 1,
+            controls: 0,
+            disablekb: 1,
+            fs: 0,
+            modestbranding: 1,
+            rel: 0,
+            showinfo: 0,
+            iv_load_policy: 3,
+            origin: window.location.origin,
+          },
+          events: {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            onReady: (event: any) => {
+              this.music.registerYTPlayer(event.target);
+              event.target.setVolume(this.music.volume());
+              if (this.music.isMuted()) {
+                event.target.mute();
+              }
+              // Attempt to auto play immediately
+              if (!this.music.userManuallyPaused()) {
+                try {
+                  event.target.playVideo();
+                  this.music.isPlaying.set(true);
+                } catch {
+                  // Handled by user gesture listener
+                }
+              }
+            },
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            onStateChange: (event: any) => {
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              const YTState = (window as any).YT?.PlayerState;
+              const state = event.data;
+              // 0 = ENDED: Automatic transition to next track
+              if (state === (YTState ? YTState.ENDED : 0)) {
+                this.music.nextTrack();
+              } else if (state === (YTState ? YTState.PLAYING : 1)) {
+                this.music.isPlaying.set(true);
+              } else if (state === (YTState ? YTState.PAUSED : 2)) {
+                if (this.music.userManuallyPaused()) {
+                  this.music.isPlaying.set(false);
+                }
+              }
+            },
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            onError: (event: any) => {
+              console.warn('YouTube error encountered code:', event.data, 'Auto-skipping to next song...');
+              setTimeout(() => {
+                this.music.nextTrack();
+              }, 1200);
+            },
+          },
+        });
+      } catch (err) {
+        console.warn('YT.Player instantiation caught:', err);
+      }
+    };
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    if (typeof (window as any).YT !== 'undefined' && (window as any).YT.Player) {
+      createPlayer();
+    } else {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const prevCallback = (window as any).onYouTubeIframeAPIReady;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (window as any).onYouTubeIframeAPIReady = () => {
+        if (typeof prevCallback === 'function') prevCallback();
+        createPlayer();
+      };
+
+      // Periodic check if script loaded
+      let attempts = 0;
+      this.checkInterval = setInterval(() => {
+        attempts++;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        if (typeof (window as any).YT !== 'undefined' && (window as any).YT.Player) {
+          if (this.checkInterval) clearInterval(this.checkInterval);
+          createPlayer();
+        } else if (attempts > 40) {
+          if (this.checkInterval) clearInterval(this.checkInterval);
+        }
+      }, 200);
+    }
+  }
+
+  private setupAutoplayUnlockGesture(): void {
+    if (typeof window === 'undefined') return;
+
+    this.unlockListener = () => {
+      if (!this.music.isPlaying() && !this.music.userManuallyPaused()) {
+        this.music.play();
+      }
+      if (this.unlockListener) {
+        window.removeEventListener('click', this.unlockListener);
+        window.removeEventListener('touchstart', this.unlockListener);
+        window.removeEventListener('keydown', this.unlockListener);
+        this.unlockListener = null;
+      }
+    };
+
+    window.addEventListener('click', this.unlockListener, { passive: true });
+    window.addEventListener('touchstart', this.unlockListener, { passive: true });
+    window.addEventListener('keydown', this.unlockListener, { passive: true });
   }
 
   toggleExpanded(): void {
@@ -272,6 +445,16 @@ export class MusicPlayer {
   togglePlay(): void {
     this.sound.playClick();
     this.music.togglePlay();
+  }
+
+  onPrevTrack(): void {
+    this.sound.playClick();
+    this.music.prevTrack();
+  }
+
+  onNextTrack(): void {
+    this.sound.playClick();
+    this.music.nextTrack();
   }
 
   toggleMute(): void {
@@ -298,21 +481,6 @@ export class MusicPlayer {
       this.sound.playChime();
       this.music.setCustomYoutubeUrl(val);
       this.showUrlPrompt.set(false);
-    }
-  }
-
-  onMessage(event: MessageEvent): void {
-    // YouTube iframe API sends messages as JSON strings
-    if (typeof event.data === 'string') {
-      try {
-        const data = JSON.parse(event.data);
-        if (data.event === 'onStateChange' && data.info === 0) {
-          // info 0 is the "ENDED" state in YT API
-          this.music.nextTrack();
-        }
-      } catch {
-        // Not a valid JSON or not from YT
-      }
     }
   }
 }

@@ -19,6 +19,7 @@ export class Music {
   public readonly hasStartedOnce = signal<boolean>(false);
   public readonly isPlayerReady = signal<boolean>(false);
   public readonly isEmbedRestricted = signal<boolean>(false);
+  public readonly autoPlayNext = signal<boolean>(true);
   
   public readonly trackTitle = computed(() => this.currentTrack().title);
 
@@ -26,6 +27,8 @@ export class Music {
     return this.extractVideoId(this.youtubeUrl());
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private ytPlayer: any = null;
   private playerElement: HTMLIFrameElement | null = null;
 
   constructor() {
@@ -65,6 +68,12 @@ export class Music {
     return '5qap5aO4i9A';
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  public registerYTPlayer(player: any): void {
+    this.ytPlayer = player;
+    this.isPlayerReady.set(true);
+  }
+
   public registerIframe(iframe: HTMLIFrameElement): void {
     this.playerElement = iframe;
     this.isPlayerReady.set(true);
@@ -79,6 +88,13 @@ export class Music {
   public play(): void {
     this.userManuallyPaused.set(false);
     this.isPlaying.set(true);
+    if (this.ytPlayer && typeof this.ytPlayer.playVideo === 'function') {
+      try {
+        this.ytPlayer.playVideo();
+      } catch {
+        // Ignored
+      }
+    }
     this.sendCommand('playVideo');
     this.updateVolume(this.volume());
   }
@@ -86,6 +102,13 @@ export class Music {
   public pause(): void {
     this.userManuallyPaused.set(true);
     this.isPlaying.set(false);
+    if (this.ytPlayer && typeof this.ytPlayer.pauseVideo === 'function') {
+      try {
+        this.ytPlayer.pauseVideo();
+      } catch {
+        // Ignored
+      }
+    }
     this.sendCommand('pauseVideo');
   }
 
@@ -103,12 +126,33 @@ export class Music {
     if (typeof window !== 'undefined') {
       localStorage.setItem('love_have_music_volume', String(clamped));
     }
+    if (this.ytPlayer && typeof this.ytPlayer.setVolume === 'function') {
+      try {
+        this.ytPlayer.setVolume(clamped);
+      } catch {
+        // Ignored
+      }
+    }
     this.updateVolume(clamped);
   }
 
   public toggleMute(): void {
     const nextMute = !this.isMuted();
     this.isMuted.set(nextMute);
+    if (this.ytPlayer) {
+      try {
+        if (nextMute && typeof this.ytPlayer.mute === 'function') {
+          this.ytPlayer.mute();
+        } else if (!nextMute && typeof this.ytPlayer.unMute === 'function') {
+          this.ytPlayer.unMute();
+          if (typeof this.ytPlayer.setVolume === 'function') {
+            this.ytPlayer.setVolume(this.volume());
+          }
+        }
+      } catch {
+        // Ignored
+      }
+    }
     if (nextMute) {
       this.sendCommand('mute');
     } else {
@@ -120,9 +164,21 @@ export class Music {
   public selectTrack(index: number): void {
     if (index >= 0 && index < this.playlist().length) {
       this.currentTrackIndex.set(index);
-      if (this.isPlaying()) {
-        // Restart play for new track
-        setTimeout(() => this.play(), 200);
+      const track = this.playlist()[index];
+      const vid = this.extractVideoId(track.url);
+      if (this.ytPlayer && typeof this.ytPlayer.loadVideoById === 'function') {
+        try {
+          this.ytPlayer.loadVideoById(vid);
+          this.isPlaying.set(true);
+          this.userManuallyPaused.set(false);
+        } catch {
+          setTimeout(() => this.play(), 200);
+        }
+      } else {
+        if (this.isPlaying()) {
+          // Restart play for new track fallback
+          setTimeout(() => this.play(), 200);
+        }
       }
     }
   }
@@ -153,6 +209,14 @@ export class Music {
       nextIndex = 0; // Loop back to start
     }
     this.selectTrack(nextIndex);
+  }
+
+  public prevTrack(): void {
+    let prevIndex = this.currentTrackIndex() - 1;
+    if (prevIndex < 0) {
+      prevIndex = this.playlist().length - 1;
+    }
+    this.selectTrack(prevIndex);
   }
 
   private updateVolume(vol: number): void {

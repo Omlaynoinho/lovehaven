@@ -17,6 +17,7 @@ import { MailboxSection } from './components/mailbox/mailbox';
 import { AboutGarden } from './components/about-garden/about-garden';
 import { CharacterService } from './services/character';
 import { Sound } from './services/sound';
+import { Music } from './services/music';
 import { PublicCharacter } from './models/character.model';
 
 @Component({
@@ -41,6 +42,7 @@ import { PublicCharacter } from './models/character.model';
 export class App {
   readonly charService = inject(CharacterService);
   readonly sound = inject(Sound);
+  readonly music = inject(Music);
 
   readonly hasEnteredGarden = signal<boolean>(false);
   readonly searchControl = new FormControl('');
@@ -51,6 +53,8 @@ export class App {
       const entered = sessionStorage.getItem('love_have_entered_session');
       if (entered === 'true') {
         this.hasEnteredGarden.set(true);
+        // Automatically start music if returning user
+        setTimeout(() => this.music.startGardenMusic(), 300);
       }
     }
 
@@ -65,6 +69,7 @@ export class App {
     if (typeof window !== 'undefined') {
       sessionStorage.setItem('love_have_entered_session', 'true');
     }
+    this.music.startGardenMusic();
   }
 
   reopenWelcomeEnvelope(): void {
