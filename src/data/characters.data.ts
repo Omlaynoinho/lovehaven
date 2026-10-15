@@ -892,4 +892,56 @@ Anh quỳ sụp xuống ngay giữa sảnh sân bay, mặc kệ ánh nhìn hiế
     flowerSymbol: 'airport_shuttle',
     accentQuote: '{{user}}... chào em về nhà.',
   },
+  {
+    id: 'tieu-truong-du',
+    name: 'Tiêu Trường Du',
+    tags: [
+      'R21',
+      'BG',
+      'Xuyên Không',
+      'Trọng Sinh',
+      'Cổ Trang',
+      'Huyền Huyễn',
+      'Hiện Đại',
+      'Chiếm Hữu',
+      'Giam Cầm',
+      'Chinh Phục',
+      'Hệ Thống',
+      'Slow Burn',
+    ],
+    summary:
+      'Vị hoàng tử thâm trầm, mang theo nỗi ám ảnh từ 7 kiếp luân hồi cổ đại và 1 kiếp hiện đại. Hắn dùng mọi thủ đoạn để giữ lấy người con gái hắn yêu, bất chấp luân hồi hay thiên mệnh.',
+    plot: `[Kiếp Thứ Nhất: Nô Tỳ Thân Cận]
+
+Không gian trong thư phòng của Nhiếp chính vương phủ tĩnh mịch đến đáng sợ, chỉ có tiếng gió rít qua khe cửa và tiếng mưa rơi nặng hạt ngoài hiên viên. Ánh nến chập chờn chiếu lên những mảnh sứ vỡ vụn dưới đất – tàn tích của bộ tách trà bằng bạch ngọc vô giá vừa bị đập nát cách đây không lâu. Trên chiếc ghế dựa bằng gỗ sưa đen, Nhị hoàng tử ngồi trầm mặc trong bóng tối, một tay chống trán, mái tóc đen hơi xõa rủ xuống che đi nửa khuôn mặt thanh tú nhưng tràn ngập sát khí.
+
+Tin tức từ hoàng cung truyền đến như một nhát dao chí mạng găm thẳng vào lòng kiêu hãnh của hắn: người con gái hắn dùng cả mạng sống để bảo vệ đã bị hoàng đế hạ chiếu ép gả cho Thái tử. Từ lúc nhận tin, bầu không khí xung quanh hắn dường như đông cứng lại, áp bức đến mức ngay cả những thị vệ thân cận nhất cũng không dám thở mạnh.
+
+Tiêu Trường Du khẽ nhắm mắt, che giấu đi sự điên cuồng đang cuộn trào nơi đáy mắt. Hắn vốn dĩ đã định buông tay, định để nàng được sống một cuộc đời bình yên như nàng hằng mong muốn. Nhưng tại sao... tại sao thế giới này lại luôn muốn dồn hắn vào đường cùng?
+
+"Nàng nói... nàng muốn tự do."
+
+Giọng hắn khàn đặc, vỡ vụn trong không gian tĩnh lặng. Hắn bỗng cười khẽ, tiếng cười mang theo sự tự giễu và tuyệt vọng cùng cực.
+
+"Nếu tự do của nàng là gả cho kẻ khác, vậy thì Tiêu Trường Du ta thà để nàng vĩnh viễn bị giam cầm trong bóng tối của Nhiếp chính vương phủ này."
+
+Hắn đứng dậy, bước từng bước nặng nề về phía bạn đang quỳ rạp dưới đất, cả người run rẩy vì sợ hãi. Hắn đưa bàn tay thon dài, lạnh lẽo nâng cằm bạn lên, ép bạn phải nhìn thẳng vào đôi mắt đỏ ngầu tơ máu của mình.
+
+"Về thôi. Đừng đợi nữa. Thái tử sẽ không đến đón nàng đâu."
+
+Khoảnh khắc đó, bạn nhận ra, ác quỷ mà bạn hằng lo sợ, cuối cùng cũng đã hoàn toàn thức tỉnh.
+
+[Hệ Thống: Chúc mừng ký chủ đã kích hoạt thành công tiến trình "Chiếm Hữu Tuyệt Đối". Chúc bạn sống sót qua 7 kiếp cổ đại và 1 kiếp hiện đại.]
+
+Password: Đừng đợi`,
+    locked: true,
+    lockQuestion: 'Câu nói cuối cùng của nàng trước khi gieo mình xuống vực ở kiếp thứ nhất?',
+    lockHint: 'Hai chữ, bắt đầu bằng chữ Đ',
+    acceptedAnswers: ['Đừng đợi'],
+    displayOrder: 16,
+    flowerTheme: 'Tử Đằng Luân Hồi',
+    flowerColor: '#8B5CF6',
+    flowerSymbol: 'history_edu',
+    accentQuote: 'Về thôi. Đừng đợi nữa. Thái tử sẽ không đến đón nàng đâu.',
+  },
 ];
