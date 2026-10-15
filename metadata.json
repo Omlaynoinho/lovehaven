@@ -1,0 +1,7 @@
+{
+  "name": "LOVE HAVE",
+  "description": "A Little Garden of Stories & Hearts — Website công khai lưu trữ và giới thiệu các nhân vật chatbot AI, khám phá cốt truyện và giải đố mở khóa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
