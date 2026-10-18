@@ -43,5 +43,10 @@ service cloud.firestore {
       // Letters cannot be modified
       allow update: if false;
     }
+
+    // Test connection endpoint for verifying Firestore connectivity
+    match /test/connection {
+      allow read: if true;
+    }
   }
 }

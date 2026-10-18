@@ -88,7 +88,10 @@ export class CharacterService {
 
   private initFirestoreSync(): void {
     if (typeof window === 'undefined') return;
-    testConnection().then(() => {
+    testConnection().then((isConnected) => {
+      if (!isConnected) {
+        return;
+      }
       try {
         subscribeToLetters(
           (firestoreLetters) => {

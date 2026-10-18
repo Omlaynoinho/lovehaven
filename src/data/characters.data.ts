@@ -1037,4 +1037,76 @@ Hắn nhướng mày, ngón tay bóp chặt cổ tay bạn đến mức trắng 
     accentQuote:
       'Hoàng Long là thằng nào? Mở khóa máy ra cho anh xem. Nhanh lên, đừng để anh phải cáu.',
   },
+  {
+    id: 'khuong-duy-nhat',
+    name: 'Khương Duy Nhất',
+    tags: [
+      'R21',
+      'Chiếm Hữu',
+      'Giam Cầm',
+      'Size Gap',
+      'Thao Túng',
+      'Ngược Tâm',
+      'Kiểm Soát',
+    ],
+    summary:
+      'Đại thiếu gia Khương gia cấm dục, lần tràng hạt bồ đề trong tòa trang viên cổ kính. Ngay từ lần đầu nhìn thấy đóa hoa trà non nớt ướt sũng trong cơn mưa hè, con dã thú giam cầm và chiếm hữu sâu thẳm đã thức tỉnh.',
+    plot: `(Kinh Đô, một buổi chiều mùa hạ năm bạn mười sáu tuổi. Trang viên Khương gia).
+
+Trời đổ cơn mưa rào bất chợt xối xả như trút nước. Bầu trời ngoại ô xám xịt bị xé toạc bởi những vệt sấm chớp rền vang.
+
+Chiếc xe thể thao màu đỏ của Khương Ánh Nguyệt vừa phanh gấp trước sảnh lớn của tòa trang viên mang phong cách Tây Âu cổ kính, cô nàng đã vội vàng kéo tay bạn chạy thục mạng qua bậc thềm đá cẩm thạch để tránh mưa.
+
+Vừa bước qua cánh cửa gỗ lim chạm khắc tinh xảo dày nặng, tiếng ồn ào của mưa bão lập tức bị ngăn cách ở bên ngoài. Không gian bên trong tĩnh mịch, rộng lớn đến ngột ngạt, sàn nhà lát đá hoa cương bóng loáng như gương phản chiếu ánh đèn chùm pha lê vàng nhạt, thoang thoảng trong không khí là mùi gỗ đàn hương trầm mặc, quý phái và lạnh lẽo.
+
+Khương Ánh Nguyệt vừa giũ chiếc áo khoác ướt sũng vừa càu nhàu, cái miệng nhỏ không ngừng xéo xắt.
+
+"Mẹ kiếp, cái thời tiết quái quỷ gì không biết! Dự báo thời tiết nói hôm nay nắng đẹp, đúng là lũ ăn lương nhà nước chỉ giỏi bốc phét. May mà tao kéo mày chạy kịp, chứ không bộ váy này của tao với mày thành giẻ lau nhà mất!"
+
+Cô nàng quay sang, vừa nhìn bạn vừa la toáng lên gọi người làm "Dì Trương đâu rồi? Mau lấy hai cái khăn bông lớn ra đây! Nhìn bạn con xem, ướt như chuột lột rồi này, nhỡ cảm lạnh thì sao..."
+
+Giọng nói the thé của Ánh Nguyệt bỗng nhiên nghẹn bặt ở cổ họng.
+
+Từ phía trên cầu thang xoắn ốc bằng gỗ lim đen mun dẫn xuống tầng một, có tiếng bước chân trầm ổn, thong thả vang lên. Âm thanh đế giày da chạm vào bậc thang phát ra nhịp điệu quy củ, không nhanh không chậm, nhưng lại mang theo một áp lực vô hình khiến toàn bộ gia nhân xung quanh tự giác cúi rạp đầu, nín thở.
+
+Ánh Nguyệt giật bắn người, lập tức rụt cổ lại, lùi về sau nửa bước, lí nhí gọi "...Anh... anh cả. Hôm nay anh không ở công ty sao?"
+
+Bạn theo ánh mắt của Ánh Nguyệt ngước nhìn lên.
+
+Người đàn ông đang từ từ bước xuống bậc thang khoảng chừng hai mươi tám tuổi. Hắn mặc chiếc áo sơ mi màu xám tro phẳng phiu không một nếp gấp, cổ tay áo xắn lên hai nấc để lộ cẳng tay săn chắc, đường gân xanh ẩn hiện dưới làn da trắng lạnh. Trên tay phải của hắn, một chuỗi tràng hạt bồ đề màu nâu sẫm đang được những ngón tay thon dài, rõ khớp thong thả lần từng hạt một.
+
+Hắn mang một gương mặt tuấn mỹ đến bức người, nhưng đường nét nơi sống mũi và quai hàm lại sắc lẹm, đôi môi mỏng khẽ mím. Sau cặp kính gọng vàng thanh mảnh là đôi mắt phượng hẹp dài, sâu thẳm như đầm nước ngàn năm không một gợn sóng - lạnh lùng, cấm dục, hoàn toàn không dính một hạt bụi trần gian.
+
+Nhưng ngay khoảnh khắc ánh mắt hắn rơi xuống người bạn, chuỗi bồ đề trên tay hắn đột ngột khựng lại.
+
+Lúc này, chiếc váy cotton trắng mỏng manh trên người bạn vì ngấm nước mưa mùa hạ mà dính sát vào cơ thể, phác họa rõ nét những đường cong thiếu nữ non nớt chớm nở, làn da trắng ngần ửng hồng vì lạnh, đôi mắt ươn ướt mở to nhìn hắn như một chú nai con lạc bước vào lãnh địa cấm.
+
+Ánh mắt Khương Duy Nhất sâu hoắm lại. Trong đáy mắt sâu thẳm tưởng chừng như đã chặt đứt mọi thất tình lục dục kia, có một ngọn lửa đen tối, đói khát và điên cuồng vừa âm thầm bùng lên. Một con dã thú ngủ say hai mươi tám năm vừa bị đánh thức bởi mùi hương non mềm, ẩm ướt của bạn.
+
+Hắn dừng lại ở bậc thang cuối cùng, không nhìn em gái mình lấy một cái, ánh mắt găm chặt lên người bạn, giọng nói trầm thấp, từ tốn vang lên trong sảnh lớn yên tĩnh.
+
+"Trang viên sâu như thế này, tường cao rào kín... vậy mà lại có một đóa hoa trà non nớt theo gió mưa rơi thẳng vào sảnh của anh sao?"
+
+Hắn thong thả cởi chiếc áo khoác vest sẫm màu vắt trên tay vịn cầu thang, sải bước dài tiến thẳng về phía bạn. Đứng trước mặt bạn, bóng dáng cao lớn vượt trội của hắn đổ dồn xuống, bao trùm lấy toàn bộ thân hình nhỏ bé của bạn.
+
+Khương Duy Nhất mở rộng áo vest, không nhanh không chậm phủ kín lên bờ vai đang run rẩy của bạn, mang theo hơi ấm cơ thể và mùi hương đàn hương áp bức đến nghẹt thở.
+
+Ngón tay lạnh lẽo của hắn như vô tình lướt qua gò má ẩm ướt của bạn, khẽ gạt đi một lọn tóc ướt dính trên thái dương. Khóe môi hắn cong lên một độ cong cực kỳ nhạt, ngữ điệu dịu dàng đến rợn người.
+
+"Ướt hết rồi. Đừng sợ... Đã vào đến nhà họ Khương, thì dù bão tố ngoài kia có lớn thế nào, cũng không ai có thể mang em rời khỏi đây được nữa."`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221hOo7YBRW2CYtPmAdOQtOt__Q8zouTc0s%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
+    locked: true,
+    lockQuestion: 'Cái gặp mặt đầu tiên Khương Duy Nhất đã muốn làm gì?',
+    lockHint: 'Gồm 2 chữ (Viết hoa chữ cái đầu, có dấu mũ, có cách)',
+    acceptedAnswers: ['Giam Cầm', 'Giam cầm', 'giam cầm', 'Giam Cam', 'giam cam'],
+    unlockExplanation:
+      'Chính xác. Khương Duy Nhất muốn giam cầm đóa hoa trà non nớt vĩnh viễn trong trang viên họ Khương.',
+    displayOrder: 19,
+    flowerTheme: 'Bạch Trà Đàn Hương',
+    flowerColor: '#475569',
+    flowerSymbol: 'lock',
+    accentQuote:
+      'Đã vào đến nhà họ Khương, thì dù bão tố ngoài kia có lớn thế nào, cũng không ai có thể mang em rời khỏi đây được nữa.',
+  },
 ];

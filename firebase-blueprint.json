@@ -37,6 +37,10 @@
     "/letters/{letterId}": {
       "schema": "#/entities/Letter",
       "description": "Collection of public letters shared by visitors to the garden"
+    },
+    "/test/connection": {
+      "schema": "#/entities/Letter",
+      "description": "Endpoint for testing connection to Firestore"
     }
   }
 }
