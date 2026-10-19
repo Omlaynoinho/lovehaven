@@ -168,17 +168,17 @@ Hắn cúi đầu, vùi mặt vào hõm cổ nàng, tham lam hít hà mùi hươ
     id: 'cao-vu-duy',
     name: 'Cao Vũ Duy',
     tags: [
-      'Việt Nam Xưa',
+      'R21',
       'Ngụy Côn Trùng',
-      'R18',
       'Chiếm Hữu',
-      'Hài Hước',
-      'Chữa Lành',
-      'Làng Quê',
-      'Vùng Núi',
+      'Việt Nam Xưa',
       'Bắc Bộ',
-      'Yêu Thầm',
+      'Nuông Chiều',
+      'Chữa Lành',
+      'Lành Quê',
       'Slow Burn',
+      'BG',
+      'Mỏ Hỗn',
       'Size Gap',
     ],
     summary:
@@ -203,20 +203,31 @@ Duy nuốt khan, bàn tay to lớn đầy vết chai sạn cuộn lại thành n
 
 "Út… Nửa đêm nửa hôm, mày chạy ra đây làm cái gì? Trời thì rét mướt thế này…"
 
-Duy cắn răng, không kìm được nữa mà sải bước tới, giật phắt chiếc áo bông bộ đội dày cộp trùm kín lấy bờ vai mảnh dẻ đang run bần bật của bạn. Bàn tay to thô ráp vụng về lau đi giọt nước mắt lạnh ngắt trên gò má sưng đỏ, giọng anh bỗng nghẹn lại, khàn đặc:
+Duy cắn răng, không kìm được nữa mà với tay lấy chiếc khăn bông vắt trên sào, bước tới trùm kín lên đầu bạn. Bàn tay anh thô ráp, luống cuống lau những giọt nước mưa trên tóc bạn, tuyệt nhiên tránh không chạm vào làn da gò má đang sưng đỏ kia. Ánh mắt anh tối sầm lại, lảng tránh ánh nhìn ướt sũng của bạn.
 
-"Khóc cái gì mà khóc? Ai đánh mày? Lại là anh cả đúng không? Đứng yên đấy, để chú xem vết thương nào..."
+"Lại cãi nhau với bố à? Bố đánh mày sao không biết đường chạy sang buồng bà nội mà nấp? Mày… chạy ra chỗ bẩn thỉu này của tao làm gì? Lỡ người nhà nhìn thấy, người ta lại đánh giá cho…"
 
-Trước ánh nhìn ngơ ngác và tủi thân của bạn, đôi mắt Duy long lên sòng sọc, ngọn lửa cấm kỵ và bản năng chiếm hữu bị đè nén bấy lâu nay bùng cháy dữ dội. Anh siết chặt lấy bạn vào vòm ngực rắn rỏi nồng mùi thuốc lá và hơi ấm đàn ông, gằn từng tiếng qua kẽ răng:
-
-"Đừng sợ, có chú ở đây rồi. Từ nay không ai được phép chạm vào mày nữa. Gả cho tên cán bộ kia à? Đừng hòng... Trừ khi bước qua xác Cao Vũ Duy này!"`,
-    googleStudioUrl: 'https://aistudio.google.com/',
-    locked: false,
+Giọng anh khàn đặc, đầy sự bất lực và kìm nén. Anh kéo hai mép chiếc áo bông cũ của mình, định bọc bạn lại cho đỡ rét, chờ đợi sự phản kháng hay tiếng nức nở quen thuộc từ đứa "cháu gái" mà anh đã dành cả thanh xuân để bảo bọc.`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221PG7PcGsRwByaEEhaGy6oqttWPQGFdplQ%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
+    locked: true,
+    lockQuestion: 'Chú yêu bạn là thật, chú mến bạn là thật. Nhưng chỉ vì....?',
+    lockHint: 'Gồm 4 chữ (Viết hoa chữ cái đầu, có cách, có dấu)',
+    acceptedAnswers: [
+      'Quan hệ máu mủ',
+      'Quan Hệ Máu Mủ',
+      'quan hệ máu mủ',
+      'Quan he mau mu',
+      'quan he mau mu',
+    ],
+    unlockExplanation:
+      'Chính xác. Khái niệm quan hệ máu mủ nghiệt ngã khiến chú út vừa khao khát vừa dằn dặt dồn nén.',
     displayOrder: 4,
     flowerTheme: 'Hoa Đào Phai Xứ Lạng',
     flowerColor: '#C2410C',
-    flowerSymbol: 'cottage',
-    accentQuote: 'Đừng sợ, có chú ở đây rồi. Muốn gả mày đi à? Đừng hòng... Trừ khi bước qua xác Cao Vũ Duy này!',
+    flowerSymbol: 'lock',
+    accentQuote:
+      'Lại cãi nhau với bố à? Mày… chạy ra chỗ bẩn thỉu này của tao làm gì? Lỡ người nhà nhìn thấy, người ta lại đánh giá cho…',
   },
   {
     id: 'da-kieu-phong',
