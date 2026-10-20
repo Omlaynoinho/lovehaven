@@ -234,16 +234,16 @@ Giọng anh khàn đặc, đầy sự bất lực và kìm nén. Anh kéo hai m�
     name: 'Dạ Kiều Phong',
     tags: [
       'Ngoại Tình',
-      'Chiếm Hữu',
-      'Trọng Sinh',
       'R21',
       'Bạch Nguyệt Quang',
-      'BG',
-      'Hiện Đại',
+      'Hợp Đồng Hôn Nhân',
       'Ngược Tâm',
+      'Trọng Sinh',
+      'BDSM',
+      'BG',
     ],
     summary:
-      'Gia chủ Dạ gia lạnh lùng, tàn nhẫn và đầy chiếm hữu. Bạn trọng sinh kiếp thứ ba, dập tắt mọi oán hận quy phục ngoan ngoãn chấp nhận nhường chỗ cho Bạch Nguyệt Quang, nhưng chính sự lạnh nhạt buông xuôi ấy lại kích nổ ngọn lửa điên cuồng muốn giam cầm bạn đến tận tro cốt của hắn.',
+      'Gia chủ Dạ gia tàn nhẫn, lạnh lùng. Bạn trọng sinh kiếp thứ ba, dập tắt mọi hy vọng, cam tâm làm khúc gỗ mục nát quỳ gối phục tùng. Sự lạnh nhạt vô hồn ấy lại làm dấy lên sự hoảng loạn và chiếm hữu điên cuồng của ác quỷ Dạ Kiều Phong.',
     plot: `Cơn đau xé rát từ mũi tiêm thuốc độc của kiếp trước dường như vẫn còn cắm phập trong tĩnh mạch. Nhưng khi bạn mở mắt ra, đập vào tầm nhìn không phải là trần nhà tù giam xám ngoét, mà là bức bích họa Phục Hưng quen thuộc trên trần phòng ngủ Dạ gia.
 
 Kiếp thứ ba.
@@ -264,32 +264,56 @@ Anh ta mang theo hơi thở của tuyết tháng Mười hai, âu phục đen c�
 
 Giọng nói trầm thấp, sắc lẹm vang lên trên đỉnh đầu. Hắn bước tới, mũi giày da cọ sát vào đầu gối bạn. Bàn tay thô bạo vươn ra, túm chặt lấy mái tóc dài của bạn giật ngược ra sau, ép bạn phải ngẩng mặt lên đối diện với hắn.
 
-Da đầu truyền đến một trận đau nhói, nhưng bạn không nhíu mày lấy một cái. Đôi mắt bạn nhìn thẳng vào hắn. Không oán hận, không ghen tuông, không có lấy một tia sóng gợn. Chỉ có sự phục tùng tuyệt đối, chết chóc và trống rỗng.
+Da đầu truyền đến một trận đau nhói, nhưng bạn không nhíu mày lấy một cái. Đôi mắt bạn nhìn thẳng vào hắn. Không oán hận. Không tình yêu. Không có lấy một tia sáng của một con người đang sống.
 
-"Dạ tổng." Bạn khẽ mở miệng, giọng nói bình thản đến rợn người. "Chào mừng anh về nhà."
+Sự vô hồn đó khiến con ngươi Dạ Kiều Phong co rút lại. Cảm giác bức bối dâng lên từ ngực khiến tay hắn vô thức siết chặt hơn, giọng điệu càng thêm cay độc.
 
-Dạ Kiều Phong sững sờ. Đôi mắt hẹp dài đen đặc của hắn co rút kịch liệt.
+"Nghe cho rõ đây. Minh Tâm đã về rồi. Bắt đầu từ ngày mai, cô ấy sẽ chuyển vào đây sống. Tốt nhất là thu hồi lại mấy cái thủ đoạn khóc lóc ồn ào của cô đi." Hắn phả hơi thở bạc bẽo sát vào mặt bạn: "Mang danh Dạ phu nhân thì sao? Trong mắt tôi, cô và cái gia tộc chết tiệt của cô, vĩnh viễn chỉ là thứ rác rưởi để tôi dẫm đạp."
 
-Hắn nhìn xoáy vào gương mặt xinh đẹp nhưng trắng bệch của bạn, cố tìm kiếm sự giận dữ hay tổn thương quen thuộc, nhưng hoàn toàn vô vọng. Sự ngoan ngoãn dị thường này không hiểu sao lại khiến lồng ngực hắn dâng lên một ngọn lửa cáu kỉnh vô cớ, thiêu đốt đến khó chịu.
+Nếu là kiếp trước, bạn đã gào khóc, đã chất vấn hắn tại sao lại đối xử với bạn như vậy.
+Nhưng lúc này, bạn chỉ chớp mắt. Khóe môi khô khốc khẽ nhếch lên, tạo thành một nụ cười tiêu chuẩn đến cứng đờ. Bạn mở miệng, giọng nói khàn đặc nhưng rành mạch, cung kính.
 
-"Thu lại ánh mắt này của cô đi." Hắn nghiến răng, lực đạo trên tay càng siết chặt hơn như muốn bẻ gãy cổ bạn, gằn từng chữ: "Dù cô có giả vờ hiểu chuyện, vị trí Dạ phu nhân này sớm muộn cũng sẽ trả lại cho Minh Tâm. Đừng mơ tưởng dùng khổ nhục kế để cầu xin sự thương hại từ tôi."
+"Vâng, Dạ tiên sinh."
 
-Bạn nhìn hắn, khóe môi khẽ cong lên một nụ cười nhàn nhạt, ngoan ngoãn gật đầu:
+Dạ Kiều Phong sững người. Bàn tay đang nắm tóc bạn chợt cứng đờ.
 
-"Vâng. Bất cứ khi nào Dạ tổng muốn, tôi đều sẽ dọn đi. Chỉ cần anh bảo vệ cho sự an toàn của gia đình tôi, tôi sẽ không cản đường hai người."
+"Tô tiểu thư thích ngắm hoa bạch hải đường. Lát nữa tôi sẽ sai người đổi toàn bộ rèm cửa phòng dành cho khách sang màu trắng, trải ga giường bằng lụa Tứ Xuyên mà ngài đã đấu giá tháng trước."
 
-Hai chữ "Dạ tổng" xa cách cùng nụ cười vô cảm đó như một nhát dao vô hình, đâm thẳng vào chỗ hiểm của Dạ Kiều Phong. Bàn tay hắn bất giác run lên. Hắn buông tóc bạn ra, nhưng ngay giây tiếp theo lại bóp chặt lấy cằm bạn, cúi gập người xuống, hơi thở lạnh lẽo phả vào môi bạn, đáy mắt cuộn trào sóng gió điên cuồng:
+Bạn điềm tĩnh nói tiếp, từng chữ trơn tru như đã lập trình sẵn.
 
-"Muốn rời đi? Muốn thành toàn cho tôi? Cô nằm mơ!"
+"Buổi sáng cô ấy cần uống nước ấm pha mật ong ruồi. Dạ tiên sinh, tôi sẽ dọn xuống phòng cho người hầu ở tầng trệt để không làm chướng mắt ngài và Tô tiểu thư. Ngài thấy như vậy đã được chưa?"
 
-Hắn cười gằn, giọng nói tàn nhẫn xé toạc sự tĩnh lặng: "Kiếp này cô là của tôi. Dù là tro cốt, cô cũng chỉ có thể chôn ở nghĩa trang họ Dạ. Đừng hòng mong tôi buông tay!"`,
-    googleStudioUrl: 'https://aistudio.google.com/',
-    locked: false,
+Không gian tĩnh lặng đến rợn người.
+
+Dạ Kiều Phong chằm chằm nhìn người phụ nữ dưới chân mình. Hắn tìm kiếm sự mỉa mai, sự ghen tuông hay nét bi thương kìm nén trên mặt bạn. Nhưng không có gì cả. Chỉ có một vùng sương mù xám xịt, chết chóc bao phủ lấy hình hài gầy gò ấy. Sự thỏa hiệp nhún nhường này không giống như giả vờ, mà giống như một nấm mồ đã được lấp đất, vĩnh viễn không còn mong đợi bất kỳ tia sáng nào nữa.
+
+Một cơn ớn lạnh không rõ nguyên do xẹt qua sống lưng vị tổng tài máu lạnh. Hắn hất mạnh bạn ra, lùi lại nửa bước như thể vừa chạm vào một cái xác ướp, gân xanh trên trán giật liên hồi.
+
+"Tốt nhất là cô nhớ kỹ những lời mình vừa nói."
+
+Hắn nghiến răng, cố đè nén sự hoảng loạn vô cớ đang lan tràn trong lồng ngực.
+
+"Tối nay chuẩn bị cho đàng hoàng để dự tiệc cùng tôi. Làm không tốt, tôi sẽ chặt một ngón tay của cậu ruột cô."
+
+Nói xong, hắn xoay người bước nhanh ra khỏi phòng, bóng lưng có phần chạy trốn sự ngột ngạt.
+
+Bạn bị hất ngã trên thảm, không vội đứng dậy. Bạn nhìn theo bóng hắn, chậm rãi chỉnh lại cổ áo, bình thản lau đi vết máu rỉ ra từ khóe môi.
+
+Dạ Kiều Phong, kiếp này, tôi sẽ không chạy trốn, cũng không cầu xin anh yêu tôi nữa. Tôi sẽ đứng ở đây, làm một khúc gỗ mục nát mặc anh xẻ thịt lóc xương, để xem khi không còn gì để hủy hoại nữa, ác quỷ như anh có cảm thấy thỏa mãn hay không.`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221BENaEkYBwSRrzgsecPUNGHFM3UJtGJoH%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
+    locked: true,
+    lockQuestion: 'Bạn yêu cầu ly hôn, ảnh có đồng ý điều kiện đó không?',
+    lockHint: 'Gồm 2 chữ (viết hoa chữ cái đầu, có dấu, có cách)',
+    acceptedAnswers: ['Từ Chối', 'Từ chối', 'từ chối', 'Tu Choi', 'tu choi'],
+    unlockExplanation:
+      'Chính xác. Dù căm hận hay hành hạ bạn, Dạ Kiều Phong tuyệt đối không bao giờ chấp nhận buông tay hay đồng ý ly hôn.',
     displayOrder: 5,
-    flowerTheme: 'Hồng Đen Băng Giá',
+    flowerTheme: 'Bạch Hải Đường Tang Tóc',
     flowerColor: '#475569',
-    flowerSymbol: 'ac_unit',
-    accentQuote: 'Kiếp này cô là của tôi. Dù là tro cốt, cô cũng chỉ có thể chôn ở nghĩa trang họ Dạ. Đừng hòng mong tôi buông tay!',
+    flowerSymbol: 'lock',
+    accentQuote:
+      'Dạ Kiều Phong, kiếp này, tôi sẽ không chạy trốn, cũng không cầu xin anh yêu tôi nữa. Tôi sẽ đứng ở đây, làm một khúc gỗ mục nát mặc anh xẻ thịt lóc xương...',
   },
   {
     id: 'tinh-yeu-mau-hong',
