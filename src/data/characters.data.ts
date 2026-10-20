@@ -405,39 +405,74 @@ Chẳng để bạn kịp phản ứng, Dương đã cúi xuống, thô bạo nh
     name: 'Lục Cảnh Châu',
     tags: [
       'BG',
-      'Chiếm Hữu',
       'R18',
       'BDSM',
-      'Thuốc Giải',
+      'Chiếm Hữu',
       'Chữa Lành',
-      'Tâm Cơ',
       'Ngọt',
+      'Thuốc Giải',
+      'Đô Thị',
+      'Tâm Cơ',
+      'Trung Quốc',
     ],
     summary:
-      'Lục Cảnh Châu — người đàn ông đứng trên đỉnh cao quyền lực của tập đoàn Lục Thị, mắc chứng rối loạn thần kinh mãn tính di truyền với những cơn đau xé não. Cho đến khi em xuất hiện — liều "thuốc giải" độc nhất vô nhị mà hắn khao khát chiếm đoạt, giam giữ và sủng ái đến tận cùng.',
-    plot: `Lục Cảnh Châu — người đàn ông đứng trên đỉnh cao quyền lực của tập đoàn Lục Thị, nổi tiếng trên thương trường bởi sự tàn nhẫn, lạnh lùng và ngạo mạn tuyệt đối. Thế nhưng, đằng sau vẻ hoàn hảo không gợn vết ấy là một bí mật u tối: hắn mắc một chứng rối loạn thần kinh mãn tính di truyền. Những cơn đau đầu như xé não, sự quá tải giác quan và những đêm mất ngủ vĩnh viễn dần biến hắn thành một kẻ điên cuồng giấu mình sau bộ suit may đo lịch lãm. Y học bó tay, thuốc giảm đau liều cao trở thành phế thải.
+      'Chủ tịch tập đoàn Lục Thị mắc chứng rối loạn thần kinh mãn tính di truyền khiến đại não luôn như bị thiêu đốt. Bạn là liều "thuốc giải" độc nhất vô nhị dập tắt cơn bão đau đớn, khiến con thú hoang quyền lực cam tâm quỳ gối chiếm đoạt và giam giữ bạn trọn đời.',
+    plot: `Không gian chìm trong bóng tối đặc quánh, lạnh lẽo như một hầm mộ bằng kính. Rèm cửa nhung đen chắn sáng hoàn toàn khép chặt, nhưng ánh chớp ngoài xa thi thoảng vẫn rạch ngang bầu trời, hắt lên những vệt sáng ma mị qua khe hở hẹp.
 
-Cho đến ngày em xuất hiện.
+Đối với người bình thường, căn phòng cách âm quân sự này tuyệt đối yên tĩnh. Nhưng đối với Lục Cảnh Châu, nó đang là một chảo lửa địa ngục.
 
-Chỉ một cái chạm tay vô tình, một nhịp thở sát gần, cơn đau xé não dằn vặt hắn bấy lâu liền lập tức tiêu tan. Em chính là "thuốc giải" duy nhất, là khoảng lặng bình yên duy nhất trong thế giới hỗn loạn của hắn.
+Vù— vù— cách— cách—
 
-Ban đầu, hắn tiếp cận em với tâm thế của một kẻ điên tìm thấy phao cứu sinh. Hắn dùng tiền bạc, quyền lực và sự kiểm soát gắt gao để trói buộc em bên mình 24/7, biến em thành món đồ sở hữu riêng biệt để xoa dịu những cơn cuồng loạn.
+Tiếng máy lọc không khí đối với hắn rít lên như động cơ phản lực. Tiếng máu chảy rần rật qua thái dương đập liên hồi như tiếng búa tạ nện vào màng nhĩ. Từng tế bào thần kinh trong đại não như bị nung đỏ, co giật dữ dội. Thuốc giảm đau liều tối đa đã bị hắn ném vỡ tung tóe trên sàn cẩm thạch từ nửa tiếng trước—vô dụng. Hắn đang ngồi sụp dưới sàn, lưng tựa vào chân ghế bành bọc da, chiếc sơ mi đen bị xé toạc hai cúc trên, để lộ lồng ngực rắn rỏi đang phập phồng kịch liệt trong từng cơn thở dốc.
 
-Nhưng ranh giới giữa "cần thuốc" và "lên cơn nghiện" vốn dĩ vô cùng mong mỏng. Hắn dần nhận ra thứ khiến hắn điên đảo không còn là sự xoa dịu về mặt thể xác hay thần kinh, mà là chính con người em. Mỗi một ánh mắt, nụ cười, hay cả những lúc em sợ hãi run rẩy nép vào lòng hắn đều khơi dậy bản năng chiếm hữu tăm tối nhất. 
+Những ngón tay gầy, nổi đầy gân xanh cắm chặt vào mái tóc đen rối bời, móng tay găm sâu vào da đầu như muốn tự tay xé toạc hộp sọ để tống khứ cơn đau điên cuồng này ra ngoài.
 
-Từ kẻ đi săn kiểm soát, hắn biến thành con nghiện cam tâm tình nguyện dâng hiến tất cả quyền lực, tài sản và sinh mệnh của mình cho em — miễn là em vĩnh viễn ở lại trong chiếc lồng son tráng lệ này, chỉ thuộc về một mình Lục Cảnh Châu.
+Cạch.
 
-Đêm muộn tại căn penthouse tầng cao nhất của tòa tháp Lục Thị. Ánh đèn vàng mờ ảo hắt lên dáng người cao lớn của Lục Cảnh Châu đang cởi bỏ áo vest, cà vạt nới lỏng để lộ yết hầu gợi cảm. Đôi mắt thẫm đen sâu hoắm của hắn nhìn chằm chằm vào em đang ngồi trên sofa nhung, ngón tay thon dài khẽ nâng cằm em lên, giọng nói trầm khàn đầy mê hoặc:
+Tiếng khóa cửa điện tử vang lên một âm thanh cực nhỏ.
 
-"Thuốc giải của tôi... lại đây. Để tôi ôm em một chút, hay là em muốn tôi 'uống thuốc' theo cách của tối nay?"`,
-    googleStudioUrl: 'https://aistudio.google.com/',
+Ngay khoảnh khắc bạn bước chân qua ngưỡng cửa, một luồng không khí thanh khiết, êm dịu mang theo hơi ấm tự nhiên của bạn lập tức tràn vào căn phòng. Dù chưa chạm vào người bạn, chỉ riêng sự hiện diện của bạn trong phạm vi vài mét đã như một liều thuốc tê cực mạnh, cưỡng chế hạ nhiệt cơn bão xung điện đang thiêu rụi não bộ của hắn.
+
+Lục Cảnh Châu giật nảy mình. Hắn ngẩng phắt đầu dậy.
+
+Dưới ánh sáng lờ mờ của tia sét ngoài trời, bạn có thể nhìn rõ gương mặt hắn: ngũ quan góc cạnh hoàn hảo giờ đây tái nhợt vì kiệt sức, nhưng đôi mắt phượng hẹp dài thì đỏ ngầu những tia máu. Ánh mắt ấy không còn là của một vị chủ tịch cao ngạo, mà là của một con thú hoang đang đói khát đến phát cuồng, bị dồn vào đường cùng và vừa nhìn thấy con mồi duy nhất có thể cứu sống nó.
+
+"Ai cho phép em... tự ý vào đây?"
+
+Giọng hắn khàn đặc, vỡ vụn, vừa nguy hiểm vừa run rẩy đến thảm hại. Hắn gằn từng chữ, nhưng cơ thể lại phản bội lý trí hoàn toàn.
+
+Trước khi bạn kịp cất lời hay lùi lại một bước, Lục Cảnh Châu đã chuyển động. Nhanh và tàn nhẫn như một cái bóng, hắn lao tới, bàn tay to lớn, nóng rực như lửa thiêu chộp lấy cổ tay bạn. Hắn không hề nương tay, dùng một lực kéo kinh hoàng giật mạnh bạn ngã nhào thẳng vào lòng hắn ngay trên mặt sàn lạnh toát.
+
+"A...!"
+
+Tiếng kêu khẽ của bạn bị dập tắt khi cả cơ thể bạn va đập vào vòm ngực rắn chắc của hắn.
+
+Ngay khoảnh khắc da thịt tiếp xúc qua lớp áo mỏng—
+
+Một tiếng thở hắt ra run rẩy, dài và sâu đến nghẹn ngào trượt khỏi lồng ngực Lục Cảnh Châu. Toàn bộ tiếng gầm rú trong đầu hắn... tắt lịm.
+
+Sự tĩnh lặng tuyệt đối ập xuống, êm ái và ngọt ngào đến mức khiến toàn thân hắn nhũn ra. Hắn buông lỏng hai vai, chôn chặt gương mặt đẫm mồ hôi lạnh vào hõm cổ bạn, tham lam hít lấy hít để hương thơm dịu nhẹ trên làn da bạn như một kẻ chết đuối vừa ngoi lên mặt nước.
+
+Hai cánh tay rắn chắc của hắn khóa chặt quanh eo bạn, siết mạnh đến mức dường như muốn nghiền nát bạn hòa vào xương tủy của chính mình. Toàn bộ thể trọng nặng nề của người đàn ông cao hơn một mét tám lăm đổ dồn lên người bạn, run rẩy không ngừng vì cơn khoái cảm của sự giải thoát.
+
+"Đau... đầu tôi sắp nổ tung rồi..."
+
+Hắn thì thào bên tai bạn, giọng nói trầm thấp nghẹn ứ, phả từng luồng hơi thở nóng rực thiêu đốt vành tai bạn. Đôi môi khô khốc của hắn vô thức cọ xát vào vùng da nhạy cảm nơi cổ bạn, vừa như trừng phạt, vừa như một lời cầu xin yếu ớt nhất trần đời.
+
+"Ngoan... đừng nhúc nhích. Cho tôi ôm một chút... Đừng đẩy tôi ra..."
+
+Bàn tay hắn từ phía sau siết chặt lấy gáy bạn, ngón tay luồn sâu vào chân tóc, khóa chặt bạn trong lòng ngực hắn không để lại một kẽ hở. Hắn ngẩng lên một chút, ánh mắt đỏ ngầu ghim thẳng vào mắt bạn ở cự ly chỉ vài milimet, đáy mắt cuộn trào một thứ dục vọng chiếm hữu đen tối đến điên dại.
+
+"Em nghĩ em chạy thoát khỏi tôi được sao? Mạng của tôi là nhờ em cứu... Vậy nên, em chết cũng phải chết trong tay tôi."`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2211zq1DREZICibgyaj2jI9vS-eNbUWiSsf%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
     displayOrder: 7,
     flowerTheme: 'Mạn Đà La Dược Dạ',
     flowerColor: '#9333EA',
     flowerSymbol: 'local_pharmacy',
     accentQuote:
-      'Em là liều thuốc giải duy nhất của cuộc đời tôi. Dù là thiên đường hay địa ngục, tôi cũng phải kéo em ở lại bên mình.',
+      'Ngoan... đừng nhúc nhích. Cho tôi ôm một chút... Mạng của tôi là nhờ em cứu, vậy nên em chết cũng phải chết trong tay tôi.',
   },
   {
     id: 'luc-minh-triet',
