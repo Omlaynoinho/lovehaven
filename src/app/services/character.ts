@@ -127,6 +127,13 @@ export class CharacterService {
   private loadCachedUnlockedState(): void {
     if (typeof window === 'undefined') return;
     try {
+      // Allow URL parameters like ?relock=1 or ?solve=1 or ?khoa=1 so shared links can be opened in locked state for others to solve
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('relock') || urlParams.has('solve') || urlParams.has('khoa') || urlParams.has('reset')) {
+        this.relockAllCharacters();
+        return;
+      }
+
       const savedUnlocked = localStorage.getItem('love_have_unlocked_ids');
       if (savedUnlocked) {
         const ids: string[] = JSON.parse(savedUnlocked);
@@ -145,6 +152,24 @@ export class CharacterService {
     } catch {
       // Storage error ignored
     }
+  }
+
+  public relockCharacter(characterId: string): void {
+    const currentSet = new Set(this.unlockedIds());
+    currentSet.delete(characterId);
+    this.unlockedIds.set(currentSet);
+
+    const currentMap = new Map(this.unlockedDetails());
+    currentMap.delete(characterId);
+    this.unlockedDetails.set(currentMap);
+
+    this.saveCachedUnlockedState();
+  }
+
+  public relockAllCharacters(): void {
+    this.unlockedIds.set(new Set());
+    this.unlockedDetails.set(new Map());
+    this.saveCachedUnlockedState();
   }
 
   private saveCachedUnlockedState(): void {

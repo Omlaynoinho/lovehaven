@@ -147,6 +147,87 @@ import { Sound } from '../../services/sound';
                     Nhân vật này chưa có liên kết chatbot.
                   </div>
                 }
+
+                <!-- Option: Re-lock so other people can solve the secret code -->
+                @if (char().locked || char().lockQuestion) {
+                  <div class="mt-4 pt-4 border-t border-[#F2E5E8] flex flex-wrap items-center justify-center gap-3">
+                    <button
+                      type="button"
+                      (click)="relockForOthers()"
+                      class="px-4 py-2 rounded-full text-xs font-medium text-[#8B4858] bg-[#FAF2F4] hover:bg-[#F3E2E6] border border-[#EBCBD4] transition-colors flex items-center gap-1.5 cursor-pointer shadow-2xs active:scale-95"
+                      title="Khóa lại nhân vật này trên thiết bị để người khác có thể tự tay giải mật mã"
+                    >
+                      <mat-icon class="text-sm">lock_reset</mat-icon>
+                      <span>Khóa lại để người khác giải mật mã</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      (click)="toggleReSolveQuiz()"
+                      class="px-4 py-2 rounded-full text-xs font-medium text-[#6B555A] hover:bg-[#F9F3EE] bg-white border border-[#E5D7DA] transition-colors flex items-center gap-1.5 cursor-pointer shadow-2xs"
+                      title="Mở khung câu đố để người khác thử giải lại mật mã"
+                    >
+                      <mat-icon class="text-sm text-[#C98F9E]">vpn_key</mat-icon>
+                      <span>{{ showReSolveQuiz() ? 'Ẩn câu hỏi mật mã' : 'Thử giải lại mật mã' }}</span>
+                    </button>
+                  </div>
+
+                  <!-- Practice / Re-solving Quiz Envelope when already unlocked -->
+                  @if (showReSolveQuiz()) {
+                    <div class="mt-4 p-5 rounded-2xl bg-[#FAF5EE] border border-[#E6D4D8] animate-fade-in text-left">
+                      <div class="flex items-center gap-2 text-xs font-semibold text-[#C98F9E] mb-2 uppercase tracking-wider">
+                        <mat-icon class="text-sm">quiz</mat-icon>
+                        <span>Câu hỏi mật mã (dành cho người giải):</span>
+                      </div>
+                      <p class="text-sm font-serif-vintage text-[#554347] font-medium leading-relaxed mb-3">
+                        {{ char().lockQuestion || 'Ký ức đầu tiên giữa bạn và nhân vật là gì?' }}
+                      </p>
+
+                      <div class="flex flex-col gap-2.5">
+                        <input
+                          type="text"
+                          [formControl]="answerControl"
+                          (keydown.enter)="checkAnswer()"
+                          placeholder="Nhập câu trả lời để kiểm tra mật mã..."
+                          class="w-full px-4 py-2.5 rounded-xl border border-[#E3CDD2] bg-white text-sm text-[#5B464B] placeholder:text-[#A69094] focus:outline-none focus:border-[#C98F9E]"
+                        />
+                        <div class="flex gap-2">
+                          <button
+                            type="button"
+                            (click)="checkAnswer()"
+                            [disabled]="isVerifying() || !answerControl.value?.trim()"
+                            class="px-4 py-2 rounded-xl bg-[#C98F9E] hover:bg-[#B77A8A] text-white text-xs font-medium flex items-center gap-1.5 cursor-pointer disabled:opacity-50"
+                          >
+                            <mat-icon class="text-sm">check_circle</mat-icon>
+                            <span>{{ isVerifying() ? 'Đang kiểm tra...' : 'Kiểm tra mật mã' }}</span>
+                          </button>
+                          <button
+                            type="button"
+                            (click)="toggleHint()"
+                            class="px-3 py-2 rounded-xl border border-[#DDC6CC] bg-white text-xs font-medium text-[#78666A] flex items-center gap-1 cursor-pointer"
+                          >
+                            <mat-icon class="text-sm text-[#C98F9E]">lightbulb</mat-icon>
+                            <span>{{ showHint() ? 'Ẩn gợi ý' : 'Gợi ý' }}</span>
+                          </button>
+                        </div>
+
+                        @if (errorMessage()) {
+                          <div class="p-2.5 rounded-lg bg-[#FFF0F2] border border-[#F3CCD2] text-xs text-[#A64A5E] flex items-center gap-2">
+                            <mat-icon class="text-sm shrink-0">sentiment_dissatisfied</mat-icon>
+                            <span>{{ errorMessage() }}</span>
+                          </div>
+                        }
+
+                        @if (showHint() && char().lockHint) {
+                          <div class="p-3 rounded-lg bg-[#FFFDF5] border border-[#EFE2B8] text-xs text-[#7D6B3C] flex items-start gap-2">
+                            <mat-icon class="text-sm text-[#B39B4B] shrink-0 mt-0.5">tips_and_updates</mat-icon>
+                            <span>{{ char().lockHint }}</span>
+                          </div>
+                        }
+                      </div>
+                    </div>
+                  }
+                }
               </div>
             </div>
           }
@@ -309,6 +390,8 @@ export class CharacterDetailModal {
     return data?.googleStudioUrl || this.char().googleStudioUrl;
   });
 
+  readonly showReSolveQuiz = signal<boolean>(false);
+
   closeModal(): void {
     this.sound.playClick();
     this.dismiss.emit();
@@ -317,6 +400,19 @@ export class CharacterDetailModal {
   toggleHint(): void {
     this.sound.playChime();
     this.showHint.update((v) => !v);
+  }
+
+  toggleReSolveQuiz(): void {
+    this.sound.playClick();
+    this.showReSolveQuiz.update((v) => !v);
+  }
+
+  relockForOthers(): void {
+    this.sound.playClick();
+    this.charService.relockCharacter(this.char().id);
+    this.showReSolveQuiz.set(false);
+    this.errorMessage.set('');
+    this.answerControl.setValue('');
   }
 
   checkAnswer(): void {

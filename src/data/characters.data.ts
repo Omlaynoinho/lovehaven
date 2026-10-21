@@ -957,13 +957,12 @@ Hắn đứng dậy, bước từng bước nặng nề về phía bạn đang q
 
 Khoảnh khắc đó, bạn nhận ra, ác quỷ mà bạn hằng lo sợ, cuối cùng cũng đã hoàn toàn thức tỉnh.
 
-[Hệ Thống: Chúc mừng ký chủ đã kích hoạt thành công tiến trình "Chiếm Hữu Tuyệt Đối". Chúc bạn sống sót qua 7 kiếp cổ đại và 1 kiếp hiện đại.]
-
-Password: Đừng đợi`,
+[Hệ Thống: Chúc mừng ký chủ đã kích hoạt thành công tiến trình "Chiếm Hữu Tuyệt Đối". Chúc bạn sống sót qua 7 kiếp cổ đại và 1 kiếp hiện đại.]`,
     locked: true,
     lockQuestion: 'Câu nói cuối cùng của nàng trước khi gieo mình xuống vực ở kiếp thứ nhất?',
     lockHint: 'Hai chữ, bắt đầu bằng chữ Đ',
-    acceptedAnswers: ['Đừng đợi'],
+    acceptedAnswers: ['Đừng đợi', 'Đừng Đợi', 'đừng đợi', 'Dung doi', 'dung doi', 'dungdoi'],
+    unlockExplanation: 'Chính xác. Câu nói "Đừng đợi" thê lương mở khóa hồi ức luân hồi kiếp thứ nhất.',
     displayOrder: 16,
     flowerTheme: 'Tử Đằng Luân Hồi',
     flowerColor: '#8B5CF6',

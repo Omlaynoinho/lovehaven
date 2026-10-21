@@ -30,7 +30,12 @@ function normalizeText(text: string): string {
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/đ/g, 'd')
-    .replace(/\s+/g, ' ');
+    .replace(/[.,!?:;"'“”‘’()\-_\s]+/g, ' ')
+    .trim();
+}
+
+function collapseText(text: string): string {
+  return normalizeText(text).replace(/[^a-z0-9]/g, '');
 }
 
 // Process-level error protection to prevent dev-server crashes
@@ -114,15 +119,20 @@ app.post('/api/characters/verify-unlock', (req, res) => {
 
   const normalizedInput = normalizeText(answer);
   const rawInput = answer.trim().toLowerCase();
+  const collapsedInput = collapseText(answer);
 
   const isCorrect = (char.acceptedAnswers || []).some((accepted) => {
     const rawAcc = accepted.trim().toLowerCase();
     const normAcc = normalizeText(accepted);
+    const collapsedAcc = collapseText(accepted);
+
     return (
       rawInput === rawAcc ||
       normalizedInput === normAcc ||
+      collapsedInput === collapsedAcc ||
       rawInput.includes(rawAcc) ||
-      normalizedInput.includes(normAcc)
+      normalizedInput.includes(normAcc) ||
+      (collapsedAcc.length >= 3 && collapsedInput.includes(collapsedAcc))
     );
   });
 

@@ -150,10 +150,36 @@
             Vườn Nhân Vật AI
           </h2>
         </div>
-        <p class="font-script-romantic text-lg sm:text-xl text-[#8E7479] mt-2 sm:mt-0">
-          Mỗi loài hoa cất giữ một câu chuyện riêng...
-        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-3 mt-3 sm:mt-0">
+          @if (charService.unlockedIds().size > 0) {
+            <button
+              type="button"
+              (click)="onRelockAllForOthers()"
+              class="px-4 py-2 rounded-full text-xs font-medium text-[#8B4858] bg-[#FAF2F4] hover:bg-[#F3E2E6] border border-[#EBCBD4] transition-all flex items-center gap-1.5 cursor-pointer shadow-2xs active:scale-95"
+              title="Đặt lại trạng thái khóa để người khác có thể tự tay giải mật mã các nhân vật"
+            >
+              <mat-icon class="text-sm">lock_reset</mat-icon>
+              <span>Cho người khác giải mật mã ({{ charService.unlockedIds().size }} đã mở)</span>
+            </button>
+          }
+          <p class="font-script-romantic text-lg sm:text-xl text-[#8E7479]">
+            Mỗi loài hoa cất giữ một câu chuyện riêng...
+          </p>
+        </div>
       </div>
+
+      <!-- Relock Toast Notification -->
+      @if (relockToast()) {
+        <div class="mb-6 p-4 rounded-2xl bg-[#F4F9F2] border border-[#D5E6D1] text-xs sm:text-sm text-[#42583C] flex items-center justify-between gap-3 animate-fade-in shadow-xs">
+          <div class="flex items-center gap-2">
+            <mat-icon class="text-base text-[#7D9775]">vpn_key</mat-icon>
+            <span>{{ relockToast() }}</span>
+          </div>
+          <button type="button" (click)="relockToast.set(null)" class="text-[#7D9775] hover:text-[#42583C]">
+            <mat-icon class="text-sm">close</mat-icon>
+          </button>
+        </div>
+      }
 
       <!-- Character Responsive Grid (1 col mobile, 2 col md, 3 col xl) -->
       @if (charService.filteredCharacters().length > 0) {

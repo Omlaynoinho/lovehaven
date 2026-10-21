@@ -108,4 +108,15 @@ export class App {
   closeCharacterModal(): void {
     this.charService.closeDetail();
   }
+
+  readonly relockToast = signal<string | null>(null);
+
+  onRelockAllForOthers(): void {
+    this.sound.playChime();
+    this.charService.relockAllCharacters();
+    this.relockToast.set('Đã khóa lại tất cả nhân vật để người khác có thể tự tay giải mật mã!');
+    setTimeout(() => {
+      this.relockToast.set(null);
+    }, 4000);
+  }
 }

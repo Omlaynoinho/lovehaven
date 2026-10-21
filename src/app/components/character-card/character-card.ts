@@ -36,10 +36,22 @@ import { Sound } from '../../services/sound';
 
           <!-- Lock/Unlock Status Badge -->
           @if (isUnlocked()) {
-            <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-[#B8C8B0]/30 text-[#476040] border border-[#B8C8B0]/60 shadow-2xs">
-              <mat-icon class="text-xs">lock_open</mat-icon>
-              <span>Đã mở khóa</span>
-            </span>
+            <div class="flex items-center gap-1.5">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-[#B8C8B0]/30 text-[#476040] border border-[#B8C8B0]/60 shadow-2xs">
+                <mat-icon class="text-xs">lock_open</mat-icon>
+                <span>Đã mở khóa</span>
+              </span>
+              @if (char().locked || char().lockQuestion) {
+                <button
+                  type="button"
+                  (click)="onRelock($event)"
+                  title="Khóa lại để người khác giải mật mã"
+                  class="w-6 h-6 rounded-full flex items-center justify-center text-[#8B4858] hover:bg-[#FAF2F4] border border-[#EBCBD4] transition-colors cursor-pointer"
+                >
+                  <mat-icon class="text-xs scale-90">lock_reset</mat-icon>
+                </button>
+              }
+            </div>
           } @else {
             <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-[#EBCBD4]/40 text-[#8B4858] border border-[#EBCBD4] shadow-2xs">
               <mat-icon class="text-xs">lock</mat-icon>
@@ -114,5 +126,11 @@ export class CharacterCard {
   onExploreClick(): void {
     this.sound.playClick();
     this.explore.emit(this.char());
+  }
+
+  onRelock(event: Event): void {
+    event.stopPropagation();
+    this.sound.playClick();
+    this.charService.relockCharacter(this.char().id);
   }
 }
