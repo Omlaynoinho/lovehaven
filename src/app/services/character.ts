@@ -22,6 +22,21 @@ export interface MailboxResponse {
   totalSenders?: number;
 }
 
+function normalizeTextLocal(text: string): string {
+  return (text || '')
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/đ/g, 'd')
+    .replace(/[.,!?:;"'“”‘’()\-_\s]+/g, ' ')
+    .trim();
+}
+
+function collapseTextLocal(text: string): string {
+  return normalizeTextLocal(text).replace(/[^a-z0-9]/g, '');
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -268,9 +283,63 @@ export class CharacterService {
           this.saveCachedUnlockedState();
         }
       }),
-      catchError((err) => {
-        const errorMsg = err?.error?.message || 'Có lỗi kết nối khi kiểm tra chìa khóa. Vui lòng thử lại!';
-        return of({ success: false, message: errorMsg });
+      catchError(() => {
+        // Fallback: If server is temporarily restarting or unreachable, verify against local CHARACTERS_DATA
+        const localChar = CHARACTERS_DATA.find((c) => c.id === characterId);
+        if (localChar) {
+          const normalizedInput = normalizeTextLocal(answer);
+          const rawInput = answer.trim().toLowerCase();
+          const collapsedInput = collapseTextLocal(answer);
+
+          const isCorrect = (localChar.acceptedAnswers || []).some((accepted) => {
+            const rawAcc = accepted.trim().toLowerCase();
+            const normAcc = normalizeTextLocal(accepted);
+            const collapsedAcc = collapseTextLocal(accepted);
+
+            return (
+              rawInput === rawAcc ||
+              normalizedInput === normAcc ||
+              collapsedInput === collapsedAcc ||
+              rawInput.includes(rawAcc) ||
+              normalizedInput.includes(normAcc) ||
+              (collapsedAcc.length >= 3 && collapsedInput.includes(collapsedAcc))
+            );
+          });
+
+          if (isCorrect) {
+            const res: UnlockResponse = {
+              success: true,
+              plot: localChar.plot,
+              googleStudioUrl: localChar.googleStudioUrl,
+              unlockExplanation: localChar.unlockExplanation,
+            };
+
+            const currentSet = new Set(this.unlockedIds());
+            currentSet.add(characterId);
+            this.unlockedIds.set(currentSet);
+
+            const currentMap = new Map(this.unlockedDetails());
+            currentMap.set(characterId, {
+              plot: res.plot!,
+              googleStudioUrl: res.googleStudioUrl || '',
+              unlockExplanation: res.unlockExplanation,
+            });
+            this.unlockedDetails.set(currentMap);
+
+            this.saveCachedUnlockedState();
+            return of(res);
+          } else {
+            return of({
+              success: false,
+              message: 'Hình như chiếc chìa khóa này chưa đúng rồi, thử lại nhé!',
+            });
+          }
+        }
+
+        return of({
+          success: false,
+          message: 'Hình như chiếc chìa khóa này chưa đúng rồi, thử lại nhé!',
+        });
       })
     );
   }
