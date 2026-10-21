@@ -33,6 +33,15 @@ function normalizeText(text: string): string {
     .replace(/\s+/g, ' ');
 }
 
+// Process-level error protection to prevent dev-server crashes
+process.on('unhandledRejection', (reason) => {
+  console.error('[Server] Unhandled Rejection:', reason);
+});
+
+process.on('uncaughtException', (err) => {
+  console.error('[Server] Uncaught Exception:', err);
+});
+
 const app = express();
 const angularApp = new AngularNodeAppEngine();
 
@@ -256,6 +265,15 @@ app.use((req, res, next) => {
       response ? writeResponseToNodeResponse(response, res) : next(),
     )
     .catch(next);
+});
+
+// Global Express error handler to prevent process crashes
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+app.use((err: unknown, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
+  console.error('[Server] Express error handled:', err);
+  if (!res.headersSent) {
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 /**
