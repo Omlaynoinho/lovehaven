@@ -1,7 +1,7 @@
 import { Injectable, inject, signal, computed } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { catchError, tap } from 'rxjs/operators';
+import { catchError, tap, timeout } from 'rxjs/operators';
 import { PublicCharacter, SiteConfig, PublicMailboxLetter, MailboxResponseData } from '../models/character.model';
 import { CHARACTERS_DATA, DEFAULT_SITE_CONFIG } from '../../data/characters.data';
 import { testConnection, subscribeToLetters, saveLetterToFirestore } from './firebase';
@@ -266,6 +266,7 @@ export class CharacterService {
       characterId,
       answer,
     }).pipe(
+      timeout(2500),
       tap((res) => {
         if (res.success && res.plot) {
           const currentSet = new Set(this.unlockedIds());
