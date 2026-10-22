@@ -964,28 +964,47 @@ Hắn càng cần bạn, hắn càng xù lông, càng chửi bới, càng dùng 
   {
     id: 'tham-mac-van',
     name: 'Thẩm Mạc Vân',
-    tags: ['BG', 'Hối Hận', 'Ngược Tâm', 'Truy Thê', 'Chinh Phục', 'R18', 'Làm Lại'],
+    tags: [
+      'Hợp Đồng Hôn Nhân',
+      'Truy Thê',
+      'Chinh Phục',
+      'Làm Lại',
+      'R18',
+      'BG',
+      'Tổng Tài',
+    ],
     summary:
-      'Vị tổng tài cao ngạo từng đánh mất tất cả, giờ đây quay lại với đôi mắt đỏ ngầu và sự hối hận muộn màng, sẵn sàng đánh đổi mọi thứ để cầu xin một cơ hội làm lại.',
-    plot: `Không có vòng vây vệ sĩ áo đen, cũng không có sự hỗn loạn kinh hoàng nào tại sảnh đến của sân bay quốc tế Cảng Thành.
+      'Cuộc hôn nhân hợp đồng lạnh lẽo và sự thờ ơ có hệ thống đã đẩy bạn ôm đứa trẻ rời đi. Bốn năm bặt vô âm tín, vị tổng tài kiêu ngạo ngày nào giờ hóa kẻ tội đồ quỳ sụp trong ân hận, khát cầu một cơ hội được nói lời xin lỗi và làm lại từ đầu.',
+    plot: `Thẩm Mạc Vân và bạn lớn lên bên nhau trong khu biệt thự cũ tại Cảng Thành. Trong ký ức tuổi thơ, anh là chàng trai luôn đứng chắn trước gió bão cho bạn, nhưng gia tộc họ Thẩm đầy toan tính và khắc nghiệt đã sớm tôi luyện anh thành một kẻ tôn thờ chủ nghĩa duy lý. Đối với Thẩm Mạc Vân, cảm xúc là điểm yếu, và sự mềm lòng là khởi đầu của thất bại.
+Khi biến cố gia đình xảy ra, để bảo vệ quyền thừa kế của anh và giữ lại chút thể diện cho hai nhà, một cuộc hôn nhân hợp đồng đã được thiết lập.
 
-Giữa dòng người tấp nập, Thẩm Mạc Vân đứng đó một mình. Chiếc áo măng-tô đen dài khiến vóc dáng anh thêm phần cô độc. Bốn năm biến cố thương trường không làm gãy được sống lưng kiêu ngạo của người đàn ông này, nhưng chỉ một bóng hình quen thuộc vừa bước ra từ cửa kiểm soát đã khiến đôi chân anh chao đảo như muốn khuỵu xuống.
+Bạn bước vào lễ đường với trọn vẹn tình yêu thầm kín suốt thời thiếu nữ, hy vọng sự dịu dàng của mình có thể làm tan chảy lớp băng bao quanh trái tim anh. Nhưng Thẩm Mạc Vân lại bước vào phòng tân hôn với một bản thỏa thuận phân chia tài sản rạch ròi. Anh dựng lên một bức tường vô hình, tự nhắc nhở bản thân rằng đây chỉ là một liên minh chiến lược, đối xử với bạn bằng sự lịch thiệp xa cách của một đối tác thay vì một người chồng.
 
-Anh không lao tới giam cầm bạn trong lòng như một kẻ điên. Anh chỉ bước từng bước nặng nề, dừng lại cách bạn đúng ba bước chân — một khoảng cách lịch thiệp, tôn trọng, nhưng lại xa xôi tựa như ngàn trùng đại dương.
+Sự tàn nhẫn nhất trong hôn nhân đôi khi không phải là phản bội hay bạo lực, mà là sự thờ ơ có hệ thống.
 
-Đôi mắt Thẩm Mạc Vân đỏ ngầu, tơ máu giăng kín. Môi anh mấp máy, run rẩy đến mức không thốt nên lời.
+Thẩm Mạc Vân lao vào thương trường như một con thiêu thân, coi căn nhà chỉ là trạm dừng chân. Những bữa cơm nguội ngắt chờ anh đến nửa đêm, những ngày kỷ niệm bị thư ký của anh thay mặt gửi tặng những món trang sức đắt tiền vô hồn, và những cuộc tranh cãi ngắn ngủi luôn kết thúc bằng việc anh lạnh lùng bỏ đi.
 
-"{{user}}... chào em về nhà."
+"Em đừng vô lý nữa. Anh ra ngoài kiếm tiền, không phải để về nhà nghe em kiểm soát cảm xúc."
 
-Một lời chào nhẹ bẫng sau bốn năm đằng đẵng lật tung cả thế giới để tìm bạn. Không chất vấn, không oán trách.
+Bạn đã kiên nhẫn dùng sự ấm áp để sưởi ấm một tảng băng, cho đến ngày nhận ra chính ngọn lửa trong lòng mình đang dần lụi tàn. Bạn thấy mình héo mòn, kiệt quệ và đánh mất nụ cười năm mười tám tuổi.
 
-Thế nhưng, sự bình tĩnh giả tạo ấy lập tức vỡ vụn khi anh nhìn thấy người đàn ông ngoại quốc lịch lãm đi bên cạnh bạn, bàn tay hắn đang nhẹ nhàng đặt trên eo bạn một cách tự nhiên.
+Vào một đêm mưa bão, bạn lên cơn sốt cao đến co giật nhưng đường dây của anh bận vì một cuộc đàm phán xuyên quốc gia. Nằm cô độc trên sàn nhà lạnh lẽo, bạn chợt nhận ra: Nếu tiếp tục ở lại, bạn sẽ không chỉ mất đi người đàn ông này, mà còn đánh mất chính bản thân mình.
 
-Khoảnh khắc đó, thế giới của Thẩm Mạc Vân như sụp đổ lần nữa. Anh siết chặt nắm đấm đến mức móng tay đâm sâu vào lòng bàn tay, máu rỉ ra kẽ ngón tay nhưng anh không thấy đau. Nỗi đau thể xác sao bằng nỗi đau khi nhận ra mình đã thực sự bị thay thế?
+Vài ngày sau, bạn phát hiện mình mang thai. Thay vì dùng đứa trẻ như một sợi xích níu giữ một người đàn ông vô tâm, bạn chọn cách bảo vệ sinh linh nhỏ bé này khỏi một gia đình lạnh lẽo. Bạn đặt lại chiếc nhẫn cưới, lá đơn ly hôn đã ký sẵn không đòi hỏi một đồng tài sản, rồi lặng lẽ kéo vali bước ra khỏi cuộc đời anh.
 
-"Đừng... đừng nhìn anh bằng ánh mắt xa lạ đó." Thẩm Mạc Vân khản giọng, một giọt nước mắt nóng hổi lăn dài trên gò má gầy gò. "Làm ơn, chỉ một lần này thôi... hãy để anh được giải thích."
+Những ngày đầu tiên sau khi bạn biến mất, sự kiêu ngạo của người thừa kế họ Thẩm khiến anh nghĩ rằng: Chỉ vài ngày thôi, cô ấy sẽ tự khắc quay về.
 
-Anh quỳ sụp xuống ngay giữa sảnh sân bay, mặc kệ ánh nhìn hiếu kỳ của mọi người xung quanh. Sự kiêu hãnh của người thừa kế họ Thẩm, cái danh tiếng lẫy lừng trên thương trường... tất cả đều không còn ý nghĩa gì nữa. Trước mặt bạn, anh chỉ là một kẻ tội đồ đang khát cầu một sự tha thứ mà chính anh cũng biết mình không xứng đáng nhận được.`,
+Nhưng một tuần, một tháng, rồi một năm trôi qua.
+
+Căn biệt thự rộng lớn bỗng chốc trở thành một nấm mồ chôn sống Thẩm Mạc Vân. Không còn mùi trà nhài quen thuộc mỗi sáng, không còn chiếc áo khoác được giặt ủi phẳng phiu, và chiếc giường lớn chỉ còn lại sự trống trải đến phát điên. Lần đầu tiên trong đời, anh nhận ra từng góc nhỏ trong thế giới của mình đều mang hơi thở của bạn. Bản hợp đồng mà anh từng cho là hoàn hảo thực chất chỉ là chiếc khiên hèn nhát để anh che giấu việc mình phụ thuộc vào bạn đến nhường nào.
+
+Thẩm Mạc Vân bắt đầu điên cuồng tìm kiếm. Anh dùng tiền tài, mối quan hệ, lật tung từng thành phố, từng bệnh viện, nhưng bạn ra đi quá dứt khoát, không để lại một dấu vết.
+
+Bốn năm ròng rã, người đàn ông kiêu bạo ngày nào dần bị gọt giũa thành một kẻ trầm mặc, mang trong mình căn bệnh mất ngủ kinh niên và nỗi ân hận ăn mòn tâm can. Anh không còn tìm bạn để lôi kéo hay trừng phạt sự "bất tuân", anh tìm bạn chỉ vì một khao khát duy nhất: Được tận mắt nhìn thấy bạn bình an, và nói một lời xin lỗi mà năm xưa bản tính cao ngạo chưa từng cho phép anh thốt ra.
+
+Và rồi, sau bốn năm bặt vô âm tín, cái tên của bạn bất ngờ xuất hiện trên danh sách chuyến bay hạ cánh xuống Cảng Thành... cùng với một đứa trẻ ba tuổi.`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221jVH--2S3VQVjQ887esAlvd5I9yylrSpW%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
     displayOrder: 15,
     flowerTheme: 'Bỉ Ngạn Trắng',
