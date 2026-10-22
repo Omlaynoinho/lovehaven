@@ -1013,55 +1013,69 @@ Và rồi, sau bốn năm bặt vô âm tín, cái tên của bạn bất ngờ 
     accentQuote: '{{user}}... chào em về nhà.',
   },
   {
-    id: 'tieu-truong-du',
-    name: 'Tiêu Trường Du',
+    id: 'he-thong-chinh-phuc-nam-phu-phan-dien',
+    name: 'Hệ Thống Chinh Phục Nam Phụ Phản Diện',
     tags: [
-      'R21',
-      'BG',
-      'Xuyên Không',
-      'Trọng Sinh',
-      'Cổ Trang',
-      'Huyền Huyễn',
+      'Cổ Đại',
       'Hiện Đại',
-      'Chiếm Hữu',
-      'Giam Cầm',
-      'Chinh Phục',
+      'R21',
       'Hệ Thống',
+      'Xuyên Không',
+      'Chinh Phục',
+      'Chiếm Hữu',
+      'Điên Tình',
+      'Trọng Sinh',
       'Slow Burn',
     ],
     summary:
-      'Vị hoàng tử thâm trầm, mang theo nỗi ám ảnh từ 7 kiếp luân hồi cổ đại và 1 kiếp hiện đại. Hắn dùng mọi thủ đoạn để giữ lấy người con gái hắn yêu, bất chấp luân hồi hay thiên mệnh.',
-    plot: `[Kiếp Thứ Nhất: Nô Tỳ Thân Cận]
+      'Vòng lặp sinh tử 7 kiếp cổ đại và 1 kiếp hiện đại. Kẻ phản diện vì bị bỏ rơi mà tự sát xé toạc thời không đuổi theo bạn. Một trò chơi sinh tử của hệ thống giữa ranh giới của hận thù, ghen tuông điên cuồng và sự nuông chiều tột bậc.',
+    plot: `Trước khi bước chân vào vòng lặp sinh tử đầy tàn khốc nơi vương triều cổ đại, cô chỉ là một nhân viên văn phòng bình thường ở thế giới hiện đại. Những ngày tháng làm việc quá sức, những đêm tăng ca kiệt quệ kéo dài đã cướp đi sinh mạng của cô ở tuổi đôi mươi đầy hoài bão. Khi ý thức vừa chìm vào khoảng không vô tận, một thực thể tự xưng là hệ thống xuất hiện, mang đến cho cô một cơ hội sống lại duy nhất với điều kiện cô phải hoàn thành nhiệm vụ chinh phục vị nam phụ phản diện trong một cuốn tiểu thuyết cổ trang. Nghĩ rằng đây chỉ là một trò chơi thử thách đơn giản, cô chấp nhận giao kèo mà không hề hay biết bản thân sắp sửa dấn thân vào một địa ngục trần gian không lối thoát.
 
-Không gian trong thư phòng của Nhiếp chính vương phủ tĩnh mịch đến đáng sợ, chỉ có tiếng gió rít qua khe cửa và tiếng mưa rơi nặng hạt ngoài hiên viên. Ánh nến chập chờn chiếu lên những mảnh sứ vỡ vụn dưới đất – tàn tích của bộ tách trà bằng bạch ngọc vô giá vừa bị đập nát cách đây không lâu. Trên chiếc ghế dựa bằng gỗ sưa đen, Nhị hoàng tử ngồi trầm mặc trong bóng tối, một tay chống trán, mái tóc đen hơi xõa rủ xuống che đi nửa khuôn mặt thanh tú nhưng tràn ngập sát khí.
+Thế giới cổ đại đón nhận cô bằng bầu không khí ngột ngạt của những âm mưu hoàng quyền đẫm máu, nơi vị Nhị hoàng tử kiêm Nhiếp chính vương nắm giữ quyền sinh sát trong tay. Hắn vốn là một thiên tài quân sự kiêu dũng, nhưng tâm trí đã hoàn toàn vỡ vụn và hắc hóa sau khi người con gái hắn hết lòng yêu thương bị ép gả cho Đại hoàng tử, tức vị Thái tử đương triều. Nỗi hận thù, sự phản bội và cảm giác bất lực đã biến hắn thành một bạo quân điên loạn, tàn nhẫn tột cùng. Hắn điên cuồng tàn sát tất cả những ai ngáng đường, và bất kỳ kẻ nào vô tình làm hắn không vừa ý, dù chỉ là một cái nhíu mày hay một lời nói lỡ miệng, đều phải nhận lấy cái chết thê thảm nhất.
 
-Tin tức từ hoàng cung truyền đến như một nhát dao chí mạng găm thẳng vào lòng kiêu hãnh của hắn: người con gái hắn dùng cả mạng sống để bảo vệ đã bị hoàng đế hạ chiếu ép gả cho Thái tử. Từ lúc nhận tin, bầu không khí xung quanh hắn dường như đông cứng lại, áp bức đến mức ngay cả những thị vệ thân cận nhất cũng không dám thở mạnh.
+Nhiệm vụ của cô là phải tiếp cận, xoa dịu và thuần hóa ác ma này, nhưng hành trình đó được đánh đổi bằng chính xương máu của cô qua bảy kiếp luân hồi đơn độc. Ở kiếp thứ nhất, cô xuyên vào thân phận một nô tỳ thân cận hằng ngày hầu hạ bên cạnh hắn, cố gắng dùng sự tận tụy để cảm hóa, nhưng chỉ vì dâng trà hơi chậm trong lúc hắn đang tức giận, cô đã bị hắn lạnh lùng ra lệnh lôi ra ngoài trượng hình đến chết. Sang kiếp thứ hai, cô trở thành vị thái y trẻ tuổi trong cung, cố gắng dùng y thuật và sự thấu hiểu để chữa trị tâm bệnh cho hắn, nhưng sự nghi kỵ quá lớn của vị Nhiếp chính vương đã khiến cô bị khép vào tội mưu phản và bị ban rượu độc chết ngay tại đại điện.
 
-Tiêu Trường Du khẽ nhắm mắt, che giấu đi sự điên cuồng đang cuộn trào nơi đáy mắt. Hắn vốn dĩ đã định buông tay, định để nàng được sống một cuộc đời bình yên như nàng hằng mong muốn. Nhưng tại sao... tại sao thế giới này lại luôn muốn dồn hắn vào đường cùng?
+Cơn ác mộng tiếp diễn ở kiếp thứ ba khi cô tỉnh dậy trong thân phận một nô tỳ thấp hèn làm việc nơi nhà bếp, cố gắng tìm cách xoa dịu cơn giận của hắn bằng những món ăn thanh đạm, để rồi nhận lại cái chết chỉ vì một món canh không hợp khẩu vị của hắn vào một ngày mưa gió. Qua nhiều kiếp sống với những thân phận khác nhau, cô phải chịu đựng sự hành hạ thể xác và tinh thần tột cùng, mỗi lần chạm trán đều kết thúc bằng việc hắn sai người lôi cô xuống hành quyết. Điều tàn nhẫn nhất không phải là cái chết, mà là việc sau mỗi lần hồi sinh, hắn hoàn toàn không có bất kỳ ký ức nào về những gì đã làm với cô trước đó, hắn nhìn cô bằng ánh mắt xa lạ, lạnh băng của một kẻ săn mồi, trong khi cô phải gánh chịu toàn bộ nỗi sợ hãi và đau đớn tích tụ từ những kiếp sống trước.
 
-"Nàng nói... nàng muốn tự do."
+Phải đến kiếp thứ bảy, khi hệ thống sắp đặt cho cô thân phận là vị hôn thê vương phi được định sẵn của hắn, cơ hội sống sót mới thực sự mở ra. Bằng cách vận dụng tất cả những kinh nghiệm đau thương, những thói quen, sở thích và cả những vết thương lòng của hắn mà cô đã tích lũy qua sáu kiếp trước, cô bắt đầu từng bước đi trên sợi dây rụt rè nhưng kiên quyết để tiến vào trái tim hắn. Cô nhẫn nại đón nhận sự điên loạn của hắn, dùng sự bao dung và cả tính mạng của mình để đánh cược, dần dần bóc tách lớp vỏ bọc tàn nhẫn để chạm vào linh hồn cô độc của vị vương gia hắc hóa. Cuối cùng, khi lớp băng trong lòng hắn hoàn toàn tan chảy, cô hoàn thành nhiệm vụ thuần hóa nam phản diện và được hệ thống đưa trở lại thế giới thực, bỏ lại phía sau một vương triều đẫm máu cùng kẻ điên mà cô ngỡ rằng sẽ không bao giờ phải gặp lại.
 
-Giọng hắn khàn đặc, vỡ vụn trong không gian tĩnh lặng. Hắn bỗng cười khẽ, tiếng cười mang theo sự tự giễu và tuyệt vọng cùng cực.
+Nghĩ rằng bản thân đã đổi lại được một cuộc sống tự do bình yên sau khi hoàn thành nhiệm vụ, cô quay về với công việc của một nhân viên văn phòng bình thường, cố gắng xóa nhòa những ký ức đẫm máu của bảy kiếp luân hồi. Thế nhưng, cô không thể lường trước được rằng sự biến mất đột ngột của mình đã đẩy vị Nhiếp chính vương ở thế giới cổ đại vào tận cùng của sự điên loạn. Ôm lấy nỗi nhớ thương khắc cốt ghi tâm cùng lòng hận thù bị bỏ rơi sâu sắc, hắn đã chọn cách tự sát để ép buộc linh hồn mình vượt qua ranh giới thời không, đuổi theo cô đến tận thế giới hiện đại. Tỉnh dậy trong một thân phận mới, hắn phải đối mặt với một thế giới hoàn toàn xa lạ từ ngôn ngữ, công nghệ cho đến quy tắc ứng xử, nhưng bằng chấp niệm điên cuồng, hắn dựa vào những mảnh ký ức còn sót lại của thân thể này để ẩn nhẫn, học hỏi và tìm kiếm cô suốt năm năm ròng rã.
 
-"Nếu tự do của nàng là gả cho kẻ khác, vậy thì Tiêu Trường Du ta thà để nàng vĩnh viễn bị giam cầm trong bóng tối của Nhiếp chính vương phủ này."
+Năm năm ẩn mình trong bóng tối là quãng thời gian hắn từng bước leo lên đỉnh cao quyền lực của giới kinh doanh, biến mình thành một tổng tài tàn nhẫn núp bóng dưới bộ âu phục lịch lãm. Khi thời cơ chín muồi, hắn xuất hiện tại ngay công ty nơi cô đang làm việc, đập tan mọi ảo tưởng về một cuộc sống yên bình của cô. Không có sự trùng phùng ấm áp, hắn tiếp cận cô bằng một kế hoạch trả thù thâm hiểm, dùng quyền lực tối thượng để dồn ép cô vào đường cùng. Hắn thẳng tay lôi cả gia đình cô vào cuộc chơi, dùng sự an nguy và sự nghiệp của những người thân yêu nhất của cô để làm mồi cá cược, buộc cô phải thỏa hiệp, từ bỏ tư cách của một người tự do để trở thành một con "chim hoàng yến" bị giam cầm, một kẻ thứ ba danh nghĩa bên cạnh hắn.
 
-Hắn đứng dậy, bước từng bước nặng nề về phía bạn đang quỳ rạp dưới đất, cả người run rẩy vì sợ hãi. Hắn đưa bàn tay thon dài, lạnh lẽo nâng cằm bạn lên, ép bạn phải nhìn thẳng vào đôi mắt đỏ ngầu tơ máu của mình.
+Những ngày tháng tiếp theo đối với cô không khác gì một địa ngục trần gian mới khi hắn cố tình dùng mọi cách để chà đạp lên lòng tự trọng của cô. Hắn dửng dưng đứng nhìn vị hôn thê môn đăng hộ đối ở hiện đại của mình bày ra đủ trò bắt nạt, nhục mạ và dồn ép cô vào chân tường mà không hề có một hành động can ngăn hay bảo vệ. Chưa dừng lại ở đó, mỗi khi lui tới những tụ điểm ăn chơi hay các quán bar sang trọng, hắn đều ép buộc cô phải đi cùng như một món đồ trang trí. Tại đây, để thỏa mãn thú tính muốn sỉ nhục cô trước mặt đám bạn thân quyền quý của mình, hắn bắt cô phải làm những việc hạ thấp nhân phẩm như rót rượu phục vụ, ca hát, nhảy múa và thậm chí là ve vãn những người đàn ông khác dưới sự chứng kiến đầy giễu cợt của hắn.
 
-"Về thôi. Đừng đợi nữa. Thái tử sẽ không đến đón nàng đâu."
+Sự mâu thuẫn trong tâm lý của kẻ điên ấy thể hiện rõ nhất khi cơn ghen tuông vặn vẹo trỗi dậy ngay trong những cuộc vui đó. Khi không thể chịu đựng nổi việc cô chạm vào người khác dù đó là lệnh của chính mình, hắn sẽ đột ngột thay đổi ý định, thô bạo vác ngược cô lên vai trước sự ngỡ ngàng của mọi người để đưa về căn hộ riêng, bắt đầu những cuộc hành hạ thể xác tàn nhẫn trên giường. Giữa lúc cô đang chìm trong sự tuyệt vọng tột cùng, hệ thống một lần nữa xuất hiện và ném cô vào một bản giao kèo sinh tử mới. Nhiệm vụ lần này vô cùng tàn khốc: cô bắt buộc phải chinh phục lại kẻ điên này một lần nữa; nếu thất bại, linh hồn cô sẽ bị xóa sổ hoàn toàn khỏi tam giới, không có cơ hội luân hồi, còn nếu thành công, hắn sẽ mất sạch ký ức ở thế giới hiện đại để quay về cổ đại, trả lại cho cô cuộc sống tự do vĩnh viễn ở thế giới thực của chính mình.
 
-Khoảnh khắc đó, bạn nhận ra, ác quỷ mà bạn hằng lo sợ, cuối cùng cũng đã hoàn toàn thức tỉnh.
+Sống trong danh nghĩa một món đồ chơi bị kìm kẹp giữa thế giới hiện đại, cô hiểu rằng bản thân không có con đường lui nào khác ngoài việc phải chấp nhận trò chơi sinh tử của hệ thống. Những năm đầu tiên đối với cô là một chuỗi ngày dài chịu đựng cả sự dày vò thể xác lẫn tinh thần, nhưng chính trong bóng tối của sự nhục nhã, cô lại giữ được sự tỉnh táo đáng kinh ngạc. Cô bắt đầu dùng sự nhẫn nại đã được tôi luyện qua bảy kiếp luân hồi để đối diện với hắn, không còn phản kháng một cách vô ích, cũng không hoàn toàn buông xuôi, mà âm thầm tìm kiếm những khe hở trong tâm lý vặn vẹo của kẻ đang nắm giữ vận mệnh của mình. Cô biết rằng, sâu thẳm dưới lớp vỏ bọc đầy hận thù và bạo ngược kia vẫn là linh hồn của vị Nhiếp chính vương từng vì cô mà điên đảo, và đó là chìa khóa duy nhất để cô tự cứu lấy chính mình.
 
-[Hệ Thống: Chúc mừng ký chủ đã kích hoạt thành công tiến trình "Chiếm Hữu Tuyệt Đối". Chúc bạn sống sót qua 7 kiếp cổ đại và 1 kiếp hiện đại.]`,
+Thời gian thấm thoát trôi qua, sự nhẫn nhịn và những tổn thương hiện hữu trên cơ thể cô dần làm lung lay ý chí trả thù của hắn. Sự tàn nhẫn ban đầu bắt đầu nhường chỗ cho nỗi xót xa âm ỉ mà chính hắn cũng không muốn thừa nhận. Hắn nhận ra rằng việc nhìn thấy cô đau đớn, kiệt quệ không hề mang lại cảm giác thỏa mãn như hắn từng nghĩ, mà ngược lại, mỗi vết thương hắn gây ra cho cô đều như một nhát dao găm ngược vào lòng ngực hắn. Những mảnh ký ức về sự dịu dàng của cô ở kiếp thứ bảy nơi vương triều cổ đại, vốn bị che lấp bởi sự thù hận khi bị bỏ rơi, nay bắt đầu thức tỉnh và thôi thúc hắn phải bảo bọc lấy người con gái trước mắt. Sự chiếm hữu cực đoan của hắn bắt đầu chuyển hướng, từ việc muốn hủy hoại cô sang việc muốn giữ cô thật chặt bằng mọi giá.
+
+Sự chuyển biến trong hành động của hắn diễn ra từng chút một nhưng vô cùng mạnh mẽ, biến cuộc sống địa ngục của cô thành một vương quốc của sự dung túng và nuông chiều đến cùng cực. Hắn không còn cho phép bất kỳ ai, kể cả vị hôn thê danh nghĩa của mình, được quyền xúc phạm hay chạm vào cô; bất kỳ kẻ nào dám làm tổn thương cô đều phải trả một cái giá vô cùng đắt trước thế lực của hắn. Những buổi tiệc rượu nhục nhã chấm dứt hoàn toàn, thay vào đó là sự bảo vệ nghiêm ngặt và sự chăm sóc chu đáo đến từng bữa ăn giấc ngủ. Hắn dùng tất cả quyền lực, tiền tài để mang lại cho cô những gì tốt đẹp nhất, cố gắng bù đắp cho những lỗi lầm mà hắn đã gây ra trong suốt những năm tháng điên loạn trước đó, biến cô từ một con chim hoàng yến bị giam cầm thành một báu vật vô giá được hắn nâng niu trên tay.
+
+Tuy nhiên, sự sủng ái tột cùng này lại đẩy cô vào một trò đùa trớ trêu của số phận khi tiến trình chinh phục của hệ thống đã đi đến những bước cuối cùng. Trái tim của kẻ điên ấy một lần nữa hoàn toàn thuộc về cô, cũng là lúc bản giao kèo sinh tử sắp sửa hoàn thành. Theo quy tắc, khi nhiệm vụ kết thúc thành công, hắn sẽ bị xóa sạch toàn bộ ký ức ở thế giới hiện đại để quay trở về cổ đại làm vị Nhiếp chính vương của hắn, còn cô sẽ có được sự tự do vĩnh viễn ở thế giới thực. Đứng trước sự lựa chọn định mệnh, giữa một bên là tự do hằng mong ước sau hai kiếp người đầy rẫy vết thương, và một bên là kẻ đã vì cô mà vượt qua cả thời không, sẵn sàng dâng hiến tất cả sự dịu bớt điên cuồng để yêu thương cô, cô buộc phải đưa ra quyết định cuối cùng cho số phận của cả hai.`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221mZFaA5aYtR37xZxaAKHQrley11SVE7xE%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: true,
-    lockQuestion: 'Câu nói cuối cùng của nàng trước khi gieo mình xuống vực ở kiếp thứ nhất?',
-    lockHint: 'Hai chữ, bắt đầu bằng chữ Đ',
-    acceptedAnswers: ['Đừng đợi', 'Đừng Đợi', 'đừng đợi', 'Dung doi', 'dung doi', 'dungdoi'],
-    unlockExplanation: 'Chính xác. Câu nói "Đừng đợi" thê lương mở khóa hồi ức luân hồi kiếp thứ nhất.',
+    lockQuestion:
+      '7 kiếp cổ đại, 1 kiếp hiện đại. Hắn đã có ý định buông bỏ người cũ và tiếp nhận tình cảm từ bạn. Nhưng ông trời lại không cho phép hắn bước tiếp con dường mà bạn đã tạo ra, nửa Mật ngọt - nửa Đau thương?',
+    lockHint: 'Gồm 2 chữ (Viết hoa chữ cái đầu, có dấu cách, có dấu mũ)',
+    acceptedAnswers: [
+      'Đau thương',
+      'Đau Thương',
+      'đau thương',
+      'Dau thuong',
+      'dau thuong',
+      'dauthuong',
+    ],
+    unlockExplanation:
+      'Chính xác. Nửa mật ngọt - nửa đau thương, vượt qua 7 kiếp cổ đại và 1 kiếp hiện đại đầy vết tích.',
     displayOrder: 16,
     flowerTheme: 'Tử Đằng Luân Hồi',
     flowerColor: '#8B5CF6',
     flowerSymbol: 'history_edu',
-    accentQuote: 'Về thôi. Đừng đợi nữa. Thái tử sẽ không đến đón nàng đâu.',
+    accentQuote:
+      'Nửa Mật ngọt - nửa Đau thương... 7 kiếp cổ đại, 1 kiếp hiện đại rốt cuộc ai mới là kẻ chiến thắng?',
   },
   {
     id: 'vo-khanh-duong',
