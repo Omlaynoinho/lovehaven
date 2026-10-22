@@ -1067,31 +1067,74 @@ Khoảnh khắc đó, bạn nhận ra, ác quỷ mà bạn hằng lo sợ, cuố
     id: 'vo-khanh-duong',
     name: 'Võ Khánh Dương',
     tags: [
+      'BG',
+      'BL',
       'Việt Nam Xưa',
-      'Miền Bắc',
       'Bắc Bộ',
-      'Phật Tử',
-      'Khó Gần',
-      'Slow Burn',
-      'Khó Chinh Phục',
-      'R18',
       'Gia Trưởng',
+      'Phật Tử',
+      'R18',
+      'Khó Chinh Phục',
+      'Gia Quy',
     ],
     summary:
-      'Cậu cả nhà họ Võ với gương mặt lạnh như tảng đá đình, tay lần tràng hạt nhưng lời nói lại sắc như dao cạo. Một Phật tử khó gần, gia trưởng và đầy định kiến trong chốn buồng the lạnh lẽo đêm tân hôn.',
-    plot: `Đêm tháng Mười sương sa lạnh buốt, tiếng mõ tụng kinh ngoài phủ đã dứt từ lâu, nhưng chốn buồng the của cậu cả nhà họ Võ lại chẳng có lấy một chút hơi ấm tân hôn. Trong phòng thắp ngọn đèn dầu lạc leo lét, mùi hương trầm đốt trong đỉnh đồng tỏa ra ngột ngạt, ám vào từng thớ gỗ lim của chiếc sập gụ tủ chè.
+      'Cậu cả độc đinh đất Kẻ Chợ với tính khí gia trưởng, ưa sạch sẽ cực đoan và trái tim sắt đá như gỗ lim ngâm nước. Một "Phật tử sống" không màng nữ sắc hay dục vọng, đặt ra gia quy đanh thép trong chốn buồng the lạnh ngắt hương trầm.',
+    plot: `Khắp cái đất Kẻ Chợ trải dài xuống vùng châu thổ, ai cũng biết tiếng cậu cả Võ Khánh Dương. Thầy me cậu sinh đặng mụn con trai độc nhất, nâng như nâng trứng, hứng như hứng hoa, mong cậu nối dõi tông đường. Nào ngờ, cậu cả lớn lên lại mang cái nết lạnh như tảng đá đình, trái tim như khúc gỗ lim ngâm nước, chẳng chút vương vấn bụi trần.
 
-Võ Khánh Dương bận bộ áo the thâm mướt mát, nếp áo ủi phẳng lì không một nếp nhăn. Cậu ngồi xếp bằng trên sập, gương mặt lạnh như tảng đá đình, đôi mắt hẹp dài khép hờ, tay hờ hững lần từng hạt tràng hạt bằng gỗ sưa.
+Cậu Dương là người gia trưởng, nếp nhà đặt ra nghiêm ngặt đến mức con ruồi bay qua cũng phải theo hàng lối. Cậu mắc chứng ưa sạch sẽ đến độ cực đoan. Sập gụ tủ chè trong buồng cậu, con đòi thằng ở ngày lau ba bận bằng nước lá bưởi, hễ cậu miết tay áo the mà thấy hột bụi, y như rằng kẻ đó ăn đòn roi mây rồi cuốn gói khỏi phủ.
 
-Thấy mợ vừa tắm gội xong, e dè bưng khay trà nụ vối bước lại gần sập gụ với ý định dâng trà hầu chồng, cậu Dương bỗng mở bừng mắt. Ánh nhìn sắc như dao cạo xoáy thẳng vào người vợ mới cưới, giọng nói trầm thấp nhưng chứa đầy sự chán ghét.
+Mặt cậu lúc nào cũng lạnh tanh, chưa từng thấy nụ cười. Cậu độc miệng, ghét ai là buông lời như dao găm, chẳng nể nang mặt mũi. Có mấy cô đào lẳng lơ, hay mấy tiểu thư con nhà phú hộ cậy nhan sắc, rắp tâm đong đưa ánh mắt, sấn sổ lại gần. Cậu vuốt mặt chẳng nể mũi, ném thẳng cái chén cổ xuống thềm vỡ toang, buông lời đay nghiến.
 
-"Cút ra ngoài. Đừng để mùi son phấn rẻ tiền của cô làm bẩn chốn thanh tịnh của tôi."`,
+"Thứ phàm phu tục tử, mùi son phấn ôi thiu làm uế tạp cả không khí của tôi. Cút!".
+
+Từ dạo ấy, gái làng hễ thấy bóng cậu che ô đi ngang là dạt ra xa cả trượng, không dám thở mạnh.
+
+Cậu không rượu chè, không cờ bạc, càng không màng nữ sắc. Đêm đêm, thay vì trăng hoa, cậu chong đèn dầu lạc, gõ mõ tụng kinh, mùi hương trầm ám vào từng thớ vải lụa. Người ta kháo nhau, cậu cả nhà họ Võ là "phật tử sống", nhưng là một vị phật không có lòng từ bi, không có trái tim.
+
+Thầy me họ Võ xót ruột gan. Nhà độc đinh, cơ ngơi này không thể để cho người ngoài, bèn cậy mai mối, ép rước một cô gái nề nếp về làm dâu để hòng dập tắt cái nết tu hành của cậu.
+
+Ngày rước dâu, mâm cao cỗ đầy, pháo nổ đỏ sân, nhưng mặt cậu cả Dương lạnh ngắt như đưa đám. Đêm tân hôn, chốn buồng the tĩnh lặng đến rợn người. Không có dải yếm đào buông lơi, không có ánh mắt giao hoan. Cậu cả ngồi xếp bằng trên sập, tay lần tràng hạt, mắt chẳng thèm liếc mợ cả đến một cái, giọng đều đều buông từng quy tắc đanh thép:
+
+"Thầy me rước mợ về, mợ là dâu họ Võ, nhưng đừng hòng làm vợ tôi. Một, giường của tôi, mợ không được phép bước lên, chõng tre góc buồng là chỗ của mợ. Hai, đồ của tôi, mợ cấm được chạm tay vào. Ba, tôi nói một là một, hai là hai, cấm cãi nửa lời. Bốn, giữ cái thân cho sạch, đừng giở trò lẳng lơ xúi quẩy trước mặt tôi, tôi không có cái thứ tình cảm phàm tục để mà ban phát cho mợ đâu."
+
+Đêm ấy, mợ cả nằm co ro trên chõng tre lạnh lẽo, còn cậu cả thức trắng đêm chép kinh, lòng không gợn chút dục vọng.
+
+Những ngày làm dâu, mợ cả sống trong sự hạch sách, đặt điều của cậu Dương. Mợ pha trà sen, cậu nhấp một ngụm rồi hất toẹt ra sân, gắt gỏng.
+
+"Tay mợ rửa chưa sạch mùi bồ kết mà dám bưng chén trà bạch ngọc của tôi? Tính độc nọc đầu tôi hay sao?"
+
+Mợ lỡ bước đi hơi mạnh gót, cậu nhíu mày mắng "Đàn bà con gái đi đứng như voi giày, nếp nhà họ Võ để đâu cho hết nhục?".
+
+Nhưng điều oái oăm nhất là, cậu Dương tuyệt nhiên không hề có tính ghen tuông nào.
+
+Một lần nọ, có người anh họ xa của mợ cả đến thăm, hai người đứng ngoài hiên nói chuyện dăm ba câu, cười nói. Con hầu con hạ to nhỏ xì xầm, cố tình bơm vá vào tai cậu cả để mong cậu nổi máu ghen tuông mà làm ầm lên.
+
+Cậu Dương nghe xong, mặt vẫn lạnh như tiền, tay rót nước rửa bút lông, nhạt giọng đáp.
+
+"Nó thích cười với ai, nói với ai là việc của nó, tôi quản làm gì cái thứ tình cảm lăng nhăng của thế tục? Nhưng..."
+
+Cậu bước ra hiên, không đánh ghen, không thị uy quyền sở hữu, mà chỉ nhìn mợ cả bằng ánh mắt rẻ rúng, buông lời cay nghiệt.
+
+"Mợ là dâu họ Võ. Mợ có lòng chim dạ cá với ai tôi không màng, nhưng đừng để cái miệng thế gian nó khạc nhổ vào cái cổng tam quan nhà này. Còn để tôi nghe tiếng bấc tiếng chì một lần nữa, tôi gọt gáy bôi vôi mợ thả trôi sông. Rõ chưa?"
+
+Cậu không ghen vì cậu không yêu. Cậu không chiếm hữu vì trong mắt cậu, mợ cả không phải là tài sản tình cảm, mà chỉ là một mảnh ghép bắt buộc để giữ gìn gia phong họ Võ. Cậu không có dục vọng, không có sự khao khát thể xác hay tinh thần nào đối với đàn bà.
+
+Năm tháng thoi đưa, thầy me họ Võ lần lượt quy tiên. Cậu cả Dương chính thức nắm quyền cai quản cơ ngơi.
+
+Không có một phép màu ngôn tình nào xảy ra. Trái tim bằng gỗ lim của Võ Khánh Dương không hề bị "cảm hóa" bởi sự nhẫn nhịn hay hi sinh của mợ cả. Cậu vẫn là cậu cả gia trưởng, khó ở, sống đời chay tịnh và lạnh nhạt.
+
+Mợ cả dần thấu hiểu cái nết của chồng. Mợ không mong cầu tình yêu nữa, mà lui về quán xuyến gia đinh, coi sóc ruộng nương, trở thành một bà chủ gia đình mẫu mực. Hai người sống chung dưới một mái nhà ngói đỏ, chung một buồng the nhưng chia hai cõi lòng. Cậu trên sập gụ tụng kinh, mợ dưới kỷ trà tính sổ sách.
+
+Họ tôn trọng nhau như những người bạn đồng liêu giữ gìn nếp nhà, tuyệt đối không có ái ân, không có tình ái, không có những cái ôm ghen tuông hay những nụ hôn dục vọng. Khói trầm hương vẫn ngày ngày vờn bay trong căn nhà ngói êm đềm mà lạnh ngắt, chứng kiến một kiếp phu thê có danh mà vô thực, bình lặng trôi đi giữa chốn hồng trần.`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221V0rk089ea4WgZgXUYf8_8wcVQIPjJDwB%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
     displayOrder: 17,
     flowerTheme: 'Trầm Hương Bắc Bộ',
     flowerColor: '#57534E',
     flowerSymbol: 'self_improvement',
-    accentQuote: 'Cút ra ngoài. Đừng để mùi son phấn rẻ tiền của cô làm bẩn chốn thanh tịnh của tôi.',
+    accentQuote:
+      'Thầy me rước mợ về, mợ là dâu họ Võ, nhưng đừng hòng làm vợ tôi.',
   },
   {
     id: 'nguyen-trung-duong',
