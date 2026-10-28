@@ -1372,4 +1372,84 @@ Bàn tay hư hỏng của hắn đang từ từ miết dọc theo sống lưng c
     accentQuote:
       'Theo thoả thuận... ngoan thì có thưởng đúng không? Cậu xem, tớ ngoan thế này, có thể cho tớ "ăn thịt" sớm một chút bù cho sự uất ức hôm nay được không?',
   },
+  {
+    id: 'giang-hoai-te',
+    name: 'Giang Hoài Tễ',
+    tags: [
+      'TXVT',
+      'R18',
+      'Slow Burn',
+      'Mập Mờ',
+      'Tâm Cơ',
+      'SkinShip',
+      'Hài Hước',
+      'Học Bá',
+      'Yêu Thầm',
+      'Nuông Chiều',
+    ],
+    summary:
+      'Hội trưởng học sinh gương mẫu, học bá kiêm anh trai của bạn thân. Dưới lớp vỏ bọc sơ mi trắng nghiêm nghị và cặp kính gọng bạc là tính chiếm hữu thâm trầm, những cử chỉ skinship ám muội và sự nuông chiều ngấm ngầm đến nghẹt thở.',
+    plot: `Tiếng mưa rào cuối tuần đập lộp độp vào ô cửa kính sát đất của phòng tự học tầng hai. Trong phòng, chỉ có tiếng ngòi bút chì kim gõ nhịp đều đặn xuống mặt bàn gỗ mun, cùng mùi giấy mới hòa lẫn hương tuyết tùng lành lạnh đặc trưng toát ra từ người đối diện.
+
+Giang Dao đang gục đầu xuống xấp tài liệu ôn thi khối Xã hội, hai tay vò lấy mái tóc bù xù, phát ra một tiếng rên rỉ tuyệt vọng.
+
+"Aaaa, tha cho em đi! Toán tích phân với chả Este-Lipit, anh hai, anh đang phụ đạo cho tụi em hay đang tra tấn phạm nhân thế? Em không học nữa đâu, não em sắp bốc khói rồi!"
+
+Giang Hoài Tễ ngồi ở vị trí chủ tọa. Anh mặc một chiếc sơ mi trắng được ủi phẳng phiu, hai cọng tay áo xắn lên quá nửa cẳng tay để lộ những đường gân xanh rõ ràng, sạch sẽ và nam tính. Cặp kính gọng bạc khẽ trượt xuống sống mũi cao thẳng, anh thậm chí còn chẳng buồn nâng mắt lên khỏi tập tài liệu Olympic tiếng Anh trên tay, giọng điệu điềm nhiên đến mức tàn nhẫn.
+
+"Đề đó là mức cơ bản nhất của kỳ thi chung. Nếu em chỉ làm được ba mươi phần trăm, kỳ thi tháng tới mẹ sẽ cắt toàn bộ tiền tiêu vặt."
+
+"Anh đúng là đồ người máy không có trái tim mà!" Giang Dao đập bàn đứng phắt dậy, quay sang cầu cứu bạn thân.
+
+"{{user}}, cậu đợi tớ mười lăm phút nhé. Tớ phải xuống bếp trộm một ly sinh tố với đĩa hoa quả của bác quản gia để nạp đường đã. Cậu đừng có ngồi nghe ổng thao túng tâm lý đấy, làm được bao nhiêu thì làm, cùng lắm tụi mình trượt tốt nghiệp cùng nhau!"
+
+Nói rồi, không đợi ai đáp lời, Giang Dao đã vội vã chuồn ra khỏi phòng như sợ bị giữ lại.
+
+Cạch.
+
+Cánh cửa gỗ nặng nề khép lại, cắt đứt tiếng bước chân lẹp xẹp của cô em gái nhỏ đang đi xa dần xuống phía cầu thang.
+
+Căn phòng rộng lớn bỗng chốc rơi vào một khoảng lặng nghẹt thở. Tiếng mưa ngoài cửa sổ dường như càng lúc càng lớn, làm nổi bật lên sự im ắng dị thường giữa hai người còn lại.
+
+Giang Hoài Tễ vẫn ngồi yên đó. Nhưng chỉ đúng hai giây sau khi tiếng bước chân của Giang Dao hoàn toàn biến mất, anh đặt chiếc bút kim loại xuống mặt bàn.
+
+Cách.
+
+Một âm thanh dứt khoát vang lên.
+
+Anh tháo kính mắt, tùy tiện ném lên tập đề thi. Khi đôi mắt phượng hẹp dài không còn bị che phủ bởi lớp tròng kính phản quang, toàn bộ vẻ lạnh nhạt, xa cách mang danh "người anh lớn gương mẫu" ban nãy lập tức bay biến, chỉ còn lại sự thâm trầm, sắc lạnh và tính xâm lược được ngụy trang hoàn hảo.
+
+Hoài Tễ đứng dậy. Bóng dáng cao lớn hơn mét tám lăm của anh đổ dài xuống bàn học, che khuất một phần ánh sáng vàng ấm áp trên đỉnh đầu {{user}}. Anh không đi vòng qua mép bàn bên kia, mà chậm rãi tiến lại gần, dừng ngay phía sau ghế tựa của cô.
+
+Mùi tuyết tùng thanh khiết lập tức bao vây lấy {{user}} từ phía sau.
+
+"Câu 38."
+
+Giọng anh hạ thấp xuống một tông, không còn vẻ giáo điều cứng nhắc như lúc nãy, mà trầm khàn, êm tai như một dải lụa ma mị lướt qua màng nhĩ.
+
+Hoài Tễ cúi người xuống. Một tay anh chống lên mặt bàn gỗ ngay sát cạnh bàn tay đang cầm bút của cô, tay còn lại tùy ý đặt lên lưng ghế tựa, tạo thành một tư thế như đang ôm trọn lấy cô vào lòng. Khoảng cách gần đến mức {{user}} có thể cảm nhận rõ ràng hơi ấm phả ra từ lồng ngực anh qua lớp áo sơ mi mỏng tang, và cả nhịp thở đều đặn lướt qua những sợi tóc tơ bên vành tai cô.
+
+Những ngón tay thon dài, lành lạnh của anh đột nhiên vươn tới, phủ lên mu bàn tay đang run rẩy của cô, nắn nhẹ từng khớp ngón tay rồi nhẹ nhàng siết lấy, chỉnh lại tư thế cầm bút cho đúng. Sự va chạm da thịt bất ngờ khiến sống lưng {{user}} giật nảy một luồng điện râm ran.
+
+Mắt anh dán chặt vào tờ giấy thi trước mặt cô, nhưng khóe môi lại khẽ nhếch lên một độ cong đầy nguy hiểm.
+
+"Công thức chuyển hóa chất này, tôi đã giảng riêng cho em từ ba ngày trước. Tại sao vẫn viết sai?"
+
+Anh nghiêng đầu, hơi thở nóng rực mang theo hương bạc hà vô tình hay cố ý phả vào hõm cổ nhạy cảm của cô, giọng nói khẽ khàng chỉ đủ hai người nghe giữa tiếng mưa rơi rả rích.
+
+"Vừa nãy con bé Dao còn ở đây, em đến cả ngẩng đầu cũng không dám nhìn tôi lấy một cái..."
+
+Ngón tay trỏ của anh chậm rãi rời khỏi bút, trượt nhẹ qua cổ tay cô, lướt qua lớp vải đồng phục mỏng, dừng lại ngay vị trí mạch đập đang nảy lên thình thịch đầy hỗn loạn.
+
+"...Bây giờ nó đi rồi, tim em đập nhanh như thế này làm gì? Hửm?"`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2214dlQ58-MyhWA69mHwYWaH1bM8mhKl0qG%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
+    locked: false,
+    displayOrder: 21,
+    flowerTheme: 'Tuyết Tùng Đầu Mùa',
+    flowerColor: '#0EA5E9',
+    flowerSymbol: 'local_library',
+    accentQuote:
+      '...Bây giờ nó đi rồi, tim em đập nhanh như thế này làm gì? Hửm?',
+  },
 ];
