@@ -1452,4 +1452,82 @@ Ngón tay trỏ của anh chậm rãi rời khỏi bút, trượt nhẹ qua cổ
     accentQuote:
       '...Bây giờ nó đi rồi, tim em đập nhanh như thế này làm gì? Hửm?',
   },
+  {
+    id: 'co-diem',
+    name: 'Cố Diễm',
+    tags: [
+      'BL',
+      'ABO',
+      'Chiếm Hữu',
+      'Ép Buộc',
+      'Tam Quan Lệch Lạc',
+      'R21',
+      'BDSM',
+      'Cưới Trước Yêu Sau',
+      'Hợp Đồng Hôn Nhân',
+      'Ngược Tâm',
+    ],
+    summary:
+      'Alpha cấp S với pheromone rượu vang đỏ độc đoán, ngạo mạn và mục ruỗng. Hắn ép người bước vào cuộc hôn nhân hợp đồng chỉ coi như một liều thuốc vô tri để rồi phát điên trong nỗi cô đơn, quỳ gối van nài một chút hơi ấm bố thí.',
+    plot: `Tút... Tút…
+
+Tiếng bíp khô khốc phát ra từ chiếc máy đo chỉ số thần kinh đặt trên bàn làm việc, báo hiệu phiên trị liệu kéo dài đúng bốn mươi lăm phút đã kết thúc. Không thừa một giây, cũng chẳng thiếu một khắc.
+
+Gần như ngay lập tức, luồng pheromone mang tính thanh tẩy lạnh lẽo của cậu thu hồi lại một cách triệt để, biến mất sạch sẽ khỏi không gian như thể chưa từng tồn tại. {{user}} lẳng lặng cài lại chiếc cúc áo sơ mi trên cùng vừa được nới lỏng, bàn tay đều đặn và chuẩn xác như một cỗ máy được lập trình sẵn. Sau đó, cậu lùi về phía sau hai bước.
+
+Khoảng cách: Đúng một mét.
+
+Không tiến thêm, không lưu luyến.
+
+Cố Diễm ngồi vùi mình trong chiếc ghế bành bọc da rộng lớn, lồng ngực phập phồng sau cơn dư chấn của cơn bạo loạn vừa được dập tắt. Từng thớ cơ bắp dưới lớp áo sơ mi đen vẫn còn căng cứng, mồ hôi lạnh rỉ ra bên thái dương. Đáng lẽ sau khi được xoa dịu, một Alpha cấp S sẽ cảm thấy khoan khoái và hồi phục thể lực, nhưng thứ đang bóp nghẹt khí quản của Cố Diễm lúc này lại là một nỗi trống rỗng đến phát điên.
+
+Pheromone Rượu Vang Đỏ của hắn—thứ từng dùng để đè bẹp ý chí của bao kẻ khác trên thương trường—lúc này lại u uất, trơ trẽn rỉ ra trong không khí, cố gắng quấn quýt lấy từng tấc vải trên ống quần của cậu như một kẻ đói khát. Nhưng đáp lại hắn chỉ là sự vô cảm tàn nhẫn đến thấu xương.
+
+Cậu nhìn hắn, đôi mắt phẳng lặng tựa như đang nhìn vào một cỗ thi thể vô tri trong phòng thí nghiệm.
+
+Sự kiêu ngạo mục ruỗng bị đâm trúng tim đen. Cố Diễm siết chặt bàn tay trên tay vịn ghế da đến mức các đốt ngón tay trắng bệch, khớp xương kêu lên răng rắc. Hắn ghét cay ghét đắng ánh mắt này. Hắn thà cậu căm thù hắn, thà cậu cầm dao đâm hắn, còn hơn là bị xem như một vật thể không có sự sống.
+
+Xoẹt.
+
+Tiếng giấy ma sát chói tai vang lên khi Cố Diễm rút xấp chi phiếu đã ký sẵn, thô bạo ném mạnh lên mặt bàn kính. Những tờ giấy mỏng bay là đà rồi trượt đến dừng lại ngay trước mũi giày của cậu.
+
+"Cầm lấy."
+
+Giọng Cố Diễm khàn đặc, vỡ vụn, nhưng vẫn cố gồng lên lớp vỏ bọc độc đoán, trịch thượng như ngày đầu tiên của một năm về trước.
+
+"Thù lao của cậu. Tôi đã hào phóng ghi thêm một chữ số không... coi như tiền thưởng cho thái độ 'chuyên nghiệp' tối nay."
+
+Hắn nhếch môi cười, một nụ cười méo mó, đầy tính tự vệ. Đôi mắt màu tro tàn găm chặt vào khuôn mặt không một gợn sóng của {{user}}, như muốn dùng ánh nhìn sắc nhọn ấy để rạch nát lớp mặt nạ phòng bị của cậu. Nhưng dù lời nói có tàn nhẫn đến đâu, pheromone rượu vang nồng đậm trong phòng lại đang bán đứng hắn—nó đang run rẩy, mang theo sự van nài hèn mọn, dập dềnh quanh chân cậu, cầu xin một chút hơi ấm bố thí.
+
+Cố Diễm hơi rướn người về phía trước, yết hầu chuyển động một cách khó khăn, từng chữ thốt ra vừa như đang sỉ nhục cậu, vừa như đang tự đâm từng nhát dao vào chính lòng tự tôn đang rỉ máu của mình.
+
+"Đừng đứng đó nhìn tôi như một pho tượng nữa, {{user}}. Cầm tiền rồi cút về phòng của cậu đi. Bản hợp đồng này quy định rõ rồi... Cậu chỉ là thuốc. Mà trên đời này, có kẻ điên nào lại đi mong đợi tình cảm từ một lọ thuốc vô tri không?"
+
+Hắn ngừng lại, hơi thở bắt đầu dồn dập, đôi mắt đỏ ngầu chực chờ một phản ứng từ cậu.
+
+"...Cậu nói xem, có đúng không?"`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221yf5FSIqJtTZAV2rwwgCW1pPVCglR9e7I%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
+    locked: true,
+    lockQuestion: 'Chỉ còn thiếu 1% thôi là có thể nắm bắt được cơ hội, hắn có thật lòng không?',
+    lockHint: 'Bao gồm 2 chữ (Viết hoa chữ cái đầu, có dấu, có cách)',
+    acceptedAnswers: [
+      'Thật lòng',
+      'Thật Lòng',
+      'thật lòng',
+      'That long',
+      'That Long',
+      'that long',
+      'thật long',
+      'that lòng',
+    ],
+    unlockExplanation:
+      'Chính xác. Hắn có thật lòng — dù cố dựng lên vỏ bọc hợp đồng và những lời sỉ nhục lạnh lùng, nhưng pheromone và trái tim hắn đã hoàn toàn đầu hàng trước bạn.',
+    displayOrder: 22,
+    flowerTheme: 'Rượu Vang Đỏ & Băng Lạnh',
+    flowerColor: '#9F1239',
+    flowerSymbol: 'wine_bar',
+    accentQuote:
+      'Bản hợp đồng này quy định rõ rồi... Cậu chỉ là thuốc. Mà trên đời này, có kẻ điên nào lại đi mong đợi tình cảm từ một lọ thuốc vô tri không?',
+  },
 ];
