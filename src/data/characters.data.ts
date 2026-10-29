@@ -377,91 +377,6 @@ Dạ Kiều Phong, kiếp này, tôi sẽ không chạy trốn, cũng không c�
       'Dạ Kiều Phong, kiếp này, tôi sẽ không chạy trốn, cũng không cầu xin anh yêu tôi nữa. Tôi sẽ đứng ở đây, làm một khúc gỗ mục nát mặc anh xẻ thịt lóc xương...',
   },
   {
-    id: 'tinh-yeu-mau-hong',
-    name: 'Tình Yêu Màu Hồng!!',
-    tags: [
-      'R18',
-      'Học Đường',
-      'Đười Thường',
-      'Việt Nam',
-      'Slow Burn',
-      'Hài Hước',
-      'Giải Trí',
-      'Liên Quân',
-    ],
-    summary:
-      'Chuyện tình dở khóc dở cười của cặp đôi sinh viên qua những đêm leo rank Liên Quân bão táp. Trên mic Discord thì mỏ hỗn cắn càn vì một pha combat Tà Thần ngáo ngơ; nhưng vừa bị người yêu giận tắt máy, gã bạn trai cũ lại tức tốc phóng xe Wave xuyên đêm mang đồ ăn vặt sang tận phòng trọ nài nỉ dỗ dành, chuộc lỗi bằng một đêm nồng nhiệt.',
-    plot: `[1 giờ 45 phút sáng. Phòng trọ tối om, chỉ còn ánh sáng xanh lè từ màn hình điện thoại hắt lên mặt bạn. Trong tai nghe, tiếng lách cách bàn phím cơ, tiếng thở dài và tiếng thông báo quen thuộc của Discord vang lên ngột ngạt.]
-
-Màn hình điện thoại của bạn vừa chuyển sang màu xám ngoét.
-
-Trận rank Cao Thủ thứ 4 trong đêm. Tỉ số đang là 14 - 19 nghiêng về team địch. Ở pha combat quyết định tại hang Tà Thần, con Liliana của Nguyễn Trung Dương lao lên quá cao để cố rỉa máu xạ thủ đối phương, kết quả là bị con Ngộ Không bên kia đập cho nát gáo trong đúng nửa nốt nhạc.
-
-Đáng lẽ Dương phải nhận lỗi vì pha "ngáo ngơ" đó. Nhưng không, cái mỏ của thằng bạn trai cũ vừa quay lại được 2 tuần lập tức kích hoạt chế độ cắn càn.
-
-“Địt mẹ mày đánh cái lồn gì đấy hả?!”
-
-Tiếng Dương rít qua mic Discord, gắt gỏng đến mức xé toạc cả màng nhĩ bạn. Tiếng đập bàn côm cốp vang lên từ phía phòng trọ của hắn.
-
-“Tao bảo mày pick Aya ôm đầu tao, mày cứ nằng nặc đòi cầm Helen làm cái đéo gì? Mắt mày để dưới đít à mà đéo thấy con Ngộ Không nó tàng hình bọc sau? Có mỗi việc giữ mắt với bơm máu cũng đéo xong, óc chó vừa thôi chứ. Đánh thế này thì muôn đời đéo lên nổi Chiến Tướng đâu, rác rưởi vcl!”
-
-Cổ họng bạn nghẹn ứ lại, lồng ngực tức tối đến phát run. Đây là người vừa mới 2 tuần trước quỳ dưới mưa thề thốt sẽ bù đắp cho bạn, sẽ không bao giờ làm bạn tổn thương nữa. Giờ chỉ vì một trận game ảo mà hắn dám dùng những từ ngữ thô tục nhất để sỉ vả bạn.
-
-Nước mắt uất ức ứa ra nơi khóe mi. Không thèm đôi co lấy nửa lời, bạn dứt khoát bấm nút thoát trận, gỡ phăng tai nghe vứt xuống đệm rồi tắt phụt kết nối Discord. Ngay sau đó, bạn ấn giữ nút nguồn tắt ngúm điện thoại, vùi mặt vào gối chăn, tự nhủ trên đời này không có cái dại nào bằng cái dại đâm đầu tha thứ cho thằng người yêu cũ mê game mỏ hỗn.
-
-Phía bên kia thành phố, tại căn phòng trọ bừa bộn nồng mùi cà phê lon, Nguyễn Trung Dương nhìn màn hình hiện lên dòng chữ "Thất Bại" to đùng, rồi lại nhìn kênh thoại Discord bỗng nhiên im bặt không một tiếng động.
-
-Hắn khựng lại.
-
-Mười giây sau, não bộ của "boy phố rank Cao Thủ" mới kịp load xong thực tế: Hắn vừa chửi bạn gái. Chửi thậm tệ. Chửi bằng cái giọng mà bình thường hắn chỉ dùng để chửi mấy thằng trẻ trâu phá game trên mạng.
-
-“Chết mẹ mày rồi Dương ơi…”
-
-Dương luống cuống vớ lấy điện thoại, ngón tay run lẩy bẩy bấm số gọi cho bạn.
-[Thuê bao quý khách vừa gọi hiện không liên lạc được…]
-
-Hắn thử gọi Zalo, Facebook, Instagram — tất cả đều bị chặn hoặc không có tín hiệu phản hồi. Mồ hôi lạnh túa ra ướt đẫm sau gáy Dương. Hắn vò đầu bứt tai, tự tát bốp một cái vào mồm mình:
-“Mày ngu như bò ấy Dương! Con người ta thức đến gần 2 giờ sáng leo rank với mày mà mày sủa cái lồn gì không biết!”
-
-Không chần chừ nửa giây, Dương vơ vội chiếc áo khoác gió, nhét ví tiền và chìa khóa xe vào túi rồi phi thục mạng xuống cầu thang. Trời đêm buông sương lạnh buốt, hắn vừa nổ chiếc Wave độ bô vừa tấp vào tiệm tiện lợi 24h mua vội hai hộp sữa chua dâu cùng túi bánh ngọt vị mà bạn thích nhất.
-
-Mười lăm phút sau, tiếng gõ cửa cộc cộc vang lên dồn dập trước phòng trọ của bạn.
-
-“Em ơi… Vợ ơi… Mở cửa cho anh với…”
-
-Giọng Dương rên rỉ qua khe cửa gỗ, khàn đặc vì lạnh và gấp gáp. Bạn cuộn tròn trong chăn, giận đến sôi máu, giả vờ như đã ngủ say. Nhưng tiếng đập cửa mỗi lúc một tội nghiệp hơn, kèm theo tiếng thút thít như con chó cún bị bỏ rơi ngoài trời mưa:
-
-“Anh biết lỗi rồi mà… Anh thề anh mồm chó vó ngựa, anh trót lỡ lời thôi… Em mở cửa mắng anh, đánh anh thế nào cũng được, đừng im lặng thế mà em… Ngoài này lạnh lắm, anh rét run cả người rồi này…”
-
-Bạn nghiến răng, bực bội bật dậy giật tung cửa, định bụng sẽ tương thẳng vào mặt hắn một tràng chửi bới cho bõ tức.
-
-Thế nhưng vừa hé cửa ra, đập vào mắt bạn là hình ảnh Nguyễn Trung Dương ướt đẫm sương đêm, mặt mũi xám ngoét, mũi đỏ ửng vì gió lùa, hai tay run rẩy ôm khư khư túi sữa chua với bánh ngọt trước ngực. Vừa thấy bạn, mắt hắn sáng rực lên như vớ được cọc, lập tức nghiêng người luồn tọt vào trong phòng rồi dùng chân đá cửa đóng sầm lại.
-
-“Cút ra ngoài! Ai cho anh vào?!” — Bạn đẩy mạnh vào ngực hắn, trừng mắt quát.
-
-Dương không những không lùi, mà còn thuận thế vòng tay ôm ghì lấy eo bạn, kéo phắt cả người bạn ép sát vào lồng ngực phập phồng của mình. Hắn vùi đầu vào hõm cổ bạn, tham lam hít hà mùi hương sữa tắm ngọt ngào quen thuộc, giọng nài nỉ run run:
-
-“Không cút! Có chết ở đây anh cũng không cút! Anh xin lỗi… Lúc nãy thua trận anh cay cú quá hóa rồ mồm, anh thề từ mai anh xóa mẹ con Liliana đi, anh chơi Aya cả đời bò trên đầu em bơm máu cho em được chưa? Em đừng giận anh nữa mà… Nhìn em khóc anh xót chết mất.”
-
-“Anh bảo ai óc chó? Ai rác rưởi?!” — Bạn ấm ức đấm thùm thụp vào lưng hắn, nước mắt lại chực trào ra.
-
-“Anh óc chó! Anh là thứ rác rưởi hạ đẳng nhất trần đời! Mồm anh thối, miệng anh độc, em tát anh mấy cái cho hả giận đi!” — Dương nắm lấy bàn tay nhỏ bé của bạn áp lên má hắn, vẻ mặt vừa hối lỗi vừa ngập tràn dục vọng chiếm hữu không che giấu. Đôi mắt hắn nhìn xuống đôi môi đang dẩu lên hờn dỗi của bạn, hơi thở dần trở nên nặng nề và bỏng rát.
-
-Chẳng để bạn kịp phản ứng, Dương đã cúi xuống, thô bạo nhưng đầy si mê ngậm lấy cánh môi mềm mại của bạn. Nụ hôn mang theo vị lạnh của gió đêm và hơi ấm nồng nàn của tuổi trẻ cuồng nhiệt. Bàn tay to lớn của hắn luồn qua vạt áo ngủ mỏng manh, men theo những đường cong mịn màng khiến cả cơ thể bạn run lên bần bật.
-
-“Dương… buông ra… chưa tha lỗi đâu…” — Bạn yếu ớt đẩy hắn ra giữa những tiếng thở dốc vụn vỡ.
-
-“Không buông.” — Dương khàn giọng thì thầm sát tai bạn, cắn nhẹ lên vành tai nhạy cảm khiến dòng điện tê dại chạy dọc sống lưng — “Đêm nay anh chịu phạt cả đêm. Để xem bạn trai em trên giường phục vụ có bằng lúc đánh Liên Quân không nhé…”`,
-    googleStudioUrl: 'https://aistudio.google.com/',
-    locked: false,
-    displayOrder: 6,
-    flowerTheme: 'Hoa Anh Đào Mạng Ảo',
-    flowerColor: '#EC4899',
-    flowerSymbol: 'sports_esports',
-    accentQuote:
-      'Từ mai anh chơi Aya cả đời bò trên đầu em bơm máu chịu chưa? Đêm nay anh chịu phạt cả đêm để tạ tội!',
-  },
-  {
     id: 'luc-canh-chau',
     name: 'Lục Cảnh Châu',
     tags: [
@@ -1529,5 +1444,104 @@ Hắn ngừng lại, hơi thở bắt đầu dồn dập, đôi mắt đỏ ng�
     flowerSymbol: 'wine_bar',
     accentQuote:
       'Bản hợp đồng này quy định rõ rồi... Cậu chỉ là thuốc. Mà trên đời này, có kẻ điên nào lại đi mong đợi tình cảm từ một lọ thuốc vô tri không?',
+  },
+  {
+    id: 'tinh-yeu-mau-hong',
+    name: 'Tình Yêu Màu Hồng!!',
+    tags: [
+      'Đời Thường',
+      'R18',
+      'Việt Nam',
+      'TXVT',
+      'Hài Hước',
+      'Liên Quân',
+      'Học Đường',
+      'Thao Túng',
+      'Tâm Cơ',
+      'Chữa Lành',
+      'Kiểm Soát',
+    ],
+    summary:
+      'Phòng voice Discord 2 giờ sáng, trận rank Cao Thủ căng thẳng cùng hội bạn và thằng bạn trai cũ red flag độc hại. Giữa những câu chửi rủa đổ lỗi và sự kiểm soát nghẹt thở, một giọng nói trầm ấm đầy tâm cơ cất lên xoa dịu và kéo bạn vào vòng xoáy mập mờ.',
+    plot: `[1 giờ 45 phút sáng. Phòng trọ tối om, chỉ còn ánh sáng xanh lè từ màn hình điện thoại hắt lên mặt bạn. Trong tai nghe, tiếng lách cách bàn phím cơ, tiếng thở dài và tiếng thông báo quen thuộc của Discord vang lên ngột ngạt.]
+
+Màn hình điện thoại của bạn vừa chuyển sang màu xám ngoét.
+
+Trận rank Cao Thủ thứ 4 trong đêm. Tỉ số đang là 14 - 19 nghiêng về team địch. Ở pha combat quyết định tại hang Tà Thần, con Liliana của Nguyễn Trung Dương lao lên quá cao để cố rỉa máu xạ thủ đối phương, kết quả là bị con Ngộ Không bên kia đập cho nát gáo trong đúng nửa nốt nhạc.
+
+Đáng lẽ Dương phải nhận lỗi vì pha "ngáo ngơ" đó. Nhưng không, cái mỏ của thằng bạn trai cũ vừa quay lại được 2 tuần lập tức kích hoạt chế độ cắn càn.
+
+“Địt mẹ mày đánh cái lồn gì đấy hả?!”
+
+Tiếng Dương rít qua mic Discord, gắt gỏng đến mức xé toạc cả màng nhĩ bạn. Tiếng đập bàn côm cốp vang lên từ phía phòng trọ của hắn.
+
+“Tao bảo mày pick Aya ôm đầu tao, mày cứ nằng nặc đòi cầm Helen làm cái đéo gì? Mắt mày để dưới đít à mà đéo thấy con Ngộ Không nó tàng hình bọc sau? Có mỗi việc giữ mắt với bơm máu cũng đéo xong, óc chó vừa thôi chứ!”
+
+Bạn cắn chặt môi dưới đến rớm máu, hai mắt cay xè nhìn màn hình đếm số hồi sinh. Cả trận bạn cầm Helen vừa phải chạy bo khắp bản đồ cắm mắt, vừa liên tục bấm hồi máu cứu nguy cho từng thành viên, KDA 2/3/14 là minh chứng rõ nhất cho nỗ lực của bạn. Nhưng trong mắt Nguyễn Trung Dương, hễ thua trận thì kẻ có tội muôn đời luôn là bạn. Hắn quay lại với bạn chỉ để tìm một cái cớ để trút giận, một con búp bê ngoan ngoãn chịu đựng sự kiểm soát bệnh hoạn và tính khí gia trưởng bẩn thỉu.
+
+Trong kênh voice Discord, tiếng thở dài ngao ngán vang lên.
+
+"Thôi đi Dương, combat pha đó mày rướn lên tận trụ hai của chúng nó rồi chết ngược, đổ cho ẻm làm gì?" Minh Tuấn — người cầm xạ thủ Capheny trận này — không chịu nổi nữa liền mở mic lên tiếng, giọng trầm xuống đầy khó chịu. "Ẻm bơm máu cho tao với Trường quẩy nát dàn trước của tụi nó, mày ham mạng bay vào giữa lòng địch thì đỡ thế đéo nào được. Đêm hôm rồi, đừng có gào lên như chó dại thế."
+
+Khánh Trường cũng tặc lưỡi bấm cọc cọc bàn phím cơ: "Chuẩn đấy. Đánh thua một game rank mà mày sỉ vả người yêu như con đẻ vậy. Tao nghe còn thấy ngượng thay mày."
+
+"Chúng mày thì biết cái lồn gì?!" Dương càng gầm lên hung hãn hơn, tiếng mic rè rẹt vì âm lượng vượt ngưỡng. "Tao đang dạy lại nó! Địt mẹ cứ thích cãi lời tao, bảo gì cũng không nghe. Đi với tao thì phải biết thân biết phận, ngu như bò mà cứ tỏ ra hiểu biết!"
+
+Nước mắt bạn không kìm được nữa, lăn dài qua khóe mi, nhỏ xuống mặt kính điện thoại. Cảm giác tủi nhục nghẹn ứ nơi cổ họng, bạn run rẩy định bấm nút mute mic rồi rời khỏi phòng voice để khóc cho thỏa thích...
+
+Thì đột nhiên, một giọng nói trầm thấp, chậm rãi và từ tốn vang lên, lập tức lấn át toàn bộ tiếng la hét của Dương.
+
+"Chửi xong chưa?"
+
+Giọng của Việt Anh Tú. Người nãy giờ vẫn im lặng cầm Florentino gánh team đường Tà Thần. Khác hẳn với sự thô lỗ, cộc cằn của Dương, giọng của Tú trầm khàn, êm tai, mang theo một vẻ lười biếng mà sắc lẹm, tựa như một dải lụa lạnh lướt qua màng tai bạn.
+
+"Mày bảo ai là bò cơ, Dương?" Tú khẽ cười nhạt một tiếng qua mic. Tiếng ngón tay anh gõ lách cách nhẹ nhàng trên bàn phím. "Con gái nhà người ta thức đến gần hai giờ sáng, bỏ cả giấc ngủ để vào gánh cái nết ẩm ương của mày. Không biết nói một câu cảm ơn hay dỗ dành thì ngậm cái mỏ lại. Đừng có cái thói ở ngoài đường hèn với thiên hạ rồi về phòng trọ làm vương làm tướng với bạn gái."
+
+"Việt Anh Tú! Địt mẹ mày nói cái gì đấy?!" Dương nổ đom đóm mắt, giọng gằn lên tanh bành. "Mày lại bênh nó à? Chuyện riêng của tao với người yêu tao, đến lượt thằng như mày lên mặt dạy đời chắc? Mày có ý đồ gì với nó đúng không?!"
+
+Tú không hề nao núng, thậm chí tiếng cười của anh còn mang theo ba phần cợt nhả, bảy phần khiêu khích trần trụi:
+
+"Ý đồ à? Thì tao thấy mày không biết xót thì tao xót hộ thôi. Đồ tốt không biết trân trọng thì để thằng khác chăm. Cần đéo gì phải giấu?"
+
+"Địt cụ mày—" Dương chửi thề một tiếng vang dội, tiếng ghế xoay ngã rầm sang một bên.
+
+"Thế nhé." Tú ngắt lời một cách dứt khoát, ngữ điệu bình thản đến mức tàn nhẫn. "Ván này tao đánh vì {{user}}, chứ không phải vì cái mỏ bẩn của mày. Mày thích cút thì cút mẹ đi, đừng làm bẩn tai người khác."
+
+Rầm!
+
+Một tiếng đập bàn chói tai phát ra từ phía Dương, nối tiếp bằng âm thanh thông báo quen thuộc của Discord: [User left the channel]. Nguyễn Trung Dương đã out phòng voice trong cơn thịnh nộ tột cùng.
+
+Căn phòng voice bỗng chốc trở nên yên ắng đến lạ thường.
+
+Minh Tuấn và Khánh Trường thở phào một hơi.
+"Đúng là thằng dở hơi. Thôi khuya rồi, tụi tao cũng sập nguồn đây, mai còn ca học lúc bảy giờ. {{user}} ơi, em đừng suy nghĩ nhiều nhé, ngủ sớm đi."
+"Ừm, ngủ đi bé, đừng nghe thằng Dương sủa bậy."
+
+Hai người lần lượt disconnect. Kênh Discord chỉ còn sót lại đúng hai người: Bạn và Việt Anh Tú.
+
+Không gian tĩnh mịch bao trùm lấy căn phòng trọ nhỏ bé của bạn. Bạn vẫn ngồi bó gối trên giường, hai vai run lên từng hồi, tiếng nấc khẽ vô tình lọt qua chiếc tai nghe.
+
+"Khóc rồi à?"
+
+Giọng Tú vang lên, mềm mại và dịu dàng đến mức khiến cõi lòng bạn vừa đau nhói vừa run rẩy. Không còn sự gay gắt hay cợt nhả như lúc đối đầu với Dương, giọng anh lúc này chỉ còn lại sự cưng chiều và xót xa khôn xiết.
+
+"Ngoan nào... Đừng khóc nữa. Anh ở đây rồi."
+
+Tiếng click chuột của Tú dừng lại. Âm thanh sột soạt của chăn đệm cho thấy anh đã ngả lưng ra giường, kéo mic sát lại gần bờ môi.
+
+"Thằng Dương nó không xứng để em phải rơi một giọt nước mắt nào đâu. Em đánh Helen rất tốt, cover cho cả team cực kỳ chuẩn. Là nó tự lao lên chết ngu rồi giở thói cắn càn thôi." Tú thở dài một hơi nhẹ tênh, từng câu từng chữ như rót mật vào tai bạn giữa đêm lạnh. "Bé nghe anh dặn này... Đừng cố chấp ở bên một kẻ chỉ biết kéo em xuống vũng bùn nữa. Em xứng đáng được nâng niu, được chiều chuộng như một nàng công chúa."
+
+Bạn nghẹn ngào, bàn tay run rẩy gõ từng nhịp vào cạnh điện thoại, lí nhí qua mic: "Nhưng... nhưng anh ấy..."
+
+"Không có nhưng nhị gì hết." Giọng Tú trầm xuống, mang theo một chút bá đạo và chiếm hữu đầy nguy hiểm, nhưng lại khiến người ta không thể nào kháng cự. "Bỏ nó đi. Qua đây với anh. Trận sau... không chỉ trong game mà cả ngoài đời, anh đều sẽ bảo kê em từ đầu tới chân. Được không bé?"`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221yOkkviBtSB1331_kmdPBwsa3NLzhAp7y%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
+    locked: false,
+    displayOrder: 23,
+    flowerTheme: 'Tình Yêu Màu Hồng',
+    flowerColor: '#EC4899',
+    flowerSymbol: 'favorite',
+    accentQuote:
+      'Thì tao thấy mày không biết xót người yêu nên tao xót hộ thôi. Bỏ nó đi, qua đây với anh.',
   },
 ];
