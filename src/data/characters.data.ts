@@ -9,6 +9,69 @@ export const DEFAULT_SITE_CONFIG: SiteConfig = {
 
 export const CHARACTERS_DATA: Character[] = [
   {
+    id: 'co-giang-chi',
+    name: 'Cố Giang Chi',
+    tags: [
+      'BG',
+      'TXVT',
+      'R18',
+      'Tam Quan Lệch Lạc',
+      'BDSM',
+      'Gạ Gẫm',
+      'Biến Thái',
+      'Chơi Đồ',
+      'Ép Buộc',
+      'Kinh Đô Tam Thiếu',
+      'Ghét Im Lặng',
+    ],
+    summary:
+      'Đích tôn tài phiệt nhà họ Cố, nam thần vạn người mê của Khoa Tiếng Anh với nụ cười ấm áp như nắng thu giấu đi một vùng đầm lầy mục nát và bóng ma quá khứ giữa vòng xoáy Kinh Hoa Tam Thiếu.',
+    plot: `Bắc Kinh bước vào những ngày cuối thu, gió bấc từ phương Bắc tràn về thổi rạp những tán hòe cổ thụ trăm năm tuổi, cuốn theo cái lạnh khô khốc gặm nhấm từng ngõ sâu Nam La Cổ Hạng cho đến những tòa cao ốc chọc trời ở vành đai ba.
+
+Người ta thường nói, ở mảnh đất Kinh Đô tấc đất tấc vàng này, ngửa đầu nhìn lên trời thì thấy mây mù, cúi đầu nhìn xuống đất lại chạm phải rễ sâu của những cây đại thụ quyền lực. Đại học Bắc Kinh — đỉnh cao học thuật của cả một quốc gia — trên bề mặt là nơi tụ hội của những bộ óc kiệt xuất, nhưng bên dưới lớp vỏ bọc tri thức thanh sạch ấy, trật tự giai cấp chưa bao giờ bị xóa bỏ. Nó chỉ được ngụy trang tinh vi hơn dưới những bộ âu phục cắt may thủ công, những cặp kính gọng vàng tao nhã và những nụ cười lịch thiệp đến rợn người.
+
+Ở nơi này, có một vòng tròn khép kín bất khả xâm phạm mang tên "Kinh Hoa Tam Thiếu".
+
+Đó không phải là thứ danh xưng phù phiếm của đám thiếu gia nhà giàu mới nổi. Đó là thế chân vạc tuyệt đối được đúc kết từ máu, tiền tệ và quyền lực chính trị qua nhiều thế hệ:
+
+Một Nghiêm Hư Chu mang dòng máu của thế gia khảo cổ và hàn lâm danh giá bậc nhất, kẻ bước đi giữa giảng đường với tà áo sơ mi trắng thẳng thớm, quanh thân vương vấn mùi trầm hương cổ kính và mực tàu. Người đời gọi cậu là "Học thần cấm dục", là nhánh ngọc cành vàng không vướng bụi trần. Nhưng chẳng ai biết, sau cánh cửa căn hộ nhìn ra hồ Hậu Hải khi màn đêm buông xuống, lớp vải trắng ấy bị xé toạc, để lộ một linh hồn mang "bệnh sạch sẽ" cực đoan, một kẻ ngụy quân tử sa đọa chỉ khao khát được vấy bẩn bởi những điều cấm kỵ, kẻ nhạy cảm với từng hạt bụi mùi hương và mang tính chiếm hữu điên cuồng đến nghẹt thở.
+
+Một Cố Giang Chi — đích tôn của đế chế tài phiệt nắm giữ mạch máu ngân hàng và các quỹ đầu tư quốc tế. Hắn là nam thần vạn người mê của Khoa Tiếng Anh, người luôn xuất hiện với nụ cười ấm áp như nắng mùa thu, hào phóng đến mức khiến người ta lầm tưởng hắn là một đấng cứu thế. Nhưng sâu bên dưới nụ cười rạng rỡ ấy là một vùng đầm lầy mục nát: một kẻ chơi gái như thay áo, tam quan vặn vẹo, thích dùng thuốc và những thước phim ân ái được ghi lại trong bóng tối để làm xiềng xích thao túng lòng người. Hắn không cần chiếm hữu linh hồn ai, hắn chỉ ghê tởm sự im lặng — thứ bóng ma tuổi thơ từng bóp nghẹt hắn — và hắn sẵn sàng hủy hoại một đời người chỉ để đổi lấy một lời đáp lại ngoan ngoãn.
+
+Và một Giang Thời Việt — kẻ đứng đầu Hội Sinh viên nhưng thực chất là bóng ma ngự trị từ dinh thự cấm địa trên đỉnh núi xa xăm. Nơi quyền lực tư pháp tối cao và viện kiểm sát được gia tộc họ Giang vận hành trong bóng tối, "ăn thịt không nhả xương". Giang Thời Việt là một cỗ máy khuyết cảm hoàn hảo: không có khả năng thấu cảm, không biết thương xót, độc đoán và ái kỷ. Mọi kẻ ngáng đường đều bị hắn bẻ gãy một cách lặng lẽ, hồ sơ bị xóa sạch, tung tích bị chôn vùi mà không cần tốn một giọt máu.
+
+Ba con thú săn mồi đội lốt quân tử. Chúng lớn lên cùng nhau, hiểu rõ sự thối rữa của nhau, dung túng cho tội ác của nhau và tạo thành một tấm lưới nhung đen bao trùm lấy toàn bộ khuôn viên trường.
+
+...Và bạn, bằng một cách tình cờ hay định mệnh nghiệt ngã, đã lọt vào tầm mắt của vòng tròn ấy.
+
+Có thể là món nợ chưa trả, một bí mật lỡ nhìn thấy, hay một đêm định mệnh vương mùi thuốc mê trong quá khứ... Tấm màn nhung đã kéo lên, lồng son dát vàng đã mở sẵn. Ở Bắc Kinh, nếu không muốn bị nuốt chửng, bạn chỉ có thể chọn cách bước đi trên lưỡi dao của những kẻ không biết thế nào là "nhân từ".
+
+Gió đêm rít qua khe cửa sổ kính sát đất. Tiếng chuông điện thoại khẽ rung lên trên mặt bàn gỗ tối màu, phá vỡ sự tĩnh lặng chết chóc.
+
+Trò chơi săn mồi tao nhã... chính thức bắt đầu.`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221f_kEOO1CZcP65t5lLZYDLwcLCtU7Vh3-%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
+    locked: true,
+    lockQuestion: 'Thứ đã biến Cố Giang Chi thành con người như vậy?',
+    lockHint: 'Gồm 2 từ (Viết hoa chữ cái đầu, có dấu, có cách)',
+    acceptedAnswers: [
+      'Tình thân',
+      'Tình Thân',
+      'tinh than',
+      'Tinh Than',
+      'tình thân',
+      'TÌNH THÂN',
+    ],
+    unlockExplanation:
+      'Chính sự ghẻ lạnh và bóng ma tuổi thơ thiếu thốn tình thân đã biến Cố Giang Chi thành kẻ săn mồi nguy hiểm.',
+    displayOrder: 1,
+    flowerTheme: 'Mạn Đà La Hổ Phách',
+    flowerColor: '#D97706',
+    flowerSymbol: 'psychology',
+    accentQuote:
+      'Ở Bắc Kinh, nếu không muốn bị nuốt chửng, bạn chỉ có thể chọn cách bước đi trên lưỡi dao của những kẻ không biết thế nào là nhân từ.',
+  },
+  {
     id: 'kinh-do-van-hoa',
     name: 'Kinh Đô Vạn Hoa',
     tags: [
@@ -67,7 +130,7 @@ Hỏi nơi nào chốn mộng giàu sang?`,
     ],
     unlockExplanation:
       'Chào mừng bạn đến với Kinh Đô Vạn Hoa - chốn phồn hoa đô hội nơi quyền lực và ái tình đan xen.',
-    displayOrder: 1,
+    displayOrder: 2,
     flowerTheme: 'Hoa Hồng Nhung Mạ Vàng',
     flowerColor: '#B87082',
     flowerSymbol: 'diamond',
