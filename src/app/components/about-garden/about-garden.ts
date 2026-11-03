@@ -105,7 +105,7 @@ import { Sound } from '../../services/sound';
 
             <!-- 2. Discord Link Card -->
             <a
-              href="https://discord.gg/Rfgx6g8Q5"
+              href="https://discord.gg/qxQfxTGyk"
               target="_blank"
               rel="noopener noreferrer"
               (click)="onLinkClick()"
@@ -128,7 +128,7 @@ import { Sound } from '../../services/sound';
                   Liên kết Discord
                 </h4>
                 <p class="text-xs font-mono text-[#8E7479] mt-0.5 truncate">
-                  discord.gg/Rfgx6g8Q5
+                  discord.gg/qxQfxTGyk
                 </p>
                 <p class="text-xs text-[#78666A] mt-3 leading-relaxed">
                   Máy chủ cộng đồng chính thức: giao lưu chia sẻ trải nghiệm nhập vai, thảo luận kịch bản và nhận thông báo bot mới.
@@ -144,7 +144,7 @@ import { Sound } from '../../services/sound';
             <!-- 3. Commission Service Button Card -->
             <button
               type="button"
-              (click)="openCommissionModal()"
+              (click)="scrollToCommission()"
               class="group text-left p-6 rounded-2xl bg-gradient-to-br from-[#FFF7F9] to-white hover:from-[#FDF0F3] hover:to-white border border-[#EBCBD4] hover:border-[#C98F9E] transition-all duration-300 hover:shadow-md flex flex-col justify-between cursor-pointer w-full"
             >
               <div>
@@ -158,24 +158,27 @@ import { Sound } from '../../services/sound';
                   </span>
                 </div>
 
+                <div class="text-[11px] uppercase font-serif tracking-widest text-[#A65B6D] font-bold mb-1">
+                  Ôm Lấy Nỗi Nhớ Của Yue Yue
+                </div>
                 <h4 class="font-serif-vintage text-lg font-bold text-[#5B464B] group-hover:text-[#A65B6D] transition-colors">
-                  Dịch vụ mở commission
+                  PRICE & TOS Commission
                 </h4>
                 <p class="text-xs font-mono text-[#8E7479] mt-0.5 truncate">
-                  Viết kịch bản & System Prompt AI theo yêu cầu
+                  5 gói giá • 7 phụ phí • 10 Điều khoản TOS
                 </p>
                 <p class="text-xs text-[#78666A] mt-3 leading-relaxed">
-                  Nhận sáng tác nhân vật độc quyền, thiết kế bối cảnh, prompt engineering chuyên sâu cho Google AI Studio theo ý bạn.
+                  Nhận sáng tác character độc quyền, thiết kế bối cảnh, prompt engineering chuyên sâu cho Google AI Studio, SillyTavern, JanitorAI theo yêu cầu.
                 </p>
               </div>
 
               <div class="mt-5 pt-3 border-t border-[#F3E5E8] flex items-center justify-between w-full">
                 <span class="text-xs font-medium text-[#C98F9E] group-hover:text-[#A65B6D] flex items-center gap-1">
-                  <span>Chi tiết & Đặt làm</span>
-                  <mat-icon class="text-xs">arrow_forward</mat-icon>
+                  <span>Khám phá bảng giá & TOS</span>
+                  <mat-icon class="text-xs">arrow_downward</mat-icon>
                 </span>
-                <span class="text-[10px] uppercase font-serif tracking-wider text-[#A69094] bg-[#FAF0E6] px-2 py-0.5 rounded">
-                  Price & TOS
+                <span class="text-[11px] uppercase font-serif tracking-wider text-[#A65B6D] bg-[#FFF0F3] border border-[#EBCBD4] px-2.5 py-0.5 rounded-full font-bold">
+                  Từ 60k
                 </span>
               </div>
             </button>
@@ -345,7 +348,7 @@ import { Sound } from '../../services/sound';
 
               <!-- Contact via Discord -->
               <a
-                href="https://discord.gg/Rfgx6g8Q5"
+                href="https://discord.gg/qxQfxTGyk"
                 target="_blank"
                 rel="noopener noreferrer"
                 (click)="sound.playClick()"
@@ -379,6 +382,18 @@ export class AboutGarden {
   openCommissionModal(): void {
     this.sound.playPaper();
     this.isCommissionModalOpen.set(true);
+  }
+
+  scrollToCommission(): void {
+    this.sound.playPaper();
+    if (typeof document !== 'undefined') {
+      const el = document.querySelector('#commission');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+    }
+    this.openCommissionModal();
   }
 
   closeCommissionModal(): void {

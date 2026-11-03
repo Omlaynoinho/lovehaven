@@ -14,6 +14,7 @@ import { MusicPlayer } from './components/music-player/music-player';
 import { CharacterCard } from './components/character-card/character-card';
 import { CharacterDetailModal } from './components/character-detail-modal/character-detail-modal';
 import { MailboxSection } from './components/mailbox/mailbox';
+import { CommissionServiceComponent } from './components/commission-service/commission-service';
 import { AboutGarden } from './components/about-garden/about-garden';
 import { CharacterService } from './services/character';
 import { Sound } from './services/sound';
@@ -33,6 +34,7 @@ import { PublicCharacter } from './models/character.model';
     MusicPlayer,
     CharacterCard,
     CharacterDetailModal,
+    CommissionServiceComponent,
     MailboxSection,
     AboutGarden,
   ],

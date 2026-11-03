@@ -72,6 +72,15 @@ import { Music } from '../../services/music';
           </a>
 
           <a
+            href="#commission"
+            (click)="onNavClick('#commission', $event)"
+            class="px-3 py-1.5 rounded-full hover:bg-[#FBECEF] text-xs lg:text-sm font-medium transition-colors flex items-center gap-1.5"
+          >
+            <mat-icon class="text-xs text-[#A65B6D]">palette</mat-icon>
+            <span>Commission</span>
+          </a>
+
+          <a
             href="#about"
             (click)="onNavClick('#about', $event)"
             class="px-3 py-1.5 rounded-full hover:bg-[#FBECEF] text-xs lg:text-sm font-medium transition-colors flex items-center gap-1.5"
@@ -155,6 +164,15 @@ import { Music } from '../../services/music';
           >
             <mat-icon class="text-sm text-[#C98F9E]">mail</mat-icon>
             <span>Hộp thư gửi gắm</span>
+          </a>
+
+          <a
+            href="#commission"
+            (click)="onNavClick('#commission', $event)"
+            class="flex items-center gap-2.5 py-2 px-3 rounded-xl hover:bg-[#FBECEF] text-sm font-medium text-[#5B464B]"
+          >
+            <mat-icon class="text-sm text-[#A65B6D]">palette</mat-icon>
+            <span>Commission & TOS</span>
           </a>
 
           <a

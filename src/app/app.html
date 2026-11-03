@@ -214,6 +214,9 @@
       }
     </section>
 
+    <!-- COMMISSION SERVICE SECTION (PRICE & TOS) -->
+    <app-commission-service />
+
     <!-- MAILBOX SECTION -->
     <app-mailbox />
 
@@ -250,6 +253,14 @@
           class="hover:text-[#C98F9E] transition-colors cursor-pointer"
         >
           Vườn nhân vật
+        </button>
+        <span>•</span>
+        <button
+          type="button"
+          (click)="scrollToSection('#commission')"
+          class="hover:text-[#C98F9E] transition-colors cursor-pointer font-medium"
+        >
+          Commission (Price & TOS)
         </button>
         <span>•</span>
         <button
