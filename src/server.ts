@@ -5,10 +5,10 @@ import {
   writeResponseToNodeResponse,
 } from '@angular/ssr/node';
 import express from 'express';
-import {join} from 'node:path';
-import {existsSync, mkdirSync, readFileSync, writeFileSync} from 'node:fs';
-import {CHARACTERS_DATA, DEFAULT_SITE_CONFIG} from './data/characters.data';
-import {MailboxLetter, PublicCharacter} from './app/models/character.model';
+import { join } from 'node:path';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { CHARACTERS_DATA, DEFAULT_SITE_CONFIG } from './data/characters.data';
+import { MailboxLetter, PublicCharacter } from './app/models/character.model';
 
 const browserDistFolder = join(import.meta.dirname, '../browser');
 const dataDir = join(process.cwd(), 'data');
@@ -17,9 +17,9 @@ const lettersFilePath = join(dataDir, 'letters.json');
 // Ensure data directory exists
 if (!existsSync(dataDir)) {
   try {
-    mkdirSync(dataDir, {recursive: true});
+    mkdirSync(dataDir, { recursive: true });
   } catch {
-    // Ignore error if already created
+    // Ignore error
   }
 }
 
@@ -38,7 +38,7 @@ function collapseText(text: string): string {
   return normalizeText(text).replace(/[^a-z0-9]/g, '');
 }
 
-// Process-level error protection to prevent dev-server crashes
+// Process-level error protection
 process.on('unhandledRejection', (reason) => {
   console.error('[Server] Unhandled Rejection:', reason);
 });
@@ -50,19 +50,14 @@ process.on('uncaughtException', (err) => {
 const app = express();
 const angularApp = new AngularNodeAppEngine();
 
-// Parse JSON request bodies for /api routes
 app.use(express.json());
 
-/**
- * REST API Endpoints for LOVE HAVE
- */
-
-// 1. Get Site Configuration (YouTube URL, garden name, greetings)
+// 1. Get Site Configuration
 app.get('/api/config', (_req, res) => {
   res.json(DEFAULT_SITE_CONFIG);
 });
 
-// 2. Get Public Character List (Masks plot & googleStudioUrl for locked characters)
+// 2. Get Public Character List
 app.get('/api/characters', (_req, res) => {
   const publicList: PublicCharacter[] = CHARACTERS_DATA.map((c) => ({
     id: c.id,
@@ -85,9 +80,9 @@ app.get('/api/characters', (_req, res) => {
   res.json(publicList);
 });
 
-// 3. Verify Character Quiz & Unlock securely
+// 3. Verify Character Quiz & Unlock
 app.post('/api/characters/verify-unlock', (req, res) => {
-  const {characterId, answer} = req.body || {};
+  const { characterId, answer } = req.body || {};
 
   if (!characterId || typeof answer !== 'string') {
     res.status(400).json({
@@ -107,7 +102,6 @@ app.post('/api/characters/verify-unlock', (req, res) => {
   }
 
   if (!char.locked) {
-    // Already unlocked character
     res.json({
       success: true,
       plot: char.plot,
@@ -117,191 +111,116 @@ app.post('/api/characters/verify-unlock', (req, res) => {
     return;
   }
 
-  const normalizedInput = normalizeText(answer);
-  const rawInput = answer.trim().toLowerCase();
-  const collapsedInput = collapseText(answer);
+  const normalizedInput = collapseText(answer);
+  const isMatch = (char.acceptedAnswers || []).some((ans) => collapseText(ans) === normalizedInput);
 
-  const isCorrect = (char.acceptedAnswers || []).some((accepted) => {
-    const rawAcc = accepted.trim().toLowerCase();
-    const normAcc = normalizeText(accepted);
-    const collapsedAcc = collapseText(accepted);
-
-    return (
-      rawInput === rawAcc ||
-      normalizedInput === normAcc ||
-      collapsedInput === collapsedAcc ||
-      rawInput.includes(rawAcc) ||
-      normalizedInput.includes(normAcc) ||
-      (collapsedAcc.length >= 3 && collapsedInput.includes(collapsedAcc))
-    );
-  });
-
-  if (isCorrect) {
+  if (isMatch) {
     res.json({
       success: true,
       plot: char.plot,
       googleStudioUrl: char.googleStudioUrl,
-      unlockExplanation: char.unlockExplanation,
+      unlockExplanation: char.unlockExplanation || 'Chúc mừng bạn đã tìm ra chiếc chìa khóa định mệnh!',
     });
   } else {
-    res.json({
-      success: false,
-      message: 'Hình như chiếc chìa khóa này chưa đúng rồi, thử lại nhé!',
-    });
-  }
-});
-
-// 4. Get Public Mailbox Letters and Total Senders count
-app.get('/api/mailbox', (_req, res) => {
-  try {
-    let letters: MailboxLetter[] = [];
-    if (existsSync(lettersFilePath)) {
-      try {
-        const raw = readFileSync(lettersFilePath, 'utf8');
-        letters = JSON.parse(raw);
-      } catch {
-        letters = [];
-      }
-    }
-
-    const publicLetters = letters.map((l) => ({
-      id: l.id,
-      nickname: l.nickname,
-      title: l.title,
-      content: l.content,
-      createdAt: l.createdAt,
-    })).reverse();
-
-    res.json({
-      letters: publicLetters,
-      totalSenders: letters.length,
-    });
-  } catch (err) {
-    console.error('Lỗi khi đọc hòm thư:', err);
-    res.status(500).json({
-      letters: [],
-      totalSenders: 0,
-      message: 'Không thể đọc danh sách thư từ khu vườn.',
-    });
-  }
-});
-
-// 5. Save Public Mailbox Letters securely to server storage
-app.post('/api/mailbox', (req, res) => {
-  const ip = req.ip || req.socket.remoteAddress || 'unknown';
-  const {nickname, title, content} = req.body || {};
-
-  const cleanContent = typeof content === 'string' ? content.trim() : '';
-  if (!cleanContent) {
     res.status(400).json({
       success: false,
-      message: 'Vui lòng nhập nội dung thư.',
+      message: 'Chìa khóa hoa chưa khớp. Hãy xem kỹ gợi ý nhé!',
+    });
+  }
+});
+
+// Helper for letters file
+function readStoredLetters(): MailboxLetter[] {
+  try {
+    if (existsSync(lettersFilePath)) {
+      const content = readFileSync(lettersFilePath, 'utf8');
+      return JSON.parse(content) || [];
+    }
+  } catch {
+    // Ignore error
+  }
+  return [];
+}
+
+function writeStoredLetters(letters: MailboxLetter[]): void {
+  try {
+    writeFileSync(lettersFilePath, JSON.stringify(letters, null, 2), 'utf8');
+  } catch {
+    // Ignore error
+  }
+}
+
+// 4. Get Mailbox Letters
+app.get('/api/mailbox', (_req, res) => {
+  const letters = readStoredLetters();
+  const senders = new Set(letters.map((l) => l.senderName));
+  res.json({
+    letters: letters.filter((l) => l.isPublic),
+    totalSenders: senders.size,
+  });
+});
+
+// 5. Send Letter to Mailbox
+app.post('/api/mailbox', (req, res) => {
+  const { senderName, recipientCharacterId, recipientCharacterName, message, flowerChoice } = req.body || {};
+
+  if (!message || typeof message !== 'string' || message.trim().length === 0) {
+    res.status(400).json({
+      success: false,
+      message: 'Lời nhắn gửi không được để trống.',
     });
     return;
   }
 
-  const cleanNickname = typeof nickname === 'string' && nickname.trim()
-    ? nickname.trim().slice(0, 50)
-    : 'Người lữ khách vô danh';
-
-  const cleanTitle = typeof title === 'string' && title.trim()
-    ? title.trim().slice(0, 120)
-    : (cleanContent.length > 25 ? cleanContent.slice(0, 25) + '...' : 'Thư gửi khu vườn');
-
   const newLetter: MailboxLetter = {
-    id: `letter-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`,
-    nickname: cleanNickname,
-    title: cleanTitle,
-    content: cleanContent.slice(0, 5000),
+    id: 'letter-' + Date.now() + '-' + Math.random().toString(36).substring(2, 6),
+    senderName: (senderName && senderName.trim()) || 'Lữ khách ẩn danh',
+    recipientCharacterId: recipientCharacterId || undefined,
+    recipientCharacterName: recipientCharacterName || 'Toàn bộ khu vườn',
+    message: message.trim(),
+    flowerChoice: flowerChoice || 'Hoa Hồng',
     createdAt: new Date().toISOString(),
-    ip,
+    isPublic: true,
   };
 
-  try {
-    let letters: MailboxLetter[] = [];
-    if (existsSync(lettersFilePath)) {
-      try {
-        const raw = readFileSync(lettersFilePath, 'utf8');
-        letters = JSON.parse(raw);
-      } catch {
-        letters = [];
-      }
-    }
-    letters.push(newLetter);
-    writeFileSync(lettersFilePath, JSON.stringify(letters, null, 2), 'utf8');
+  const current = readStoredLetters();
+  current.unshift(newLetter);
+  writeStoredLetters(current);
 
-    const cleanPublicLetter = {
-      id: newLetter.id,
-      nickname: newLetter.nickname,
-      title: newLetter.title,
-      content: newLetter.content,
-      createdAt: newLetter.createdAt,
-    };
+  const senders = new Set(current.map((l) => l.senderName));
 
-    res.json({
-      success: true,
-      message: 'Lá thư của bạn đã được trao gửi công khai vào hòm thư LOVE HAVE.',
-      letter: cleanPublicLetter,
-      totalSenders: letters.length,
-    });
-  } catch (err) {
-    console.error('Lỗi khi lưu thư:', err);
-    res.status(500).json({
-      success: false,
-      message: 'Máy chủ tạm thời không thể tiếp nhận thư. Bạn vui lòng thử lại sau nhé.',
-    });
-  }
+  res.json({
+    success: true,
+    message: 'Lá thư của bạn đã được trao gửi an yên vào khu vườn!',
+    letter: newLetter,
+    totalSenders: senders.size,
+  });
 });
 
-
-/**
- * Serve static files from /browser
- */
+// Serve static files
 app.use(
   express.static(browserDistFolder, {
     maxAge: '1y',
     index: false,
     redirect: false,
-  }),
+  })
 );
 
-/**
- * Handle all other requests by rendering the Angular application.
- */
+// Angular SSR catch-all
 app.use((req, res, next) => {
   angularApp
     .handle(req)
     .then((response) =>
-      response ? writeResponseToNodeResponse(response, res) : next(),
+      response ? writeResponseToNodeResponse(response, res) : next()
     )
     .catch(next);
 });
 
-// Global Express error handler to prevent process crashes
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-app.use((err: unknown, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
-  console.error('[Server] Express error handled:', err);
-  if (!res.headersSent) {
-    res.status(500).send('Internal Server Error');
-  }
-});
-
-/**
- * Start the server if this module is the main entry point, or it is ran via PM2.
- * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
- */
-if (isMainModule(import.meta.url) || process.env['pm_id']) {
-  const port = process.env['PORT'] || 4000;
-  app.listen(port, (error) => {
-    if (error) {
-      throw error;
-    }
-
+if (isMainModule(import.meta.url)) {
+  const port = process.env['PORT'] || 3000;
+  app.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
 }
 
-/**
- * Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.
- */
 export const reqHandler = createNodeRequestHandler(app);

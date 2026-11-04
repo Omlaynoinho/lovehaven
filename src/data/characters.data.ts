@@ -1588,4 +1588,58 @@ Bạn nghẹn ngào, bàn tay run rẩy gõ từng nhịp vào cạnh điện th
     accentQuote:
       'Thì tao thấy mày không biết xót người yêu nên tao xót hộ thôi. Bỏ nó đi, qua đây với anh.',
   },
+  {
+    id: 'opw-dai-canh-hoang-trieu',
+    name: 'OPW - Đại Cảnh Hoàng Triều',
+    tags: [
+      'Cổ Trang',
+      'Open World',
+      'Tự Do',
+      'Cung Đấu',
+      'Cổ Đại',
+      'R18',
+      'Quyền Mưu',
+      'Slow Burn',
+      'Kiếm Khách',
+    ],
+    summary:
+      'Tử Cấm Thành ba trăm năm cơ nghiệp họ Tiêu nguy nga lộng lẫy nhưng thứ vữa gắn kết là xương tàn và huyết lệ. Năm Cảnh Diệu thứ tám, một mũi tên ám sát Đích tử tại Tiễn Đình đã xé tan màn thái bình giả tạo, châm ngòi cuộc huyết chiến cung đình giữa hoàng đế đa nghi, hoàng hậu nguội lạnh, quý phi dã tâm và những thế lực ngầm chực chờ đoạt vị.',
+    plot: `Người đời vẫn truyền tai nhau rằng, Tử Cấm Thành của Đại Cảnh Hoàng Triều được dựng nên bằng gạch son rực rỡ và ngói lưu ly dát vàng chói lọi. Nhưng chỉ những kẻ từng bước qua cánh cổng Ngọ Môn mới thấu một sự thật tàn khốc: thứ vữa gắn kết ba trăm năm cơ nghiệp tông miếu họ Tiêu chưa từng là vôi đá, mà là xương tàn và huyết lệ của muôn vạn sinh linh.
+
+Năm Cảnh Diệu thứ tám, thiên hạ ngoài miệng xưng tụng cảnh thái bình thịnh trị. Bốn cõi quy phục, mùa màng bội thu, ngọn gió phương Bắc tạm yên ngoài quan ải. Nhưng đằng sau tấm màn nhung gấm lộng lẫy nơi cửu trùng đài, vương triều Đại Cảnh thực chất chỉ là một pho tượng vàng rỗng ruột đang chực chờ sụp đổ dưới sức nặng của những dã tâm ngút trời.
+
+Trên long ngai Càn Thanh Cung, Cảnh Diệu Đế Tiêu Dực Ninh ngồi đơn độc giữa đỉnh cao quyền lực. Mười năm dập tắt huynh đệ tương tàn đã tôi luyện ngài thành một bậc đế vương mang trái tim sắt đá và lý trí lạnh lùng đến rợn người. Ngài ban phát ân sủng như rải những quân cờ, ngoài mặt cưng chiều sủng phi nhưng sau lưng lại ngầm sai thái y hòa hương triệt tự vào lò trầm Vĩnh Thọ Cung, bóp nghẹt giọt máu tương lai của gia tộc tướng môn. Ngài thức trắng bao đêm thâu, dùng chén thuốc đắng và sự cô độc để chuộc lại bóng ma tội lỗi về cái chết của đứa con đầu lòng năm xưa.
+
+Tại Khôn Ninh Cung uy nghiêm buốt giá, Hiếu Từ Hoàng hậu Thẩm Ngọc Uyển khoác lên mình bộ phượng bào cửu trĩ đoan trang, thay mặt thiên hạ chấp chưởng lục cung. Đằng sau cốt cách mực thước, công bình của người mẹ cả là một tâm can đã nguội lạnh thành tro tàn. Nàng không màng thánh sủng, không màng thị phi, tất cả sinh mạng và bản lĩnh thép của nàng chỉ dồn vào hai điều: bảo vệ tuyệt đối cho Đích tử Tiêu Khải bước lên ngai vàng Thái tử, và lần theo dấu vết chiếc trâm bạc dính độc năm nào để bắt kẻ đã giết đứa con đỏ hỏn của mình phải đền mạng bằng máu.
+
+Thế nhưng, ngọn lửa tham vọng chốn hậu đình chưa từng bao giờ lụi tàn. Nơi Tây Lục Cung tráng lệ, Tuệ Chiêu Hoàng quý phi Liễu Tố Nga mang nhan sắc diễm lệ khuynh thành và sự ngạo nghễ của dòng dõi tướng môn, sẵn sàng đạp đổ ngôi vị mẫu nghi để đưa Tam a ca Tiêu Triển lên làm bá chủ thiên hạ. Nàng ỷ vào mười vạn trọng binh của phụ thân nơi biên ải, dung dưỡng bầy rắn độc dưới trướng như Thục tần Khương Huệ Nhu, mà không hề hay biết chính mình đang vùng vẫy tuyệt vọng trong chiếc lồng son tẩm độc của đấng quân vương.
+
+Và rồi, sự bình yên giả tạo ấy đã chính thức vỡ vụn vào một buổi chiều thu mưa ngâu ảm đạm.
+
+Tại Tiễn Đình, một mũi tên sắt xé toạc không gian, suýt chút nữa đã xuyên thủng tim Đích tử Tiêu Khải. Máu của bồi độc Mạnh Hoài Ngọc nhuộm đỏ bãi cát vàng. Tam a ca bị cấm túc trong cơn cuồng nộ; Hoàng quý phi quỳ gối chịu nhục dưới làn mưa xối xả trước Dưỡng Tâm Điện; Binh bộ Thượng thư mặc tang phục quỳ ngoài cung môn đòi lẽ công bằng. Mối thù giữa văn thần Sĩ tộc và võ tướng Tướng môn chính thức rút đao tương hướng.
+
+Cùng lúc đó, ngoài chân núi Kỳ Liên Sơn, bóng tối của sự phản trắc bắt đầu bủa vây. Tĩnh Thân vương Tiêu Dực Tiêu — lưỡi kiếm hộ quốc trung kiên nhất của hoàng triều — đang hấp hối gục ngã trên vũng máu đen vì độc tiễn sa trường. Năm vạn thiết kỵ của Liễu gia kéo cờ áp sát kinh thành; mạng lưới mật thám "Ám Lũy" của Thụy Vương Tiêu Dực Trực điên cuồng lục tung chợ đen tìm kiếm linh dược; và trong góc tiểu viện Diên Hi Cung thanh vắng, Doãn Mỹ nhân đang âm thầm mài từng nắm độc thảo phương Nam, chuẩn bị lật lại bản án oan sai trăm vạn lượng muối của phụ thân mình.
+
+Thời gian như chiếc đồng hồ cát đang cạn dần từng hạt máu.
+
+Đêm mai, ánh trăng rằm Trung Thu sẽ treo trên đỉnh Giao Thái Điện. Tiệc rượu sẽ bày, đàn ca sẽ trỗi, nhưng đó cũng là thời khắc những mũi dao giấu trong tay áo đồng loạt vung lên.
+
+Ngươi sẽ bước vào ván cờ sinh tử này với thân phận nào?
+
+Là một thị vệ ngự tiền mang thanh đao lạnh lùng thực thi mật chỉ trong bóng tối? Là một y nữ thâm cung dùng từng giọt thảo mộc cứu người hoặc đoạt mạng vô thanh? Hay là một kẻ gián điệp đội lốt phong lưu, dùng những lời thì thầm bên bến sông Tần Hoài để xoay vần vận mệnh cả một triều đại?
+
+Tử Cấm Thành sâu tựa biển, một bước sẩy chân là muôn đời vạn kiếp không thể quay đầu. Khi hồi chuông dạ cấm ba mươi sáu tiếng ngân vang, ngọn đèn lồng cuối cùng nơi cung cấm vụt tắt...
+
+Hãy rút kiếm, hoặc chọn lấy cho mình một chén rượu độc! Bàn cờ Cảnh Diệu đã mở, và mạng sống của ngươi chính là quân cờ kế tiếp.`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221BbFlUybxdvBMZhJ5_lgaitMKUF9j0QiV%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
+    locked: false,
+    displayOrder: 24,
+    flowerTheme: 'Mẫu Đơn Tử Cấm',
+    flowerColor: '#B91C1C',
+    flowerSymbol: 'fort',
+    accentQuote:
+      'Tử Cấm Thành sâu tựa biển, một bước sẩy chân là muôn đời vạn kiếp không thể quay đầu. Bàn cờ Cảnh Diệu đã mở, và mạng sống của ngươi chính là quân cờ kế tiếp.',
+  },
 ];
+

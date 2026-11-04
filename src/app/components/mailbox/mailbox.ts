@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
-import { ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
+import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import { CharacterService } from '../../services/character';
 import { Sound } from '../../services/sound';
 
@@ -10,293 +10,242 @@ import { Sound } from '../../services/sound';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, MatIconModule, ReactiveFormsModule],
   template: `
-    <section id="mailbox" class="relative max-w-5xl mx-auto px-4 sm:px-6 py-16 scroll-mt-20">
-      
-      <!-- Section Header -->
-      <div class="text-center mb-10">
-        <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-[#EBCBD4]/40 border border-[#EBCBD4] text-[#A65B6D] text-xs font-serif tracking-widest uppercase mb-3">
-          <mat-icon class="text-xs">mark_email_unread</mat-icon>
-          <span>Hộp Thư Công Khai</span>
-          <mat-icon class="text-xs">mark_email_unread</mat-icon>
-        </div>
-
-        <h2 class="font-serif-vintage text-3xl sm:text-4xl md:text-5xl text-[#5B464B] font-bold tracking-tight">
-          Hòm thư nhỏ của LOVE HAVE
-        </h2>
-
-        <p class="font-script-romantic text-xl sm:text-2xl text-[#8E7479] mt-2 max-w-lg mx-auto">
-          Những dòng thư và cảm xúc được gửi gắm công khai giữa khu vườn...
-        </p>
-
-        <!-- Total Senders Count Badge -->
-        <div class="mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-[#E8D4D8] vintage-shadow-sm text-xs sm:text-sm text-[#5B464B] font-medium">
-          <mat-icon class="text-base text-[#C98F9E]">mark_email_read</mat-icon>
-          <span>Hiện có <strong class="text-[#A65B6D] font-bold text-sm sm:text-base">{{ charService.totalSenders() }}</strong> người gửi thư vào khu vườn</span>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+    <section id="mailbox" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 scroll-mt-20">
+      <div class="bg-gradient-to-br from-white/95 via-[#FFFDFB]/95 to-[#FCF4F6]/95 rounded-3xl p-6 sm:p-10 lg:p-12 border border-[#E8D4D8] vintage-shadow relative overflow-hidden">
         
-        <!-- CỘT 1: FORM GỬI THƯ (5 COLS ON LG) -->
-        <div class="lg:col-span-5 bg-white/95 rounded-3xl p-6 sm:p-7 border border-[#EAD5DA] vintage-shadow-lg relative overflow-hidden">
-          <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-[#EBCBD4] via-[#D8CEE9] to-[#EBCBD4]"></div>
-
-          <div class="flex items-center justify-between pb-3 mb-4 border-b border-[#F2E5E8]">
-            <div class="flex items-center gap-2">
-              <div class="w-8 h-8 rounded-full bg-[#FAF0E6] flex items-center justify-center text-[#C98F9E]">
-                <mat-icon class="text-base">edit_note</mat-icon>
-              </div>
-              <div>
-                <h3 class="font-serif-vintage font-bold text-lg text-[#5B464B]">Viết Thư Mới</h3>
-                <span class="text-[11px] text-[#A69094]">Thư sẽ được hiển thị công khai</span>
-              </div>
-            </div>
+        <!-- Header -->
+        <div class="max-w-2xl mx-auto text-center mb-10">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF0E6] text-[#A65B6D] text-xs font-serif font-medium mb-3">
+            <mat-icon class="text-xs">mail</mat-icon>
+            <span>Hộp Thư Gửi Gắm Yêu Thương</span>
           </div>
 
-          <form [formGroup]="letterForm" (ngSubmit)="onSubmitLetter()" class="flex flex-col gap-4">
-            
-            <!-- 1. Biệt danh (tùy chọn) -->
-            <div class="flex flex-col gap-1">
-              <label for="mailbox-nickname" class="text-xs font-medium text-[#78666A] flex items-center gap-1">
-                <mat-icon class="text-sm text-[#C98F9E]">person_outline</mat-icon>
-                <span>Biệt danh (tùy chọn)</span>
-              </label>
-              <input
-                id="mailbox-nickname"
-                type="text"
-                formControlName="nickname"
-                placeholder="Ví dụ: Người qua đường, Mộng mơ..."
-                maxlength="50"
-                class="px-3.5 py-2.5 rounded-xl border border-[#E5D0D5] bg-[#FFFDF9] text-sm text-[#5B464B] placeholder:text-[#B59EA3] focus:outline-none focus:border-[#C98F9E] focus:ring-1 focus:ring-[#C98F9E] transition-all"
-              />
-            </div>
+          <h2 class="font-serif-vintage text-3xl sm:text-4xl font-bold text-[#5B464B]">
+            Hộp Thư Khu Vườn LOVE HAVE
+          </h2>
 
-            <!-- 2. Tiêu đề (tùy chọn) -->
-            <div class="flex flex-col gap-1">
-              <label for="mailbox-title" class="text-xs font-medium text-[#78666A] flex items-center gap-1">
-                <mat-icon class="text-sm text-[#C98F9E]">title</mat-icon>
-                <span>Tiêu đề (tùy chọn)</span>
-              </label>
-              <input
-                id="mailbox-title"
-                type="text"
-                formControlName="title"
-                placeholder="Ví dụ: Lời nhắn gửi khu vườn..."
-                maxlength="120"
-                class="px-3.5 py-2.5 rounded-xl border border-[#E5D0D5] bg-[#FFFDF9] text-sm text-[#5B464B] placeholder:text-[#B59EA3] focus:outline-none focus:border-[#C98F9E] focus:ring-1 focus:ring-[#C98F9E] transition-all"
-              />
-            </div>
+          <p class="font-script-romantic text-lg sm:text-xl text-[#8E7479] mt-2">
+            "Viết một lá thư gửi tới nhân vật bạn yêu mến, kèm theo một đóa hoa dịu dàng..."
+          </p>
 
-            <!-- 3. Nội dung (bắt buộc) -->
-            <div class="flex flex-col gap-1">
-              <div class="flex items-center justify-between">
-                <label for="mailbox-content" class="text-xs font-medium text-[#78666A] flex items-center gap-1">
-                  <mat-icon class="text-sm text-[#C98F9E]">border_color</mat-icon>
-                  <span>Nội dung thư <span class="text-[#C98F9E]">*</span></span>
-                </label>
-                <span class="text-[10px] text-[#A69094]">
-                  {{ contentCount() }} / 3000 ký tự
-                </span>
-              </div>
-              <textarea
-                id="mailbox-content"
-                rows="5"
-                formControlName="content"
-                placeholder="Gửi một lời nhắn nhủ, cảm xúc hay điều bạn muốn nói..."
-                maxlength="3000"
-                (keydown.control.enter)="onSubmitLetter()"
-                (keydown.meta.enter)="onSubmitLetter()"
-                class="px-3.5 py-2.5 rounded-xl border border-[#E5D0D5] bg-[#FFFDF9] text-sm text-[#5B464B] placeholder:text-[#B59EA3] leading-relaxed focus:outline-none focus:border-[#C98F9E] focus:ring-1 focus:ring-[#C98F9E] transition-all"
-              ></textarea>
-            </div>
-
-            <!-- Error message if any -->
-            @if (serverError()) {
-              <div class="p-3 rounded-xl bg-[#FFF0F2] border border-[#F3CCD2] text-xs text-[#A64A5E] flex items-center gap-2">
-                <mat-icon class="text-sm shrink-0">error_outline</mat-icon>
-                <span>{{ serverError() }}</span>
-              </div>
-            }
-
-            <!-- Success notification banner -->
-            @if (successMessage()) {
-              <div class="p-3 rounded-xl bg-[#F4F9F2] border border-[#D5E6D1] text-xs text-[#42583C] flex items-center gap-2 animate-fade-in">
-                <mat-icon class="text-sm text-[#7D9775] shrink-0">check_circle</mat-icon>
-                <span>{{ successMessage() }}</span>
-              </div>
-            }
-
-            <!-- 4. Nút Gửi thư -->
-            <button
-              type="submit"
-              [disabled]="isSubmitting()"
-              class="w-full mt-1 py-3 px-6 rounded-full bg-[#C98F9E] hover:bg-[#B77A8A] text-white text-sm font-medium tracking-wide shadow-md hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 cursor-pointer active:scale-95"
-            >
-              @if (isSubmitting()) {
-                <mat-icon class="text-base animate-spin">refresh</mat-icon>
-                <span>Đang gửi thư...</span>
-              } @else {
-                <mat-icon class="text-base">send</mat-icon>
-                <span>Gửi thư</span>
-              }
-            </button>
-          </form>
-        </div>
-
-        <!-- CỘT 2: DANH SÁCH NGƯỜI GỬI & LÁ THƯ (7 COLS ON LG) -->
-        <div class="lg:col-span-7 flex flex-col gap-4">
-          <div class="flex items-center justify-between pb-2 border-b border-[#EBCBD4]/60">
-            <div class="flex items-center gap-2">
-              <mat-icon class="text-base text-[#C98F9E]">all_inbox</mat-icon>
-              <h3 class="font-serif-vintage font-bold text-xl text-[#5B464B]">Danh Sách Người Gửi</h3>
-            </div>
-            <span class="text-xs text-[#8E7479] font-medium font-serif">
-              {{ charService.publicLetters().length }} lá thư đã gửi
+          <div class="flex items-center justify-center gap-4 text-xs font-serif text-[#78666A] mt-4">
+            <span class="flex items-center gap-1">
+              <mat-icon class="text-xs text-[#C98F9E]">mark_email_read</mat-icon>
+              <span>{{ charService.publicLetters().length }} bức thư đã gửi</span>
+            </span>
+            <span>•</span>
+            <span class="flex items-center gap-1">
+              <mat-icon class="text-xs text-[#B8C8B0]">favorite</mat-icon>
+              <span>{{ charService.totalSenders() }} tâm hồn đồng điệu</span>
             </span>
           </div>
-
-          <!-- Letters List Display -->
-          @if (charService.publicLetters().length > 0) {
-            <div class="flex flex-col gap-3.5 max-h-[640px] overflow-y-auto pr-1">
-              @for (letter of charService.publicLetters(); track letter.id) {
-                <article class="bg-white/90 rounded-2xl p-5 border border-[#E9D6DC] vintage-shadow-sm hover:vintage-shadow transition-all relative overflow-hidden group">
-                  
-                  <!-- Top Postal Header of Each Letter -->
-                  <div class="flex items-start justify-between gap-3 mb-2.5">
-                    <div class="flex items-center gap-2">
-                      <div class="w-7 h-7 rounded-full bg-[#FAF0E6] border border-[#E8D4D8] flex items-center justify-center text-[#A65B6D]">
-                        <mat-icon class="text-xs">local_florist</mat-icon>
-                      </div>
-                      <div>
-                        <h4 class="font-serif-vintage font-bold text-sm text-[#5B464B]">
-                          {{ letter.nickname || 'Người lữ khách vô danh' }}
-                        </h4>
-                        <time class="text-[10px] text-[#A69094] block">
-                          {{ formatDate(letter.createdAt) }}
-                        </time>
-                      </div>
-                    </div>
-
-                    <!-- Small Vintage Postage Stamp Visual -->
-                    <div class="w-7 h-9 border border-dashed border-[#C98F9E] rounded flex items-center justify-center bg-[#FFFDF9] text-[#C98F9E] opacity-70 shrink-0">
-                      <mat-icon class="text-[11px]">mail</mat-icon>
-                    </div>
-                  </div>
-
-                  <!-- Letter Title -->
-                  <h5 class="font-serif-vintage text-base font-semibold text-[#6E4F56] mb-1.5">
-                    {{ letter.title }}
-                  </h5>
-
-                  <!-- Letter Content -->
-                  <p class="text-xs sm:text-sm text-[#665457] leading-relaxed whitespace-pre-line font-light">
-                    {{ letter.content }}
-                  </p>
-                </article>
-              }
-            </div>
-          } @else {
-            <!-- Empty state when no letters sent yet -->
-            <div class="py-16 px-6 text-center bg-white/70 rounded-3xl border border-dashed border-[#E5D0D5] flex flex-col items-center">
-              <div class="w-12 h-12 rounded-full bg-[#FAF0E6] flex items-center justify-center text-[#C98F9E] mb-3">
-                <mat-icon class="text-2xl">mail_outline</mat-icon>
-              </div>
-              <h4 class="font-serif-vintage text-lg font-bold text-[#5B464B]">
-                Chưa có lá thư nào được gửi
-              </h4>
-              <p class="text-xs text-[#8E7479] mt-1 max-w-xs">
-                Hãy là người đầu tiên để lại một lá thư dịu dàng trong hòm thư của khu vườn nhé!
-              </p>
-            </div>
-          }
         </div>
 
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left Column: Letter Composition Form -->
+          <div class="lg:col-span-5 bg-white/80 p-6 sm:p-7 rounded-3xl border border-[#ECD9DE] vintage-shadow">
+            <h3 class="font-serif-vintage text-xl font-bold text-[#5B464B] mb-4 flex items-center gap-2">
+              <mat-icon class="text-[#C98F9E]">edit_note</mat-icon>
+              <span>Viết Lá Thư Của Bạn</span>
+            </h3>
+
+            <form [formGroup]="letterForm" (ngSubmit)="sendLetter()" class="space-y-4">
+              <!-- Sender Name -->
+              <div>
+                <label for="senderName" class="block text-xs font-medium text-[#5B464B] mb-1">
+                  Tên hoặc biệt danh của bạn:
+                </label>
+                <input
+                  id="senderName"
+                  type="text"
+                  formControlName="senderName"
+                  placeholder="VD: Một đóa cúc họa mi..."
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-[#E5D0D5] bg-[#FFFDF9] text-xs sm:text-sm text-[#5B464B] focus:outline-none focus:border-[#C98F9E]"
+                />
+              </div>
+
+              <!-- Recipient Character -->
+              <div>
+                <label for="recipientChar" class="block text-xs font-medium text-[#5B464B] mb-1">
+                  Gửi tới ai trong khu vườn:
+                </label>
+                <select
+                  id="recipientChar"
+                  formControlName="recipientCharacterId"
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-[#E5D0D5] bg-[#FFFDF9] text-xs sm:text-sm text-[#5B464B] focus:outline-none focus:border-[#C98F9E]"
+                >
+                  <option value="">-- Toàn bộ khu vườn & tất cả nhân vật --</option>
+                  @for (c of charService.characters(); track c.id) {
+                    <option [value]="c.id">{{ c.name }}</option>
+                  }
+                </select>
+              </div>
+
+              <!-- Flower Choice -->
+              <div>
+                <span class="block text-xs font-medium text-[#5B464B] mb-1.5">
+                  Chọn một đóa hoa gửi kèm:
+                </span>
+                <div class="grid grid-cols-4 gap-2">
+                  @for (f of flowers; track f.name) {
+                    <button
+                      type="button"
+                      (click)="selectFlower(f.name)"
+                      class="p-2 rounded-xl border text-center transition-all cursor-pointer flex flex-col items-center gap-1"
+                      [class.border-[#C98F9E]]="letterForm.get('flowerChoice')?.value === f.name"
+                      [class.bg-[#FFF4F6]]="letterForm.get('flowerChoice')?.value === f.name"
+                      [class.border-[#ECD9DE]]="letterForm.get('flowerChoice')?.value !== f.name"
+                    >
+                      <mat-icon class="text-sm" [style.color]="f.color">{{ f.icon }}</mat-icon>
+                      <span class="text-[10px] text-[#5B464B] truncate w-full">{{ f.name }}</span>
+                    </button>
+                  }
+                </div>
+              </div>
+
+              <!-- Message Textarea -->
+              <div>
+                <label for="letterMessage" class="block text-xs font-medium text-[#5B464B] mb-1">
+                  Lời tâm tình (bắt buộc):
+                </label>
+                <textarea
+                  id="letterMessage"
+                  formControlName="message"
+                  rows="4"
+                  placeholder="Gửi gắm vài dòng suy nghĩ, tâm sự hoặc lời nhắn nhủ dành cho nhân vật..."
+                  class="w-full p-3.5 rounded-xl border border-[#E5D0D5] bg-[#FFFDF9] text-xs sm:text-sm text-[#5B464B] focus:outline-none focus:border-[#C98F9E]"
+                ></textarea>
+              </div>
+
+              @if (submitSuccess()) {
+                <div class="p-3 rounded-xl bg-[#ECFDF5] border border-[#A7F3D0] text-xs text-[#059669] flex items-center gap-1.5">
+                  <mat-icon class="text-xs">check_circle</mat-icon>
+                  <span>{{ successMessage() }}</span>
+                </div>
+              }
+
+              <!-- Send Button -->
+              <button
+                type="submit"
+                [disabled]="isSending() || letterForm.invalid"
+                class="w-full py-3 rounded-xl bg-gradient-to-r from-[#C98F9E] to-[#A65B6D] hover:from-[#B77A8A] hover:to-[#924C5C] text-white text-xs sm:text-sm font-medium transition-all shadow-xs hover:shadow-md disabled:opacity-50 cursor-pointer flex items-center justify-center gap-2 active:scale-95"
+              >
+                <mat-icon class="text-sm">send</mat-icon>
+                <span>{{ isSending() ? 'Đang gửi...' : 'Gửi lá thư vào hộp thư' }}</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Right Column: Letters Stream Display -->
+          <div class="lg:col-span-7 space-y-4">
+            <div class="flex items-center justify-between">
+              <h3 class="font-serif-vintage text-xl font-bold text-[#5B464B] flex items-center gap-2">
+                <mat-icon class="text-[#B8C8B0]">mark_email_unread</mat-icon>
+                <span>Những Lá Thư Đang Nở Hoa</span>
+              </h3>
+              <span class="text-xs text-[#8E7479] font-serif">Mới nhất</span>
+            </div>
+
+            <div class="space-y-3.5 max-h-[560px] overflow-y-auto pr-1">
+              @for (letter of charService.publicLetters(); track letter.id) {
+                <div class="p-5 rounded-2xl bg-white/90 border border-[#EADCE0] vintage-shadow space-y-2.5">
+                  <div class="flex items-center justify-between text-xs">
+                    <div class="flex items-center gap-1.5 font-medium text-[#5B464B]">
+                      <mat-icon class="text-xs text-[#C98F9E]">favorite</mat-icon>
+                      <span>{{ letter.senderName }}</span>
+                      <span class="text-[#B59EA3]">gửi tới</span>
+                      <span class="text-[#A65B6D] font-serif">{{ letter.recipientCharacterName || 'Khu vườn' }}</span>
+                    </div>
+
+                    <span class="text-[11px] px-2 py-0.5 rounded-full bg-[#FAF0E6] text-[#78666A] flex items-center gap-1">
+                      <mat-icon class="text-[10px] text-[#C98F9E]">local_florist</mat-icon>
+                      <span>{{ letter.flowerChoice }}</span>
+                    </span>
+                  </div>
+
+                  <p class="text-xs sm:text-sm text-[#6B555A] leading-relaxed whitespace-pre-line font-serif italic">
+                    "{{ letter.message }}"
+                  </p>
+
+                  <div class="text-[10px] text-[#B09DA2] font-mono text-right">
+                    {{ letter.createdAt | date:'HH:mm • dd/MM/yyyy' }}
+                  </div>
+                </div>
+              } @empty {
+                <div class="p-8 rounded-2xl bg-white/60 border border-dashed border-[#ECD9DE] text-center text-xs text-[#8E7479]">
+                  Hộp thư đang chờ lá thư đầu tiên từ bạn. Hãy là người gieo hạt giống yêu thương đầu tiên!
+                </div>
+              }
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   `,
-  styles: [`
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(4px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fade-in {
-      animation: fadeIn 0.3s ease-out forwards;
-    }
-  `],
 })
-export class MailboxSection {
+export class Mailbox {
   readonly charService = inject(CharacterService);
-  private sound = inject(Sound);
+  readonly sound = inject(Sound);
 
-  readonly letterForm = new FormGroup({
-    nickname: new FormControl(''),
-    title: new FormControl(''),
-    content: new FormControl(''),
-  });
-
-  readonly isSubmitting = signal<boolean>(false);
-  readonly serverError = signal<string>('');
+  readonly isSending = signal<boolean>(false);
+  readonly submitSuccess = signal<boolean>(false);
   readonly successMessage = signal<string>('');
 
-  get contentCount(): () => number {
-    return () => (this.letterForm.get('content')?.value || '').length;
-  }
+  readonly flowers = [
+    { name: 'Hoa Hồng', icon: 'local_florist', color: '#E11D48' },
+    { name: 'Oải Hương', icon: 'spa', color: '#8B5CF6' },
+    { name: 'Cúc Họa Mi', icon: 'filter_vintage', color: '#059669' },
+    { name: 'Mạn Châu Sa', icon: 'grain', color: '#DC2626' },
+  ];
 
-  formatDate(isoString: string): string {
-    if (!isoString) return '';
-    try {
-      const d = new Date(isoString);
-      return d.toLocaleDateString('vi-VN', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-      });
-    } catch {
-      return isoString;
-    }
-  }
+  readonly letterForm = new FormGroup({
+    senderName: new FormControl(''),
+    recipientCharacterId: new FormControl(''),
+    flowerChoice: new FormControl('Hoa Hồng'),
+    message: new FormControl('', [Validators.required, Validators.minLength(3)]),
+  });
 
-  onSubmitLetter(): void {
-    const val = this.letterForm.value;
-    const contentText = (val.content || '').trim();
-
-    if (!contentText) {
-      this.sound.playWrongAnswer();
-      this.serverError.set('Vui lòng nhập nội dung thư trước khi bấm Gửi thư nhé!');
-      return;
-    }
-
+  selectFlower(flowerName: string): void {
     this.sound.playClick();
-    this.isSubmitting.set(true);
-    this.serverError.set('');
-    this.successMessage.set('');
+    this.letterForm.patchValue({ flowerChoice: flowerName });
+  }
 
-    const titleText = (val.title || '').trim();
+  sendLetter(): void {
+    if (this.letterForm.invalid) return;
 
-    this.charService.sendMail(val.nickname || '', titleText, contentText).subscribe({
-      next: (res) => {
-        this.isSubmitting.set(false);
-        if (res.success) {
-          this.sound.playSendMail();
-          this.successMessage.set('Lá thư đã được gửi công khai thành công vào danh sách!');
-          this.letterForm.reset();
+    this.sound.playPaper();
+    this.isSending.set(true);
+    this.submitSuccess.set(false);
 
-          // Clear success banner after 4s
-          setTimeout(() => {
-            this.successMessage.set('');
-          }, 4000);
-        } else {
-          this.sound.playWrongAnswer();
-          this.serverError.set(res.message);
-        }
-      },
-      error: () => {
-        this.isSubmitting.set(false);
-        this.sound.playWrongAnswer();
-        this.serverError.set('Không thể kết nối đến máy chủ. Vui lòng thử lại sau giây lát!');
-      },
-    });
+    const val = this.letterForm.value;
+    const recipientChar = this.charService.characters().find((c) => c.id === val.recipientCharacterId);
+
+    this.charService
+      .sendMailboxLetter({
+        senderName: (val.senderName || '').trim() || 'Lữ khách ẩn danh',
+        recipientCharacterId: val.recipientCharacterId || undefined,
+        recipientCharacterName: recipientChar ? recipientChar.name : 'Toàn bộ khu vườn',
+        message: (val.message || '').trim(),
+        flowerChoice: val.flowerChoice || 'Hoa Hồng',
+      })
+      .subscribe({
+        next: (res) => {
+          this.isSending.set(false);
+          this.submitSuccess.set(true);
+          this.successMessage.set(res.message);
+          this.sound.playChime();
+          this.letterForm.reset({
+            senderName: '',
+            recipientCharacterId: '',
+            flowerChoice: 'Hoa Hồng',
+            message: '',
+          });
+          setTimeout(() => this.submitSuccess.set(false), 4000);
+        },
+        error: () => {
+          this.isSending.set(false);
+        },
+      });
   }
 }

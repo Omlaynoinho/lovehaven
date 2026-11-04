@@ -47,25 +47,24 @@ export interface TosSection {
         <div class="absolute -bottom-10 -left-10 w-44 h-44 bg-[#D8CEE9]/25 rounded-full blur-3xl pointer-events-none"></div>
 
         <!-- Header Ribbon Badge -->
-        <div class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#EBCBD4]/40 border border-[#EBCBD4] text-[#A65B6D] text-xs font-serif tracking-widest uppercase mb-4 w-fit shadow-2xs">
-          <mat-icon class="text-xs">palette</mat-icon>
-          <span>Ôm Lấy Nỗi Nhớ Của Yue Yue</span>
-          <mat-icon class="text-xs">favorite</mat-icon>
-        </div>
-
-        <!-- Main Title Header -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-4 pb-4 border-b border-[#EBCBD4]/50">
-          <div>
-            <h2 class="font-serif-vintage text-3xl sm:text-4xl lg:text-5xl text-[#5B464B] font-bold tracking-tight">
-              PRICE & TOS
-            </h2>
-            <p class="font-script-romantic text-xl sm:text-2xl text-[#8E7479] mt-1">
-              Dịch vụ mở commission viết kịch bản & System Prompt AI theo yêu cầu
-            </p>
+        <div class="max-w-3xl mx-auto text-center mb-10">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF0E6] border border-[#E8D4D8] text-xs font-serif text-[#A65B6D] mb-3">
+            <mat-icon class="text-xs">palette</mat-icon>
+            <span class="tracking-wide">Dịch Vụ Commission Character Độc Quyền</span>
           </div>
 
-          <!-- Quick Action Buttons -->
-          <div class="flex items-center gap-2">
+          <h2 class="font-serif-vintage text-3xl sm:text-4xl lg:text-5xl font-bold text-[#5B464B] tracking-tight">
+            Ôm Lấy Nỗi Nhớ Của Yue Yue
+          </h2>
+          <p class="font-serif text-sm sm:text-base text-[#8E7479] mt-1 tracking-widest uppercase font-semibold">
+            PRICE & TOS COMMISSION
+          </p>
+          <p class="font-script-romantic text-lg sm:text-xl text-[#A65B6D] mt-2">
+            "Vui lòng đọc kỹ trước khi đặt commission. Đặt đơn / thanh toán = đồng ý với TOS."
+          </p>
+
+          <!-- Contact Quick Pill Buttons -->
+          <div class="flex flex-wrap items-center justify-center gap-3 mt-5">
             <a
               href="https://www.facebook.com/qingyue224"
               target="_blank"
@@ -94,18 +93,7 @@ export interface TosSection {
           </div>
         </div>
 
-        <!-- Mandatory Agreement Notice Banner -->
-        <div class="mb-8 p-4 rounded-2xl bg-[#FFF8EB] border border-[#F3DFC1] text-xs sm:text-sm text-[#7D5B28] flex items-center gap-3 shadow-2xs">
-          <div class="w-8 h-8 rounded-full bg-[#ECC688]/40 flex items-center justify-center shrink-0 text-[#8F5910]">
-            <mat-icon class="text-base">gavel</mat-icon>
-          </div>
-          <div class="leading-relaxed">
-            <span class="font-bold text-[#674415]">Vui lòng đọc kỹ trước khi đặt commission.</span>
-            <span class="ml-1">Đặt đơn / thanh toán = đồng ý với toàn bộ điều khoản TOS dưới đây.</span>
-          </div>
-        </div>
-
-        <!-- Tab Controls Navigation -->
+        <!-- Section Navigation Tabs -->
         <div class="flex flex-wrap items-center gap-2 mb-8 p-1.5 rounded-2xl bg-[#F5ECEE]/70 border border-[#ECD9DE] w-fit">
           <button
             type="button"
@@ -162,15 +150,11 @@ export interface TosSection {
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               @for (tier of tiers; track tier.id) {
                 <div
-                  class="rounded-2xl p-6 border transition-all duration-300 flex flex-col justify-between hover:shadow-md bg-white/90 relative"
-                  [class.border-[#E8D4D8]]="tier.id !== 'advanced' && tier.id !== 'premium'"
-                  [class.border-[#C98F9E]]="tier.id === 'advanced' || tier.id === 'premium'"
-                  [class.ring-2]="tier.id === 'advanced'"
-                  [class.ring-[#C98F9E]/20]="tier.id === 'advanced'"
+                  class="rounded-3xl p-6 sm:p-7 bg-white/90 border border-[#E9D7DC] hover:border-[#C98F9E] transition-all duration-300 vintage-shadow hover:shadow-xl flex flex-col justify-between relative overflow-hidden"
                 >
-                  <!-- Optional Best Seller / Popular Ribbon -->
+                  <!-- Badge for Best-Seller / Popular -->
                   @if (tier.badge) {
-                    <div class="absolute -top-3 right-4 px-3 py-0.5 rounded-full bg-[#C98F9E] text-white text-[11px] font-medium tracking-wide shadow-2xs">
+                    <div class="absolute top-4 right-4 bg-gradient-to-r from-[#C98F9E] to-[#A65B6D] text-white text-[10px] font-serif uppercase tracking-wider font-bold py-1 px-3 rounded-full shadow-2xs">
                       {{ tier.badge }}
                     </div>
                   }
@@ -248,16 +232,16 @@ export interface TosSection {
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               @for (item of surcharges; track item.id) {
-                <div class="p-5 rounded-2xl bg-white/90 border border-[#ECD9DE] hover:border-[#D8CEE9] transition-all flex items-start gap-4">
-                  <div class="w-10 h-10 rounded-xl bg-[#D8CEE9]/30 text-[#7D6B9A] flex items-center justify-center shrink-0">
+                <div class="p-5 rounded-2xl bg-white/90 border border-[#ECD9DE] hover:border-[#C98F9E]/50 transition-all vintage-shadow flex gap-4">
+                  <div class="w-10 h-10 rounded-2xl bg-[#FAF0E6] text-[#A65B6D] flex items-center justify-center shrink-0">
                     <mat-icon class="text-xl">{{ item.icon }}</mat-icon>
                   </div>
                   <div class="flex-1">
-                    <div class="flex items-baseline justify-between mb-1">
-                      <h4 class="font-serif-vintage text-base font-bold text-[#5B464B]">
+                    <div class="flex items-center justify-between mb-1">
+                      <h4 class="font-serif-vintage font-bold text-[#5B464B] text-base">
                         {{ item.name }}
                       </h4>
-                      <span class="text-sm font-bold text-[#A65B6D] font-mono bg-[#FFF3F5] px-2.5 py-0.5 rounded-full border border-[#EBCBD4]">
+                      <span class="font-mono font-bold text-[#A65B6D] text-sm">
                         {{ item.fee }}
                       </span>
                     </div>
@@ -268,87 +252,70 @@ export interface TosSection {
                 </div>
               }
             </div>
-
-            <!-- Helpful Surcharge Advice Box -->
-            <div class="p-5 rounded-2xl bg-[#F7F2FA] border border-[#E3D9EE] text-xs sm:text-sm text-[#5B4C72] flex items-start gap-3">
-              <mat-icon class="text-[#7D6B9A] text-lg shrink-0 mt-0.5">info</mat-icon>
-              <div class="leading-relaxed">
-                <strong>Lưu ý về phụ phí:</strong> Mọi phụ phí đều được trao đổi rõ ràng và chốt trước khi bạn thanh toán hoặc đặt cọc. Không phát sinh chi phí ngầm trong quá trình thực hiện kịch bản.
-              </div>
-            </div>
           </div>
         }
 
-        <!-- TAB 3: TERMS OF SERVICE (10 ĐIỀU KHOẢN) -->
+        <!-- TAB 3: ĐIỀU KHOẢN TOS (10 ĐIỀU) -->
         @if (activeTab() === 'tos') {
           <div class="space-y-6">
-            <div class="flex items-center justify-between">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <h3 class="font-serif-vintage text-2xl font-bold text-[#5B464B] flex items-center gap-2">
-                  <mat-icon class="text-[#C98F9E]">article</mat-icon>
-                  <span>10 Điều Khoản Dịch Vụ (TOS)</span>
+                  <mat-icon class="text-[#A65B6D]">menu_book</mat-icon>
+                  <span>Điều Khoản Dịch Vụ (TOS)</span>
                 </h3>
                 <p class="text-xs text-[#8E7479] mt-1">
-                  Đảm bảo quyền lợi, tính minh bạch và sự thống nhất tuyệt đối giữa hai bên.
+                  10 quy định và nguyên tắc làm việc rõ ràng bảo vệ quyền lợi đôi bên.
                 </p>
               </div>
-            </div>
 
-            <!-- Search or Toggle All -->
-            <div class="flex items-center gap-2">
               <button
                 type="button"
                 (click)="toggleAllTos()"
-                class="px-3.5 py-1.5 rounded-full bg-white border border-[#ECD9DE] text-xs font-medium text-[#78666A] hover:text-[#5B464B] transition-colors cursor-pointer flex items-center gap-1 shadow-2xs"
+                class="px-3.5 py-1.5 rounded-full bg-[#FAF0E6] hover:bg-[#FBE4E9] text-xs font-serif text-[#A65B6D] transition-colors cursor-pointer w-fit"
               >
-                <mat-icon class="text-xs">{{ allExpanded() ? 'unfold_less' : 'unfold_more' }}</mat-icon>
-                <span>{{ allExpanded() ? 'Thu gọn tất cả' : 'Mở rộng tất cả 10 mục' }}</span>
+                {{ allExpanded() ? 'Thu gọn tất cả' : 'Mở rộng tất cả 10 điều' }}
               </button>
             </div>
 
-            <!-- 10 TOS Accordion Cards -->
-            <div class="space-y-3.5">
-              @for (sec of tosList; track sec.number) {
-                <div class="rounded-2xl border transition-all overflow-hidden bg-white/95"
-                  [class.border-[#E8D4D8]]="!isTosExpanded(sec.number)"
-                  [class.border-[#C98F9E]]="isTosExpanded(sec.number)"
-                  [class.shadow-xs]="isTosExpanded(sec.number)"
-                >
-                  <!-- Card Header Bar -->
+            <!-- TOS Accordion List -->
+            <div class="space-y-3">
+              @for (tos of tosList; track tos.number) {
+                <div class="rounded-2xl border border-[#ECD9DE] bg-white/90 overflow-hidden transition-all">
                   <button
                     type="button"
-                    (click)="toggleTosItem(sec.number)"
-                    class="w-full px-5 py-4 flex items-center justify-between text-left cursor-pointer hover:bg-[#FFF9FA] transition-colors"
+                    (click)="toggleTosItem(tos.number)"
+                    class="w-full p-4 sm:p-5 text-left flex items-center justify-between hover:bg-[#FFF9FA] transition-colors cursor-pointer"
                   >
                     <div class="flex items-center gap-3">
-                      <span class="w-8 h-8 rounded-full bg-[#EBCBD4]/40 text-[#A65B6D] text-xs font-serif font-bold flex items-center justify-center shrink-0">
-                        {{ sec.number }}
+                      <span class="w-8 h-8 rounded-full bg-[#FAF0E6] text-[#A65B6D] font-mono font-bold text-xs flex items-center justify-center shrink-0">
+                        {{ tos.number }}
                       </span>
-                      <span class="font-serif-vintage text-base sm:text-lg font-bold text-[#5B464B]">
-                        {{ sec.title }}
-                      </span>
+                      <div class="flex items-center gap-2">
+                        <mat-icon class="text-sm text-[#C98F9E]">{{ tos.icon }}</mat-icon>
+                        <h4 class="font-serif-vintage text-sm sm:text-base font-bold text-[#5B464B]">
+                          {{ tos.title }}
+                        </h4>
+                      </div>
                     </div>
 
-                    <div class="flex items-center gap-2 text-[#8E7479]">
-                      <mat-icon class="text-sm transition-transform duration-200" [class.rotate-180]="isTosExpanded(sec.number)">
-                        expand_more
-                      </mat-icon>
-                    </div>
+                    <mat-icon class="text-base text-[#8E7479] transition-transform duration-200" [class.rotate-180]="isTosExpanded(tos.number)">
+                      expand_more
+                    </mat-icon>
                   </button>
 
-                  <!-- Card Body -->
-                  @if (isTosExpanded(sec.number)) {
-                    <div class="px-5 pb-5 pt-1 border-t border-[#F5E5E8] text-xs sm:text-sm text-[#6B555A] leading-relaxed space-y-2.5 animate-fade-in">
-                      @for (p of sec.items; track p) {
-                        <div class="flex items-start gap-2.5">
-                          <mat-icon class="text-xs text-[#C98F9E] shrink-0 mt-1">arrow_right</mat-icon>
-                          <span>{{ p }}</span>
-                        </div>
+                  @if (isTosExpanded(tos.number)) {
+                    <div class="px-5 pb-5 pt-1 border-t border-[#F5E5E8] text-xs sm:text-sm text-[#6B555A] space-y-2 leading-relaxed bg-[#FFFDFB]">
+                      @for (item of tos.items; track item) {
+                        <p class="flex items-start gap-2">
+                          <span class="text-[#C98F9E] mt-0.5">•</span>
+                          <span>{{ item }}</span>
+                        </p>
                       }
-                      @if (sec.highlight) {
-                        <div class="mt-3 p-3 rounded-xl bg-[#FFF8EB] border border-[#F5E1C3] text-xs text-[#7A5722] font-medium flex items-center gap-2">
-                          <mat-icon class="text-xs text-[#C28222]">lightbulb</mat-icon>
-                          <span>{{ sec.highlight }}</span>
+
+                      @if (tos.highlight) {
+                        <div class="mt-2 p-2.5 rounded-xl bg-[#FFF4F6] border border-[#F5DCE2] text-xs text-[#A65B6D] font-medium">
+                          ⚠️ {{ tos.highlight }}
                         </div>
                       }
                     </div>
@@ -417,13 +384,13 @@ export class CommissionServiceComponent {
       priceNum: 60,
       description: 'Dành cho character đơn giản, dễ chơi, có tầm 1-2 NPC.',
       features: [
-        'Prompt hoàn chỉnh',
+        'Prompt chuẩn chỉnh, tối ưu ngữ cảnh',
         'Profile ngắn: tên, tuổi, giới tính, vài nét tính cách',
-        'Hỗ trợ 1 - 2 NPC cơ bản',
+        'Phù hợp trải nghiệm roleplay nhập môn',
       ],
-      recommendedFor: 'Phù hợp người mới thử nghiệm bot, nhân vật tình huống nhanh.',
-      accentColor: '#9A84B8',
-      bgLight: '#FAF5FF',
+      recommendedFor: 'Character đơn giản, dễ chơi, có tầm 1-2 NPC.',
+      accentColor: '#B8C8B0',
+      bgLight: '#F4F7F3',
     },
     {
       id: 'standard',
@@ -432,228 +399,219 @@ export class CommissionServiceComponent {
       priceNum: 85,
       description: 'Dành cho character cơ bản, có plot mở/drama.',
       features: [
-        'Prompt hoàn chỉnh',
+        'Prompt chuyên sâu',
         'Profile cơ bản: tên, tuổi, giới tính, tính cách, ngoại hình',
         'Backstory < 2.000 ký tự',
         'First message < 2.000 ký tự',
-        'Rule Anti-OOC',
-        '≤ 3 NPC cơ bản',
+        'Rule Anti-OOC giữ vững tính cách',
+        '≤ 3 NPC cơ bản hỗ trợ',
       ],
-      recommendedFor: 'Cân bằng, phổ biến cho các cốt truyện đời thường, học đường, tình cảm.',
-      accentColor: '#C98F9E',
-      bgLight: '#FFF7F9',
+      recommendedFor: 'Character cơ bản, có plot mở / drama vừa phải.',
+      accentColor: '#D8CEE9',
+      bgLight: '#F8F6FC',
     },
     {
       id: 'advanced',
       name: 'Advanced',
-      badge: 'Khuyên Dùng',
+      badge: 'Phổ Biến Nhất',
       price: '100 - 140k',
       priceNum: 120,
-      description: 'Dành cho character có cốt truyện rõ ràng, được xây dựng chỉn chu. Có plot ẩn/drama.',
+      description: 'Dành cho character có cốt truyện rõ ràng, chỉnh chu, plot ẩn.',
       features: [
-        'Prompt chuyên sâu',
-        'Profile đầy đủ: tính cách, ngoại hình, sở thích/ghét, quan hệ và thông tin liên quan',
+        'Prompt chi tiết đa lớp',
+        'Profile đầy đủ: tính cách, ngoại hình, sở thích/ghét, mối quan hệ',
         'Backstory < 5.000 ký tự',
         'First message < 5.000 ký tự',
-        'Rule Anti-OOC',
-        'Rule Anti-User Role Stealing',
-        '≤ 5 NPC cơ bản',
+        'Rule Anti-OOC & Rule Anti-User Role Stealing',
+        '≤ 5 NPC cơ bản tương tác tự nhiên',
       ],
-      recommendedFor: 'Cốt truyện nhiều kịch tính, thế giới đô thị, hào môn, tâm lý có chiều sâu.',
-      accentColor: '#A65B6D',
-      bgLight: '#FFF0F3',
+      recommendedFor: 'Character có cốt truyện rõ ràng, chỉnh chu, plot ẩn/drama.',
+      accentColor: '#C98F9E',
+      bgLight: '#FCF2F5',
     },
     {
       id: 'premium',
       name: 'Premium',
-      badge: 'Nổi Bật',
+      badge: 'Chuyên Sâu',
       price: '150 - 200k',
       priceNum: 175,
-      description: 'Dành cho character có drama, plot ẩn, bí mật hoặc nhiều lớp thông tin.',
+      description: 'Dành cho character có drama, plot ẩn, bí mật nhiều lớp.',
       features: [
         'Prompt cao cấp',
-        'Profile chi tiết đa tầng',
+        'Profile cực kỳ chi tiết',
         'Backstory < 8.000 ký tự',
         'First message < 8.000 ký tự',
-        'Rule Anti-OOC',
-        'Rule Anti-User Role Stealing',
-        'Lệnh riêng theo {{char}}',
-        '≤ 3 NPC phức tạp',
+        'Rule Anti-OOC & Anti-User Role Stealing',
+        'Lệnh riêng biệt thiết kế theo {{char}}',
+        '≤ 3 NPC phức tạp có chiều sâu tâm lý',
       ],
-      recommendedFor: 'Nhân vật đa nhân cách, trinh thám, tranh đoạt quyền lực, ngược tâm sâu sắc.',
-      accentColor: '#8E4858',
-      bgLight: '#FAF0E6',
+      recommendedFor: 'Character có drama, plot ẩn, bí mật hoặc nhiều lớp thông tin.',
+      accentColor: '#A65B6D',
+      bgLight: '#FBF0F3',
     },
     {
       id: 'custom',
       name: 'Custom',
+      badge: 'Dự Án Lớn',
       price: 'Trên 200k+',
       priceNum: 220,
-      description: 'Dành cho project có độ phức tạp cao / Open World.',
+      description: 'Dành cho project có độ phức tạp cao hoặc Open World.',
       features: [
         'Lore / Worldbuilding riêng biệt',
-        'Nhiều NPC / nhiều tuyến nhân vật song song',
-        'Cốt truyện phân nhánh / hidden plot bí mật',
-        'Format RP riêng biệt / lệnh riêng chuyên sâu',
-        'Báo giá linh hoạt theo yêu cầu cụ thể',
+        'NPC không giới hạn (tùy chỉnh theo yêu cầu)',
+        'Cốt truyện nhánh mở rộng',
+        'Prompt tối ưu riêng cho từng nền tảng (SillyTavern, JanitorAI, GG Studio)',
+        'Báo giá chi tiết theo độ phức tạp của dự án',
       ],
-      recommendedFor: 'Dự án game RPG lớn, vũ trụ tiểu thuyết riêng, Open World hoàn chỉnh.',
+      recommendedFor: 'Project độ phức tạp cao / Open World thế giới mở.',
       accentColor: '#5B464B',
       bgLight: '#F5ECEE',
     },
   ];
 
-  // 7 Surcharges Data
+  // 7 Surcharges
   readonly surcharges: SurchargeItem[] = [
     {
       id: 'private',
-      name: 'Private',
-      fee: '+20%',
-      description: 'Giữ bot riêng tư tuyệt đối, không công khai dưới mọi hình thức, không làm sample.',
+      name: 'Gói Private (Giữ riêng tư 100%)',
+      fee: '+20% tổng giá',
+      description: 'Không công khai mẫu, không đăng sample dưới mọi hình thức để làm portfolio.',
       icon: 'lock',
     },
     {
-      id: 'basic-npc',
-      name: 'NPC cơ bản',
-      fee: '+10K / NPC',
-      description: 'Tính cách ngắn gọn, vai trò phụ, xuất hiện hỗ trợ cốt truyện.',
-      icon: 'person_outline',
+      id: 'npc-basic',
+      name: 'Thêm NPC cơ bản',
+      fee: '+10k / NPC',
+      description: 'NPC phụ đơn giản hỗ trợ đẩy tình huống cốt truyện.',
+      icon: 'person_add',
     },
     {
-      id: 'complex-npc',
-      name: 'NPC phức tạp',
-      fee: '+20K / NPC',
-      description: 'Có tính cách riêng, mục tiêu riêng, can thiệp sâu vào diễn biến cốt truyện.',
-      icon: 'groups',
+      id: 'npc-complex',
+      name: 'Thêm NPC phức tạp',
+      fee: '+20k / NPC',
+      description: 'Có tính cách riêng, can thiệp sâu vào cốt truyện và tương tác với {{user}}.',
+      icon: 'psychology',
     },
     {
       id: 'overlength',
-      name: 'Vượt giới hạn ký tự',
-      fee: '+15K / ~1K ký tự',
-      description: 'Backstory hoặc First Message vượt quá số ký tự quy định của gói đã chọn.',
-      icon: 'text_fields',
+      name: 'Độ dài vượt mức tiêu chuẩn',
+      fee: '+15k / ~1k ký tự',
+      description: 'Áp dụng cho Backstory hoặc First Message dài hơn hạn mức trong gói.',
+      icon: 'format_size',
     },
     {
       id: 'canon',
-      name: 'Dựa trên tác phẩm có sẵn',
-      fee: '+20 - 50K',
-      description: 'Cần thời gian nghiên cứu chuyên sâu về character, lore, mối quan hệ và văn phong canon gốc.',
+      name: 'Nhân vật dựa trên tác phẩm có sẵn (Canon)',
+      fee: '+20 - 50k',
+      description: 'Tùy mức độ tìm hiểu lore, mối quan hệ và phong cách nhân vật gốc.',
       icon: 'auto_stories',
     },
     {
       id: 'worldbuilding',
       name: 'Worldbuilding riêng',
-      fee: '+30K trở lên',
-      description: 'Cần xây dựng bối cảnh riêng, hệ thống phép thuật, cấp bậc hoặc thế giới mới hoàn toàn.',
+      fee: '+20 - 50k',
+      description: 'Xây dựng hệ thống thế giới, quy tắc phép thuật, giai cấp mới theo yêu cầu.',
       icon: 'public',
     },
     {
       id: 'rush',
-      name: 'Rush Order',
-      fee: '+30 - 50%',
-      description: 'Hoàn thành gấp trước deadline tiêu chuẩn (tùy theo độ gấp và khối lượng công việc).',
-      icon: 'bolt',
+      name: 'Rush Order (Đơn gấp)',
+      fee: '+30% tổng giá',
+      description: 'Thời gian hoàn thành dưới 5 ngày kể từ khi chốt brief.',
+      icon: 'speed',
     },
   ];
 
-  // 10 TOS Sections Data
+  // 10 TOS Items
   readonly tosList: TosSection[] = [
     {
       number: '01',
-      title: 'QUY TRÌNH LÀM VIỆC',
-      icon: 'alt_route',
+      title: 'Quy Trình Làm Việc',
+      icon: 'timeline',
       items: [
-        'Trao đổi ý tưởng, bối cảnh, yêu cầu cụ thể cho character.',
-        'Thống nhất gói commission, phụ phí (nếu có) và deadline.',
-        'Bạn đặt cọc / thanh toán theo thỏa thuận.',
-        'Mình lên First Message (FM) và Backstory (BS) cơ bản.',
-        'Gửi bản nháp để bạn duyệt phong cách mở đầu và hướng phát triển.',
-        'Hoàn thiện toàn bộ prompt, profile, rules và các phần còn lại.',
-        'Gửi sản phẩm hoàn chỉnh để bạn test trong vòng 3 ngày.',
-        'Hỗ trợ chỉnh sửa theo đúng quy định ở mục 02.',
+        'Trao đổi brief chi tiết -> Báo giá -> Cọc tiền -> Viết -> Giao bản nháp -> Chỉnh sửa -> Thanh toán phần còn lại -> Giao bản hoàn chỉnh.',
+        'Thời gian hoàn thành: 7 - 14 ngày tùy độ phức tạp của từng gói.',
       ],
-      highlight: 'Thời gian test thử nghiệm miễn phí: 3 ngày kể từ khi bàn giao bản hoàn chỉnh.',
     },
     {
       number: '02',
-      title: 'CHỈNH SỬA & BẢO HÀNH',
-      icon: 'published_with_changes',
+      title: 'Thanh Toán',
+      icon: 'payments',
       items: [
-        'Chỉnh sửa miễn phí nếu: Bot không đúng với brief ban đầu, lỗi prompt nghiêm trọng khiến bot không hoạt động, bot OOC nặng so với thỏa thuận ban đầu.',
-        'Có tính phí nếu: Bạn muốn thay đổi cốt truyện, đổi tính cách, thêm thắt tình tiết mới lệch khỏi brief ban đầu sau khi đã hoàn thành.',
-        'Thời hạn hỗ trợ: Tối đa 10 ngày kể từ ngày bàn giao sản phẩm hoàn chỉnh. Sau thời gian này, mọi chỉnh sửa đều tính phí như làm mới một phần.',
+        'Cọc trước 50% sau khi chốt brief. Thanh toán 50% còn lại trước khi nhận file prompt hoàn chỉnh.',
+        'Không hoàn cọc nếu khách tự ý hủy đơn giữa chừng khi tác giả đã bắt đầu viết.',
       ],
     },
     {
       number: '03',
-      title: 'THANH TOÁN & HOÀN TIỀN',
-      icon: 'payments',
+      title: 'Chỉnh Sửa',
+      icon: 'edit_note',
       items: [
-        'Thanh toán: Chấp nhận chuyển khoản ngân hàng (ưu tiên) hoặc ví điện tử. Thanh toán 100% trước khi làm hoặc cọc 50% sau khi thống nhất brief và duyệt FM + BS cơ bản (áp dụng cho đơn từ Standard trở lên).',
-        'Hoàn tiền 100%: Nếu mình không thể hoàn thành đơn đúng hạn vì lý do cá nhân mà không báo trước hoặc hai bên không tìm được tiếng nói chung trong giai đoạn lên khung (chưa viết chi tiết).',
-        'Hoàn tiền một phần (30 - 50%): Nếu hủy đơn khi mình đã hoàn thành xong FM và BS cơ bản.',
-        'Không hoàn tiền: Khi sản phẩm đã hoàn thành và gửi bản test/bản chính thức.',
+        'Miễn phí 2 lần sửa nhỏ (từ ngữ, chi tiết nhỏ trong tính cách, điều chỉnh phản ứng nhẹ).',
+        'Sửa lớn (đổi tính cách cốt lõi, viết lại toàn bộ backstory, đổi hoàn toàn bối cảnh): tính thêm 30 - 50% giá gói.',
+        'Sau khi đã chốt bản cuối cùng và nhận file: mọi chỉnh sửa phát sinh sau đó sẽ tính phí như đơn mới.',
       ],
+      highlight: 'Sửa lớn thay đổi cốt truyện sẽ tính phụ phí 30-50%.',
     },
     {
       number: '04',
-      title: 'QUYỀN SỞ HỮU & SỬ DỤNG',
-      icon: 'shield',
+      title: 'Quyền Sở Hữu & Bản Quyền',
+      icon: 'copyright',
       items: [
-        'Bạn có toàn quyền sử dụng character cho mục đích cá nhân: chơi trên các nền tảng AI (JanitorAI, Chub, CharacterAI...), chia sẻ cho bạn bè (nếu không đặt gói Private).',
-        'Bạn KHÔNG ĐƯỢC: Bán lại prompt, claim prompt là do bạn tự viết 100%, sử dụng cho mục đích thương mại khi chưa có thỏa thuận riêng.',
-        'Quyền của mình: Mình có quyền giữ credit là người tạo prompt. Với các đơn không đặt gói Private, mình có quyền đăng bot lên trang cá nhân/kênh của mình dưới dạng sample sau khi bạn đã nhận hàng tối thiểu 3 ngày.',
+        'Khách có quyền sử dụng character cho mục đích cá nhân (roleplay trên các nền tảng AI).',
+        'Khách KHÔNG được: Bán lại prompt, claim tác giả là của mình, chia sẻ public nếu đặt gói Private.',
+        'Tác giả có quyền: Giữ quyền tác giả với phần prompt, được phép dùng trích đoạn ngắn làm sample portfolio (trừ gói Private).',
       ],
     },
     {
       number: '05',
-      title: 'CHARACTER DỰA TRÊN TÁC PHẨM CÓ SẴN',
-      icon: 'menu_book',
+      title: 'Hạn Chế Thể Loại (Tránh/Từ chối)',
+      icon: 'block',
       items: [
-        'Đối với character từ phim, anime, game, tiểu thuyết: Mình sẽ cố gắng bám sát canon nhất có thể. Tuy nhiên, AI vẫn là AI — prompt chỉ đóng vai trò định hướng khoảng 70-80%, còn lại phụ thuộc vào model AI bạn sử dụng.',
-        'Vui lòng cung cấp tư liệu nếu character quá ít thông tin hoặc là nhân vật phụ ít đất diễn.',
+        'Nhận: BL, BG, GL, R18, Dark romance, Yandere, BDSM, ABO, Đô thị, Cổ trang, v.v.',
+        'KHÔNG nhận: Vi phạm pháp luật, ấu dâm, thú tính, các chủ đề báng bổ tôn giáo/chính trị nhạy cảm.',
       ],
+      highlight: 'Tuyệt đối không nhận các thể loại vi phạm pháp luật và đạo đức.',
     },
     {
       number: '06',
-      title: 'TÍNH MINH BẠCH VỀ AI (AI TRANSPARENCY)',
-      icon: 'psychology',
+      title: 'Trách Nhiệm Khi Test & Vận Hành',
+      icon: 'bug_report',
       items: [
-        'Trong quá trình làm bot, mình có thể sử dụng AI để hỗ trợ sắp xếp thông tin, kiểm tra logic prompt hoặc tối ưu hóa từ ngữ.',
-        'Tuy nhiên, ý tưởng cốt truyện, cấu trúc prompt, thiết lập nhân vật và kiểm duyệt chất lượng đều do mình trực tiếp thực hiện và kiểm soát.',
-        'Nếu bạn yêu cầu 100% thủ công không qua bất kỳ công cụ AI nào hỗ trợ, vui lòng thông báo trước và phụ phí sẽ áp dụng.',
+        'Prompt được test cơ bản trước khi giao (đảm bảo bot hiểu context, bám sát tính cách và không OOC nặng).',
+        'Chất lượng roleplay thực tế còn phụ thuộc vào model AI, temperature, context length của nền tảng bạn sử dụng (SillyTavern, JanitorAI, Claude, GPT, v.v.). Tác giả không chịu trách nhiệm với lỗi kỹ thuật từ phía nền tảng AI.',
       ],
     },
     {
       number: '07',
-      title: 'GIỚI HẠN CỦA PROMPT & NỀN TẢNG',
-      icon: 'memory',
+      title: 'Giao Tiếp & Phản Hồi',
+      icon: 'forum',
       items: [
-        'Prompt là khung xương giúp định hình nhân vật, nhưng chất lượng roleplay thực tế còn phụ thuộc vào: model AI bạn dùng (Claude, GPT, Gemini, Wizard...), jailbreak / prefill, context size và cách viết của chính bạn (User).',
-        'Mình cam kết tối ưu prompt tốt nhất trong khả năng, nhưng không chịu trách nhiệm nếu nền tảng AI bạn dùng bị thay đổi thuật toán, kiểm duyệt gắt gao hơn hoặc model hoạt động kém ổn định sau thời gian bàn giao.',
+        'Vui lòng phản hồi bản nháp trong vòng 48h. Nếu quá 48h không phản hồi mà không báo trước, đơn sẽ bị dời lịch hoàn thành.',
+        'Giao tiếp lịch sự, tôn trọng lẫn nhau. Tác giả có quyền từ chối tiếp tục làm việc nếu khách có thái độ xúc phạm hoặc thiếu tôn trọng.',
       ],
     },
     {
       number: '08',
-      title: 'DEADLINE',
-      icon: 'hourglass_top',
+      title: 'Hủy Đơn & Hoàn Tiền',
+      icon: 'money_off',
       items: [
-        'Thời gian hoàn thành tiêu chuẩn: 7 - 14 ngày tùy độ phức tạp của gói (tính từ ngày thanh toán/cọc).',
-        'Với các đơn dài hoặc đợt quá tải, mình sẽ chủ động thông báo nếu cần thêm thời gian.',
-        'Đơn cần gấp (dưới 5 ngày) vui lòng chọn phụ phí Rush Order (+30 - 50%).',
+        'Khách hủy trước khi viết: hoàn 100% cọc.',
+        'Khách hủy sau khi đã viết: không hoàn cọc.',
+        'Nếu lỗi từ phía tác giả (quá hạn deadline mà không có thỏa thuận gia hạn trước): hoàn 100% tiền đã nhận.',
       ],
     },
     {
       number: '09',
-      title: 'QUYỀN TỪ CHỐI',
-      icon: 'block',
+      title: 'Bảo Mật Thông Tin',
+      icon: 'security',
       items: [
-        'Mình có quyền từ chối các đơn: Có nội dung vi phạm pháp luật nghiêm trọng, thể loại mình không thoải mái / không đủ tự tin làm tốt, hoặc thái độ của khách không tôn trọng, toxic trong quá trình trao đổi.',
+        'Mọi thông tin cá nhân và ý tưởng riêng tư của khách đều được bảo mật tuyệt đối, không chia sẻ cho bên thứ ba.',
       ],
     },
     {
       number: '10',
-      title: 'XÁC NHẬN ĐỒNG Ý',
+      title: 'Xác Nhận Đồng Ý',
       icon: 'verified',
       items: [
         'Việc bạn đặt commission và thanh toán đồng nghĩa với việc bạn đã đọc, hiểu và đồng ý với toàn bộ các điều khoản trên.',

@@ -1,25 +1,17 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  inject,
-  signal,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
-import { ReactiveFormsModule, FormControl } from '@angular/forms';
+import { HeaderNav } from './components/header-nav/header-nav';
 import { GardenBackground } from './components/garden-background/garden-background';
 import { WelcomeEnvelope } from './components/welcome-envelope/welcome-envelope';
-import { HeaderNav } from './components/header-nav/header-nav';
-import { MusicPlayer } from './components/music-player/music-player';
 import { CharacterCard } from './components/character-card/character-card';
 import { CharacterDetailModal } from './components/character-detail-modal/character-detail-modal';
-import { MailboxSection } from './components/mailbox/mailbox';
+import { Mailbox } from './components/mailbox/mailbox';
 import { CommissionServiceComponent } from './components/commission-service/commission-service';
 import { AboutGarden } from './components/about-garden/about-garden';
+import { MusicPlayer } from './components/music-player/music-player';
 import { CharacterService } from './services/character';
 import { Sound } from './services/sound';
-import { Music } from './services/music';
-import { PublicCharacter } from './models/character.model';
 
 @Component({
   selector: 'app-root',
@@ -27,16 +19,15 @@ import { PublicCharacter } from './models/character.model';
   imports: [
     CommonModule,
     MatIconModule,
-    ReactiveFormsModule,
+    HeaderNav,
     GardenBackground,
     WelcomeEnvelope,
-    HeaderNav,
-    MusicPlayer,
     CharacterCard,
     CharacterDetailModal,
+    Mailbox,
     CommissionServiceComponent,
-    MailboxSection,
     AboutGarden,
+    MusicPlayer,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
@@ -44,81 +35,45 @@ import { PublicCharacter } from './models/character.model';
 export class App {
   readonly charService = inject(CharacterService);
   readonly sound = inject(Sound);
-  readonly music = inject(Music);
 
-  readonly hasEnteredGarden = signal<boolean>(false);
-  readonly searchControl = new FormControl('');
+  readonly welcomeOpen = signal<boolean>(false);
 
-  constructor() {
-    // Check session storage for entered state
-    if (typeof window !== 'undefined') {
-      const entered = sessionStorage.getItem('love_have_entered_session');
-      if (entered === 'true') {
-        this.hasEnteredGarden.set(true);
-        // Automatically start music if returning user
-        setTimeout(() => this.music.startGardenMusic(), 300);
-      }
-    }
-
-    // Sync search control with characterService
-    this.searchControl.valueChanges.subscribe((val) => {
-      this.charService.searchQuery.set(val || '');
-    });
+  openWelcome(): void {
+    this.sound.playPaper();
+    this.welcomeOpen.set(true);
   }
 
-  onWelcomeEntered(): void {
-    this.hasEnteredGarden.set(true);
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem('love_have_entered_session', 'true');
-    }
-    this.music.startGardenMusic();
-  }
-
-  reopenWelcomeEnvelope(): void {
-    this.hasEnteredGarden.set(false);
-  }
-
-  scrollToSection(selector: string): void {
+  scrollTo(anchor: string): void {
     this.sound.playClick();
     if (typeof document !== 'undefined') {
-      const el = document.querySelector(selector);
+      const el = document.querySelector(anchor);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
       }
     }
   }
 
-  onTagClick(tag: string): void {
-    this.sound.playChime();
-    this.charService.toggleTag(tag);
+  onSearchInput(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.charService.setSearchQuery(input.value);
   }
 
-  onClearFilters(): void {
+  clearSearch(): void {
+    this.charService.setSearchQuery('');
+  }
+
+  toggleTag(tag: string): void {
     this.sound.playClick();
-    this.searchControl.setValue('');
-    this.charService.clearTags();
+    this.charService.toggleTag(tag);
   }
 
   isTagSelected(tag: string): boolean {
     return this.charService.selectedTags().includes(tag);
   }
 
-  openCharacter(char: PublicCharacter): void {
-    this.charService.openDetail(char);
-  }
-
-  closeCharacterModal(): void {
-    this.charService.closeDetail();
-  }
-
-  readonly relockToast = signal<string | null>(null);
-
-  onRelockAllForOthers(): void {
-    this.sound.playChime();
-    this.charService.relockAllCharacters();
-    this.relockToast.set('Đã khóa lại tất cả nhân vật để người khác có thể tự tay giải mật mã!');
-    setTimeout(() => {
-      this.relockToast.set(null);
-    }, 4000);
+  resetFilters(): void {
+    this.sound.playClick();
+    this.charService.clearTags();
+    this.charService.setSearchQuery('');
   }
 }

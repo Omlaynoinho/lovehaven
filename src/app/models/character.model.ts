@@ -3,8 +3,8 @@ export interface Character {
   name: string;
   tags: string[];
   summary: string;
-  plot?: string; // Full plot, revealed when unlocked or unlocked by default
-  googleStudioUrl?: string; // AI Studio Chatbot URL, revealed when unlocked
+  plot: string;
+  googleStudioUrl: string;
   locked: boolean;
   lockQuestion?: string;
   lockHint?: string;
@@ -17,49 +17,32 @@ export interface Character {
   accentQuote?: string;
 }
 
-export interface PublicCharacter {
-  id: string;
-  name: string;
-  tags: string[];
-  summary: string;
-  locked: boolean;
-  lockQuestion?: string;
-  lockHint?: string;
-  unlockExplanation?: string;
-  displayOrder: number;
-  flowerTheme: string;
-  flowerColor: string;
-  flowerSymbol: string;
-  accentQuote?: string;
-  plot?: string; // Only present if initially unlocked
-  googleStudioUrl?: string; // Only present if initially unlocked
-}
-
-export interface MailboxLetter {
-  id: string;
-  nickname: string;
-  title: string;
-  content: string;
-  createdAt: string;
-  ip?: string;
-}
-
-export interface PublicMailboxLetter {
-  id: string;
-  nickname: string;
-  title: string;
-  content: string;
-  createdAt: string;
-}
-
-export interface MailboxResponseData {
-  letters: PublicMailboxLetter[];
-  totalSenders: number;
-}
+export type PublicCharacter = Omit<Character, 'acceptedAnswers' | 'plot' | 'googleStudioUrl'> & {
+  plot?: string;
+  googleStudioUrl?: string;
+};
 
 export interface SiteConfig {
   youtubeMusicUrl: string;
   siteName: string;
   tagline: string;
   welcomeGreeting: string;
+}
+
+export interface MailboxLetter {
+  id: string;
+  senderName: string;
+  recipientCharacterId?: string;
+  recipientCharacterName?: string;
+  message: string;
+  flowerChoice: string;
+  createdAt: string;
+  isPublic: boolean;
+}
+
+export type PublicMailboxLetter = MailboxLetter;
+
+export interface MailboxResponseData {
+  letters: PublicMailboxLetter[];
+  totalSenders: number;
 }

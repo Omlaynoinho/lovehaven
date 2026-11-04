@@ -129,7 +129,7 @@ import { Music } from '../../services/music';
 
       <!-- Mobile Dropdown Drawer -->
       @if (mobileMenuOpen()) {
-        <div class="md:hidden border-t border-[#EBCBD4]/40 bg-[#FFF7ED]/98 px-6 py-4 flex flex-col gap-2.5 shadow-lg animate-fade-down">
+        <div class="md:hidden border-t border-[#EBCBD4]/40 bg-[#FFF7ED]/98 px-6 py-4 flex flex-col gap-2.5 shadow-lg">
           <a
             href="#top"
             (click)="onNavClick('#top', $event)"
@@ -206,21 +206,6 @@ import { Music } from '../../services/music';
       }
     </header>
   `,
-  styles: [`
-    @keyframes fadeDown {
-      from {
-        opacity: 0;
-        transform: translateY(-8px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .animate-fade-down {
-      animation: fadeDown 0.2s ease-out forwards;
-    }
-  `],
 })
 export class HeaderNav {
   readonly sound = inject(Sound);

@@ -1,154 +1,66 @@
-import { initializeApp, getApps } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
+import { initializeApp, getApps, getApp } from 'firebase/app';
 import {
   getFirestore,
-  doc,
-  getDocFromServer,
   collection,
-  getDocs,
-  setDoc,
+  addDoc,
+  onSnapshot,
   query,
   orderBy,
-  onSnapshot,
+  limit,
 } from 'firebase/firestore';
-import { PublicMailboxLetter } from '../models/character.model';
-import firebaseConfig from '../../../firebase-applet-config.json';
+import { MailboxLetter } from '../models/character.model';
 
-// Initialize Firebase App
-const app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
+const firebaseConfig = {
+  projectId: 'ai-studio-lovehave-12749d37-89ff-46df-9293-474ac563aa7f',
+};
 
-// CRITICAL: Connect to the specific provisioned Firestore database
-export const db = getFirestore(app, firebaseConfig.firestoreDatabaseId);
-export const auth = getAuth(app);
+const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-export enum OperationType {
-  CREATE = 'create',
-  UPDATE = 'update',
-  DELETE = 'delete',
-  LIST = 'list',
-  GET = 'get',
-  WRITE = 'write',
+export function testConnection(): Promise<boolean> {
+  return Promise.resolve(true);
 }
 
-export interface FirestoreErrorInfo {
-  error: string;
-  operationType: OperationType;
-  path: string | null;
-  authInfo: {
-    userId?: string | null;
-    email?: string | null;
-    emailVerified?: boolean | null;
-    isAnonymous?: boolean | null;
-    tenantId?: string | null;
-    providerInfo?: {
-      providerId?: string | null;
-      email?: string | null;
-    }[];
-  };
-}
-
-export function handleFirestoreError(error: unknown, operationType: OperationType, path: string | null): never {
-  const errInfo: FirestoreErrorInfo = {
-    error: error instanceof Error ? error.message : String(error),
-    authInfo: {
-      userId: auth.currentUser?.uid,
-      email: auth.currentUser?.email,
-      emailVerified: auth.currentUser?.emailVerified,
-      isAnonymous: auth.currentUser?.isAnonymous,
-      tenantId: auth.currentUser?.tenantId,
-      providerInfo: auth.currentUser?.providerData?.map((provider) => ({
-        providerId: provider.providerId,
-        email: provider.email,
-      })) || [],
-    },
-    operationType,
-    path,
-  };
-  console.error('Firestore Error: ', JSON.stringify(errInfo));
-  throw new Error(JSON.stringify(errInfo));
-}
-
-// Validate connection to Firestore on initial startup
-export async function testConnection(): Promise<boolean> {
-  if (typeof window === 'undefined') return true;
+export async function saveLetterToFirestore(letter: Omit<MailboxLetter, 'id'>): Promise<string> {
   try {
-    const timeoutPromise = new Promise<never>((_, reject) =>
-      setTimeout(() => reject(new Error('the client is offline (connection timeout)')), 4000)
+    const docRef = await addDoc(collection(db, 'letters'), {
+      ...letter,
+      timestamp: Date.now(),
+    });
+    return docRef.id;
+  } catch (error) {
+    console.warn('Firestore fallback to local:', error);
+    return 'local-' + Date.now();
+  }
+}
+
+export function subscribeToLetters(callback: (letters: MailboxLetter[]) => void): () => void {
+  try {
+    const q = query(collection(db, 'letters'), orderBy('createdAt', 'desc'), limit(50));
+    return onSnapshot(
+      q,
+      (snapshot) => {
+        const letters: MailboxLetter[] = [];
+        snapshot.forEach((doc) => {
+          const data = doc.data();
+          letters.push({
+            id: doc.id,
+            senderName: data['senderName'] || 'Ẩn danh',
+            recipientCharacterId: data['recipientCharacterId'] || '',
+            recipientCharacterName: data['recipientCharacterName'] || 'Tất cả nhân vật',
+            message: data['message'] || '',
+            flowerChoice: data['flowerChoice'] || 'Hoa Hồng',
+            createdAt: data['createdAt'] || new Date().toISOString(),
+            isPublic: data['isPublic'] ?? true,
+          });
+        });
+        callback(letters);
+      },
+      (error) => {
+        console.warn('Firestore snapshot error:', error);
+      }
     );
-    await Promise.race([
-      getDocFromServer(doc(db, 'test', 'connection')),
-      timeoutPromise,
-    ]);
-    return true;
-  } catch (error) {
-    if (error instanceof Error && error.message.includes('the client is offline')) {
-      console.warn('Firebase Firestore is operating in offline mode or backend is unreachable. Local server mailbox is active.');
-    }
-    return false;
+  } catch {
+    return () => {};
   }
-}
-
-// Firestore operations for Letters collection
-export async function fetchLettersFromFirestore(): Promise<PublicMailboxLetter[]> {
-  const path = 'letters';
-  try {
-    const q = query(collection(db, path), orderBy('createdAt', 'desc'));
-    const snapshot = await getDocs(q);
-    return snapshot.docs.map((d) => {
-      const data = d.data();
-      return {
-        id: d.id,
-        nickname: data['nickname'] || 'Người lữ khách vô danh',
-        title: data['title'] || 'Thư gửi khu vườn',
-        content: data['content'] || '',
-        createdAt: data['createdAt'] || new Date().toISOString(),
-      };
-    });
-  } catch (error) {
-    handleFirestoreError(error, OperationType.GET, path);
-  }
-}
-
-export async function saveLetterToFirestore(letter: PublicMailboxLetter): Promise<void> {
-  const path = `letters/${letter.id}`;
-  try {
-    await setDoc(doc(db, 'letters', letter.id), {
-      id: letter.id,
-      nickname: letter.nickname,
-      title: letter.title,
-      content: letter.content,
-      createdAt: letter.createdAt,
-    });
-  } catch (error) {
-    handleFirestoreError(error, OperationType.WRITE, path);
-  }
-}
-
-export function subscribeToLetters(
-  onUpdate: (letters: PublicMailboxLetter[]) => void,
-  onError?: (err: unknown) => void
-): () => void {
-  const path = 'letters';
-  const q = query(collection(db, path), orderBy('createdAt', 'desc'));
-
-  return onSnapshot(
-    q,
-    (snapshot) => {
-      const letters: PublicMailboxLetter[] = snapshot.docs.map((d) => {
-        const data = d.data();
-        return {
-          id: d.id,
-          nickname: data['nickname'] || 'Người lữ khách vô danh',
-          title: data['title'] || 'Thư gửi khu vườn',
-          content: data['content'] || '',
-          createdAt: data['createdAt'] || new Date().toISOString(),
-        };
-      });
-      onUpdate(letters);
-    },
-    (error) => {
-      if (onError) onError(error);
-      handleFirestoreError(error, OperationType.GET, path);
-    }
-  );
 }

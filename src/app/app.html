@@ -1,233 +1,191 @@
-<!-- Dynamic Fairy Garden Ambient Background (Leaves, Petals, Butterflies, Motes) -->
-<app-garden-background />
+<div class="relative min-h-screen flex flex-col justify-between selection:bg-[#EBCBD4] selection:text-[#5B3E45]">
+  
+  <!-- Romantic Ambient Background -->
+  <app-garden-background></app-garden-background>
 
-<!-- Welcome Envelope Screen ("Gửi thư") on first visit or when reopened -->
-@if (!hasEnteredGarden()) {
-  <app-welcome-envelope (entered)="onWelcomeEntered()" />
-}
+  <!-- Sticky Header Navigation -->
+  <app-header-nav (reopenWelcome)="openWelcome()"></app-header-nav>
 
-<div class="relative min-h-screen flex flex-col z-10 selection:bg-[#EBCBD4] selection:text-[#5B464B]">
-  <!-- Top Navigation Header -->
-  <app-header-nav (reopenWelcome)="reopenWelcomeEnvelope()" />
-
-  <main class="flex-1">
-    <!-- HERO SECTION -->
-    <section id="top" class="relative max-w-5xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-12 text-center">
+  <!-- Main Content Flow -->
+  <main class="flex-1 w-full" id="top">
+    
+    <!-- Hero Garden Banner -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-12 text-center">
       
-      <!-- Top Decorative Ribbon Badge -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-[#EBCBD4] text-[#A65B6D] text-xs font-serif tracking-widest uppercase mb-6 shadow-xs animate-fade-in">
-        <mat-icon class="text-xs">local_florist</mat-icon>
-        <span>A Little Garden of Stories & Hearts</span>
-        <mat-icon class="text-xs">local_florist</mat-icon>
+      <!-- Crown Flower Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FAF0E6]/90 border border-[#E8D4D8] text-xs font-serif text-[#A65B6D] mb-6 shadow-2xs">
+        <mat-icon class="text-sm">local_florist</mat-icon>
+        <span class="tracking-wide">Khu Vườn Nhân Vật Nhập Vai & Tình Cảm</span>
       </div>
 
       <!-- Main Title -->
-      <h1 class="font-serif-vintage text-5xl sm:text-6xl md:text-7xl font-bold text-[#5B464B] tracking-tight mb-4 drop-shadow-xs">
+      <h1 class="font-serif-vintage text-4xl sm:text-6xl lg:text-7xl font-bold text-[#5B464B] tracking-tight mb-4">
         LOVE HAVE
       </h1>
 
-      <!-- Welcome Quote -->
-      <p class="font-serif-vintage text-2xl sm:text-3xl text-[#78666A] italic font-normal max-w-xl mx-auto mb-3">
-        “Welcome to my little garden.”
+      <!-- Script Romantic Tagline -->
+      <p class="font-script-romantic text-2xl sm:text-3xl text-[#8E7479] max-w-xl mx-auto mb-6">
+        "A Little Garden of Stories & Hearts..."
       </p>
 
-      <!-- Romantic Subtitle Description -->
-      <p class="font-script-romantic text-xl sm:text-2xl text-[#8E7479] max-w-2xl mx-auto leading-relaxed mb-8">
-        “Những câu chuyện nhỏ, những nhân vật riêng và những thế giới đang chờ bạn mở khóa.”
+      <p class="text-xs sm:text-sm text-[#78666A] max-w-2xl mx-auto leading-relaxed mb-8">
+        Mỗi bông hoa lưu giữ một mảnh linh hồn, mỗi nhân vật là một khúc ca thầm kín. 
+        Hãy mở khóa các chương nhật ký, khám phá thế giới nội tâm và bắt đầu hành trình nhập vai độc nhất vô nhị.
       </p>
 
-      <!-- Primary Action Button: "Khám phá khu vườn" -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+      <!-- Quick Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-3">
         <button
           type="button"
-          (click)="scrollToSection('#characters')"
-          class="px-8 py-3.5 rounded-full bg-[#C98F9E] hover:bg-[#B77A8A] text-white font-medium text-sm sm:text-base tracking-wide shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:scale-95 flex items-center gap-2.5 cursor-pointer"
+          (click)="scrollTo('#characters')"
+          class="px-6 py-3 rounded-full bg-gradient-to-r from-[#C98F9E] to-[#A65B6D] hover:from-[#B77A8A] hover:to-[#924C5C] text-white text-xs sm:text-sm font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2 cursor-pointer active:scale-95"
         >
-          <mat-icon class="text-lg">park</mat-icon>
-          <span>Khám phá khu vườn</span>
-          <mat-icon class="text-sm">arrow_downward</mat-icon>
+          <mat-icon class="text-sm">eco</mat-icon>
+          <span>Khám phá vườn nhân vật ({{ charService.characters().length }})</span>
         </button>
 
         <button
           type="button"
-          (click)="scrollToSection('#mailbox')"
-          class="px-6 py-3.5 rounded-full bg-white/80 hover:bg-white text-[#78666A] hover:text-[#5B464B] font-medium text-sm sm:text-base tracking-wide border border-[#E8D4D8] transition-all flex items-center gap-2 cursor-pointer shadow-2xs"
+          (click)="scrollTo('#commission')"
+          class="px-6 py-3 rounded-full bg-white/90 hover:bg-white border border-[#E9D5DA] hover:border-[#C98F9E] text-[#5B464B] text-xs sm:text-sm font-medium transition-all shadow-xs flex items-center gap-2 cursor-pointer active:scale-95"
         >
-          <mat-icon class="text-base text-[#C98F9E]">mail_outline</mat-icon>
-          <span>Gửi thư lại vườn</span>
+          <mat-icon class="text-sm text-[#A65B6D]">palette</mat-icon>
+          <span>Commission & Bảng Giá</span>
+        </button>
+
+        <button
+          type="button"
+          (click)="scrollTo('#mailbox')"
+          class="px-6 py-3 rounded-full bg-[#FAF0E6] hover:bg-[#FBE4E9] text-[#78666A] hover:text-[#5B464B] text-xs sm:text-sm font-medium transition-colors flex items-center gap-2 cursor-pointer"
+        >
+          <mat-icon class="text-sm text-[#C98F9E]">mail</mat-icon>
+          <span>Hộp thư gửi gắm</span>
         </button>
       </div>
     </section>
 
-    <!-- SEARCH & TAGS BAR -->
-    <section id="tags-section" class="max-w-6xl mx-auto px-4 sm:px-6 mb-12 scroll-mt-24">
-      <div class="bg-white/85 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-[#EAD5DA] vintage-shadow-sm flex flex-col gap-6">
+    <!-- SEARCH & FILTER BY TAG SECTION -->
+    <section id="tags-section" class="max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-20">
+      <div class="p-6 sm:p-7 rounded-3xl bg-white/80 border border-[#EADCE0] vintage-shadow space-y-5">
         
-        <!-- Search Box -->
-        <div class="relative w-full max-w-2xl mx-auto">
-          <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-[#A69094]">
-            <mat-icon class="text-xl">search</mat-icon>
-          </div>
+        <!-- Search bar -->
+        <div class="relative max-w-xl mx-auto">
+          <mat-icon class="absolute left-4 top-1/2 -translate-y-1/2 text-[#B0999E] text-lg">search</mat-icon>
           <input
             type="text"
-            [formControl]="searchControl"
-            placeholder="Tìm một câu chuyện, một nhân vật..."
-            class="w-full pl-11 pr-10 py-3.5 rounded-2xl bg-[#FFFDF9] border border-[#E5D0D5] text-sm sm:text-base text-[#5B464B] placeholder:text-[#B59EA3] focus:outline-none focus:border-[#C98F9E] focus:ring-2 focus:ring-[#EBCBD4]/50 transition-all shadow-2xs"
+            [value]="charService.searchQuery()"
+            (input)="onSearchInput($event)"
+            placeholder="Tìm kiếm theo tên nhân vật, bối cảnh, thể loại..."
+            class="w-full pl-11 pr-10 py-3 rounded-full border border-[#E5D0D5] bg-[#FFFDF9] text-xs sm:text-sm text-[#5B464B] placeholder:text-[#B59EA3] focus:outline-none focus:border-[#C98F9E] focus:ring-1 focus:ring-[#C98F9E] shadow-2xs"
           />
-          @if (searchControl.value) {
+          @if (charService.searchQuery()) {
             <button
               type="button"
-              (click)="searchControl.setValue('')"
-              class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-[#A69094] hover:text-[#5B464B]"
+              (click)="clearSearch()"
+              class="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#B0999E] hover:text-[#5B464B]"
             >
-              <mat-icon class="text-lg">close</mat-icon>
+              <mat-icon class="text-sm">close</mat-icon>
             </button>
           }
         </div>
 
-        <!-- Tags Row -->
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 border-t border-[#F3E5E8]/80">
-          <div class="flex items-center gap-2 text-xs font-serif text-[#8E7479] uppercase tracking-wider shrink-0">
-            <mat-icon class="text-xs text-[#C98F9E]">sell</mat-icon>
-            <span>Tag nổi bật:</span>
+        <!-- Tag pills cloud -->
+        <div>
+          <div class="flex items-center justify-between mb-2.5">
+            <span class="text-xs font-serif uppercase tracking-wider text-[#A65B6D] font-bold flex items-center gap-1.5">
+              <mat-icon class="text-xs">local_offer</mat-icon>
+              <span>Lọc theo thẻ tag đặc trưng:</span>
+            </span>
+
+            @if (charService.selectedTags().length > 0) {
+              <button
+                type="button"
+                (click)="charService.clearTags()"
+                class="text-xs text-[#C98F9E] hover:underline cursor-pointer"
+              >
+                Xóa bộ lọc tag
+              </button>
+            }
           </div>
 
-          <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 flex-1">
-            <!-- "Tất cả" Reset Tag Button -->
-            <button
-              type="button"
-              (click)="onClearFilters()"
-              class="px-3.5 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer shadow-2xs"
-              [class.bg-[#C98F9E]]="charService.selectedTags().length === 0 && !searchControl.value"
-              [class.text-white]="charService.selectedTags().length === 0 && !searchControl.value"
-              [class.bg-[#FFF7ED]]="charService.selectedTags().length > 0 || !!searchControl.value"
-              [class.text-[#78666A]]="charService.selectedTags().length > 0 || !!searchControl.value"
-              [class.border]="true"
-              [class.border-[#ECD9DE]]="true"
-            >
-              Tất cả
-            </button>
-
-            <!-- Available Character Tags -->
+          <div class="flex flex-wrap gap-2">
             @for (tag of charService.availableTags(); track tag) {
               <button
                 type="button"
-                (click)="onTagClick(tag)"
-                class="px-3.5 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer shadow-2xs"
-                [class.bg-[#D8CEE9]]="isTagSelected(tag)"
-                [class.text-[#4A3A5E]]="isTagSelected(tag)"
-                [class.border-[#BCA9D6]]="isTagSelected(tag)"
-                [class.bg-[#FFF7ED]]="!isTagSelected(tag)"
+                (click)="toggleTag(tag)"
+                class="px-3 py-1 rounded-full text-xs transition-all cursor-pointer border"
+                [class.bg-[#C98F9E]]="isTagSelected(tag)"
+                [class.text-white]="isTagSelected(tag)"
+                [class.border-[#C98F9E]]="isTagSelected(tag)"
+                [class.shadow-2xs]="isTagSelected(tag)"
+                [class.bg-[#FFF9FA]]="!isTagSelected(tag)"
                 [class.text-[#78666A]]="!isTagSelected(tag)"
                 [class.border-[#ECD9DE]]="!isTagSelected(tag)"
-                [class.border]="true"
-                [class.hover:bg-[#FBECEF]]="!isTagSelected(tag)"
+                [class.hover:border-[#C98F9E]]="!isTagSelected(tag)"
               >
                 #{{ tag }}
               </button>
             }
           </div>
-
-          <!-- Total Count Badge -->
-          <span class="text-xs text-[#A69094] shrink-0 font-serif">
-            {{ charService.filteredCharacters().length }} / {{ charService.characters().length }} nhân vật
-          </span>
         </div>
       </div>
     </section>
 
-    <!-- CHARACTER GARDEN SECTION -->
-    <section id="characters" class="max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-20">
-      
-      <!-- Section Title Header -->
-      <div class="flex flex-col sm:flex-row items-center justify-between mb-8 pb-4 border-b border-[#EBCBD4]/40">
+    <!-- CHARACTER GARDEN GRID -->
+    <section id="characters" class="max-w-6xl mx-auto px-4 sm:px-6 py-12 scroll-mt-20">
+      <div class="flex items-center justify-between mb-8">
         <div>
-          <div class="flex items-center gap-2 text-xs font-serif text-[#C98F9E] tracking-widest uppercase">
-            <mat-icon class="text-xs">spa</mat-icon>
-            <span>Bộ sưu tập nhân vật</span>
-          </div>
-          <h2 class="font-serif-vintage text-3xl sm:text-4xl text-[#5B464B] font-bold mt-1">
-            Vườn Nhân Vật AI
+          <h2 class="font-serif-vintage text-2xl sm:text-3xl font-bold text-[#5B464B] flex items-center gap-2">
+            <mat-icon class="text-[#C98F9E]">eco</mat-icon>
+            <span>Vườn Hoa Nhân Vật</span>
           </h2>
-        </div>
-        <div class="flex flex-col sm:flex-row items-center gap-3 mt-3 sm:mt-0">
-          @if (charService.unlockedIds().size > 0) {
-            <button
-              type="button"
-              (click)="onRelockAllForOthers()"
-              class="px-4 py-2 rounded-full text-xs font-medium text-[#8B4858] bg-[#FAF2F4] hover:bg-[#F3E2E6] border border-[#EBCBD4] transition-all flex items-center gap-1.5 cursor-pointer shadow-2xs active:scale-95"
-              title="Đặt lại trạng thái khóa để người khác có thể tự tay giải mật mã các nhân vật"
-            >
-              <mat-icon class="text-sm">lock_reset</mat-icon>
-              <span>Cho người khác giải mật mã ({{ charService.unlockedIds().size }} đã mở)</span>
-            </button>
-          }
-          <p class="font-script-romantic text-lg sm:text-xl text-[#8E7479]">
-            Mỗi loài hoa cất giữ một câu chuyện riêng...
+          <p class="text-xs text-[#8E7479] mt-0.5">
+            Đang hiển thị {{ charService.filteredCharacters().length }} / {{ charService.characters().length }} nhân vật
           </p>
         </div>
       </div>
 
-      <!-- Relock Toast Notification -->
-      @if (relockToast()) {
-        <div class="mb-6 p-4 rounded-2xl bg-[#F4F9F2] border border-[#D5E6D1] text-xs sm:text-sm text-[#42583C] flex items-center justify-between gap-3 animate-fade-in shadow-xs">
-          <div class="flex items-center gap-2">
-            <mat-icon class="text-base text-[#7D9775]">vpn_key</mat-icon>
-            <span>{{ relockToast() }}</span>
-          </div>
-          <button type="button" (click)="relockToast.set(null)" class="text-[#7D9775] hover:text-[#42583C]">
-            <mat-icon class="text-sm">close</mat-icon>
-          </button>
-        </div>
-      }
-
-      <!-- Character Responsive Grid (1 col mobile, 2 col md, 3 col xl) -->
+      <!-- Grid of Cards -->
       @if (charService.filteredCharacters().length > 0) {
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 items-stretch">
-          @for (character of charService.filteredCharacters(); track character.id) {
-            <app-character-card
-              [char]="character"
-              (explore)="openCharacter($event)"
-            />
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          @for (char of charService.filteredCharacters(); track char.id) {
+            <app-character-card [char]="char"></app-character-card>
           }
         </div>
       } @else {
-        <!-- Empty State with Sweet Cottagecore Message -->
-        <div class="py-16 px-4 text-center bg-white/70 rounded-3xl border border-dashed border-[#E5D0D5] vintage-shadow-sm flex flex-col items-center">
-          <div class="w-16 h-16 rounded-full bg-[#FAF0E6] flex items-center justify-center text-[#C98F9E] mb-4">
-            <mat-icon class="text-3xl">nature_people</mat-icon>
-          </div>
-          <h3 class="font-serif-vintage text-2xl text-[#5B464B] font-bold">
-            Không tìm thấy câu chuyện nào
-          </h3>
-          <p class="text-xs sm:text-sm text-[#8E7479] mt-1 max-w-sm">
-            Không có nhân vật nào phù hợp với từ khóa tìm kiếm. Bạn hãy thử chọn lại tag hoặc bấm "Xem tất cả" nhé.
+        <div class="p-12 rounded-3xl bg-white/70 border border-dashed border-[#ECD9DE] text-center space-y-3">
+          <mat-icon class="text-4xl text-[#C98F9E]">sentiment_dissatisfied</mat-icon>
+          <h4 class="font-serif-vintage text-lg font-bold text-[#5B464B]">
+            Không tìm thấy nhân vật phù hợp
+          </h4>
+          <p class="text-xs text-[#8E7479] max-w-md mx-auto">
+            Hãy thử tìm kiếm với từ khóa khác hoặc xóa bớt các bộ lọc tag hiện tại.
           </p>
           <button
             type="button"
-            (click)="onClearFilters()"
-            class="mt-5 px-6 py-2.5 rounded-full bg-[#C98F9E] text-white text-xs font-medium hover:bg-[#B77A8A] transition-colors cursor-pointer"
+            (click)="resetFilters()"
+            class="px-4 py-2 rounded-full bg-[#FAF0E6] text-xs text-[#A65B6D] font-medium hover:bg-[#FBE4E9] transition-colors cursor-pointer"
           >
-            Xem tất cả nhân vật
+            Đặt lại bộ lọc
           </button>
         </div>
       }
     </section>
 
-    <!-- COMMISSION SERVICE SECTION (PRICE & TOS) -->
-    <app-commission-service />
-
     <!-- MAILBOX SECTION -->
-    <app-mailbox />
+    <app-mailbox></app-mailbox>
+
+    <!-- COMMISSION SERVICE SECTION -->
+    <app-commission-service></app-commission-service>
 
     <!-- ABOUT SECTION -->
-    <app-about-garden />
+    <app-about-garden></app-about-garden>
+
   </main>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer class="w-full bg-[#FAF4ED] border-t border-[#E8D4D8] py-10 px-4 text-center mt-12">
     <div class="max-w-4xl mx-auto flex flex-col items-center gap-4">
-      <!-- Footer Logo -->
       <div class="flex items-center gap-2">
         <mat-icon class="text-[#C98F9E] text-lg">local_florist</mat-icon>
         <span class="font-serif-vintage text-xl font-bold text-[#5B464B]">LOVE HAVE</span>
@@ -239,51 +197,27 @@
       </p>
 
       <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-[#78666A] pt-2">
-        <button
-          type="button"
-          (click)="scrollToSection('#top')"
-          class="hover:text-[#C98F9E] transition-colors cursor-pointer"
-        >
+        <button type="button" (click)="scrollTo('#top')" class="hover:text-[#C98F9E] transition-colors cursor-pointer">
           Trang chủ
         </button>
         <span>•</span>
-        <button
-          type="button"
-          (click)="scrollToSection('#characters')"
-          class="hover:text-[#C98F9E] transition-colors cursor-pointer"
-        >
+        <button type="button" (click)="scrollTo('#characters')" class="hover:text-[#C98F9E] transition-colors cursor-pointer">
           Vườn nhân vật
         </button>
         <span>•</span>
-        <button
-          type="button"
-          (click)="scrollToSection('#commission')"
-          class="hover:text-[#C98F9E] transition-colors cursor-pointer font-medium"
-        >
+        <button type="button" (click)="scrollTo('#commission')" class="hover:text-[#C98F9E] transition-colors cursor-pointer font-medium">
           Commission (Price & TOS)
         </button>
         <span>•</span>
-        <button
-          type="button"
-          (click)="scrollToSection('#mailbox')"
-          class="hover:text-[#C98F9E] transition-colors cursor-pointer"
-        >
+        <button type="button" (click)="scrollTo('#mailbox')" class="hover:text-[#C98F9E] transition-colors cursor-pointer">
           Gửi thư
         </button>
         <span>•</span>
-        <button
-          type="button"
-          (click)="scrollToSection('#about')"
-          class="hover:text-[#C98F9E] transition-colors cursor-pointer"
-        >
+        <button type="button" (click)="scrollTo('#about')" class="hover:text-[#C98F9E] transition-colors cursor-pointer">
           Giới thiệu về LOVE HAVE
         </button>
         <span>•</span>
-        <button
-          type="button"
-          (click)="reopenWelcomeEnvelope()"
-          class="text-[#C98F9E] font-medium hover:underline cursor-pointer"
-        >
+        <button type="button" (click)="openWelcome()" class="text-[#C98F9E] font-medium hover:underline cursor-pointer">
           Mở lại phong thư chào mừng
         </button>
       </div>
@@ -294,14 +228,9 @@
     </div>
   </footer>
 
-  <!-- PERSISTENT YOUTUBE MUSIC PLAYER WIDGET -->
-  <app-music-player />
+  <!-- Modals & Floats -->
+  <app-welcome-envelope [isOpen]="welcomeOpen()" (closeEnvelope)="welcomeOpen.set(false)"></app-welcome-envelope>
+  <app-character-detail-modal></app-character-detail-modal>
+  <app-music-player></app-music-player>
 
-  <!-- CHARACTER DETAIL & UNLOCK MODAL -->
-  @if (charService.isDetailOpen() && charService.activeCharacter(); as activeChar) {
-    <app-character-detail-modal
-      [char]="activeChar"
-      (dismiss)="closeCharacterModal()"
-    />
-  }
 </div>

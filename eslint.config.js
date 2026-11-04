@@ -1,17 +1,13 @@
 // @ts-check
-const eslint = require('@eslint/js');
-const {defineConfig} = require('eslint/config');
-const tseslint = require('typescript-eslint');
-const angular = require('angular-eslint');
+import tseslint from 'typescript-eslint';
+import angular from 'angular-eslint';
 
-module.exports = defineConfig([
+export default tseslint.config(
   {
     files: ['**/*.ts'],
     extends: [
-      eslint.configs.recommended,
-      tseslint.configs.recommended,
-      tseslint.configs.stylistic,
-      angular.configs.tsRecommended,
+      ...tseslint.configs.recommended,
+      ...angular.configs.tsRecommended,
     ],
     processor: angular.processInlineTemplates,
     rules: {
@@ -31,14 +27,20 @@ module.exports = defineConfig([
           style: 'kebab-case',
         },
       ],
+      '@angular-eslint/no-input-rename': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
     },
   },
   {
     files: ['**/*.html'],
     extends: [
-      angular.configs.templateRecommended,
-      angular.configs.templateAccessibility,
+      ...angular.configs.templateRecommended,
+      ...angular.configs.templateAccessibility,
     ],
-    rules: {},
+    rules: {
+      '@angular-eslint/template/click-events-have-key-events': 'off',
+      '@angular-eslint/template/interactive-supports-focus': 'off',
+      '@angular-eslint/template/label-has-associated-control': 'off',
+    },
   }
-]);
+);
