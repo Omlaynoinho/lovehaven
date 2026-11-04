@@ -9,59 +9,6 @@ export const DEFAULT_SITE_CONFIG: SiteConfig = {
 
 export const CHARACTERS_DATA: Character[] = [
   {
-    id: 'opw-dai-canh-hoang-chieu',
-    name: 'OPW - Đại Cảnh Hoàng Chiều',
-    tags: [
-      'Cổ Trang',
-      'Open World',
-      'Tự Do',
-      'Cung Đấu',
-      'Cổ Đại',
-      'R18',
-      'Quyền Mưu',
-      'Slow Burn',
-      'Kiếm Khách',
-    ],
-    summary:
-      'Tử Cấm Thành rực rỡ gạch son ngói lưu ly được dựng bằng xương tàn huyết lệ muôn vạn sinh linh. Bàn cờ Cảnh Diệu đã mở, ngươi sẽ rút kiếm trảm càn khôn hay chọn lấy một chén rượu độc?',
-    plot: `Người đời vẫn truyền tai nhau rằng, Tử Cấm Thành của Đại Cảnh Hoàng Triều được dựng nên bằng gạch son rực rỡ và ngói lưu ly dát vàng chói lọi. Nhưng chỉ những kẻ từng bước qua cánh cổng Ngọ Môn mới thấu một sự thật tàn khốc: thứ vữa gắn kết ba trăm năm cơ nghiệp tông miếu họ Tiêu chưa từng là vôi đá, mà là xương tàn và huyết lệ của muôn vạn sinh linh.
-
-Năm Cảnh Diệu thứ tám, thiên hạ ngoài miệng xưng tụng cảnh thái bình thịnh trị. Bốn cõi quy phục, mùa màng bội thu, ngọn gió phương Bắc tạm yên ngoài quan ải. Nhưng đằng sau tấm màn nhung gấm lộng lẫy nơi cửu trùng đài, vương triều Đại Cảnh thực chất chỉ là một pho tượng vàng rỗng ruột đang chực chờ sụp đổ dưới sức nặng của những dã tâm ngút trời.
-
-Trên long ngai Càn Thanh Cung, Cảnh Diệu Đế Tiêu Dực Ninh ngồi đơn độc giữa đỉnh cao quyền lực. Mười năm dập tắt huynh đệ tương tàn đã tôi luyện ngài thành một bậc đế vương mang trái tim sắt đá và lý trí lạnh lùng đến rợn người. Ngài ban phát ân sủng như rải những quân cờ, ngoài mặt cưng chiều sủng phi nhưng sau lưng lại ngầm sai thái y hòa hương triệt tự vào lò trầm Vĩnh Thọ Cung, bóp nghẹt giọt máu tương lai của gia tộc tướng môn. Ngài thức trắng bao đêm thâu, dùng chén thuốc đắng và sự cô độc để chuộc lại bóng ma tội lỗi về cái chết của đứa con đầu lòng năm xưa.
-
-Tại Khôn Ninh Cung uy nghiêm buốt giá, Hiếu Từ Hoàng hậu Thẩm Ngọc Uyển khoác lên mình bộ phượng bào cửu trĩ đoan trang, thay mặt thiên hạ chấp chưởng lục cung. Đằng sau cốt cách mực thước, công bình của người mẹ cả là một tâm can đã nguội lạnh thành tro tàn. Nàng không màng thánh sủng, không màng thị phi, tất cả sinh mạng và bản lĩnh thép của nàng chỉ dồn vào hai điều: bảo vệ tuyệt đối cho Đích tử Tiêu Khải bước lên ngai vàng Thái tử, và lần theo dấu vết chiếc trâm bạc dính độc năm nào để bắt kẻ đã giết đứa con đỏ hỏn của mình phải đền mạng bằng máu.
-
-Thế nhưng, ngọn lửa tham vọng chốn hậu đình chưa từng bao giờ lụi tàn. Nơi Tây Lục Cung tráng lệ, Tuệ Chiêu Hoàng quý phi Liễu Tố Nga mang nhan sắc diễm lệ khuynh thành và sự ngạo nghễ của dòng dõi tướng môn, sẵn sàng đạp đổ ngôi vị mẫu nghi để đưa Tam a ca Tiêu Triển lên làm bá chủ thiên hạ. Nàng ỷ vào mười vạn trọng binh của phụ thân nơi biên ải, dung dưỡng bầy rắn độc dưới trướng như Thục tần Khương Huệ Nhu, mà không hề hay biết chính mình đang vùng vẫy tuyệt vọng trong chiếc lồng son tẩm độc của đấng quân vương.
-
-Và rồi, sự bình yên giả tạo ấy đã chính thức vỡ vụn vào một buổi chiều thu mưa ngâu ảm đạm.
-
-Tại Tiễn Đình, một mũi tên sắt xé toạc không gian, suýt chút nữa đã xuyên thủng tim Đích tử Tiêu Khải. Máu của bồi độc Mạnh Hoài Ngọc nhuộm đỏ bãi cát vàng. Tam a ca bị cấm túc trong cơn cuồng nộ; Hoàng quý phi quỳ gối chịu nhục dưới làn mưa xối xả trước Dưỡng Tâm Điện; Binh bộ Thượng thư mặc tang phục quỳ ngoài cung môn đòi lẽ công bằng. Mối thù giữa văn thần Sĩ tộc và võ tướng Tướng môn chính thức rút đao tương hướng.
-
-Cùng lúc đó, ngoài chân núi Kỳ Liên Sơn, bóng tối của sự phản trắc bắt đầu bủa vây. Tĩnh Thân vương Tiêu Dực Tiêu — lưỡi kiếm hộ quốc trung kiên nhất của hoàng triều — đang hấp hối gục ngã trên vũng máu đen vì độc tiễn sa trường. Năm vạn thiết kỵ của Liễu gia kéo cờ áp sát kinh thành; mạng lưới mật thám "Ám Lũy" của Thụy Vương Tiêu Dực Trực điên cuồng lục tung chợ đen tìm kiếm linh dược; và trong góc tiểu viện Diên Hi Cung thanh vắng, Doãn Mỹ nhân đang âm thầm mài từng nắm độc thảo phương Nam, chuẩn bị lật lại bản án oan sai trăm vạn lượng muối của phụ thân mình.
-
-Thời gian như chiếc đồng hồ cát đang cạn dần từng hạt máu.
-
-Đêm mai, ánh trăng rằm Trung Thu sẽ treo trên đỉnh Giao Thái Điện. Tiệc rượu sẽ bày, đàn ca sẽ trỗi, nhưng đó cũng là thời khắc những mũi dao giấu trong tay áo đồng loạt vung lên.
-
-Ngươi sẽ bước vào ván cờ sinh tử này với thân phận nào?
-
-Là một thị vệ ngự tiền mang thanh đao lạnh lùng thực thi mật chỉ trong bóng tối? Là một y nữ thâm cung dùng từng giọt thảo mộc cứu người hoặc đoạt mạng vô thanh? Hay là một kẻ gián điệp đội lốt phong lưu, dùng những lời thì thầm bên bến sông Tần Hoài để xoay vần vận mệnh cả một triều đại?
-
-Tử Cấm Thành sâu tựa biển, một bước sẩy chân là muôn đời vạn kiếp không thể quay đầu. Khi hồi chuông dạ cấm ba mươi sáu tiếng ngân vang, ngọn đèn lồng cuối cùng nơi cung cấm vụt tắt...
-
-Hãy rút kiếm, hoặc chọn lấy cho mình một chén rượu độc! Bàn cờ Cảnh Diệu đã mở, và mạng sống của ngươi chính là quân cờ kế tiếp.`,
-    googleStudioUrl:
-      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221BbFlUybxdvBMZhJ5_lgaitMKUF9j0QiV%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
-    locked: false,
-    displayOrder: 1,
-    flowerTheme: 'Mẫu Đơn Tử Cấm',
-    flowerColor: '#B45309',
-    flowerSymbol: 'fort',
-    accentQuote:
-      'Tử Cấm Thành sâu tựa biển, một bước sẩy chân là muôn đời vạn kiếp không thể quay đầu. Bàn cờ Cảnh Diệu đã mở, và mạng sống của ngươi chính là quân cờ kế tiếp.',
-  },
-  {
     id: 'co-giang-chi',
     name: 'Cố Giang Chi',
     tags: [
@@ -117,7 +64,7 @@ Trò chơi săn mồi tao nhã... chính thức bắt đầu.`,
     ],
     unlockExplanation:
       'Chính sự ghẻ lạnh và bóng ma tuổi thơ thiếu thốn tình thân đã biến Cố Giang Chi thành kẻ săn mồi nguy hiểm.',
-    displayOrder: 2,
+    displayOrder: 1,
     flowerTheme: 'Mạn Đà La Hổ Phách',
     flowerColor: '#D97706',
     flowerSymbol: 'psychology',
@@ -183,7 +130,7 @@ Hỏi nơi nào chốn mộng giàu sang?`,
     ],
     unlockExplanation:
       'Chào mừng bạn đến với Kinh Đô Vạn Hoa - chốn phồn hoa đô hội nơi quyền lực và ái tình đan xen.',
-    displayOrder: 3,
+    displayOrder: 2,
     flowerTheme: 'Hoa Hồng Nhung Mạ Vàng',
     flowerColor: '#B87082',
     flowerSymbol: 'diamond',
@@ -315,7 +262,7 @@ Nàng biết hắn nói được làm được. Hắn là tên điên, là ma qu
     googleStudioUrl:
       'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221ADBLIO48oKZE7z8zewyZJSAqAHBuyqBw%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
-    displayOrder: 3,
+    displayOrder: 2,
     flowerTheme: 'Hoa Bỉ Ngạn Huyết Sắc',
     flowerColor: '#8C2727',
     flowerSymbol: 'local_fire_department',
@@ -380,7 +327,7 @@ Giọng anh khàn đặc, đầy sự bất lực và kìm nén. Anh kéo hai m�
     ],
     unlockExplanation:
       'Chính xác. Khái niệm quan hệ máu mủ nghiệt ngã khiến chú út vừa khao khát vừa dằn dặt dồn nén.',
-    displayOrder: 5,
+    displayOrder: 4,
     flowerTheme: 'Hoa Đào Phai Xứ Lạng',
     flowerColor: '#C2410C',
     flowerSymbol: 'lock',
@@ -466,7 +413,7 @@ Dạ Kiều Phong, kiếp này, tôi sẽ không chạy trốn, cũng không c�
     acceptedAnswers: ['Từ Chối', 'Từ chối', 'từ chối', 'Tu Choi', 'tu choi'],
     unlockExplanation:
       'Chính xác. Dù căm hận hay hành hạ bạn, Dạ Kiều Phong tuyệt đối không bao giờ chấp nhận buông tay hay đồng ý ly hôn.',
-    displayOrder: 6,
+    displayOrder: 5,
     flowerTheme: 'Bạch Hải Đường Tang Tóc',
     flowerColor: '#475569',
     flowerSymbol: 'lock',
@@ -540,7 +487,7 @@ Bàn tay hắn từ phía sau siết chặt lấy gáy bạn, ngón tay luồn s
     googleStudioUrl:
       'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2211zq1DREZICibgyaj2jI9vS-eNbUWiSsf%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
-    displayOrder: 8,
+    displayOrder: 7,
     flowerTheme: 'Mạn Đà La Dược Dạ',
     flowerColor: '#9333EA',
     flowerSymbol: 'local_pharmacy',
@@ -584,7 +531,7 @@ Năm năm sau, cô trở thành một thiếu nữ xinh đẹp, kiêu sa. Còn a
     googleStudioUrl:
       'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221BT-waA-QHTZvIbXGje6x5B63naeY7IIo%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
-    displayOrder: 9,
+    displayOrder: 8,
     flowerTheme: 'Trầm Hương Cổ Tự',
     flowerColor: '#4B5563',
     flowerSymbol: 'self_improvement',
@@ -646,7 +593,7 @@ Hắn bước lên một bước, thu hẹp khoảng cách, mùi hương của c
     googleStudioUrl:
       'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221ysNX9V-8pbpoIJ_bzfahMBJ8jesg5LUE%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
-    displayOrder: 10,
+    displayOrder: 9,
     flowerTheme: 'Bóng Trúc Thập Vạn Sơn',
     flowerColor: '#7E22CE',
     flowerSymbol: 'bug_report',
@@ -689,7 +636,7 @@ Hay nghịch chuyển càn khôn, rút kiếm trảm thần, mở ra một kỷ 
     googleStudioUrl:
       'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221LBuF4IF90V8OS3vDr5mpCrnXY5CXzlGa%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
-    displayOrder: 11,
+    displayOrder: 10,
     flowerTheme: 'Thiên Đạo Hỗn Độn',
     flowerColor: '#3B82F6',
     flowerSymbol: 'auto_awesome',
@@ -758,7 +705,7 @@ Trong khoảnh khắc y cúi đầu, một hạt bụi nhỏ li ti màu đỏ th
     googleStudioUrl:
       'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221coJAXkTvAzT4AAUV6zVZevuYbl_9oMnn%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
-    displayOrder: 12,
+    displayOrder: 11,
     flowerTheme: 'Huyết Nguyệt Miêu Cương',
     flowerColor: '#9D174D',
     flowerSymbol: 'flare',
@@ -836,7 +783,7 @@ Thẩm Dư Hàn ngẩng đầu lên, đôi mắt đen láy vừa sâu thẳm v�
     googleStudioUrl:
       'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221gQ0Gl7JIqbYaubH1kGptnNfqQdpatHEA%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
-    displayOrder: 13,
+    displayOrder: 12,
     flowerTheme: 'Bạch Liên Ảnh Đế',
     flowerColor: '#64748B',
     flowerSymbol: 'movie',
@@ -916,7 +863,7 @@ Thẩm Dư Hàn ngẩng đầu lên, đôi mắt đen láy vừa sâu thẳm v�
     googleStudioUrl:
       'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221gQ0Gl7JIqbYaubH1kGptnNfqQdpatHEA%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
-    displayOrder: 14,
+    displayOrder: 13,
     flowerTheme: 'Hắc Liên Ảnh Đế',
     flowerColor: '#1E293B',
     flowerSymbol: 'theaters',
@@ -966,7 +913,7 @@ Hắn càng cần bạn, hắn càng xù lông, càng chửi bới, càng dùng 
     googleStudioUrl:
       'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221PEZ1Z3JV_G3Y0_JBLqHfVE2PvdiPhLVm%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
-    displayOrder: 15,
+    displayOrder: 14,
     flowerTheme: 'Thanh Xuân Vườn Trường',
     flowerColor: '#3B82F6',
     flowerSymbol: 'school',
@@ -1018,7 +965,7 @@ Và rồi, sau bốn năm bặt vô âm tín, cái tên của bạn bất ngờ 
     googleStudioUrl:
       'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221jVH--2S3VQVjQ887esAlvd5I9yylrSpW%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
-    displayOrder: 16,
+    displayOrder: 15,
     flowerTheme: 'Bỉ Ngạn Trắng',
     flowerColor: '#F8FAFC',
     flowerSymbol: 'airport_shuttle',
@@ -1082,7 +1029,7 @@ Tuy nhiên, sự sủng ái tột cùng này lại đẩy cô vào một trò đ
     ],
     unlockExplanation:
       'Chính xác. Nửa mật ngọt - nửa đau thương, vượt qua 7 kiếp cổ đại và 1 kiếp hiện đại đầy vết tích.',
-    displayOrder: 17,
+    displayOrder: 16,
     flowerTheme: 'Tử Đằng Luân Hồi',
     flowerColor: '#8B5CF6',
     flowerSymbol: 'history_edu',
@@ -1155,7 +1102,7 @@ Họ tôn trọng nhau như những người bạn đồng liêu giữ gìn nế
     googleStudioUrl:
       'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221V0rk089ea4WgZgXUYf8_8wcVQIPjJDwB%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
-    displayOrder: 18,
+    displayOrder: 17,
     flowerTheme: 'Trầm Hương Bắc Bộ',
     flowerColor: '#57534E',
     flowerSymbol: 'self_improvement',
@@ -1218,7 +1165,7 @@ Hắn nhướng mày, ngón tay bóp chặt cổ tay bạn đến mức trắng 
     googleStudioUrl:
       'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221tDUQr7pEjVMOsxCysjj1BzD1juZTWlHE%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
-    displayOrder: 19,
+    displayOrder: 18,
     flowerTheme: 'Hoa Dại Phố Thị',
     flowerColor: '#334155',
     flowerSymbol: 'sports_esports',
@@ -1290,7 +1237,7 @@ Ngón tay lạnh lẽo của hắn như vô tình lướt qua gò má ẩm ướ
     acceptedAnswers: ['Giam Cầm', 'Giam cầm', 'giam cầm', 'Giam Cam', 'giam cam'],
     unlockExplanation:
       'Chính xác. Khương Duy Nhất muốn giam cầm đóa hoa trà non nớt vĩnh viễn trong trang viên họ Khương.',
-    displayOrder: 20,
+    displayOrder: 19,
     flowerTheme: 'Bạch Trà Đàn Hương',
     flowerColor: '#475569',
     flowerSymbol: 'lock',
@@ -1377,7 +1324,7 @@ Bàn tay hư hỏng của hắn đang từ từ miết dọc theo sống lưng c
     googleStudioUrl:
       'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221Oz1oHMpvACSYzv45dKccz3dn16f6FCbn%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
-    displayOrder: 21,
+    displayOrder: 20,
     flowerTheme: 'Sả Chanh Đô Thị',
     flowerColor: '#10B981',
     flowerSymbol: 'terminal',
@@ -1457,7 +1404,7 @@ Ngón tay trỏ của anh chậm rãi rời khỏi bút, trượt nhẹ qua cổ
     googleStudioUrl:
       'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2214dlQ58-MyhWA69mHwYWaH1bM8mhKl0qG%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
-    displayOrder: 22,
+    displayOrder: 21,
     flowerTheme: 'Tuyết Tùng Đầu Mùa',
     flowerColor: '#0EA5E9',
     flowerSymbol: 'local_library',
@@ -1535,7 +1482,7 @@ Hắn ngừng lại, hơi thở bắt đầu dồn dập, đôi mắt đỏ ng�
     ],
     unlockExplanation:
       'Chính xác. Hắn có thật lòng — dù cố dựng lên vỏ bọc hợp đồng và những lời sỉ nhục lạnh lùng, nhưng pheromone và trái tim hắn đã hoàn toàn đầu hàng trước bạn.',
-    displayOrder: 23,
+    displayOrder: 22,
     flowerTheme: 'Rượu Vang Đỏ & Băng Lạnh',
     flowerColor: '#9F1239',
     flowerSymbol: 'wine_bar',
@@ -1634,7 +1581,7 @@ Bạn nghẹn ngào, bàn tay run rẩy gõ từng nhịp vào cạnh điện th
     googleStudioUrl:
       'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221yOkkviBtSB1331_kmdPBwsa3NLzhAp7y%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
     locked: false,
-    displayOrder: 24,
+    displayOrder: 23,
     flowerTheme: 'Tình Yêu Màu Hồng',
     flowerColor: '#EC4899',
     flowerSymbol: 'favorite',
