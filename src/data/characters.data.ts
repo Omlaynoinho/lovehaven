@@ -1,4 +1,5 @@
 import { Character, SiteConfig } from '../app/models/character.model';
+export type { Character, SiteConfig };
 
 export const DEFAULT_SITE_CONFIG: SiteConfig = {
   youtubeMusicUrl: 'https://youtu.be/MNb6hEKAS08?si=Lz8Kem3N9jptY7dv',
@@ -1641,5 +1642,61 @@ Hãy rút kiếm, hoặc chọn lấy cho mình một chén rượu độc! Bàn
     accentQuote:
       'Tử Cấm Thành sâu tựa biển, một bước sẩy chân là muôn đời vạn kiếp không thể quay đầu. Bàn cờ Cảnh Diệu đã mở, và mạng sống của ngươi chính là quân cờ kế tiếp.',
   },
+  {
+    id: 'opw-kinh-do-van-hoa-2',
+    name: 'OPW - Kinh Đô Vạn Hoa 2',
+    tags: [
+      'Hiện Đại',
+      'Open World',
+      'Tự Do',
+      'Giới Thượng Lưu',
+      'R18',
+      'Quyền Mưu',
+      'Slow Burn',
+    ],
+    summary:
+      'Siêu đô thị Cảnh Thành hoa lệ dựng lên từ tiền tài, quyền lực và những tham vọng không đáy. Phía sau cánh cổng sắt son thếp vàng của Hoắc Gia, vị gia chủ bạo chúa sắp qua đời kích ngòi cho các con tàn sát lẫn nhau, phu nhân thâm trầm giấu độc dược, trong khi các thiếu gia tranh đoạt quyền lực và thế giới ngầm cuộn trào sóng gió.',
+    plot: `Cảnh Thành — một siêu đô thị hoa lệ dựng lên từ tiền bạc, quyền lực và những tham vọng không đáy.
+
+Nơi đây, một cú gật đầu tại phòng bao kín có thể xoay chuyển cả thị trường chứng khoán; một chiếc đầm dạ hội Haute Couture độc bản có thể mở toang cánh cửa bước vào giới tinh hoa; và một cuộc hôn nhân môn đăng hộ đối chưa bao giờ đơn thuần là chuyện của con tim, mà là bản giao ước giữa những dòng họ nắm giữ huyết mạch kinh tế của cả một vùng trời.
+
+Đứng sừng sững tại tâm điểm của vòng xoáy ấy là Hoắc Gia — gia tộc tài phiệt được ví như một pháo đài thép bất khả xâm phạm.
+
+Nhưng phía sau cánh cổng sắt son thếp vàng của dinh thự Phù Hoa Khu, tấm màn nhung tráng lệ đang bắt đầu rách toạc.
+
+Trên tầng 88 của tòa tháp chọc trời, vị gia chủ sáu mươi lăm tuổi Hoắc Đình Thâm đứng nhìn xuống thành phố trong bóng tối. Bàn tay tựa trên cây gậy ba-toong bằng hợp kim titan khẽ run rẩy — một dấu hiệu của căn bệnh thoái hóa đang từng ngày đếm ngược thời gian sống của ông. Đôi mắt đại bàng xám tro của một bạo chúa Machiavelli vẫn lạnh lùng bày ra một ván cờ tàn khốc: kích ngòi cho những đứa con tàn sát lẫn nhau, để chọn ra kẻ đủ nhẫn tâm thay mình trị vì đế chế.
+
+Tại phòng may áp mái ngào ngạt hương hoa hồng gai, phu nhân Thẩm Nguyệt Ninh — đại tiểu thư danh giá của Thẩm tộc, người phụ nữ quyền lực bậc nhất giới thời trang quốc tế — mỉm cười dịu dàng khi cài từng chiếc khuy áo cho chồng. Nụ cười đoan trang ấy đã che giấu mối thù giết cha suốt một phần tư thế kỷ, che giấu cả thứ độc dược chiết xuất từ hoa Dạ Lan đang được bà lặng lẽ vi liều vào từng chén trà sâm mỗi tối. Bà sẵn sàng biến Cảnh Thành thành biển máu, miễn là bốn đứa con trai của bà được an toàn.
+
+Dưới bến cảng nồng nặc mùi khói dầu và sắt gỉ, trưởng nam Hoắc Kiến Quốc (28 tuổi) nghiến răng nhìn kho hàng số 7 vừa nổ tung trong đêm. Vết sẹo trên gò má giật liên hồi dưới ánh đèn pha tuần tra. Là người tôn sùng kỷ luật sắt và vũ lực, anh vùng vẫy trong cơn khủng hoảng quyền lực, vừa nơm nớp sợ bị cha phế truất ngôi vị con cả, vừa điên cuồng săn lùng kẻ đứng sau vụ phá hoại mà không hề hay biết bóng ma phản bội lại nằm ngay trong chính gia đình mình.
+
+Giữa những con ngõ lờ mờ ánh đèn đỏ của Vạn Hoa Nhai, nhị thiếu gia Hoắc Kiến Minh (25 tuổi) ngả ngớn nâng ly rượu vang đắt tiền giữa tiếng cười cợt của đám bạn ăn chơi trác táng. Nhưng sau lớp mặt nạ của một kẻ phóng đãng bất tài bị gia tộc ghẻ lạnh, đôi mắt gã lóe lên sự sắc lạnh của một kẻ đang âm thầm thao túng các đường dây ngầm đen tối nhất thành phố.
+
+Trước màn hình máy tính xanh lét trong đêm, tam thiếu gia Hoắc Minh Trị (24 tuổi) lạnh lùng chỉnh lại gọng kính titan. Những dòng code độc hại vừa kích nổ trạm điều áp bến cảng đang được anh tẩy sạch dấu vết trong tích tắc. Với vị giám đốc công nghệ trẻ tuổi này, con người chỉ là những biến số có thể tính toán, và đế chế Hoắc Thị sẽ phải quy phục trước thuật toán của anh.
+
+Và tại khuôn viên rợp bóng cây của Đại học Bắc Kinh, cậu út Hoắc Cao Vũ (20 tuổi) vẫn ôm trong tay những trang giáo trình kinh tế cùng niềm tin ngây thơ về công lý và lòng nhân đạo. Cậu là đóa hoa thuần khiết duy nhất mà Thẩm phu nhân liều mạng bảo bọc, nhưng chiếc USB chứa bí mật đen tối của gia tộc mà cậu vừa vô tình chạm tới đang từng bước kéo cậu xuống bờ vực của sự vỡ mộng.
+
+Nhưng thế giới này không chỉ xoay quanh một họ Hoắc.
+
+Bên ngoài cổng lớn của dinh thự là một xã hội đang cuộn trào sóng ngầm. Những tập đoàn đối thủ rình rập một sơ hở trên sàn giao dịch; các quý bà thượng lưu toan tính sau tách trà chiều; những phóng viên điều tra lần theo dấu vết các vụ rửa tiền bẩn; giới sinh viên nghèo chật vật mưu sinh giữa giá thuê nhà đắt đỏ; và những nghiệp đoàn bốc xếp sẵn sàng bãi công làm tê liệt toàn thành phố.
+
+Không có vị cứu tinh được định sẵn.
+Không có kịch bản dọn sẵn đường đi.
+Không có sự ưu ái vô điều kiện nào cho bất kỳ ai.
+
+Bạn bước chân vào Cảnh Thành — mang theo danh phận, tham vọng và những lựa chọn của riêng mình. Mỗi ánh nhìn bạn chạm phải, mỗi lời bạn thốt ra, mỗi liên minh bạn gật đầu hay mỗi hợp đồng bạn đặt bút ký đều sẽ kéo theo một chuỗi nhân quả không thể đảo ngược.
+
+Chào mừng bạn đến với Kinh Đô Vạn Hoa. Hãy giữ chặt chiếc mặt nạ của mình, bởi vì ở nơi đây, sự ngây thơ chính là bản án tử hình đắt giá nhất.`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221HrUoZHyZJeYjWnAggix6inA1OEWhc2lp%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
+    locked: false,
+    displayOrder: 25,
+    flowerTheme: 'Dạ Lan Thượng Lưu',
+    flowerColor: '#9D174D',
+    flowerSymbol: 'diamond',
+    accentQuote:
+      'Chào mừng bạn đến với Kinh Đô Vạn Hoa. Hãy giữ chặt chiếc mặt nạ của mình, bởi vì ở nơi đây, sự ngây thơ chính là bản án tử hình đắt giá nhất.',
+  },
 ];
+
 
