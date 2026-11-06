@@ -13,6 +13,7 @@ import { MusicPlayer } from './components/music-player/music-player';
 import { CharacterService } from './services/character';
 import { Sound } from './services/sound';
 import { Music } from './services/music';
+import { ActiveTab, PublicCharacter } from './models/character.model';
 
 @Component({
   selector: 'app-root',
@@ -40,6 +41,7 @@ export class App {
 
   readonly hasEntered = signal<boolean>(false);
   readonly welcomeOpen = signal<boolean>(false);
+  readonly activeTab = signal<ActiveTab>('home');
 
   onEnterGarden(): void {
     this.hasEntered.set(true);
@@ -57,13 +59,21 @@ export class App {
     this.welcomeOpen.set(true);
   }
 
-  scrollTo(anchor: string): void {
+  setTab(tab: ActiveTab): void {
     this.sound.playClick();
-    if (typeof document !== 'undefined') {
-      const el = document.querySelector(anchor);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
+    this.activeTab.set(tab);
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
+  selectTagAndSwitch(tag: string): void {
+    this.sound.playClick();
+    this.charService.clearTags();
+    this.charService.toggleTag(tag);
+    this.activeTab.set('tags');
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
 
@@ -89,5 +99,10 @@ export class App {
     this.sound.playClick();
     this.charService.clearTags();
     this.charService.setSearchQuery('');
+  }
+
+  openCharacter(char: PublicCharacter): void {
+    this.sound.playFlower();
+    this.charService.openCharacter(char);
   }
 }

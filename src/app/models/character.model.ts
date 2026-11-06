@@ -1,3 +1,5 @@
+export type ActiveTab = 'home' | 'characters' | 'tags' | 'commission' | 'about';
+
 export interface Character {
   id: string;
   name: string;

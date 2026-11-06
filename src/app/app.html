@@ -9,197 +9,490 @@
   [class.opacity-100]="hasEntered()"
 >
   
-  <!-- Romantic Ambient Background -->
+  <!-- Romantic Ambient Background Canvas -->
   <app-garden-background></app-garden-background>
 
-  <!-- Sticky Header Navigation -->
-  <app-header-nav (reopenWelcome)="openWelcome()" (reopenEntrance)="reopenEntrance()"></app-header-nav>
+  <!-- Sticky Header Navigation with Separate Tabs (Không xuống dòng) -->
+  <app-header-nav
+    [activeTab]="activeTab()"
+    (tabChange)="setTab($event)"
+    (reopenWelcome)="openWelcome()"
+    (reopenEntrance)="reopenEntrance()"
+  ></app-header-nav>
 
-  <!-- Main Content Flow -->
+  <!-- Main Content Area: Each section is rendered separately (chuyển sang riêng mục khác) -->
   <main class="flex-1 w-full" id="top">
-    
-    <!-- Hero Garden Banner -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-12 text-center relative">
-      
-      <!-- Crown Flower Badge with Silk Ribbon Bow -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/85 backdrop-blur-xs border border-[#F0BAC8] text-xs font-serif text-[#A65B6D] mb-6 shadow-2xs">
-        <!-- Silk Ribbon Bow Icon -->
-        <svg class="w-4 h-4 text-[#F092A5] shrink-0" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 9c-1.5-2.5-4-3-6-2s-2.5 3.5-.5 5.5c1.8 1.8 4.5 1.5 6.5-0.5c2 2 4.7 2.3 6.5 0.5c2-2 1.5-4.5-.5-5.5s-4.5-0.5-6 2zm-1.5 2c-1.3 1.3-3 1.2-4.2 0c-1-1-0.8-2.2 0.2-2.8c1.1-0.6 2.8-0.2 4 1.3v1.5zm3 0v-1.5c1.2-1.5 2.9-1.9 4-1.3c1 0.6 1.2 1.8 0.2 2.8c-1.2 1.2-2.9 1.3-4.2 0z"/>
-        </svg>
-        <span class="tracking-wide">Vườn Hoa Mùa Thu • Nhân Vật Nhập Vai & Tình Cảm</span>
-        <mat-icon class="text-xs text-[#8FA88B]">eco</mat-icon>
-      </div>
 
-      <!-- Main Title with Botanical Flourish -->
-      <div class="relative inline-block mb-3">
-        <h1 class="font-serif-vintage text-4xl sm:text-6xl lg:text-7xl font-bold text-[#5B464B] tracking-tight">
-          LOVE HAVE
-        </h1>
-        <!-- Subtle Autumn Leaf Accents on Left & Right -->
-        <div class="absolute -top-3 -left-7 sm:-left-10 text-[#FFB7A5] opacity-75 hidden sm:block pointer-events-none transform -rotate-25">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C8 6 4 11 6 16c2 5 7 6 10 3c3-3 2-8-4-17z"/>
-          </svg>
-        </div>
-        <div class="absolute -top-2 -right-7 sm:-right-10 text-[#8FA88B] opacity-75 hidden sm:block pointer-events-none transform rotate-35">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17 8C8 10 5 16 7 20c2 4 8 2 11-3c3-5 1-8-1-9z"/>
-          </svg>
-        </div>
-      </div>
-
-      <!-- Script Romantic Tagline -->
-      <p class="font-script-romantic text-2xl sm:text-3xl text-[#8E7479] max-w-xl mx-auto mb-6">
-        "A Little Garden of Stories & Hearts..."
-      </p>
-
-      <p class="text-xs sm:text-sm text-[#78666A] max-w-2xl mx-auto leading-relaxed mb-8">
-        Mỗi bông hoa lưu giữ một mảnh linh hồn, mỗi nhân vật là một khúc ca thầm kín. 
-        Hãy mở khóa các chương nhật ký, khám phá thế giới nội tâm và bắt đầu hành trình nhập vai độc nhất vô nhị.
-      </p>
-
-      <!-- Quick Action Buttons -->
-      <div class="flex flex-wrap items-center justify-center gap-3">
-        <button
-          type="button"
-          (click)="scrollTo('#characters')"
-          class="px-6 py-3 rounded-full bg-gradient-to-r from-[#C98F9E] to-[#A65B6D] hover:from-[#B77A8A] hover:to-[#924C5C] text-white text-xs sm:text-sm font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2 cursor-pointer active:scale-95"
-        >
-          <mat-icon class="text-sm">eco</mat-icon>
-          <span>Khám phá vườn nhân vật ({{ charService.characters().length }})</span>
-        </button>
-
-        <button
-          type="button"
-          (click)="scrollTo('#commission')"
-          class="px-6 py-3 rounded-full bg-white/90 hover:bg-white border border-[#E9D5DA] hover:border-[#C98F9E] text-[#5B464B] text-xs sm:text-sm font-medium transition-all shadow-xs flex items-center gap-2 cursor-pointer active:scale-95"
-        >
-          <mat-icon class="text-sm text-[#A65B6D]">palette</mat-icon>
-          <span>Commission & Bảng Giá</span>
-        </button>
-
-      </div>
-    </section>
-
-    <!-- SEARCH & FILTER BY TAG SECTION -->
-    <section id="tags-section" class="max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-20">
-      <div class="p-6 sm:p-7 rounded-3xl bg-[#FFFDFB]/90 backdrop-blur-sm border border-[#F0BAC8]/75 vintage-shadow space-y-5">
+    <!-- ========================================== -->
+    <!-- 1. MỤC RIÊNG: TRANG CHỦ (HOME VIEW)        -->
+    <!-- ========================================== -->
+    @if (activeTab() === 'home') {
+      <div class="animate-fadeIn">
         
-        <!-- Search bar -->
-        <div class="relative max-w-xl mx-auto">
-          <mat-icon class="absolute left-4 top-1/2 -translate-y-1/2 text-[#B0999E] text-lg">search</mat-icon>
-          <input
-            type="text"
-            [value]="charService.searchQuery()"
-            (input)="onSearchInput($event)"
-            placeholder="Tìm kiếm theo tên nhân vật, bối cảnh, thể loại..."
-            class="w-full pl-11 pr-10 py-3 rounded-full border border-[#F0BAC8]/80 bg-[#FFFDF9] text-xs sm:text-sm text-[#5B464B] placeholder:text-[#B59EA3] focus:outline-none focus:border-[#C98F9E] focus:ring-1 focus:ring-[#C98F9E] shadow-2xs"
-          />
-          @if (charService.searchQuery()) {
+        <!-- Hero Garden Banner -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-10 text-center relative">
+          
+          <!-- Crown Flower Badge with Silk Ribbon Bow -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/85 backdrop-blur-xs border border-[#F0BAC8] text-xs font-serif text-[#A65B6D] mb-5 shadow-2xs">
+            <svg class="w-4 h-4 text-[#F092A5] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 9c-1.5-2.5-4-3-6-2s-2.5 3.5-.5 5.5c1.8 1.8 4.5 1.5 6.5-0.5c2 2 4.7 2.3 6.5 0.5c2-2 1.5-4.5-.5-5.5s-4.5-0.5-6 2zm-1.5 2c-1.3 1.3-3 1.2-4.2 0c-1-1-0.8-2.2 0.2-2.8c1.1-0.6 2.8-0.2 4 1.3v1.5zm3 0v-1.5c1.2-1.5 2.9-1.9 4-1.3c1 0.6 1.2 1.8 0.2 2.8c-1.2 1.2-2.9 1.3-4.2 0z"/>
+            </svg>
+            <span class="tracking-wide">Vườn Hoa Mùa Thu • Nhân Vật Nhập Vai & Tình Cảm</span>
+            <mat-icon class="text-xs text-[#8FA88B]">eco</mat-icon>
+          </div>
+
+          <!-- Main Title with Botanical Flourish -->
+          <div class="relative inline-block mb-3">
+            <h1 class="font-serif-vintage text-4xl sm:text-6xl lg:text-7xl font-bold text-[#5B464B] tracking-tight">
+              LOVE HAVE
+            </h1>
+            <div class="absolute -top-3 -left-7 sm:-left-10 text-[#FFB7A5] opacity-75 hidden sm:block pointer-events-none transform -rotate-25">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8 6 4 11 6 16c2 5 7 6 10 3c3-3 2-8-4-17z"/>
+              </svg>
+            </div>
+            <div class="absolute -top-2 -right-7 sm:-right-10 text-[#8FA88B] opacity-75 hidden sm:block pointer-events-none transform rotate-35">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17 8C8 10 5 16 7 20c2 4 8 2 11-3c3-5 1-8-1-9z"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Script Romantic Tagline -->
+          <p class="font-script-romantic text-2xl sm:text-3xl text-[#8E7479] max-w-xl mx-auto mb-5">
+            "A Little Garden of Stories & Hearts..."
+          </p>
+
+          <p class="text-xs sm:text-sm text-[#78666A] max-w-2xl mx-auto leading-relaxed mb-8">
+            Mỗi bông hoa lưu giữ một mảnh linh hồn, mỗi nhân vật là một khúc ca thầm kín. 
+            Chào mừng bạn đến với khu vườn mùa thu của Yue Yue — nơi lưu giữ những câu chuyện nhập vai sâu sắc và đầy trắc ẩn.
+          </p>
+
+          <!-- Quick Action Buttons -->
+          <div class="flex flex-wrap items-center justify-center gap-3">
             <button
               type="button"
-              (click)="clearSearch()"
-              class="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#B0999E] hover:text-[#5B464B]"
+              (click)="setTab('characters')"
+              class="px-6 py-3 rounded-full bg-gradient-to-r from-[#C98F9E] to-[#A65B6D] hover:from-[#B77A8A] hover:to-[#924C5C] text-white text-xs sm:text-sm font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2 cursor-pointer active:scale-95"
             >
-              <mat-icon class="text-sm">close</mat-icon>
+              <mat-icon class="text-sm">eco</mat-icon>
+              <span>Vào Vườn Nhân Vật ({{ charService.characters().length }})</span>
             </button>
-          }
-        </div>
 
-        <!-- Tag pills cloud -->
-        <div>
-          <div class="flex items-center justify-between mb-2.5">
-            <span class="text-xs font-serif uppercase tracking-wider text-[#A65B6D] font-bold flex items-center gap-1.5">
-              <mat-icon class="text-xs">local_offer</mat-icon>
-              <span>Lọc theo thẻ tag đặc trưng:</span>
+            <button
+              type="button"
+              (click)="setTab('commission')"
+              class="px-6 py-3 rounded-full bg-white/90 hover:bg-white border border-[#E9D5DA] hover:border-[#C98F9E] text-[#5B464B] text-xs sm:text-sm font-medium transition-all shadow-xs flex items-center gap-2 cursor-pointer active:scale-95"
+            >
+              <mat-icon class="text-sm text-[#A65B6D]">palette</mat-icon>
+              <span>Bảng Giá Commission & TOS</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- 4 NAVIGATION PORTAL CARDS (Truy cập nhanh từng mục riêng) -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+          <div class="text-center mb-8">
+            <span class="text-xs font-serif uppercase tracking-wider text-[#A65B6D] font-bold">
+              ✦ Khám Phá Các Khu Vực ✦
             </span>
+            <h2 class="font-serif-vintage text-2xl sm:text-3xl font-bold text-[#5B464B] mt-1">
+              Chọn Lối Vào Khu Vườn
+            </h2>
+          </div>
 
-            @if (charService.selectedTags().length > 0) {
-              <button
-                type="button"
-                (click)="charService.clearTags()"
-                class="text-xs text-[#C98F9E] hover:underline cursor-pointer"
-              >
-                Xóa bộ lọc tag
-              </button>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            
+            <!-- Portal 1: Vườn Nhân Vật -->
+            <div
+              (click)="setTab('characters')"
+              class="group p-6 rounded-3xl bg-[#FFFDF9]/90 hover:bg-white border border-[#F0BAC8]/70 hover:border-[#C98F9E] vintage-shadow hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
+            >
+              <div>
+                <div class="w-12 h-12 rounded-2xl bg-[#EAF0E8] text-[#698565] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <mat-icon class="text-2xl">eco</mat-icon>
+                </div>
+                <div class="inline-block px-2.5 py-0.5 rounded-full bg-[#EAF0E8] text-[#557051] text-[10px] font-medium mb-2">
+                  {{ charService.characters().length }} Tác phẩm
+                </div>
+                <h3 class="font-serif-vintage text-lg font-bold text-[#5B464B] group-hover:text-[#C98F9E] transition-colors mb-2">
+                  Vườn Nhân Vật
+                </h3>
+                <p class="text-xs text-[#78666A] leading-relaxed">
+                  Xem danh sách đầy đủ các nhân vật nhập vai, cốt truyện, tính cách và liên kết trải nghiệm.
+                </p>
+              </div>
+              <div class="pt-4 mt-4 border-t border-[#F2E5E8] flex items-center justify-between text-xs font-medium text-[#C98F9E]">
+                <span>Khám phá ngay</span>
+                <mat-icon class="text-sm group-hover:translate-x-1 transition-transform">arrow_forward</mat-icon>
+              </div>
+            </div>
+
+            <!-- Portal 2: Tra Cứu Tag -->
+            <div
+              (click)="setTab('tags')"
+              class="group p-6 rounded-3xl bg-[#FFFDF9]/90 hover:bg-white border border-[#F0BAC8]/70 hover:border-[#C98F9E] vintage-shadow hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
+            >
+              <div>
+                <div class="w-12 h-12 rounded-2xl bg-[#F4EEF8] text-[#8668A6] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <mat-icon class="text-2xl">local_offer</mat-icon>
+                </div>
+                <div class="inline-block px-2.5 py-0.5 rounded-full bg-[#F4EEF8] text-[#715491] text-[10px] font-medium mb-2">
+                  {{ charService.availableTags().length }} Thẻ tag
+                </div>
+                <h3 class="font-serif-vintage text-lg font-bold text-[#5B464B] group-hover:text-[#C98F9E] transition-colors mb-2">
+                  Tra Cứu Theo Tag
+                </h3>
+                <p class="text-xs text-[#78666A] leading-relaxed">
+                  Bộ lọc chuyên sâu theo gu: #Cổ Trang, #Quyền Mưu, #Slow Burn, #R18, #Hiện Đại, #Kiếm Khách...
+                </p>
+              </div>
+              <div class="pt-4 mt-4 border-t border-[#F2E5E8] flex items-center justify-between text-xs font-medium text-[#C98F9E]">
+                <span>Lọc nhân vật</span>
+                <mat-icon class="text-sm group-hover:translate-x-1 transition-transform">arrow_forward</mat-icon>
+              </div>
+            </div>
+
+            <!-- Portal 3: Commission -->
+            <div
+              (click)="setTab('commission')"
+              class="group p-6 rounded-3xl bg-[#FFFDF9]/90 hover:bg-white border border-[#F0BAC8]/70 hover:border-[#C98F9E] vintage-shadow hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
+            >
+              <div>
+                <div class="w-12 h-12 rounded-2xl bg-[#FDEEF1] text-[#A65B6D] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <mat-icon class="text-2xl">palette</mat-icon>
+                </div>
+                <div class="inline-block px-2.5 py-0.5 rounded-full bg-[#FDEEF1] text-[#914658] text-[10px] font-medium mb-2">
+                  5 Phân khúc giá
+                </div>
+                <h3 class="font-serif-vintage text-lg font-bold text-[#5B464B] group-hover:text-[#C98F9E] transition-colors mb-2">
+                  Bảng Giá Commission
+                </h3>
+                <p class="text-xs text-[#78666A] leading-relaxed">
+                  "Ôm Lấy Nỗi Nhớ Của Yue Yue" — Báo giá chi tiết từ Basic (60k) đến Custom Open World và TOS.
+                </p>
+              </div>
+              <div class="pt-4 mt-4 border-t border-[#F2E5E8] flex items-center justify-between text-xs font-medium text-[#C98F9E]">
+                <span>Xem điều khoản & giá</span>
+                <mat-icon class="text-sm group-hover:translate-x-1 transition-transform">arrow_forward</mat-icon>
+              </div>
+            </div>
+
+            <!-- Portal 4: Giới Thiệu -->
+            <div
+              (click)="setTab('about')"
+              class="group p-6 rounded-3xl bg-[#FFFDF9]/90 hover:bg-white border border-[#F0BAC8]/70 hover:border-[#C98F9E] vintage-shadow hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
+            >
+              <div>
+                <div class="w-12 h-12 rounded-2xl bg-[#FBF0E6] text-[#A87258] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <mat-icon class="text-2xl">spa</mat-icon>
+                </div>
+                <div class="inline-block px-2.5 py-0.5 rounded-full bg-[#FBF0E6] text-[#8F593F] text-[10px] font-medium mb-2">
+                  Tác giả Yue Yue
+                </div>
+                <h3 class="font-serif-vintage text-lg font-bold text-[#5B464B] group-hover:text-[#C98F9E] transition-colors mb-2">
+                  Giới Thiệu Tác Giả
+                </h3>
+                <p class="text-xs text-[#78666A] leading-relaxed">
+                  Đôi dòng tâm sự về phong cách viết char ngược tâm, nguồn cảm hứng sáng tác và mạng xã hội.
+                </p>
+              </div>
+              <div class="pt-4 mt-4 border-t border-[#F2E5E8] flex items-center justify-between text-xs font-medium text-[#C98F9E]">
+                <span>Đọc tâm sự</span>
+                <mat-icon class="text-sm group-hover:translate-x-1 transition-transform">arrow_forward</mat-icon>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SPOTLIGHT: TÁC PHẨM TIÊU BIỂU -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+            <div>
+              <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF0E6] text-[#A65B6D] text-xs font-serif font-medium mb-2">
+                <mat-icon class="text-xs">star</mat-icon>
+                <span>Nhân Vật Tiêu Biểu</span>
+              </div>
+              <h2 class="font-serif-vintage text-2xl sm:text-3xl font-bold text-[#5B464B]">
+                Tâm Điểm Khu Vườn Mùa Thu
+              </h2>
+            </div>
+
+            <button
+              type="button"
+              (click)="setTab('characters')"
+              class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-[#C98F9E] hover:text-[#A65B6D] transition-colors cursor-pointer self-start sm:self-auto"
+            >
+              <span>Xem tất cả {{ charService.characters().length }} nhân vật</span>
+              <mat-icon class="text-sm">arrow_forward</mat-icon>
+            </button>
+          </div>
+
+          <!-- Highlight Grid (Show first 3 characters with cards) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            @for (char of charService.characters().slice(0, 3); track char.id) {
+              <app-character-card [char]="char"></app-character-card>
             }
           </div>
 
-          <div class="flex flex-wrap gap-2">
-            @for (tag of charService.availableTags(); track tag) {
-              <button
-                type="button"
-                (click)="toggleTag(tag)"
-                class="px-3 py-1 rounded-full text-xs transition-all cursor-pointer border"
-                [class.bg-[#C98F9E]]="isTagSelected(tag)"
-                [class.text-white]="isTagSelected(tag)"
-                [class.border-[#C98F9E]]="isTagSelected(tag)"
-                [class.shadow-2xs]="isTagSelected(tag)"
-                [class.bg-[#FFF9FA]]="!isTagSelected(tag)"
-                [class.text-[#78666A]]="!isTagSelected(tag)"
-                [class.border-[#ECD9DE]]="!isTagSelected(tag)"
-                [class.hover:border-[#C98F9E]]="!isTagSelected(tag)"
-              >
-                #{{ tag }}
-              </button>
-            }
+          <div class="mt-8 text-center">
+            <button
+              type="button"
+              (click)="setTab('characters')"
+              class="px-8 py-3.5 rounded-full bg-[#FAF0E6] hover:bg-[#FBE4E9] border border-[#E8D4D8] text-xs sm:text-sm text-[#5B464B] font-medium transition-all shadow-xs cursor-pointer inline-flex items-center gap-2"
+            >
+              <mat-icon class="text-sm text-[#C98F9E]">eco</mat-icon>
+              <span>Chuyển sang mục Vườn Nhân Vật để xem đầy đủ ({{ charService.characters().length }} nhân vật)</span>
+            </button>
           </div>
-        </div>
+        </section>
+
+        <!-- Autumn Quote Banner -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+          <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#FFFBF7]/90 via-[#FFF9FA]/90 to-[#FFFBF7]/90 border border-[#F0BAC8]/70 text-center relative vintage-shadow">
+            <mat-icon class="text-3xl text-[#C98F9E] mb-2 opacity-75">format_quote</mat-icon>
+            <p class="font-script-romantic text-2xl sm:text-3xl text-[#6B5056] leading-relaxed max-w-xl mx-auto">
+              "Gió thu mang theo hương hoa và những câu chuyện chưa kể. Hãy để trái tim bạn lắng nghe..."
+            </p>
+            <p class="font-serif text-xs text-[#9E8288] mt-3">
+              — LOVE HAVE Autumn Garden
+            </p>
+          </div>
+        </section>
+
       </div>
-    </section>
+    }
 
-    <!-- CHARACTER GARDEN GRID -->
-    <section id="characters" class="max-w-6xl mx-auto px-4 sm:px-6 py-12 scroll-mt-20">
-      <div class="flex items-center justify-between mb-8">
-        <div>
-          <h2 class="font-serif-vintage text-2xl sm:text-3xl font-bold text-[#5B464B] flex items-center gap-2">
-            <mat-icon class="text-[#C98F9E]">eco</mat-icon>
-            <span>Vườn Hoa Nhân Vật</span>
-          </h2>
-          <p class="text-xs text-[#8E7479] mt-0.5">
-            Đang hiển thị {{ charService.filteredCharacters().length }} / {{ charService.characters().length }} nhân vật
+    <!-- ========================================== -->
+    <!-- 2. MỤC RIÊNG: VƯỜN NHÂN VẬT (CHARACTERS)   -->
+    <!-- ========================================== -->
+    @if (activeTab() === 'characters') {
+      <div class="animate-fadeIn max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+        
+        <!-- Header for Characters view -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#EAF0E8] text-[#557051] text-xs font-serif font-medium mb-3">
+            <mat-icon class="text-xs">eco</mat-icon>
+            <span>Khu Vực Riêng: Vườn Nhân Vật</span>
+          </div>
+
+          <h1 class="font-serif-vintage text-3xl sm:text-5xl font-bold text-[#5B464B] tracking-tight">
+            Vườn Hoa Nhân Vật
+          </h1>
+
+          <p class="font-script-romantic text-xl sm:text-2xl text-[#8E7479] mt-2">
+            "Mỗi nhân vật là một tác phẩm được chấp bút bằng tất cả tâm huyết..."
           </p>
-        </div>
-      </div>
 
-      <!-- Grid of Cards -->
-      @if (charService.filteredCharacters().length > 0) {
+          <p class="text-xs sm:text-sm text-[#78666A] mt-3 max-w-xl mx-auto leading-relaxed">
+            Hiện tại khu vườn đang nuôi dưỡng <strong>{{ charService.characters().length }}</strong> nhân vật với bối cảnh Cổ Trang, Cung Đấu, Hiện Đại Giới Thượng Lưu, Kiếm Khách... Nhấp vào từng đóa hoa để đọc nhật ký cốt truyện.
+          </p>
+
+          <!-- Quick link to Tag filter -->
+          <div class="mt-5 flex items-center justify-center gap-3">
+            <button
+              type="button"
+              (click)="setTab('tags')"
+              class="px-4 py-2 rounded-full bg-white/90 hover:bg-white border border-[#E9D5DA] text-xs text-[#A65B6D] font-medium transition-all shadow-2xs inline-flex items-center gap-1.5 cursor-pointer"
+            >
+              <mat-icon class="text-xs text-[#9A84B8]">local_offer</mat-icon>
+              <span>Chuyển sang mục Tra Cứu Tag để lọc chi tiết</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Grid of All Character Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          @for (char of charService.filteredCharacters(); track char.id) {
+          @for (char of charService.characters(); track char.id) {
             <app-character-card [char]="char"></app-character-card>
           }
         </div>
-      } @else {
-        <div class="p-12 rounded-3xl bg-white/70 border border-dashed border-[#ECD9DE] text-center space-y-3">
-          <mat-icon class="text-4xl text-[#C98F9E]">sentiment_dissatisfied</mat-icon>
-          <h4 class="font-serif-vintage text-lg font-bold text-[#5B464B]">
-            Không tìm thấy nhân vật phù hợp
-          </h4>
-          <p class="text-xs text-[#8E7479] max-w-md mx-auto">
-            Hãy thử tìm kiếm với từ khóa khác hoặc xóa bớt các bộ lọc tag hiện tại.
+
+        <!-- Commission callout at bottom of Characters -->
+        <div class="mt-14 p-8 rounded-3xl bg-[#FFFDF9]/95 border border-[#F0BAC8]/70 text-center max-w-2xl mx-auto vintage-shadow">
+          <mat-icon class="text-3xl text-[#C98F9E] mb-2">auto_awesome</mat-icon>
+          <h3 class="font-serif-vintage text-xl font-bold text-[#5B464B] mb-2">
+            Bạn muốn có một nhân vật viết riêng cho mình?
+          </h3>
+          <p class="text-xs text-[#78666A] mb-4">
+            Yue nhận sáng tác character theo yêu cầu với dịch vụ "Ôm Lấy Nỗi Nhớ Của Yue Yue" từ cốt truyện, NPC đến lệnh bot độc quyền.
           </p>
           <button
             type="button"
-            (click)="resetFilters()"
-            class="px-4 py-2 rounded-full bg-[#FAF0E6] text-xs text-[#A65B6D] font-medium hover:bg-[#FBE4E9] transition-colors cursor-pointer"
+            (click)="setTab('commission')"
+            class="px-6 py-2.5 rounded-full bg-[#C98F9E] hover:bg-[#B77A8A] text-white text-xs font-medium transition-all shadow-xs inline-flex items-center gap-2 cursor-pointer"
           >
-            Đặt lại bộ lọc
+            <mat-icon class="text-xs">palette</mat-icon>
+            <span>Xem Bảng Giá Commission & TOS</span>
           </button>
         </div>
-      }
-    </section>
 
+      </div>
+    }
 
-    <!-- COMMISSION SERVICE SECTION -->
-    <app-commission-service></app-commission-service>
+    <!-- ========================================== -->
+    <!-- 3. MỤC RIÊNG: TRA CỨU TAG (TAGS VIEW)      -->
+    <!-- ========================================== -->
+    @if (activeTab() === 'tags') {
+      <div class="animate-fadeIn max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+        
+        <!-- Header for Tag View -->
+        <div class="text-center max-w-3xl mx-auto mb-8">
+          <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F4EEF8] text-[#715491] text-xs font-serif font-medium mb-3">
+            <mat-icon class="text-xs">local_offer</mat-icon>
+            <span>Khu Vực Riêng: Tra Cứu & Bộ Lọc Tag</span>
+          </div>
 
-    <!-- ABOUT SECTION -->
-    <app-about-garden></app-about-garden>
+          <h1 class="font-serif-vintage text-3xl sm:text-5xl font-bold text-[#5B464B] tracking-tight">
+            Khám Phá Theo Thẻ Tag
+          </h1>
+
+          <p class="font-script-romantic text-xl sm:text-2xl text-[#8E7479] mt-2">
+            "Tìm kiếm những giai điệu cốt truyện hợp với tâm trạng của bạn..."
+          </p>
+        </div>
+
+        <!-- SEARCH & FILTER BOX -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-[#FFFDFB]/95 backdrop-blur-sm border border-[#F0BAC8]/85 vintage-shadow-lg mb-10 space-y-6">
+          
+          <!-- Search input -->
+          <div class="relative max-w-xl mx-auto">
+            <mat-icon class="absolute left-4 top-1/2 -translate-y-1/2 text-[#B0999E] text-lg">search</mat-icon>
+            <input
+              type="text"
+              [value]="charService.searchQuery()"
+              (input)="onSearchInput($event)"
+              placeholder="Nhập tên nhân vật, bối cảnh, hoàng triều, kinh đô, slow burn..."
+              class="w-full pl-11 pr-10 py-3.5 rounded-full border border-[#F0BAC8]/80 bg-[#FFFDF9] text-xs sm:text-sm text-[#5B464B] placeholder:text-[#B59EA3] focus:outline-none focus:border-[#C98F9E] focus:ring-2 focus:ring-[#C98F9E]/30 shadow-2xs"
+            />
+            @if (charService.searchQuery()) {
+              <button
+                type="button"
+                (click)="clearSearch()"
+                class="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#B0999E] hover:text-[#5B464B] cursor-pointer"
+              >
+                <mat-icon class="text-sm">close</mat-icon>
+              </button>
+            }
+          </div>
+
+          <!-- Tag Cloud -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-serif uppercase tracking-wider text-[#A65B6D] font-bold flex items-center gap-1.5">
+                <mat-icon class="text-xs">local_offer</mat-icon>
+                <span>Nhấp chọn các thẻ tag để lọc:</span>
+              </span>
+
+              @if (charService.selectedTags().length > 0) {
+                <button
+                  type="button"
+                  (click)="charService.clearTags()"
+                  class="text-xs text-[#C98F9E] hover:underline cursor-pointer font-medium"
+                >
+                  Xóa tất cả lựa chọn ({{ charService.selectedTags().length }})
+                </button>
+              }
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+              @for (tag of charService.availableTags(); track tag) {
+                <button
+                  type="button"
+                  (click)="toggleTag(tag)"
+                  class="px-3.5 py-1.5 rounded-full text-xs transition-all cursor-pointer border flex items-center gap-1"
+                  [class.bg-[#C98F9E]]="isTagSelected(tag)"
+                  [class.text-white]="isTagSelected(tag)"
+                  [class.border-[#C98F9E]]="isTagSelected(tag)"
+                  [class.shadow-xs]="isTagSelected(tag)"
+                  [class.bg-[#FFF9FA]]="!isTagSelected(tag)"
+                  [class.text-[#78666A]]="!isTagSelected(tag)"
+                  [class.border-[#ECD9DE]]="!isTagSelected(tag)"
+                  [class.hover:border-[#C98F9E]]="!isTagSelected(tag)"
+                >
+                  <span>#{{ tag }}</span>
+                  @if (isTagSelected(tag)) {
+                    <mat-icon class="text-[12px] h-3 w-3 leading-none">check</mat-icon>
+                  }
+                </button>
+              }
+            </div>
+          </div>
+
+          <!-- Filter Status Banner -->
+          <div class="pt-4 border-t border-[#F2E5E8] flex flex-wrap items-center justify-between gap-3 text-xs text-[#78666A]">
+            <div class="flex items-center gap-2">
+              <span class="font-medium">Kết quả:</span>
+              <span class="px-2 py-0.5 rounded-full bg-[#FAF0E6] text-[#A65B6D] font-bold">
+                {{ charService.filteredCharacters().length }} / {{ charService.characters().length }} nhân vật
+              </span>
+            </div>
+
+            @if (charService.selectedTags().length > 0 || charService.searchQuery()) {
+              <button
+                type="button"
+                (click)="resetFilters()"
+                class="text-xs text-[#C98F9E] hover:underline cursor-pointer"
+              >
+                Đặt lại bộ lọc về ban đầu
+              </button>
+            }
+          </div>
+        </div>
+
+        <!-- FILTERED RESULTS GRID -->
+        <div>
+          @if (charService.filteredCharacters().length > 0) {
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              @for (char of charService.filteredCharacters(); track char.id) {
+                <app-character-card [char]="char"></app-character-card>
+              }
+            </div>
+          } @else {
+            <div class="p-12 rounded-3xl bg-white/80 border border-dashed border-[#ECD9DE] text-center space-y-3 vintage-shadow">
+              <mat-icon class="text-4xl text-[#C98F9E]">sentiment_dissatisfied</mat-icon>
+              <h4 class="font-serif-vintage text-lg font-bold text-[#5B464B]">
+                Không tìm thấy nhân vật nào phù hợp
+              </h4>
+              <p class="text-xs text-[#8E7479] max-w-md mx-auto">
+                Hiện chưa có nhân vật nào khớp trọn vẹn với từ khóa hoặc tổ hợp thẻ tag đã chọn.
+              </p>
+              <button
+                type="button"
+                (click)="resetFilters()"
+                class="px-5 py-2.5 rounded-full bg-[#FAF0E6] text-xs text-[#A65B6D] font-medium hover:bg-[#FBE4E9] transition-colors cursor-pointer"
+              >
+                Xóa bộ lọc & xem tất cả nhân vật
+              </button>
+            </div>
+          }
+        </div>
+
+      </div>
+    }
+
+    <!-- ========================================== -->
+    <!-- 4. MỤC RIÊNG: COMMISSION & TOS             -->
+    <!-- ========================================== -->
+    @if (activeTab() === 'commission') {
+      <div class="animate-fadeIn">
+        <app-commission-service></app-commission-service>
+      </div>
+    }
+
+    <!-- ========================================== -->
+    <!-- 5. MỤC RIÊNG: GIỚI THIỆU (ABOUT VIEW)      -->
+    <!-- ========================================== -->
+    @if (activeTab() === 'about') {
+      <div class="animate-fadeIn">
+        <app-about-garden></app-about-garden>
+      </div>
+    }
 
   </main>
 
-  <!-- Footer -->
+  <!-- Footer (With distinct tab switching and no page reloading) -->
   <footer class="w-full bg-[#FAF4ED] border-t border-[#E8D4D8] py-10 px-4 text-center mt-12">
     <div class="max-w-4xl mx-auto flex flex-col items-center gap-4">
       <div class="flex items-center gap-2">
@@ -209,27 +502,71 @@
       </div>
 
       <p class="font-script-romantic text-xl text-[#8E7479] max-w-md">
-        "Khu vườn nhỏ của những câu chuyện, những lá thư và những trái tim..."
+        "Khu vườn nhỏ của những câu chuyện, những tâm sự và những trái tim..."
       </p>
 
-      <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-[#78666A] pt-2">
-        <button type="button" (click)="scrollTo('#top')" class="hover:text-[#C98F9E] transition-colors cursor-pointer">
+      <!-- Footer Tab Links (Directly switches to the separate tab) -->
+      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs text-[#78666A] pt-2">
+        <button
+          type="button"
+          (click)="setTab('home')"
+          class="transition-colors cursor-pointer"
+          [class.text-[#C98F9E]]="activeTab() === 'home'"
+          [class.font-bold]="activeTab() === 'home'"
+          [class.hover:text-[#C98F9E]]="activeTab() !== 'home'"
+        >
           Trang chủ
         </button>
         <span>•</span>
-        <button type="button" (click)="scrollTo('#characters')" class="hover:text-[#C98F9E] transition-colors cursor-pointer">
+        <button
+          type="button"
+          (click)="setTab('characters')"
+          class="transition-colors cursor-pointer"
+          [class.text-[#C98F9E]]="activeTab() === 'characters'"
+          [class.font-bold]="activeTab() === 'characters'"
+          [class.hover:text-[#C98F9E]]="activeTab() !== 'characters'"
+        >
           Vườn nhân vật
         </button>
         <span>•</span>
-        <button type="button" (click)="scrollTo('#commission')" class="hover:text-[#C98F9E] transition-colors cursor-pointer font-medium">
+        <button
+          type="button"
+          (click)="setTab('tags')"
+          class="transition-colors cursor-pointer"
+          [class.text-[#C98F9E]]="activeTab() === 'tags'"
+          [class.font-bold]="activeTab() === 'tags'"
+          [class.hover:text-[#C98F9E]]="activeTab() !== 'tags'"
+        >
+          Tra cứu Tag
+        </button>
+        <span>•</span>
+        <button
+          type="button"
+          (click)="setTab('commission')"
+          class="transition-colors cursor-pointer"
+          [class.text-[#C98F9E]]="activeTab() === 'commission'"
+          [class.font-bold]="activeTab() === 'commission'"
+          [class.hover:text-[#C98F9E]]="activeTab() !== 'commission'"
+        >
           Commission (Price & TOS)
         </button>
         <span>•</span>
-        <button type="button" (click)="scrollTo('#about')" class="hover:text-[#C98F9E] transition-colors cursor-pointer">
+        <button
+          type="button"
+          (click)="setTab('about')"
+          class="transition-colors cursor-pointer"
+          [class.text-[#C98F9E]]="activeTab() === 'about'"
+          [class.font-bold]="activeTab() === 'about'"
+          [class.hover:text-[#C98F9E]]="activeTab() !== 'about'"
+        >
           Giới thiệu về LOVE HAVE
         </button>
         <span>•</span>
-        <button type="button" (click)="openWelcome()" class="text-[#C98F9E] font-medium hover:underline cursor-pointer">
+        <button
+          type="button"
+          (click)="openWelcome()"
+          class="text-[#C98F9E] font-medium hover:underline cursor-pointer"
+        >
           Mở lại phong thư chào mừng
         </button>
       </div>
