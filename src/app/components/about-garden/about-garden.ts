@@ -27,6 +27,13 @@ import { Sound } from '../../services/sound';
           <p class="font-script-romantic text-lg sm:text-xl text-[#8E7479] mt-2">
             "Nơi mỗi câu chuyện là một hạt mầm được chăm chút bằng tất cả dịu dàng và cảm xúc..."
           </p>
+
+          <!-- Yue's Author Intro Note -->
+          <div class="mt-5 p-5 sm:p-6 rounded-2xl bg-white/80 border border-[#E8D4D8] text-sm text-[#6B555A] leading-relaxed max-w-2xl mx-auto shadow-2xs font-serif text-center">
+            <p>
+              Yue hay viết char ngược là chủ yếu nhưng sẽ có vài char vui vẻ - hài hước, Yue chỉ tập trung tạo char Trung Quốc - Việt Nam thôi. Nên nếu có xuất hiện mấy char mà tên nước ngoài là Yue đang tập tành làm quen. Yue hay viết dựa trên audio, truyện tiểu thuyết và cảm nghĩ tự do.
+            </p>
+          </div>
         </div>
 
         <!-- 3 Feature Cards: Facebook, Discord, Commission -->
@@ -72,7 +79,7 @@ import { Sound } from '../../services/sound';
 
           <!-- 2. Discord Link Card -->
           <a
-            href="https://discord.gg/qxQfxTGyk"
+            href="https://discord.gg/bbtXfxp48"
             target="_blank"
             rel="noopener noreferrer"
             (click)="onLinkClick()"
@@ -95,7 +102,7 @@ import { Sound } from '../../services/sound';
                 Liên kết Discord
               </h4>
               <p class="text-xs font-mono text-[#8E7479] mt-0.5 truncate">
-                discord.gg/qxQfxTGyk
+                discord.gg/bbtXfxp48
               </p>
               <p class="text-xs text-[#78666A] mt-3 leading-relaxed">
                 Máy chủ cộng đồng chính thức: giao lưu chia sẻ trải nghiệm nhập vai, thảo luận kịch bản và nhận thông báo bot mới.

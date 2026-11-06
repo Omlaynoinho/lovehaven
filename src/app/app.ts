@@ -9,6 +9,7 @@ import { CharacterDetailModal } from './components/character-detail-modal/charac
 import { Mailbox } from './components/mailbox/mailbox';
 import { CommissionServiceComponent } from './components/commission-service/commission-service';
 import { AboutGarden } from './components/about-garden/about-garden';
+import { EntranceScreen } from './components/entrance-screen/entrance-screen';
 import { MusicPlayer } from './components/music-player/music-player';
 import { CharacterService } from './services/character';
 import { Sound } from './services/sound';
@@ -19,6 +20,7 @@ import { Sound } from './services/sound';
   imports: [
     CommonModule,
     MatIconModule,
+    EntranceScreen,
     HeaderNav,
     GardenBackground,
     WelcomeEnvelope,
@@ -36,7 +38,17 @@ export class App {
   readonly charService = inject(CharacterService);
   readonly sound = inject(Sound);
 
+  readonly hasEntered = signal<boolean>(false);
   readonly welcomeOpen = signal<boolean>(false);
+
+  onEnterGarden(): void {
+    this.hasEntered.set(true);
+  }
+
+  reopenEntrance(): void {
+    this.sound.playPaper();
+    this.hasEntered.set(false);
+  }
 
   openWelcome(): void {
     this.sound.playPaper();

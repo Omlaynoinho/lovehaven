@@ -2,7 +2,7 @@ import { Character, SiteConfig } from '../app/models/character.model';
 export type { Character, SiteConfig };
 
 export const DEFAULT_SITE_CONFIG: SiteConfig = {
-  youtubeMusicUrl: 'https://youtu.be/MNb6hEKAS08?si=Lz8Kem3N9jptY7dv',
+  youtubeMusicUrl: 'https://youtu.be/_8kmc_tFzQw?si=7GD9oh-RIbfhw37R',
   siteName: 'LOVE HAVE',
   tagline: 'A Little Garden of Stories & Hearts.',
   welcomeGreeting: 'Có một khu vườn nhỏ đang chờ bạn khám phá...',

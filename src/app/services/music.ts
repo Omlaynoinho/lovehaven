@@ -18,22 +18,34 @@ export class Music {
 
   readonly tracks: MusicTrack[] = [
     {
-      id: 'gui-ling',
-      title: '归零 (Quy Linh)',
-      artist: 'Romantic Piano OST',
-      youtubeId: 'MNb6hEKAS08',
+      id: 'gone-bad',
+      title: 'GoneBad蝴蝶步 (封神版)',
+      artist: 'Phong Thần Bản',
+      youtubeId: '_8kmc_tFzQw',
     },
     {
-      id: 'garden-serenade',
-      title: 'Garden of Memories',
-      artist: 'Acoustic Guitar & Violin',
-      youtubeId: '5qap5aO4i9A',
+      id: 'chuo-xue-inst',
+      title: '灼雪【伴奏】',
+      artist: 'Chước Tuyết (Beat / Bán Tấu)',
+      youtubeId: 'nTd5NhJxmkk',
     },
     {
-      id: 'gentle-rain',
-      title: 'Autumn Rain in Peking',
-      artist: 'Classical Ambient',
-      youtubeId: 'jfKfPfyJRdk',
+      id: 'gui-si',
+      title: 'Quy Tứ (归肆)',
+      artist: 'Cổ Phong Trầm Lắng',
+      youtubeId: 'GEGSzh4vUuE',
+    },
+    {
+      id: 'lightning-moment-harp',
+      title: 'Lightning Moment (竖琴版)',
+      artist: 'Thụ Cầm Bản (Harp Version)',
+      youtubeId: 'KVremu955Qk',
+    },
+    {
+      id: 'jing-wei',
+      title: 'Tinh Vệ (精卫)',
+      artist: 'Huyền Âm Cổ Phong',
+      youtubeId: 'pWAQZ3bg1Qk',
     },
   ];
 

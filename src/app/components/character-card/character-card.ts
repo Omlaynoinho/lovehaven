@@ -12,11 +12,19 @@ import { Sound } from '../../services/sound';
   template: `
     <div
       (click)="onClick()"
-      class="group relative h-full flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-white/85 hover:bg-white border border-[#E9D7DC] hover:border-[#C98F9E] transition-all duration-300 vintage-shadow hover:shadow-xl cursor-pointer overflow-hidden transform hover:-translate-y-1"
+      class="group relative h-full flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-[#FFFDFB]/92 hover:bg-white border border-[#F0C9D2]/75 hover:border-[#E89EAE] transition-all duration-300 vintage-shadow hover:shadow-xl cursor-pointer overflow-hidden transform hover:-translate-y-1"
     >
+      <!-- Corner Botanical Leaf & Ribbon Accent -->
+      <div class="absolute -top-1 -right-1 w-14 h-14 overflow-hidden pointer-events-none opacity-40 group-hover:opacity-80 transition-opacity">
+        <svg viewBox="0 0 40 40" class="w-full h-full text-[#F092A5]">
+          <path d="M0 0 L40 0 L40 40 Z" fill="#FFE5EC"/>
+          <path d="M22 6 C 30 14, 32 24, 34 34" stroke="#EAA2B2" stroke-width="1.2" fill="none"/>
+        </svg>
+      </div>
+
       <!-- Background Ambient Glow -->
       <div
-        class="absolute -top-12 -right-12 w-32 h-32 rounded-full opacity-10 group-hover:opacity-20 transition-opacity blur-2xl pointer-events-none"
+        class="absolute -top-10 -right-10 w-32 h-32 rounded-full opacity-15 group-hover:opacity-25 transition-opacity blur-2xl pointer-events-none"
         [style.background-color]="char().flowerColor"
       ></div>
 

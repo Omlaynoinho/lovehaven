@@ -1,1 +1,31 @@
-[]
+[
+  {
+    "id": "letter-seed-1",
+    "senderName": "Một đóa Cúc Mùa Thu",
+    "recipientCharacterName": "Cố Giang Chi",
+    "recipientCharacterId": "co-giang-chi",
+    "message": "Gửi chàng trai mang vết thương sâu kín nơi Kinh Đô, hy vọng ngọn gió thu năm nay sẽ thổi bay đi những lạnh lùng và đem lại cho anh một chút ấm áp chân thành.",
+    "flowerChoice": "Cúc Họa Mi",
+    "createdAt": "2026-11-05T09:15:00.000Z",
+    "isPublic": true
+  },
+  {
+    "id": "letter-seed-2",
+    "senderName": "Tiểu Nguyệt",
+    "recipientCharacterName": "OPW - Đại Cảnh Hoàng Triều",
+    "recipientCharacterId": "opw-dai-canh-hoang-trieu",
+    "message": "Tử Cấm Thành sâu tựa biển, những mưu mô quyền đoạt nghẹt thở giữa cửu trùng đài làm người ta vừa sợ vừa mê đắm. Chúc hoàng triều sẽ tìm thấy một lối thoát giữa bể máu.",
+    "flowerChoice": "Mạn Châu Sa",
+    "createdAt": "2026-11-05T14:30:00.000Z",
+    "isPublic": true
+  },
+  {
+    "id": "letter-seed-3",
+    "senderName": "Lữ khách phương xa",
+    "recipientCharacterName": "Khu Vườn LOVE HAVE",
+    "message": "Khu vườn thật dịu dàng và bình yên. Cảm ơn vì đã tạo ra một góc trú ngụ ấm áp cho những tâm hồn yêu thích câu chuyện nhập vai.",
+    "flowerChoice": "Hoa Hồng",
+    "createdAt": "2026-11-06T02:00:00.000Z",
+    "isPublic": true
+  }
+]

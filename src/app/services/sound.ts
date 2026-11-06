@@ -105,4 +105,31 @@ export class Sound {
       // Ignore audio error
     }
   }
+
+  playFlower(): void {
+    if (!this.soundEnabled()) return;
+    const ctx = this.getAudioContext();
+    if (!ctx) return;
+
+    try {
+      const notes = [659.25, 880, 1046.5]; // E5, A5, C6
+      notes.forEach((freq, i) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, ctx.currentTime + i * 0.05);
+
+        gain.gain.setValueAtTime(0.05, ctx.currentTime + i * 0.05);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + i * 0.05 + 0.25);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(ctx.currentTime + i * 0.05);
+        osc.stop(ctx.currentTime + i * 0.05 + 0.25);
+      });
+    } catch {
+      // Ignore audio error
+    }
+  }
 }

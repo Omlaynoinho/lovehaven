@@ -178,6 +178,8 @@ export class MusicPlayer implements OnInit {
               this.music.isPlaying.set(true);
             } else if (event.data === 2) {
               this.music.isPlaying.set(false);
+            } else if (event.data === 0) {
+              this.music.nextTrack();
             }
           },
         },

@@ -9,7 +9,7 @@ import { Music } from '../../services/music';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, MatIconModule],
   template: `
-    <header class="sticky top-0 z-30 w-full transition-all duration-300 bg-[#FFF7ED]/90 backdrop-blur-md border-b border-[#EBCBD4]/40">
+    <header class="sticky top-0 z-30 w-full transition-all duration-300 bg-[#FFFDFB]/90 backdrop-blur-md border-b border-[#F0BAC8]/60 shadow-2xs">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
         
         <!-- Logo & Branding -->
@@ -19,14 +19,20 @@ import { Music } from '../../services/music';
           class="flex items-center gap-2 sm:gap-3 group cursor-pointer"
         >
           <!-- Vintage Rose Icon Ribbon -->
-          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-tr from-[#EBCBD4] to-[#FFF7ED] border border-[#C98F9E]/40 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-tr from-[#FFD1DC] via-[#FFEBEF] to-[#FFF7ED] border border-[#F0A8B8]/60 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
             <mat-icon class="text-[#C98F9E] text-lg sm:text-xl">local_florist</mat-icon>
           </div>
 
           <div class="flex flex-col">
-            <span class="font-serif-vintage text-xl sm:text-2xl text-[#5B464B] font-semibold tracking-wide leading-none group-hover:text-[#C98F9E] transition-colors">
-              LOVE HAVE
-            </span>
+            <div class="flex items-center gap-1.5">
+              <span class="font-serif-vintage text-xl sm:text-2xl text-[#5B464B] font-semibold tracking-wide leading-none group-hover:text-[#C98F9E] transition-colors">
+                LOVE HAVE
+              </span>
+              <!-- Dainty Ribbon Bow Icon -->
+              <svg class="w-3.5 h-3.5 text-[#F092A5] opacity-80" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 9c-1.5-2.5-4-3-6-2s-2.5 3.5-.5 5.5c1.8 1.8 4.5 1.5 6.5-0.5c2 2 4.7 2.3 6.5 0.5c2-2 1.5-4.5-.5-5.5s-4.5-0.5-6 2zm-1.5 2c-1.3 1.3-3 1.2-4.2 0c-1-1-0.8-2.2 0.2-2.8c1.1-0.6 2.8-0.2 4 1.3v1.5zm3 0v-1.5c1.2-1.5 2.9-1.9 4-1.3c1 0.6 1.2 1.8 0.2 2.8c-1.2 1.2-2.9 1.3-4.2 0z"/>
+              </svg>
+            </div>
             <span class="font-script-romantic text-xs sm:text-sm text-[#8E7479] mt-0.5 hidden xs:inline">
               A Little Garden of Stories & Hearts
             </span>
@@ -104,15 +110,15 @@ import { Music } from '../../services/music';
             </mat-icon>
           </button>
 
-          <!-- Reopen Welcome Envelope Button -->
+          <!-- Reopen Welcome Entrance Screen Button -->
           <button
             type="button"
-            (click)="openWelcomeEnvelope()"
-            title="Mở lại phong thư chào"
+            (click)="onReopenEntrance()"
+            title="Xem lại màn hình chào"
             class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FAF0E6] hover:bg-[#F7E1E6] border border-[#E8D4D8] text-xs text-[#78666A] font-medium transition-colors cursor-pointer"
           >
             <mat-icon class="text-xs text-[#C98F9E]">mark_email_read</mat-icon>
-            <span>Phong thư</span>
+            <span>Màn hình chào</span>
           </button>
 
           <!-- Mobile Hamburger Toggle -->
@@ -212,6 +218,7 @@ export class HeaderNav {
   readonly music = inject(Music);
 
   readonly reopenWelcome = output<void>();
+  readonly reopenEntrance = output<void>();
   readonly mobileMenuOpen = signal<boolean>(false);
 
   toggleMobileMenu(): void {
@@ -221,6 +228,12 @@ export class HeaderNav {
 
   toggleSound(): void {
     this.sound.toggleSound();
+  }
+
+  onReopenEntrance(): void {
+    this.sound.playPaper();
+    this.mobileMenuOpen.set(false);
+    this.reopenEntrance.emit();
   }
 
   openWelcomeEnvelope(): void {

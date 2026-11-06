@@ -148,29 +148,52 @@ export class CharacterService {
 
   loadLetters(): void {
     this.isLoadingLetters.set(true);
+
+    // 1. Immediately read from localStorage if present (client-side)
+    if (typeof window !== 'undefined') {
+      try {
+        const cached = localStorage.getItem('love_have_mailbox_letters');
+        if (cached) {
+          const parsed: PublicMailboxLetter[] = JSON.parse(cached);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            this.publicLetters.set(parsed);
+            const senders = new Set(parsed.map((l) => l.senderName));
+            this.totalSenders.set(senders.size);
+          }
+        }
+      } catch {
+        // Ignore localStorage error
+      }
+    }
+
+    // 2. Fetch from server /api/mailbox to get all persisted letters
     this.http
       .get<MailboxResponseData>('/api/mailbox')
       .pipe(
         catchError(() =>
           of({
-            letters: [
-              {
-                id: 'seed-1',
-                senderName: 'Một lữ khách qua đường',
-                recipientCharacterId: 'co-giang-chi',
-                recipientCharacterName: 'Cố Giang Chi',
-                message: 'Gửi Cố thiếu gia, hy vọng anh sớm tìm lại được bình yên trong tâm hồn giữa những toan tính lạnh lùng.',
-                flowerChoice: 'Hoa Hồng',
-                createdAt: new Date().toISOString(),
-                isPublic: true,
-              },
-            ],
-            totalSenders: 1,
+            letters: this.publicLetters().length > 0 ? this.publicLetters() : [],
+            totalSenders: this.totalSenders(),
           })
         ),
         tap((res) => {
-          this.publicLetters.set(res.letters || []);
-          this.totalSenders.set(res.totalSenders || (res.letters ? res.letters.length : 0));
+          if (res && res.letters && res.letters.length > 0) {
+            // Merge with local letters if any were created offline
+            const existingIds = new Set(res.letters.map((l) => l.id));
+            const localOnly = this.publicLetters().filter((l) => !existingIds.has(l.id));
+            const merged = [...res.letters, ...localOnly];
+            this.publicLetters.set(merged);
+            const senders = new Set(merged.map((l) => l.senderName));
+            this.totalSenders.set(res.totalSenders || senders.size);
+
+            if (typeof window !== 'undefined') {
+              try {
+                localStorage.setItem('love_have_mailbox_letters', JSON.stringify(merged));
+              } catch {
+                // Ignore storage quota
+              }
+            }
+          }
           this.isLoadingLetters.set(false);
         })
       )
@@ -323,9 +346,17 @@ export class CharacterService {
         }),
         tap((res) => {
           if (res.success && res.letter) {
-            this.publicLetters.update((list) => [res.letter!, ...list.filter((l) => l.id !== res.letter!.id)]);
+            const updated = [res.letter!, ...this.publicLetters().filter((l) => l.id !== res.letter!.id)];
+            this.publicLetters.set(updated);
             if (res.totalSenders) {
               this.totalSenders.set(res.totalSenders);
+            }
+            if (typeof window !== 'undefined') {
+              try {
+                localStorage.setItem('love_have_mailbox_letters', JSON.stringify(updated));
+              } catch {
+                // Ignore storage error
+              }
             }
           }
         })

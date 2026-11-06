@@ -6,28 +6,28 @@ export interface Track {
 
 export const PLAYLIST: Track[] = [
   {
-    id: 'MNb6hEKAS08',
-    title: '归零',
-    url: 'https://youtu.be/MNb6hEKAS08?si=0c54BjXX9U4Rpdyf',
+    id: '_8kmc_tFzQw',
+    title: 'GoneBad蝴蝶步 (封神版)',
+    url: 'https://youtu.be/_8kmc_tFzQw?si=7GD9oh-RIbfhw37R',
+  },
+  {
+    id: 'nTd5NhJxmkk',
+    title: '灼雪【伴奏】',
+    url: 'https://youtu.be/nTd5NhJxmkk?si=eJHNSHwo6R77G3bW',
   },
   {
     id: 'GEGSzh4vUuE',
-    title: '归肆',
-    url: 'https://youtu.be/GEGSzh4vUuE?si=mzO5HpbheeczF7Oa',
+    title: 'Quy Tứ (归肆)',
+    url: 'https://youtu.be/GEGSzh4vUuE?si=BsduHsBtLW_jRa2f',
   },
   {
-    id: 'ZLPB5OT_nuQ',
-    title: '灼雪',
-    url: 'https://youtu.be/ZLPB5OT_nuQ?si=NHyw4F8ayPBUVUjA',
+    id: 'KVremu955Qk',
+    title: 'Lightning Moment (竖琴版)',
+    url: 'https://youtu.be/KVremu955Qk?si=b4jWrgEEt6jEQWyx',
   },
   {
-    id: 'nivGQ6aXN5o',
-    title: 'Wyw my sweetie',
-    url: 'https://youtu.be/nivGQ6aXN5o?si=8I5PJOiLX5GQI-bk',
-  },
-  {
-    id: '_8kmc_tFzQw',
-    title: 'GoneBad蝴蝶步 (封神版)',
-    url: 'https://youtu.be/_8kmc_tFzQw?si=1g3oaPTFXDdyfzfd',
+    id: 'pWAQZ3bg1Qk',
+    title: 'Tinh Vệ (精卫)',
+    url: 'https://youtu.be/pWAQZ3bg1Qk?si=dSjl6kEP1XsScjh6',
   },
 ];

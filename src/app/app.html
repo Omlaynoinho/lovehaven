@@ -1,27 +1,53 @@
-<div class="relative min-h-screen flex flex-col justify-between selection:bg-[#EBCBD4] selection:text-[#5B3E45]">
+<!-- MÀN HÌNH CHÀO — ENTRANCE -->
+@if (!hasEntered()) {
+  <app-entrance-screen (enter)="onEnterGarden()"></app-entrance-screen>
+}
+
+<div
+  class="relative min-h-screen flex flex-col justify-between selection:bg-[#EBCBD4] selection:text-[#5B3E45] transition-opacity duration-700 ease-out"
+  [class.opacity-0]="!hasEntered()"
+  [class.opacity-100]="hasEntered()"
+>
   
   <!-- Romantic Ambient Background -->
   <app-garden-background></app-garden-background>
 
   <!-- Sticky Header Navigation -->
-  <app-header-nav (reopenWelcome)="openWelcome()"></app-header-nav>
+  <app-header-nav (reopenWelcome)="openWelcome()" (reopenEntrance)="reopenEntrance()"></app-header-nav>
 
   <!-- Main Content Flow -->
   <main class="flex-1 w-full" id="top">
     
     <!-- Hero Garden Banner -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-12 text-center">
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-12 text-center relative">
       
-      <!-- Crown Flower Badge -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FAF0E6]/90 border border-[#E8D4D8] text-xs font-serif text-[#A65B6D] mb-6 shadow-2xs">
-        <mat-icon class="text-sm">local_florist</mat-icon>
-        <span class="tracking-wide">Khu Vườn Nhân Vật Nhập Vai & Tình Cảm</span>
+      <!-- Crown Flower Badge with Silk Ribbon Bow -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/85 backdrop-blur-xs border border-[#F0BAC8] text-xs font-serif text-[#A65B6D] mb-6 shadow-2xs">
+        <!-- Silk Ribbon Bow Icon -->
+        <svg class="w-4 h-4 text-[#F092A5] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 9c-1.5-2.5-4-3-6-2s-2.5 3.5-.5 5.5c1.8 1.8 4.5 1.5 6.5-0.5c2 2 4.7 2.3 6.5 0.5c2-2 1.5-4.5-.5-5.5s-4.5-0.5-6 2zm-1.5 2c-1.3 1.3-3 1.2-4.2 0c-1-1-0.8-2.2 0.2-2.8c1.1-0.6 2.8-0.2 4 1.3v1.5zm3 0v-1.5c1.2-1.5 2.9-1.9 4-1.3c1 0.6 1.2 1.8 0.2 2.8c-1.2 1.2-2.9 1.3-4.2 0z"/>
+        </svg>
+        <span class="tracking-wide">Vườn Hoa Mùa Thu • Nhân Vật Nhập Vai & Tình Cảm</span>
+        <mat-icon class="text-xs text-[#8FA88B]">eco</mat-icon>
       </div>
 
-      <!-- Main Title -->
-      <h1 class="font-serif-vintage text-4xl sm:text-6xl lg:text-7xl font-bold text-[#5B464B] tracking-tight mb-4">
-        LOVE HAVE
-      </h1>
+      <!-- Main Title with Botanical Flourish -->
+      <div class="relative inline-block mb-3">
+        <h1 class="font-serif-vintage text-4xl sm:text-6xl lg:text-7xl font-bold text-[#5B464B] tracking-tight">
+          LOVE HAVE
+        </h1>
+        <!-- Subtle Autumn Leaf Accents on Left & Right -->
+        <div class="absolute -top-3 -left-7 sm:-left-10 text-[#FFB7A5] opacity-75 hidden sm:block pointer-events-none transform -rotate-25">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8 6 4 11 6 16c2 5 7 6 10 3c3-3 2-8-4-17z"/>
+          </svg>
+        </div>
+        <div class="absolute -top-2 -right-7 sm:-right-10 text-[#8FA88B] opacity-75 hidden sm:block pointer-events-none transform rotate-35">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17 8C8 10 5 16 7 20c2 4 8 2 11-3c3-5 1-8-1-9z"/>
+          </svg>
+        </div>
+      </div>
 
       <!-- Script Romantic Tagline -->
       <p class="font-script-romantic text-2xl sm:text-3xl text-[#8E7479] max-w-xl mx-auto mb-6">
@@ -66,7 +92,7 @@
 
     <!-- SEARCH & FILTER BY TAG SECTION -->
     <section id="tags-section" class="max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-20">
-      <div class="p-6 sm:p-7 rounded-3xl bg-white/80 border border-[#EADCE0] vintage-shadow space-y-5">
+      <div class="p-6 sm:p-7 rounded-3xl bg-[#FFFDFB]/90 backdrop-blur-sm border border-[#F0BAC8]/75 vintage-shadow space-y-5">
         
         <!-- Search bar -->
         <div class="relative max-w-xl mx-auto">
@@ -76,7 +102,7 @@
             [value]="charService.searchQuery()"
             (input)="onSearchInput($event)"
             placeholder="Tìm kiếm theo tên nhân vật, bối cảnh, thể loại..."
-            class="w-full pl-11 pr-10 py-3 rounded-full border border-[#E5D0D5] bg-[#FFFDF9] text-xs sm:text-sm text-[#5B464B] placeholder:text-[#B59EA3] focus:outline-none focus:border-[#C98F9E] focus:ring-1 focus:ring-[#C98F9E] shadow-2xs"
+            class="w-full pl-11 pr-10 py-3 rounded-full border border-[#F0BAC8]/80 bg-[#FFFDF9] text-xs sm:text-sm text-[#5B464B] placeholder:text-[#B59EA3] focus:outline-none focus:border-[#C98F9E] focus:ring-1 focus:ring-[#C98F9E] shadow-2xs"
           />
           @if (charService.searchQuery()) {
             <button

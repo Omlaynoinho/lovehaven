@@ -1,3 +1,52 @@
 {
-  "entities": {}
+  "entities": {
+    "Letter": {
+      "title": "MailboxLetter",
+      "description": "Public guestbook letter left in the garden mailbox",
+      "type": "object",
+      "properties": {
+        "senderName": {
+          "type": "string",
+          "description": "Name or nickname of the sender",
+          "maxLength": 100
+        },
+        "recipientCharacterId": {
+          "type": "string",
+          "description": "Optional ID of the recipient character",
+          "maxLength": 100
+        },
+        "recipientCharacterName": {
+          "type": "string",
+          "description": "Optional name of the recipient character",
+          "maxLength": 150
+        },
+        "message": {
+          "type": "string",
+          "description": "Letter message content",
+          "maxLength": 2000
+        },
+        "flowerChoice": {
+          "type": "string",
+          "description": "Name of the flower sent with the letter",
+          "maxLength": 50
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO timestamp of creation"
+        },
+        "isPublic": {
+          "type": "boolean",
+          "description": "Whether the letter is publicly displayed in the mailbox"
+        }
+      },
+      "required": ["senderName", "message", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/letters/{letterId}": {
+      "schema": "Letter",
+      "description": "Public letters placed in the garden mailbox"
+    }
+  }
 }
