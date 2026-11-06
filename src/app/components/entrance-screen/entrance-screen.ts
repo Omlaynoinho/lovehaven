@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, inject, output, signal } from '@ang
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { Sound } from '../../services/sound';
+import { Music } from '../../services/music';
 
 interface FallingPetal {
   id: number;
@@ -297,6 +298,7 @@ interface FallingPetal {
 })
 export class EntranceScreen {
   readonly sound = inject(Sound);
+  readonly music = inject(Music);
   readonly enter = output<void>();
 
   readonly isOpening = signal<boolean>(false);
@@ -318,6 +320,9 @@ export class EntranceScreen {
 
   onSendLetter(): void {
     if (this.isOpening()) return;
+
+    // Ưu tiên tự động phát nhạc khi người dùng nhấn nút GỬI THƯ lần đầu
+    this.music.autoPlayOnSendLetter();
 
     // 1. Play auditory paper unsealing & gentle chime
     this.sound.playPaper();

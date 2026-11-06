@@ -15,6 +15,10 @@ export class Music {
   readonly currentTrackIndex = signal<number>(0);
   readonly isMuted = signal<boolean>(false);
   readonly showPlaylist = signal<boolean>(false);
+  readonly hasAutoPlayedFirstTime = signal<boolean>(false);
+
+  private player: any = null;
+  private shouldAutoPlayOnReady = false;
 
   readonly tracks: MusicTrack[] = [
     {
@@ -49,10 +53,54 @@ export class Music {
     },
   ];
 
-  private player: any = null;
-
   initPlayer(playerInstance: any): void {
     this.player = playerInstance;
+    // If the user already clicked "GỬI THƯ" before player was ready, start playing immediately
+    if (this.shouldAutoPlayOnReady) {
+      this.play();
+    }
+  }
+
+  /**
+   * Prioritize auto-playing music when user clicks "GỬI THƯ" for the first time.
+   * This is triggered by a real user gesture (click), satisfying browser autoplay policies.
+   */
+  autoPlayOnSendLetter(): void {
+    this.shouldAutoPlayOnReady = true;
+    this.hasAutoPlayedFirstTime.set(true);
+    this.play();
+  }
+
+  play(): void {
+    this.shouldAutoPlayOnReady = true;
+    if (!this.player) return;
+    try {
+      if (this.player.unMute) {
+        this.player.unMute();
+        this.isMuted.set(false);
+      }
+      if (this.player.setVolume) {
+        this.player.setVolume(75);
+      }
+      if (this.player.playVideo) {
+        this.player.playVideo();
+        this.isPlaying.set(true);
+      }
+    } catch {
+      this.isPlaying.set(true);
+    }
+  }
+
+  pause(): void {
+    if (!this.player) return;
+    try {
+      if (this.player.pauseVideo) {
+        this.player.pauseVideo();
+      }
+    } catch {
+      // Ignore
+    }
+    this.isPlaying.set(false);
   }
 
   togglePlay(): void {

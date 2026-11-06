@@ -13,6 +13,7 @@ import { EntranceScreen } from './components/entrance-screen/entrance-screen';
 import { MusicPlayer } from './components/music-player/music-player';
 import { CharacterService } from './services/character';
 import { Sound } from './services/sound';
+import { Music } from './services/music';
 
 @Component({
   selector: 'app-root',
@@ -37,12 +38,15 @@ import { Sound } from './services/sound';
 export class App {
   readonly charService = inject(CharacterService);
   readonly sound = inject(Sound);
+  readonly music = inject(Music);
 
   readonly hasEntered = signal<boolean>(false);
   readonly welcomeOpen = signal<boolean>(false);
 
   onEnterGarden(): void {
     this.hasEntered.set(true);
+    // Ưu tiên tự động phát nhạc khi người dùng nhấn GỬI THƯ lần đầu
+    this.music.autoPlayOnSendLetter();
   }
 
   reopenEntrance(): void {
