@@ -6,7 +6,6 @@ import { GardenBackground } from './components/garden-background/garden-backgrou
 import { WelcomeEnvelope } from './components/welcome-envelope/welcome-envelope';
 import { CharacterCard } from './components/character-card/character-card';
 import { CharacterDetailModal } from './components/character-detail-modal/character-detail-modal';
-import { Mailbox } from './components/mailbox/mailbox';
 import { CommissionServiceComponent } from './components/commission-service/commission-service';
 import { AboutGarden } from './components/about-garden/about-garden';
 import { EntranceScreen } from './components/entrance-screen/entrance-screen';
@@ -27,7 +26,6 @@ import { Music } from './services/music';
     WelcomeEnvelope,
     CharacterCard,
     CharacterDetailModal,
-    Mailbox,
     CommissionServiceComponent,
     AboutGarden,
     MusicPlayer,

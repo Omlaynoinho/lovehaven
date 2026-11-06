@@ -45,6 +45,7 @@ export function subscribeToLetters(callback: (letters: MailboxLetter[]) => void)
           const data = doc.data();
           letters.push({
             id: doc.id,
+            title: data['title'] || 'Thư gửi khu vườn',
             senderName: data['senderName'] || 'Ẩn danh',
             recipientCharacterId: data['recipientCharacterId'] || '',
             recipientCharacterName: data['recipientCharacterName'] || 'Tất cả nhân vật',

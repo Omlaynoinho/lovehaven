@@ -79,14 +79,6 @@
           <span>Commission & Bảng Giá</span>
         </button>
 
-        <button
-          type="button"
-          (click)="scrollTo('#mailbox')"
-          class="px-6 py-3 rounded-full bg-[#FAF0E6] hover:bg-[#FBE4E9] text-[#78666A] hover:text-[#5B464B] text-xs sm:text-sm font-medium transition-colors flex items-center gap-2 cursor-pointer"
-        >
-          <mat-icon class="text-sm text-[#C98F9E]">mail</mat-icon>
-          <span>Hộp thư gửi gắm</span>
-        </button>
       </div>
     </section>
 
@@ -198,8 +190,6 @@
       }
     </section>
 
-    <!-- MAILBOX SECTION -->
-    <app-mailbox></app-mailbox>
 
     <!-- COMMISSION SERVICE SECTION -->
     <app-commission-service></app-commission-service>
@@ -233,10 +223,6 @@
         <span>•</span>
         <button type="button" (click)="scrollTo('#commission')" class="hover:text-[#C98F9E] transition-colors cursor-pointer font-medium">
           Commission (Price & TOS)
-        </button>
-        <span>•</span>
-        <button type="button" (click)="scrollTo('#mailbox')" class="hover:text-[#C98F9E] transition-colors cursor-pointer">
-          Gửi thư
         </button>
         <span>•</span>
         <button type="button" (click)="scrollTo('#about')" class="hover:text-[#C98F9E] transition-colors cursor-pointer">

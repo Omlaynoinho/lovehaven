@@ -1,6 +1,7 @@
 [
   {
     "id": "letter-seed-1",
+    "title": "Gửi ngọn gió thu ấm áp cho Cố Giang Chi",
     "senderName": "Một đóa Cúc Mùa Thu",
     "recipientCharacterName": "Cố Giang Chi",
     "recipientCharacterId": "co-giang-chi",
@@ -11,6 +12,7 @@
   },
   {
     "id": "letter-seed-2",
+    "title": "Về bức tường son nhuốm máu Tử Cấm Thành",
     "senderName": "Tiểu Nguyệt",
     "recipientCharacterName": "OPW - Đại Cảnh Hoàng Triều",
     "recipientCharacterId": "opw-dai-canh-hoang-trieu",
@@ -21,6 +23,7 @@
   },
   {
     "id": "letter-seed-3",
+    "title": "Một góc bình yên dịu dàng giữa cuộc đời",
     "senderName": "Lữ khách phương xa",
     "recipientCharacterName": "Khu Vườn LOVE HAVE",
     "message": "Khu vườn thật dịu dàng và bình yên. Cảm ơn vì đã tạo ra một góc trú ngụ ấm áp cho những tâm hồn yêu thích câu chuyện nhập vai.",

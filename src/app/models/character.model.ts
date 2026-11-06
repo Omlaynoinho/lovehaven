@@ -31,6 +31,7 @@ export interface SiteConfig {
 
 export interface MailboxLetter {
   id: string;
+  title?: string;
   senderName: string;
   recipientCharacterId?: string;
   recipientCharacterName?: string;

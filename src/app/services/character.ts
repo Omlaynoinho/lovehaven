@@ -305,6 +305,7 @@ export class CharacterService {
   }
 
   sendMailboxLetter(payload: {
+    title?: string;
     senderName: string;
     recipientCharacterId?: string;
     recipientCharacterName?: string;
@@ -313,6 +314,7 @@ export class CharacterService {
   }): Observable<MailboxResponse> {
     // Also save to Firestore in background
     saveLetterToFirestore({
+      title: payload.title,
       senderName: payload.senderName,
       recipientCharacterId: payload.recipientCharacterId,
       recipientCharacterName: payload.recipientCharacterName,
@@ -328,6 +330,7 @@ export class CharacterService {
         catchError(() => {
           const letter: PublicMailboxLetter = {
             id: 'local-' + Date.now(),
+            title: payload.title || 'Thư gửi khu vườn',
             senderName: payload.senderName || 'Ẩn danh',
             recipientCharacterId: payload.recipientCharacterId,
             recipientCharacterName: payload.recipientCharacterName,

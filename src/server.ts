@@ -162,7 +162,7 @@ app.get('/api/mailbox', (_req, res) => {
 
 // 5. Send Letter to Mailbox
 app.post('/api/mailbox', (req, res) => {
-  const { senderName, recipientCharacterId, recipientCharacterName, message, flowerChoice } = req.body || {};
+  const { title, senderName, recipientCharacterId, recipientCharacterName, message, flowerChoice } = req.body || {};
 
   if (!message || typeof message !== 'string' || message.trim().length === 0) {
     res.status(400).json({
@@ -174,6 +174,7 @@ app.post('/api/mailbox', (req, res) => {
 
   const newLetter: MailboxLetter = {
     id: 'letter-' + Date.now() + '-' + Math.random().toString(36).substring(2, 6),
+    title: (title && title.trim()) || 'Thư gửi khu vườn',
     senderName: (senderName && senderName.trim()) || 'Lữ khách ẩn danh',
     recipientCharacterId: recipientCharacterId || undefined,
     recipientCharacterName: recipientCharacterName || 'Toàn bộ khu vườn',

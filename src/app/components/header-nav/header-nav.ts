@@ -68,14 +68,6 @@ import { Music } from '../../services/music';
             <span>Tag</span>
           </a>
 
-          <a
-            href="#mailbox"
-            (click)="onNavClick('#mailbox', $event)"
-            class="px-3 py-1.5 rounded-full hover:bg-[#FBECEF] text-xs lg:text-sm font-medium transition-colors flex items-center gap-1.5"
-          >
-            <mat-icon class="text-xs text-[#C98F9E]">mail</mat-icon>
-            <span>Hộp thư</span>
-          </a>
 
           <a
             href="#commission"
@@ -163,14 +155,6 @@ import { Music } from '../../services/music';
             <span>Tìm theo Tag</span>
           </a>
 
-          <a
-            href="#mailbox"
-            (click)="onNavClick('#mailbox', $event)"
-            class="flex items-center gap-2.5 py-2 px-3 rounded-xl hover:bg-[#FBECEF] text-sm font-medium text-[#5B464B]"
-          >
-            <mat-icon class="text-sm text-[#C98F9E]">mail</mat-icon>
-            <span>Hộp thư gửi gắm</span>
-          </a>
 
           <a
             href="#commission"
