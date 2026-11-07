@@ -54,6 +54,28 @@ export class App {
     this.hasEntered.set(false);
   }
 
+  readonly fbLiked = signal<boolean>(false);
+  readonly fbLikeCount = signal<number>(224);
+  readonly copySuccess = signal<boolean>(false);
+
+  toggleFbLike(): void {
+    this.sound.playFlower();
+    this.fbLiked.update((v) => {
+      const next = !v;
+      this.fbLikeCount.update((c) => (next ? c + 1 : c - 1));
+      return next;
+    });
+  }
+
+  shareProfile(): void {
+    this.sound.playClick();
+    if (typeof navigator !== 'undefined' && navigator.clipboard) {
+      navigator.clipboard.writeText(window.location.href);
+      this.copySuccess.set(true);
+      setTimeout(() => this.copySuccess.set(false), 2500);
+    }
+  }
+
   openWelcome(): void {
     this.sound.playPaper();
     this.welcomeOpen.set(true);

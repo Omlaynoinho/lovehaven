@@ -24,245 +24,391 @@
   <main class="flex-1 w-full" id="top">
 
     <!-- ========================================== -->
-    <!-- 1. MỤC RIÊNG: TRANG CHỦ (HOME VIEW)        -->
+    <!-- 1. MỤC RIÊNG: TRANG CHỦ (FACEBOOK PROFILE) -->
     <!-- ========================================== -->
     @if (activeTab() === 'home') {
-      <div class="animate-fadeIn">
+      <div class="animate-fadeIn max-w-5xl mx-auto px-3 sm:px-6 pt-4 sm:pt-6 pb-12 space-y-6">
         
-        <!-- Hero Garden Banner -->
-        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-10 text-center relative">
+        <!-- FACEBOOK PROFILE HEADER CARD -->
+        <section class="rounded-3xl bg-[#FFFDFB]/95 border border-[#F0BAC8]/85 shadow-md overflow-hidden relative backdrop-blur-sm">
           
-          <!-- Crown Flower Badge with Silk Ribbon Bow -->
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/85 backdrop-blur-xs border border-[#F0BAC8] text-xs font-serif text-[#A65B6D] mb-5 shadow-2xs">
-            <svg class="w-4 h-4 text-[#F092A5] shrink-0" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 9c-1.5-2.5-4-3-6-2s-2.5 3.5-.5 5.5c1.8 1.8 4.5 1.5 6.5-0.5c2 2 4.7 2.3 6.5 0.5c2-2 1.5-4.5-.5-5.5s-4.5-0.5-6 2zm-1.5 2c-1.3 1.3-3 1.2-4.2 0c-1-1-0.8-2.2 0.2-2.8c1.1-0.6 2.8-0.2 4 1.3v1.5zm3 0v-1.5c1.2-1.5 2.9-1.9 4-1.3c1 0.6 1.2 1.8 0.2 2.8c-1.2 1.2-2.9 1.3-4.2 0z"/>
-            </svg>
-            <span class="tracking-wide">Vườn Hoa Mùa Thu • Nhân Vật Nhập Vai & Tình Cảm</span>
-            <mat-icon class="text-xs text-[#8FA88B]">eco</mat-icon>
-          </div>
-
-          <!-- Main Title with Botanical Flourish -->
-          <div class="relative inline-block mb-3">
-            <h1 class="font-serif-vintage text-4xl sm:text-6xl lg:text-7xl font-bold text-[#5B464B] tracking-tight">
-              LOVE HAVE
-            </h1>
-            <div class="absolute -top-3 -left-7 sm:-left-10 text-[#FFB7A5] opacity-75 hidden sm:block pointer-events-none transform -rotate-25">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C8 6 4 11 6 16c2 5 7 6 10 3c3-3 2-8-4-17z"/>
-              </svg>
-            </div>
-            <div class="absolute -top-2 -right-7 sm:-right-10 text-[#8FA88B] opacity-75 hidden sm:block pointer-events-none transform rotate-35">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17 8C8 10 5 16 7 20c2 4 8 2 11-3c3-5 1-8-1-9z"/>
-              </svg>
-            </div>
-          </div>
-
-          <!-- Script Romantic Tagline -->
-          <p class="font-script-romantic text-2xl sm:text-3xl text-[#8E7479] max-w-xl mx-auto mb-5">
-            "A Little Garden of Stories & Hearts..."
-          </p>
-
-          <p class="text-xs sm:text-sm text-[#78666A] max-w-2xl mx-auto leading-relaxed mb-8">
-            Mỗi bông hoa lưu giữ một mảnh linh hồn, mỗi nhân vật là một khúc ca thầm kín. 
-            Chào mừng bạn đến với khu vườn mùa thu của Yue Yue — nơi lưu giữ những câu chuyện nhập vai sâu sắc và đầy trắc ẩn.
-          </p>
-
-          <!-- Quick Action Buttons -->
-          <div class="flex flex-wrap items-center justify-center gap-3">
-            <button
-              type="button"
-              (click)="setTab('characters')"
-              class="px-6 py-3 rounded-full bg-gradient-to-r from-[#C98F9E] to-[#A65B6D] hover:from-[#B77A8A] hover:to-[#924C5C] text-white text-xs sm:text-sm font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2 cursor-pointer active:scale-95"
-            >
-              <mat-icon class="text-sm">eco</mat-icon>
-              <span>Vào Vườn Nhân Vật ({{ charService.characters().length }})</span>
-            </button>
-
-            <button
-              type="button"
-              (click)="setTab('commission')"
-              class="px-6 py-3 rounded-full bg-white/90 hover:bg-white border border-[#E9D5DA] hover:border-[#C98F9E] text-[#5B464B] text-xs sm:text-sm font-medium transition-all shadow-xs flex items-center gap-2 cursor-pointer active:scale-95"
-            >
-              <mat-icon class="text-sm text-[#A65B6D]">palette</mat-icon>
-              <span>Bảng Giá Commission & TOS</span>
-            </button>
-          </div>
-        </section>
-
-        <!-- 4 NAVIGATION PORTAL CARDS (Truy cập nhanh từng mục riêng) -->
-        <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-          <div class="text-center mb-8">
-            <span class="text-xs font-serif uppercase tracking-wider text-[#A65B6D] font-bold">
-              ✦ Khám Phá Các Khu Vực ✦
-            </span>
-            <h2 class="font-serif-vintage text-2xl sm:text-3xl font-bold text-[#5B464B] mt-1">
-              Chọn Lối Vào Khu Vườn
-            </h2>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- 1. Ảnh bìa (Cover Photo) -->
+          <div class="relative w-full h-48 sm:h-72 md:h-80 overflow-hidden border-b-4 border-[#DFA3B5]">
+            <img
+              src="/assets/aistudio/IMG_1193_8eb9a787.jpeg"
+              alt="Ảnh bìa sóng biển bãi cát hồng và bướm - Facebook Cover"
+              class="w-full h-full object-cover object-center select-none pointer-events-none"
+              referrerpolicy="no-referrer"
+            />
             
-            <!-- Portal 1: Vườn Nhân Vật -->
-            <div
-              (click)="setTab('characters')"
-              class="group p-6 rounded-3xl bg-[#FFFDF9]/90 hover:bg-white border border-[#F0BAC8]/70 hover:border-[#C98F9E] vintage-shadow hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
-            >
-              <div>
-                <div class="w-12 h-12 rounded-2xl bg-[#EAF0E8] text-[#698565] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <mat-icon class="text-2xl">eco</mat-icon>
-                </div>
-                <div class="inline-block px-2.5 py-0.5 rounded-full bg-[#EAF0E8] text-[#557051] text-[10px] font-medium mb-2">
-                  {{ charService.characters().length }} Tác phẩm
-                </div>
-                <h3 class="font-serif-vintage text-lg font-bold text-[#5B464B] group-hover:text-[#C98F9E] transition-colors mb-2">
-                  Vườn Nhân Vật
-                </h3>
-                <p class="text-xs text-[#78666A] leading-relaxed">
-                  Xem danh sách đầy đủ các nhân vật nhập vai, cốt truyện, tính cách và liên kết trải nghiệm.
-                </p>
+            <!-- Soft gradient overlay at top & bottom -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/25 pointer-events-none"></div>
+
+            <!-- Facebook-style Cover Camera Badge -->
+            <div class="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-10">
+              <span class="px-3 py-1.5 rounded-xl bg-black/45 hover:bg-black/60 backdrop-blur-md text-white text-xs font-medium flex items-center gap-1.5 shadow-sm transition-colors cursor-default select-none">
+                <mat-icon class="text-sm">photo_camera</mat-icon>
+                <span>Ảnh bìa sóng biển hồng</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- 2. Avatar & Profile Center Information -->
+          <div class="relative px-4 sm:px-8 pb-6 pt-0 text-center flex flex-col items-center">
+            
+            <!-- Avatar (Ảnh đại diện hình tròn viền hồng) -->
+            <div class="-mt-16 sm:-mt-22 md:-mt-26 relative z-10 inline-block group">
+              <div class="w-32 h-32 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-full border-[5px] sm:border-[6px] border-[#DFA3B5] p-1 bg-[#FFFDFB] shadow-xl overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                <img
+                  src="/assets/aistudio/3CF79AF5-B830-4C15-AC57-4388C30520D1_dea36311.png"
+                  alt="Avatar Ôm Lấy Nỗi Nhớ - Facebook Profile Picture"
+                  class="w-full h-full object-cover object-top rounded-full select-none"
+                  referrerpolicy="no-referrer"
+                />
               </div>
-              <div class="pt-4 mt-4 border-t border-[#F2E5E8] flex items-center justify-between text-xs font-medium text-[#C98F9E]">
-                <span>Khám phá ngay</span>
-                <mat-icon class="text-sm group-hover:translate-x-1 transition-transform">arrow_forward</mat-icon>
+
+              <!-- Camera badge on avatar -->
+              <div
+                class="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#FAF0E6] border-2 border-white flex items-center justify-center text-[#A65B6D] shadow-md group-hover:bg-[#FBE4E9] transition-colors"
+                title="Trạng thái: Đang hoạt động"
+              >
+                <mat-icon class="text-sm sm:text-base">local_florist</mat-icon>
               </div>
             </div>
 
-            <!-- Portal 2: Tra Cứu Tag -->
-            <div
+            <!-- 3. Tên (Name: Ôm Lấy Nỗi Nhớ) -->
+            <div class="mt-3 flex items-center justify-center gap-2 flex-wrap">
+              <h1 class="font-serif-vintage text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#3D2C31] tracking-wide">
+                Ôm Lấy Nỗi Nhớ
+              </h1>
+            </div>
+
+            <!-- Alias & Creator Info -->
+            <div class="text-xs sm:text-sm text-[#8E7479] font-serif mt-1 flex items-center justify-center gap-2 flex-wrap">
+              <span class="font-semibold text-[#5B464B]">(Yue Yue)</span>
+              <span>•</span>
+              <span>Người sáng tạo nhân vật & Sáng lập LOVE HAVE</span>
+              <span>•</span>
+              <span class="text-[#059669] font-medium inline-flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-[#10B981] inline-block animate-pulse"></span>
+                Đang mở Commission
+              </span>
+            </div>
+
+            <!-- Facebook Bio (Tiểu sử trang cá nhân) -->
+            <div class="max-w-xl mx-auto mt-3.5 px-4 sm:px-6 py-2.5 rounded-2xl bg-[#FFF8FA] border border-[#F3D7DF] text-xs sm:text-sm text-[#6E555A] leading-relaxed font-serif text-center shadow-2xs">
+              <p>
+                "Yue hay viết char ngược là chủ yếu nhưng sẽ có vài char vui vẻ - hài hước 🌸 Chỉ tập trung tạo char Trung Quốc - Việt Nam 🍂 Mỗi nhân vật là một khúc ca thầm kín..."
+              </p>
+            </div>
+
+            <!-- Facebook Profile Action Buttons -->
+            <div class="flex items-center justify-center gap-2.5 sm:gap-3 mt-4 flex-wrap">
+              
+              <!-- Message Facebook (Primary) -->
+              <a
+                href="https://www.facebook.com/qingyue224"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-[#1877F2] hover:bg-[#166FE5] text-white text-xs sm:text-sm font-semibold flex items-center gap-2 shadow-xs transition-colors cursor-pointer"
+              >
+                <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                <span>Nhắn tin Facebook</span>
+              </a>
+
+              <!-- Order Commission (Secondary) -->
+              <button
+                type="button"
+                (click)="setTab('commission')"
+                class="px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-[#FAF0E6] hover:bg-[#FBE4E9] text-[#7A3E4D] border border-[#ECD1D8] text-xs sm:text-sm font-semibold flex items-center gap-1.5 shadow-xs transition-colors cursor-pointer"
+              >
+                <mat-icon class="text-sm text-[#C98F9E]">palette</mat-icon>
+                <span>Đặt Commission</span>
+              </button>
+
+              <!-- Join Discord -->
+              <a
+                href="https://discord.gg/bbtXfxp48"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-[#5865F2] hover:bg-[#4752C4] text-white text-xs sm:text-sm font-semibold flex items-center gap-1.5 shadow-xs transition-colors cursor-pointer"
+              >
+                <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                  <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.894a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+                </svg>
+                <span>Discord</span>
+              </a>
+
+              <!-- Share Profile Button -->
+              <button
+                type="button"
+                (click)="shareProfile()"
+                class="px-3.5 py-2 sm:py-2.5 rounded-xl bg-white hover:bg-[#FBE4E9] border border-[#ECD1D8] text-[#5B464B] text-xs sm:text-sm font-medium flex items-center gap-1.5 transition-colors cursor-pointer"
+                title="Sao chép liên kết trang cá nhân"
+              >
+                <mat-icon class="text-sm text-[#8E7479]">share</mat-icon>
+                <span>{{ copySuccess() ? 'Đã sao chép!' : 'Chia sẻ' }}</span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- 4. Facebook Profile Sub-Nav Menu Tabs -->
+          <div class="border-t border-[#F0BAC8]/60 px-4 sm:px-8 py-2 flex items-center justify-start gap-1 sm:gap-2 overflow-x-auto whitespace-nowrap no-scrollbar bg-[#FFFDFB]/60">
+            
+            <button
+              type="button"
+              class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold text-[#A65B6D] bg-[#FBECEF] flex items-center gap-1.5 cursor-pointer shrink-0"
+            >
+              <mat-icon class="text-xs">feed</mat-icon>
+              <span>Bài viết</span>
+            </button>
+
+            <button
+              type="button"
+              (click)="setTab('characters')"
+              class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium text-[#78666A] hover:bg-[#FBECEF] hover:text-[#5B464B] transition-colors flex items-center gap-1.5 cursor-pointer shrink-0"
+            >
+              <mat-icon class="text-xs text-[#8FA88B]">eco</mat-icon>
+              <span>Vườn nhân vật ({{ charService.characters().length }})</span>
+            </button>
+
+            <button
+              type="button"
               (click)="setTab('tags')"
-              class="group p-6 rounded-3xl bg-[#FFFDF9]/90 hover:bg-white border border-[#F0BAC8]/70 hover:border-[#C98F9E] vintage-shadow hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
+              class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium text-[#78666A] hover:bg-[#FBECEF] hover:text-[#5B464B] transition-colors flex items-center gap-1.5 cursor-pointer shrink-0"
             >
-              <div>
-                <div class="w-12 h-12 rounded-2xl bg-[#F4EEF8] text-[#8668A6] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <mat-icon class="text-2xl">local_offer</mat-icon>
-                </div>
-                <div class="inline-block px-2.5 py-0.5 rounded-full bg-[#F4EEF8] text-[#715491] text-[10px] font-medium mb-2">
-                  {{ charService.availableTags().length }} Thẻ tag
-                </div>
-                <h3 class="font-serif-vintage text-lg font-bold text-[#5B464B] group-hover:text-[#C98F9E] transition-colors mb-2">
-                  Tra Cứu Theo Tag
-                </h3>
-                <p class="text-xs text-[#78666A] leading-relaxed">
-                  Bộ lọc chuyên sâu theo gu: #Cổ Trang, #Quyền Mưu, #Slow Burn, #R18, #Hiện Đại, #Kiếm Khách...
-                </p>
-              </div>
-              <div class="pt-4 mt-4 border-t border-[#F2E5E8] flex items-center justify-between text-xs font-medium text-[#C98F9E]">
-                <span>Lọc nhân vật</span>
-                <mat-icon class="text-sm group-hover:translate-x-1 transition-transform">arrow_forward</mat-icon>
-              </div>
-            </div>
+              <mat-icon class="text-xs text-[#9A84B8]">local_offer</mat-icon>
+              <span>Thẻ Tag</span>
+            </button>
 
-            <!-- Portal 3: Commission -->
-            <div
+            <button
+              type="button"
               (click)="setTab('commission')"
-              class="group p-6 rounded-3xl bg-[#FFFDF9]/90 hover:bg-white border border-[#F0BAC8]/70 hover:border-[#C98F9E] vintage-shadow hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
+              class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium text-[#78666A] hover:bg-[#FBECEF] hover:text-[#5B464B] transition-colors flex items-center gap-1.5 cursor-pointer shrink-0"
             >
-              <div>
-                <div class="w-12 h-12 rounded-2xl bg-[#FDEEF1] text-[#A65B6D] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <mat-icon class="text-2xl">palette</mat-icon>
-                </div>
-                <div class="inline-block px-2.5 py-0.5 rounded-full bg-[#FDEEF1] text-[#914658] text-[10px] font-medium mb-2">
-                  5 Phân khúc giá
-                </div>
-                <h3 class="font-serif-vintage text-lg font-bold text-[#5B464B] group-hover:text-[#C98F9E] transition-colors mb-2">
-                  Bảng Giá Commission
-                </h3>
-                <p class="text-xs text-[#78666A] leading-relaxed">
-                  "Ôm Lấy Nỗi Nhớ Của Yue Yue" — Báo giá chi tiết từ Basic (60k) đến Custom Open World và TOS.
-                </p>
-              </div>
-              <div class="pt-4 mt-4 border-t border-[#F2E5E8] flex items-center justify-between text-xs font-medium text-[#C98F9E]">
-                <span>Xem điều khoản & giá</span>
-                <mat-icon class="text-sm group-hover:translate-x-1 transition-transform">arrow_forward</mat-icon>
-              </div>
-            </div>
+              <mat-icon class="text-xs text-[#A65B6D]">palette</mat-icon>
+              <span>Commission & TOS</span>
+            </button>
 
-            <!-- Portal 4: Giới Thiệu -->
-            <div
+            <button
+              type="button"
               (click)="setTab('about')"
-              class="group p-6 rounded-3xl bg-[#FFFDF9]/90 hover:bg-white border border-[#F0BAC8]/70 hover:border-[#C98F9E] vintage-shadow hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
+              class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium text-[#78666A] hover:bg-[#FBECEF] hover:text-[#5B464B] transition-colors flex items-center gap-1.5 cursor-pointer shrink-0"
             >
-              <div>
-                <div class="w-12 h-12 rounded-2xl bg-[#FBF0E6] text-[#A87258] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <mat-icon class="text-2xl">spa</mat-icon>
-                </div>
-                <div class="inline-block px-2.5 py-0.5 rounded-full bg-[#FBF0E6] text-[#8F593F] text-[10px] font-medium mb-2">
-                  Tác giả Yue Yue
-                </div>
-                <h3 class="font-serif-vintage text-lg font-bold text-[#5B464B] group-hover:text-[#C98F9E] transition-colors mb-2">
-                  Giới Thiệu Tác Giả
+              <mat-icon class="text-xs text-[#8FA88B]">spa</mat-icon>
+              <span>Giới thiệu chi tiết</span>
+            </button>
+
+          </div>
+
+        </section>
+
+        <!-- TWO-COLUMN FACEBOOK PROFILE FEED LAYOUT -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          
+          <!-- LEFT SIDEBAR: Giới thiệu & Ảnh đáng chú ý (5 cols on lg) -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <!-- Widget 1: Giới thiệu (Intro Box) -->
+            <div class="p-6 rounded-3xl bg-[#FFFDFB]/95 border border-[#F0BAC8]/75 vintage-shadow space-y-4">
+              <div class="flex items-center justify-between border-b border-[#F2E5E8] pb-3">
+                <h3 class="font-serif-vintage text-lg font-bold text-[#5B464B] flex items-center gap-2">
+                  <mat-icon class="text-[#C98F9E] text-base">info</mat-icon>
+                  <span>Giới thiệu</span>
                 </h3>
-                <p class="text-xs text-[#78666A] leading-relaxed">
-                  Đôi dòng tâm sự về phong cách viết char ngược tâm, nguồn cảm hứng sáng tác và mạng xã hội.
+                <span class="text-[11px] text-[#A65B6D] font-medium bg-[#FAF0E6] px-2 py-0.5 rounded-full">
+                  Profile
+                </span>
+              </div>
+
+              <div class="space-y-3 text-xs sm:text-sm text-[#6E555A]">
+                <div class="flex items-start gap-3">
+                  <mat-icon class="text-[#C98F9E] text-lg shrink-0 mt-0.5">work</mat-icon>
+                  <div>
+                    Sáng tạo nội dung tại <span class="font-semibold text-[#5B464B]">LOVE HAVE • Vườn Hoa Mùa Thu</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <mat-icon class="text-[#8FA88B] text-lg shrink-0 mt-0.5">auto_stories</mat-icon>
+                  <div>
+                    Chuyên sáng tác: <span class="font-semibold text-[#5B464B]">Cổ Trang, Cung Đấu, Quyền Mưu, Giới Thượng Lưu, Slow Burn</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <mat-icon class="text-[#9A84B8] text-lg shrink-0 mt-0.5">brush</mat-icon>
+                  <div>
+                    Dịch vụ: <span class="font-semibold text-[#5B464B]">Commission "Ôm Lấy Nỗi Nhớ Của Yue Yue" (60k - 200k+)</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <mat-icon class="text-[#1877F2] text-lg shrink-0 mt-0.5">link</mat-icon>
+                  <div>
+                    Facebook: <a href="https://www.facebook.com/qingyue224" target="_blank" rel="noopener noreferrer" class="text-[#1877F2] hover:underline font-medium">facebook.com/qingyue224</a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <mat-icon class="text-[#5865F2] text-lg shrink-0 mt-0.5">chat</mat-icon>
+                  <div>
+                    Discord: <a href="https://discord.gg/bbtXfxp48" target="_blank" rel="noopener noreferrer" class="text-[#5865F2] hover:underline font-medium">discord.gg/bbtXfxp48</a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <mat-icon class="text-[#C98F9E] text-lg shrink-0 mt-0.5">headphones</mat-icon>
+                  <div>
+                    Âm nhạc: <span class="text-[#78666A]">GoneBad, 灼雪, Quy Tứ, Lightning Moment, Tinh Vệ</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-2 border-t border-[#F2E5E8]">
+                <button
+                  type="button"
+                  (click)="setTab('about')"
+                  class="w-full py-2.5 rounded-xl bg-[#FAF0E6] hover:bg-[#FBE4E9] text-xs font-semibold text-[#7A3E4D] transition-colors cursor-pointer text-center block"
+                >
+                  Xem toàn bộ giới thiệu về Yue Yue →
+                </button>
+              </div>
+            </div>
+
+
+            <!-- Widget 3: Lối tắt 4 khu vực (Portals) -->
+            <div class="p-6 rounded-3xl bg-[#FFFDFB]/95 border border-[#F0BAC8]/75 vintage-shadow space-y-3">
+              <h3 class="font-serif-vintage text-base font-bold text-[#5B464B] flex items-center gap-2 mb-3">
+                <mat-icon class="text-[#A65B6D] text-sm">explore</mat-icon>
+                <span>Lối tắt khu vườn</span>
+              </h3>
+
+              <div class="grid grid-cols-2 gap-2.5">
+                <button
+                  type="button"
+                  (click)="setTab('characters')"
+                  class="p-3 rounded-2xl bg-[#FFF9FA] hover:bg-[#FBE4E9] border border-[#F3D7DF] text-left transition-colors cursor-pointer group"
+                >
+                  <mat-icon class="text-[#8FA88B] text-base mb-1 group-hover:scale-110 transition-transform">eco</mat-icon>
+                  <div class="text-xs font-bold text-[#5B464B]">Vườn nhân vật</div>
+                  <div class="text-[10px] text-[#8E7479]">{{ charService.characters().length }} nhân vật</div>
+                </button>
+
+                <button
+                  type="button"
+                  (click)="setTab('tags')"
+                  class="p-3 rounded-2xl bg-[#FFF9FA] hover:bg-[#FBE4E9] border border-[#F3D7DF] text-left transition-colors cursor-pointer group"
+                >
+                  <mat-icon class="text-[#9A84B8] text-base mb-1 group-hover:scale-110 transition-transform">local_offer</mat-icon>
+                  <div class="text-xs font-bold text-[#5B464B]">Tra cứu Tag</div>
+                  <div class="text-[10px] text-[#8E7479]">{{ charService.availableTags().length }} thể loại</div>
+                </button>
+
+                <button
+                  type="button"
+                  (click)="setTab('commission')"
+                  class="p-3 rounded-2xl bg-[#FFF9FA] hover:bg-[#FBE4E9] border border-[#F3D7DF] text-left transition-colors cursor-pointer group"
+                >
+                  <mat-icon class="text-[#C98F9E] text-base mb-1 group-hover:scale-110 transition-transform">palette</mat-icon>
+                  <div class="text-xs font-bold text-[#5B464B]">Commission</div>
+                  <div class="text-[10px] text-[#8E7479]">5 gói giá & TOS</div>
+                </button>
+
+                <button
+                  type="button"
+                  (click)="setTab('about')"
+                  class="p-3 rounded-2xl bg-[#FFF9FA] hover:bg-[#FBE4E9] border border-[#F3D7DF] text-left transition-colors cursor-pointer group"
+                >
+                  <mat-icon class="text-[#D8CEE9] text-base mb-1 group-hover:scale-110 transition-transform">spa</mat-icon>
+                  <div class="text-xs font-bold text-[#5B464B]">Giới thiệu</div>
+                  <div class="text-[10px] text-[#8E7479]">Tác giả Yue Yue</div>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT TIMELINE: Facebook Pinned Posts & Showcase (7 cols on lg) -->
+          <div class="lg:col-span-7 space-y-6">
+            
+
+            <!-- POST 2: BÀI VIẾT COMMISSION "ÔM LẤY NỖI NHỚ CỦA YUE YUE" -->
+            <article class="p-6 sm:p-7 rounded-3xl bg-[#FFFDFB]/95 border border-[#F0BAC8]/85 vintage-shadow space-y-4">
+              
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full border-2 border-[#DFA3B5] overflow-hidden shrink-0">
+                  <img
+                    src="/assets/aistudio/3CF79AF5-B830-4C15-AC57-4388C30520D1_dea36311.png"
+                    alt="Avatar Ôm Lấy Nỗi Nhớ"
+                    class="w-full h-full object-cover object-top"
+                    referrerpolicy="no-referrer"
+                  />
+                </div>
+
+                <div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-serif-vintage font-bold text-sm text-[#3D2C31]">
+                      Ôm Lấy Nỗi Nhớ
+                    </span>
+                  </div>
+                  <div class="text-[11px] text-[#8E7479] flex items-center gap-1.5">
+                    <span>3 ngày trước</span>
+                    <span>•</span>
+                    <mat-icon class="text-[12px] text-[#A69094]">public</mat-icon>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-xs sm:text-sm text-[#5B464B] leading-relaxed font-serif space-y-2">
+                <p class="font-bold text-[#A65B6D]">
+                  💌 ÔM LẤY NỖI NHỚ CỦA YUE YUE — PRICE & TOS
+                </p>
+                <p>
+                  Vui lòng đọc kỹ trước khi đặt commission. Đặt đơn / thanh toán = đồng ý với TOS.
+                  Khu vườn hiện nhận 5 gói: <strong>Basic (60k)</strong>, <strong>Standard (80-90k)</strong>, <strong>Advanced (100-140k)</strong>, <strong>Premium (150-200k)</strong>, và <strong>Custom (200k+)</strong>.
                 </p>
               </div>
-              <div class="pt-4 mt-4 border-t border-[#F2E5E8] flex items-center justify-between text-xs font-medium text-[#C98F9E]">
-                <span>Đọc tâm sự</span>
-                <mat-icon class="text-sm group-hover:translate-x-1 transition-transform">arrow_forward</mat-icon>
+
+              <!-- Quick Tier Preview Cards -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-1 text-center">
+                <div class="p-2.5 rounded-2xl bg-[#FFF9FA] border border-[#F3D7DF]">
+                  <div class="text-[10px] text-[#8E7479]">Basic</div>
+                  <div class="text-xs font-bold text-[#C98F9E]">60k</div>
+                </div>
+                <div class="p-2.5 rounded-2xl bg-[#FFF9FA] border border-[#F3D7DF]">
+                  <div class="text-[10px] text-[#8E7479]">Standard</div>
+                  <div class="text-xs font-bold text-[#C98F9E]">80 - 90k</div>
+                </div>
+                <div class="p-2.5 rounded-2xl bg-[#FFF9FA] border border-[#F3D7DF]">
+                  <div class="text-[10px] text-[#8E7479]">Advanced</div>
+                  <div class="text-xs font-bold text-[#C98F9E]">100 - 140k</div>
+                </div>
               </div>
-            </div>
 
-          </div>
-        </section>
-
-        <!-- SPOTLIGHT: TÁC PHẨM TIÊU BIỂU -->
-        <section class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-          <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
-            <div>
-              <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF0E6] text-[#A65B6D] text-xs font-serif font-medium mb-2">
-                <mat-icon class="text-xs">star</mat-icon>
-                <span>Nhân Vật Tiêu Biểu</span>
+              <div class="pt-3 border-t border-[#F2E5E8] flex items-center justify-between">
+                <button
+                  type="button"
+                  (click)="setTab('commission')"
+                  class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#C98F9E] to-[#A65B6D] text-white text-xs font-semibold transition-all shadow-xs hover:shadow-md flex items-center gap-1.5 cursor-pointer"
+                >
+                  <mat-icon class="text-xs">palette</mat-icon>
+                  <span>Xem chi tiết Bảng Giá & TOS đầy đủ →</span>
+                </button>
               </div>
-              <h2 class="font-serif-vintage text-2xl sm:text-3xl font-bold text-[#5B464B]">
-                Tâm Điểm Khu Vườn Mùa Thu
-              </h2>
-            </div>
 
-            <button
-              type="button"
-              (click)="setTab('characters')"
-              class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-[#C98F9E] hover:text-[#A65B6D] transition-colors cursor-pointer self-start sm:self-auto"
-            >
-              <span>Xem tất cả {{ charService.characters().length }} nhân vật</span>
-              <mat-icon class="text-sm">arrow_forward</mat-icon>
-            </button>
+            </article>
+
           </div>
 
-          <!-- Highlight Grid (Show first 3 characters with cards) -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            @for (char of charService.characters().slice(0, 3); track char.id) {
-              <app-character-card [char]="char"></app-character-card>
-            }
-          </div>
-
-          <div class="mt-8 text-center">
-            <button
-              type="button"
-              (click)="setTab('characters')"
-              class="px-8 py-3.5 rounded-full bg-[#FAF0E6] hover:bg-[#FBE4E9] border border-[#E8D4D8] text-xs sm:text-sm text-[#5B464B] font-medium transition-all shadow-xs cursor-pointer inline-flex items-center gap-2"
-            >
-              <mat-icon class="text-sm text-[#C98F9E]">eco</mat-icon>
-              <span>Chuyển sang mục Vườn Nhân Vật để xem đầy đủ ({{ charService.characters().length }} nhân vật)</span>
-            </button>
-          </div>
-        </section>
-
-        <!-- Autumn Quote Banner -->
-        <section class="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-          <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#FFFBF7]/90 via-[#FFF9FA]/90 to-[#FFFBF7]/90 border border-[#F0BAC8]/70 text-center relative vintage-shadow">
-            <mat-icon class="text-3xl text-[#C98F9E] mb-2 opacity-75">format_quote</mat-icon>
-            <p class="font-script-romantic text-2xl sm:text-3xl text-[#6B5056] leading-relaxed max-w-xl mx-auto">
-              "Gió thu mang theo hương hoa và những câu chuyện chưa kể. Hãy để trái tim bạn lắng nghe..."
-            </p>
-            <p class="font-serif text-xs text-[#9E8288] mt-3">
-              — LOVE HAVE Autumn Garden
-            </p>
-          </div>
-        </section>
+        </div>
 
       </div>
     }
+
 
     <!-- ========================================== -->
     <!-- 2. MỤC RIÊNG: VƯỜN NHÂN VẬT (CHARACTERS)   -->
