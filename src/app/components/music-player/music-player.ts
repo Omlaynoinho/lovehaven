@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { Music } from '../../services/music';
@@ -16,8 +16,8 @@ declare global {
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, MatIconModule],
   template: `
-    <!-- Hidden YouTube iframe container -->
-    <div aria-hidden="true" class="fixed -bottom-96 -right-96 w-10 h-10 pointer-events-none opacity-0 overflow-hidden">
+    <!-- Hidden active YouTube iframe container (1px size keeps background audio active without throttle) -->
+    <div aria-hidden="true" class="fixed bottom-0 right-0 w-[2px] h-[2px] opacity-[0.01] pointer-events-none -z-50 overflow-hidden">
       <div id="love-have-yt-player"></div>
     </div>
 
@@ -30,12 +30,12 @@ declare global {
           <div class="flex items-center justify-between pb-2 mb-2 border-b border-[#F0DFE3]">
             <span class="font-serif-vintage text-sm font-bold text-[#5B464B] flex items-center gap-1.5">
               <mat-icon class="text-sm text-[#C98F9E]">queue_music</mat-icon>
-              <span>Nhạc Nền Khu Vườn</span>
+              <span>Nhạc Nền Khu Vườn (Tự động chuyển bài)</span>
             </span>
             <button
               type="button"
               (click)="music.togglePlaylist()"
-              class="text-xs text-[#8E7479] hover:text-[#5B464B]"
+              class="text-xs text-[#8E7479] hover:text-[#5B464B] cursor-pointer"
             >
               <mat-icon class="text-xs">close</mat-icon>
             </button>
@@ -74,7 +74,7 @@ declare global {
         <button
           type="button"
           (click)="music.togglePlaylist()"
-          title="Mở bảng nhạc nền"
+          title="Mở danh sách nhạc nền (Tự động chuyển bài khi hết)"
           class="group flex items-center gap-2 text-[#5B464B] cursor-pointer"
         >
           <div
@@ -87,6 +87,16 @@ declare global {
           <span class="text-xs font-serif-vintage font-medium hidden sm:inline max-w-[110px] truncate">
             {{ currentTrack().title }}
           </span>
+        </button>
+
+        <!-- Previous track -->
+        <button
+          type="button"
+          (click)="prevTrack()"
+          title="Bài trước đó"
+          class="w-7 h-7 rounded-full hover:bg-[#FDF2F4] flex items-center justify-center text-[#A69094] hover:text-[#5B464B] transition-colors cursor-pointer"
+        >
+          <mat-icon class="text-sm">skip_previous</mat-icon>
         </button>
 
         <!-- Play/Pause -->
@@ -124,9 +134,11 @@ declare global {
     </div>
   `,
 })
-export class MusicPlayer implements OnInit {
+export class MusicPlayer implements OnInit, OnDestroy {
   readonly music = inject(Music);
   readonly sound = inject(Sound);
+
+  private pollerInterval: any = null;
 
   currentTrack() {
     return this.music.tracks[this.music.currentTrackIndex()] || this.music.tracks[0];
@@ -135,6 +147,14 @@ export class MusicPlayer implements OnInit {
   ngOnInit(): void {
     if (typeof window === 'undefined') return;
     this.loadYouTubeApi();
+    this.startPlaybackPoller();
+  }
+
+  ngOnDestroy(): void {
+    if (this.pollerInterval) {
+      clearInterval(this.pollerInterval);
+      this.pollerInterval = null;
+    }
   }
 
   private loadYouTubeApi(): void {
@@ -160,33 +180,72 @@ export class MusicPlayer implements OnInit {
   private initYT(): void {
     try {
       new window.YT.Player('love-have-yt-player', {
-        height: '10',
-        width: '10',
+        height: '2',
+        width: '2',
         videoId: this.music.tracks[0].youtubeId,
         playerVars: {
           autoplay: 0,
           controls: 0,
-          loop: 1,
-          playlist: this.music.tracks[0].youtubeId,
+          loop: 0, // MUST BE 0 so it doesn't repeat the same song internally, allowing onStateChange (0 = ENDED)
+          rel: 0,
+          modestbranding: 1,
+          playsinline: 1,
+          enablejsapi: 1,
         },
         events: {
           onReady: (event: any) => {
             this.music.initPlayer(event.target);
           },
           onStateChange: (event: any) => {
-            if (event.data === 1) {
+            // 0: ENDED, 1: PLAYING, 2: PAUSED, 3: BUFFERING
+            if (event.data === 0) {
+              // Video ended -> Automatically advance to the next song!
+              this.music.onTrackEnded();
+            } else if (event.data === 1) {
               this.music.isPlaying.set(true);
             } else if (event.data === 2) {
               this.music.isPlaying.set(false);
-            } else if (event.data === 0) {
-              this.music.nextTrack();
             }
+          },
+          onError: (event: any) => {
+            // If any error occurs on a track (e.g. copyright/restricted), auto advance to next track
+            console.warn('YouTube player event error:', event.data);
+            this.music.nextTrack();
           },
         },
       });
     } catch {
       // Ignore YT initialization error in iframe sandbox
     }
+  }
+
+  /**
+   * Fallback interval poller to guarantee continuous autoplay:
+   * If a song reaches within 1 second of its end and hasn't transitioned,
+   * trigger onTrackEnded to switch to the next track smoothly.
+   */
+  private startPlaybackPoller(): void {
+    if (typeof window === 'undefined') return;
+
+    this.pollerInterval = setInterval(() => {
+      if (!this.music.isPlaying()) return;
+
+      const player = this.music.getPlayer();
+      if (player && typeof player.getCurrentTime === 'function' && typeof player.getDuration === 'function') {
+        try {
+          const currentTime = player.getCurrentTime();
+          const duration = player.getDuration();
+          if (duration > 0 && currentTime > 0) {
+            const timeLeft = duration - currentTime;
+            if (timeLeft <= 0.8) {
+              this.music.onTrackEnded();
+            }
+          }
+        } catch {
+          // Ignore
+        }
+      }
+    }, 1000);
   }
 
   togglePlay(): void {
@@ -197,6 +256,11 @@ export class MusicPlayer implements OnInit {
   nextTrack(): void {
     this.sound.playClick();
     this.music.nextTrack();
+  }
+
+  prevTrack(): void {
+    this.sound.playClick();
+    this.music.prevTrack();
   }
 
   selectTrack(index: number): void {

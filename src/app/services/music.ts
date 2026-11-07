@@ -19,6 +19,7 @@ export class Music {
 
   private player: any = null;
   private shouldAutoPlayOnReady = false;
+  private transitionTimeout: any = null;
 
   readonly tracks: MusicTrack[] = [
     {
@@ -118,20 +119,54 @@ export class Music {
     }
   }
 
+  /**
+   * Called automatically when the current track finishes playing (state === 0 or progress reaches end).
+   * Switches to the next track in the playlist seamlessly.
+   */
+  onTrackEnded(): void {
+    // Avoid double triggers if multiple events fire concurrently
+    if (this.transitionTimeout) return;
+    
+    this.transitionTimeout = setTimeout(() => {
+      this.transitionTimeout = null;
+    }, 1500);
+
+    this.nextTrack();
+  }
+
   nextTrack(): void {
     const nextIdx = (this.currentTrackIndex() + 1) % this.tracks.length;
     this.selectTrack(nextIdx);
   }
 
+  prevTrack(): void {
+    const prevIdx = (this.currentTrackIndex() - 1 + this.tracks.length) % this.tracks.length;
+    this.selectTrack(prevIdx);
+  }
+
   selectTrack(index: number): void {
     this.currentTrackIndex.set(index);
-    if (this.player && this.player.loadVideoById) {
-      try {
-        this.player.loadVideoById(this.tracks[index].youtubeId);
+    if (!this.player) return;
+
+    try {
+      const track = this.tracks[index];
+      if (track) {
+        if (typeof this.player.loadVideoById === 'function') {
+          this.player.loadVideoById({
+            videoId: track.youtubeId,
+            startSeconds: 0,
+          });
+        }
+        if (typeof this.player.unMute === 'function' && !this.isMuted()) {
+          this.player.unMute();
+        }
+        if (typeof this.player.playVideo === 'function') {
+          this.player.playVideo();
+        }
         this.isPlaying.set(true);
-      } catch {
-        // Fallback
       }
+    } catch {
+      this.isPlaying.set(true);
     }
   }
 
@@ -152,5 +187,9 @@ export class Music {
 
   togglePlaylist(): void {
     this.showPlaylist.update((v) => !v);
+  }
+
+  getPlayer(): any {
+    return this.player;
   }
 }
