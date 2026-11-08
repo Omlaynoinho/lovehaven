@@ -79,7 +79,7 @@ export interface TosSection {
             </a>
 
             <a
-              href="https://discord.gg/bbtXfxp48"
+              href="https://discord.gg/FCwQ56R6y"
               target="_blank"
               rel="noopener noreferrer"
               (click)="sound.playClick()"
@@ -199,7 +199,7 @@ export interface TosSection {
                       <span>Đặt qua FB</span>
                     </a>
                     <a
-                      href="https://discord.gg/bbtXfxp48"
+                      href="https://discord.gg/FCwQ56R6y"
                       target="_blank"
                       rel="noopener noreferrer"
                       (click)="sound.playClick()"
@@ -355,12 +355,12 @@ export interface TosSection {
             </a>
             <span>•</span>
             <a
-              href="https://discord.gg/bbtXfxp48"
+              href="https://discord.gg/FCwQ56R6y"
               target="_blank"
               rel="noopener noreferrer"
               class="hover:text-[#5865F2] transition-colors"
             >
-              Discord: discord.gg/bbtXfxp48
+              Discord: discord.gg/FCwQ56R6y
             </a>
           </div>
         </div>
