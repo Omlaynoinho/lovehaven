@@ -28,9 +28,20 @@ interface FallingPetal {
       [class.pointer-events-none]="isFadingOut()"
       [class.backdrop-blur-md]="isFadingOut()"
     >
-      <!-- 1. AUTUMN GARDEN BACKGROUND -->
+      <!-- 1. AUTUMN GARDEN BACKGROUND WITH BLURRED NEW AVATAR BACKDROP -->
       <div class="absolute inset-0 bg-gradient-to-br from-[#FFFDF8] via-[#FFDCE5] to-[#FFC0CB]">
         
+        <!-- Blurred Avatar Backdrop Layer ("Thay cả ảnh mờ đằng sau đó") -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+          <img
+            src="/assets/entrance-avatar.jpg"
+            alt="Blurred Avatar Backdrop"
+            class="w-full h-full object-cover scale-125 filter blur-3xl opacity-55 brightness-105 saturate-125"
+            referrerpolicy="no-referrer"
+          />
+          <div class="absolute inset-0 bg-gradient-to-br from-[#FFFDF8]/70 via-[#FFDCE5]/60 to-[#FFC0CB]/75 mix-blend-screen"></div>
+        </div>
+
         <!-- Warm Autumn Sunbeams & Glowing Bokeh Orbs -->
         <div class="absolute -top-24 -left-24 w-80 sm:w-96 h-80 sm:h-96 rounded-full bg-[#FFE4EC]/75 blur-3xl pointer-events-none"></div>
         <div class="absolute top-1/3 -right-24 w-[420px] h-[420px] rounded-full bg-[#FFD5C8]/60 blur-3xl pointer-events-none"></div>
@@ -39,7 +50,7 @@ interface FallingPetal {
         
         <!-- Subtle Vintage Paper Grain Texture Overlay -->
         <div
-          class="absolute inset-0 opacity-25 pointer-events-none mix-blend-multiply"
+          class="absolute inset-0 opacity-20 pointer-events-none mix-blend-multiply"
           style="background-image: radial-gradient(#8C5866 0.75px, transparent 0.75px); background-size: 24px 24px;"
         ></div>
 
@@ -71,16 +82,42 @@ interface FallingPetal {
           <span class="text-xs">꒰ა ♡ ໒꒱</span>
         </div>
 
-        <!-- THE ORNATE ARTWORK CENTERPIECE CARD (Matches IMG_1324_df40aa0a.jpeg) -->
+        <!-- THE ORNATE ARTWORK CENTERPIECE CARD (Matches IMG_1324 with new Avatar & Backdrop) -->
         <div class="relative w-full max-w-xl sm:max-w-2xl md:max-w-3xl aspect-[900/793] select-none mx-auto rounded-3xl overflow-hidden shadow-2xl border-2 border-[#F0BAC8]/90 bg-[#FFF5F7]">
           
+          <!-- Blurred Avatar Backdrop Layer inside card ("Thay cả ảnh mờ đằng sau đó") -->
+          <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+            <img
+              src="/assets/entrance-avatar.jpg"
+              alt="Blurred Backdrop Inside Card"
+              class="w-full h-full object-cover scale-110 filter blur-xl opacity-65 brightness-105"
+              referrerpolicy="no-referrer"
+            />
+            <div class="absolute inset-0 bg-[#FFDCE5]/40 mix-blend-soft-light"></div>
+          </div>
+
           <!-- Base Artwork Image -->
           <img
             src="/assets/aistudio/IMG_1324_df40aa0a.jpeg"
             alt="Khung hoa mùa thu Lovehaven"
-            class="absolute inset-0 w-full h-full object-contain pointer-events-none select-none"
+            class="absolute inset-0 w-full h-full object-contain pointer-events-none select-none relative z-10"
             referrerpolicy="no-referrer"
           />
+
+          <!-- NEW AVATAR OVERLAY: KÍCH CỠ BẰNG NHAU, VỪA KHÍT KHUNG TRÒN HOA -->
+          <!-- Positioned precisely over the avatar circle of IMG_1324 -->
+          <div
+            class="absolute z-15 rounded-full overflow-hidden border-[3px] border-[#F2CAD4] shadow-md transition-transform duration-300 hover:scale-102 pointer-events-auto"
+            style="left: 8.2%; top: 44.8%; width: 29.0%; height: 32.8%; border-radius: 50%; box-shadow: inset 0 0 10px rgba(235, 175, 190, 0.4), 0 4px 12px rgba(91, 70, 75, 0.15);"
+            title="Avatar Ôm Lấy Nỗi Nhớ"
+          >
+            <img
+              src="/assets/entrance-avatar.jpg"
+              alt="Avatar Màn hình chờ mới"
+              class="w-full h-full object-cover object-center select-none"
+              referrerpolicy="no-referrer"
+            />
+          </div>
 
           <!-- OVERLAY ZONE 1: TÊN 𝑳𝒐𝒗𝒆𝒉𝒂𝒗𝒆𝒏 Ở VỊ TRÍ TRUNG TÂM VÀ LỜI CHÀO THƠ MỘNG -->
           <!-- Placed in the scenic lake area to the right of the avatar maiden -->
