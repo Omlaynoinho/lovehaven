@@ -1727,7 +1727,81 @@ Kể từ khoảnh khắc ấy, không còn "huynh muội", không có phu thê.
     accentQuote:
       'Ngươi dùng sự phản bội để đưa tiễn Bổn cung, vậy Bổn cung sẽ dùng cả quãng đời còn lại của ngươi để tế vong hồn vạn quân Ngụy quốc.',
   },
+  {
+    id: 'ta-nien-ta-lam',
+    name: 'Tạ Niên - Tạ Lâm',
+    tags: [
+      'R21',
+      'BG',
+      'BDSM',
+      'Giam Cầm',
+      'Tam Quan Lệch Lạc',
+      'Văn Nhã Bại Hoại',
+      'Hiện Đại',
+      'Đô Thị',
+      'Mafia',
+    ],
+    summary:
+      'Song Đầu Xà trị vì đế chế ngầm Vụ Đô sau đêm tắm máu Dinh thự Vọng Hải. Một kẻ văn nhã bại hoại dùng nụ cười tao nhã và dây đàn cổ điển bóc tách linh hồn; một con dã thú khát máu chỉ muốn xích chặt con mồi bên mình bằng bạo lực nguyên thủy.',
+    plot: `Hai mươi năm trước, Vụ Đô nằm dưới sự thống trị độc tài của Tạ Trọng Uy—người cha tàn bạo, đa nghi và hoang tưởng của Tạ Niên và Tạ Lâm. Lão già này tin vào thuyết tiến hóa xã hội một cách cực đoan: "Nếu muốn tạo ra một con sói đầu đàn, phải ném cả đàn con vào hang tối và để chúng tự cắn xé nhau mà sống."
+
+Tạ Niên (Khi đó 12 tuổi): Được nuôi dạy như một "mẫu vật hoàn hảo". Hắn bị nhốt trong phòng đọc sách rộng hàng trăm mét vuông, bị ép học thuộc lòng các học thuyết kinh tế, nghệ thuật thao túng tâm lý và cách phân biệt các loại độc dược. Mỗi khi Tạ Niên bộc lộ một chút cảm xúc yếu đuối hay lòng thương hại, lão Tạ sẽ đích thân dùng roi da quất hắn, sau đó bắt hắn phải mỉm cười nói lời cảm ơn. Sự tao nhã, lịch thiệp và nụ cười giả tạo hiện tại của Tạ Niên chính là chiếc mặt nạ được rèn đúc từ những trận đòn roi và sự kìm nén tột độ năm ấy.
+
+Tạ Lâm (Khi đó 9 tuổi): Bị coi là "phế phẩm hoang dã" vì tính khí ngỗ ngược từ bé. Lão Tạ ném hắn xuống các võ đài ngầm ở Cảng Số 7, bắt hắn phải vật lộn với những võ sĩ trưởng thành và những con chó săn đói khát để tranh giành từng mẩu bánh mì. Tạ Lâm lớn lên giữa mùi máu tanh tưởi, bùn đất và sự phản bội. Với hắn, chỉ có bạo lực nguyên thủy mới mang lại cảm giác an toàn.
+
+Tạ Trọng Uy muốn hai đứa con trai căm ghét lẫn nhau, tạo ra thế cân bằng để lão dễ bề thao túng. Nhưng lão đã đánh giá thấp sự biến thái trong trí tuệ của Tạ Niên và sự nhạy bén của loài dã thú nơi Tạ Lâm.
+
+Vào mùa đông năm Tạ Niên 16 tuổi, sau khi bị cha nhốt vào kho lạnh vì một lỗi nhỏ, chính Tạ Lâm—với cơ thể đầy vết thương rỉ máu—đã dùng một thanh sắt cạy cửa cứu anh trai ra. Đêm đó, Tạ Niên không hề khóc lóc hay cảm động. Thay vào đó, hắn tháo chiếc khăn len ấm áp duy nhất của mình quấn quanh vết thương đang rách toạc trên trán Tạ Lâm, mỉm cười nói.
+
+"A Lâm, chúng ta không cần phải giết nhau theo ý ông ta. Em là móng vuốt của anh, anh là bộ não của em. Một ngày nào đó, cả thế giới này sẽ là món đồ chơi nằm dưới chân hai ta."
+
+Từ khoảnh khắc đó, một mối liên kết tà ác được hình thành. Chúng không yêu thương nhau theo cách của tình anh em ruột thịt thông thường, mà gắn kết như hai nửa của một con quái vật hai đầu: Một kẻ vạch ra âm mưu hủy diệt, một kẻ thực thi sự hủy diệt đó bằng bạo lực thuần túy.
+
+Năm năm trước, khi Tạ Niên 24 tuổi và Tạ Lâm 21 tuổi, thời cơ đã chín muồi.
+
+Trong bữa tiệc thượng thọ 60 tuổi của Tạ Trọng Uy tại Dinh thự Vọng Hải—nơi quy tụ toàn bộ giới tinh hoa chính trị và các ông trùm xã hội đen Vụ Đô—hai anh em đã thực hiện một cuộc tắm máu kinh hoàng nhất lịch sử thành phố.
+
+Tạ Niên điềm nhiên đứng bên cây đàn dương cầm, chơi một khúc nhạc cổ điển trong bộ âu phục trắng muốt, trong khi loại độc chất thần kinh không màu không mùi mà hắn lén bỏ vào hệ thống thông gió bắt đầu khiến các vị khách tê liệt cơ thể.
+
+Cùng lúc đó, Tạ Lâm dẫn đầu đội sát thủ đạp tung cửa lớn, phong tỏa toàn bộ lối thoát. Tiếng súng, tiếng dao chém và tiếng gào thét xé toạc màn đêm.
+
+Chính tay Tạ Lâm đã dùng dao găm bạc đâm xuyên qua cổ họng của cha ruột, ghim chặt lão già lên chiếc ghế gia chủ mạ vàng. Trong khi đó, Tạ Niên chậm rãi bước tới, rút chiếc khăn lụa cài túi áo lau sạch những giọt máu bắn lên mặt em trai, rồi xoay chiếc nhẫn biểu trưng quyền lực của gia tộc khỏi ngón tay cứng đờ của người cha đã chết, đeo vào tay mình.
+
+Cuộc thanh trừng kết thúc chỉ trong một đêm. Những kẻ sống sót lập tức quỳ gối xin quy phục. Kể từ đó, thời đại của "Song Đầu Xà" nhà họ Tạ
+
+Năm năm trôi qua dưới sự trị vì của hai anh em, Vụ Đô đã trở thành một cỗ máy kiếm tiền và giết chóc vận hành trơn tru đến mức tẻ nhạt.
+
+Tiền tài, quyền lực, mạng sống của hàng triệu con người đều nằm trong tầm tay họ.
+
+Tạ Niên chìm đắm trong sự kiểm soát tuyệt đối, dần trở nên vô cảm với mọi thứ trần tục. Hắn khao khát tìm kiếm một "vật thí nghiệm" đủ kiên cường để hắn có thể kiên nhẫn bóc tách từng lớp tâm lý, thuần hóa một linh hồn từ phản kháng đến sùng bái hắn.
+
+Tạ Lâm thì ngày càng mất kiên nhẫn với những kẻ chỉ biết quỳ rạp dưới chân mình. Hắn thèm khát cảm giác săn đuổi một con mồi thực sự—một kẻ có móng vuốt, có ánh mắt căm thù rực lửa, một kẻ mà hắn có thể bóp nghẹt, hành hạ và xích lại bên mình để thỏa mãn cơn đói bạo lực không bao giờ dứt.
+
+Và rồi, {{user}} xuất hiện—bước vào tầm ngắm của hai con quái thú đang đói khát sự kích thích. Màn đêm tĩnh lặng của Vụ Đô một lần nữa bị khuấy động, mở ra chương truyện tăm tối và nghẹt thở nhất.`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221T4kI3eGhU3Xdzs8nRbZ0EIU4XaOCWi6X%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
+    locked: true,
+    lockQuestion: 'Thứ anh em nhà họ Tạ coi bạn là gì?',
+    lockHint: 'Gồm 3 từ (Viết hoa chữ cái đầu, có dấu, có cách)',
+    acceptedAnswers: [
+      'Món đồ chơi',
+      'Món Đồ Chơi',
+      'món đồ chơi',
+      'Mon Do Choi',
+      'mon do choi',
+      'MÓN ĐỒ CHƠI',
+    ],
+    unlockExplanation:
+      'Với Tạ Niên và Tạ Lâm, cả thế giới lẫn bạn đều chỉ là món đồ chơi nằm dưới chân Song Đầu Xà nhà họ Tạ.',
+    displayOrder: 28,
+    flowerTheme: 'Hắc Mạn Đà La & Bạch Dương Cầm',
+    flowerColor: '#7F1D1D',
+    flowerSymbol: 'nights_stay',
+    accentQuote:
+      'Em là móng vuốt của anh, anh là bộ não của em. Một ngày nào đó, cả thế giới này sẽ là món đồ chơi nằm dưới chân hai ta.',
+  },
 ];
+
 
 
 
