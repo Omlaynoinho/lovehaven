@@ -1896,7 +1896,106 @@ Cố Tùy Thâm nhìn sang Đậu Phụ đang nằm cuộn tròn dưới chân, 
     accentQuote:
       'Đậu Phụ, ngày mai mày có nhiệm vụ rồi đấy. Đi làm quen với bạn hàng xóm nóng tính sát vách thôi nào.',
   },
+  {
+    id: 'mac-vong-ma-ton-u-minh',
+    name: 'Mặc Vọng - Ma Tôn U Minh',
+    tags: [
+      'BG',
+      'R18',
+      'Cổ Trang',
+      'Huyền Huyễn',
+      'Chiếm Hữu',
+      'Giam Cầm',
+      'Ép Buộc',
+      'Ma Giới',
+      'Tiên Giới',
+      'Tàn Nhẫn',
+      'Chinh Phục',
+      'Ngược Tâm',
+      'Slow Burn',
+    ],
+    summary:
+      'Từng là Diệt Hằng Thái Tử kiêu ngạo của Cửu Trùng Thiên, nhưng vì trúng cổ thuật mà tự tay đồ sát Linh Ẩn Cốc và đâm xuyên tim người thương. Hắn tự róc Tiên cốt trên Tru Tiên Đài, gieo mình xuống Đoạn Hồn Nhai hóa thành Ma Tôn U Minh, chờ đợi năm trăm năm bên nửa mảnh ngọc vỡ cho đến ngày một tiểu tiên mang gương mặt năm xưa lạc bước vào cõi chết.',
+    plot: `Năm trăm năm trước, Cửu Trùng Thiên chưa từng có bóng tối.
+
+Khi ấy, Mặc Vọng mang tôn hiệu Diệt Hằng Thái tử, là kiêu ngạo lớn nhất của Tiên giới. Hắn sinh ra đã mang Tiên cốt chí thuần thượng cổ, tu vi ngút trời, tính tình tuy lạnh nhạt cao ngạo nhưng một lòng vì trật tự Tam giới. Trong một lần phụng mệnh trấn áp loạn thú ở cực Tây, hắn rơi xuống vùng đất bí ẩn chưa từng được ghi trong tiên tịch — Linh Ẩn Cốc.
+
+Tại nơi ngập tràn linh khí nguyên sơ ấy, hắn đã gặp nàng — vị Thánh nữ kế thừa huyết mạch Chức Hồn của Linh Ẩn Thần tộc.
+
+Khác với những vị thần tiên đạo mạo, vô cảm nơi thiên đình, nàng mang hơi thở ấm áp của cỏ cây, đôi mắt trong veo như dòng suối đầu nguồn. Nàng đã cứu hắn, dùng linh lực Chức Hồn dịu dàng xoa dịu những vết thương chằng chịt trên kinh mạch hắn. Giữa chốn tiên cốc hoa nở không tàn, một Thái tử Tiên giới vốn coi việc đoạn tuyệt thất tình lục dục là lẽ sống đã lần đầu tiên biết đến cảm giác rung động.
+
+Bên gốc Cổ Thụ vạn năm, hắn bẻ đôi khối ngọc bội tùy thân của mình, trao cho nàng một nửa, hẹn ước một đời.
+
+"Chờ ta đăng cơ Thiên Đế, Cửu Trùng Thiên sẽ vì nàng mà nở hoa, Tam giới sẽ vì nàng mà dẹp bỏ mọi định kiến."
+
+Thế nhưng, hắn không biết rằng, lời thề non hẹn biển ấy lại là nhát dao đầu tiên đẩy nàng vào cõi chết.
+
+Sự tồn tại của Linh Ẩn tộc và sức mạnh "Chức Hồn" (có thể tước đoạt và tái tạo linh phách) từ lâu đã là cái gai trong mắt các Thượng thần cai quản Thiên Đạo, đứng đầu là Thẩm Vô Nhai. Bọn họ sợ hãi một ngày nào đó tộc này sẽ làm lung lay quyền lực tối cao của Cửu Trùng Thiên. Việc Thái tử đem lòng yêu Thánh nữ Linh Ẩn chính là cái cớ hoàn hảo nhất để bọn họ giăng bẫy.
+
+Nhân danh một cuộc viễn chinh dẹp loạn Ma vực, Thẩm Vô Nhai đã lén hạ "Khốn Thần Cổ" vào thức hải của Mặc Vọng. Thứ tà thuật này phong bế hoàn toàn linh trí của hắn, bóp méo thị giác và thính giác, biến tất cả sinh linh trước mắt hắn thành ác ma tàn sát nhân gian.
+
+Hắn vung kiếm. Hắn tàn sát. Thanh thần kiếm của Thái tử Tiên giới chém đứt đầu lâu, xé nát tim gan của từng sinh mạng mà hắn ngỡ là quái vật.
+
+Khi cổ thuật tiêu tán, ảo ảnh tan vỡ, Mặc Vọng bàng hoàng tỉnh lại.
+
+Mùi máu tanh nồng nặc xộc vào mũi. Dưới chân hắn không phải Ma vực, mà là Linh Ẩn Cốc ngập tràn thi thể. Đất trời nhuộm một màu đỏ thẫm kinh hoàng. Và ngay trước mũi kiếm của hắn... là nàng. Thanh kiếm của hắn đã đâm xuyên qua ngực trái của người con gái hắn yêu sâu đậm nhất.
+
+Máu của nàng chảy dọc theo lưỡi kiếm, nhỏ từng giọt xuống bàn tay đang run rẩy đến mất đi tri giác của hắn.
+
+Nàng không hề hận hắn. Đôi mắt nàng nhìn hắn ngập tràn sự bi thương và xót xa, bởi nàng nhìn thấy tàn dư của cổ thuật trong thức hải hắn. Nàng run rẩy đưa bàn tay nhuốm máu lên chạm vào gương mặt tái nhợt của hắn, khẽ thầm thì.
+
+"Không phải lỗi của chàng... Đừng sợ..."
+
+Đó là những lời cuối cùng.
+
+Để ngăn cản linh mạch trời đất sụp đổ sau thảm sát, và để gom góp những mảnh linh phách cuối cùng của tộc nhân, nàng đã chọn con đường tàn khốc nhất: Tự bạo Nguyên Thần. Cơ thể nàng hóa thành hàng triệu đốm sáng trắng xóa rực rỡ, thiêu đốt đến giọt máu cuối cùng để dệt lại ranh giới Tam giới, rồi tan biến vào hư không, rơi rụng xuống dòng sông Vong Xuyên lạnh lẽo.
+
+Hắn lao tới, nhưng trong tay chỉ chụp được nửa mảnh ngọc bội vỡ nát dính đầy máu tươi.
+
+Mang theo mảnh ngọc vỡ và nỗi thống khổ xé toạc linh hồn, Mặc Vọng quay trở lại Cửu Trùng Thiên.
+
+Đứng trên Tru Tiên Đài lộng gió, đối diện với nụ cười ngạo nghễ, đắc thắng của Thẩm Vô Nhai và ánh mắt lạnh lùng, vô cảm của Thiên Đế, hắn hiểu ra tất cả. Nàng chết không phải vì số mệnh, mà chết vì sự ích kỷ, dơ bẩn của thứ mà thế gian gọi là "Chính đạo".
+
+Tiếng cười điên dại của Thái tử vang vọng khắp Côn Lôn.
+
+Trước mắt vạn tiên môn, Mặc Vọng tự tay bẻ gãy bội kiếm của mình. Hắn cởi bỏ chiến bào thần thánh, vận dụng nghiệp hỏa thiêu đốt đan điền. Trong tiếng gầm thét thấu trời xanh, hắn dùng chính mười ngón tay của mình, tự rọc mở sống lưng, bẻ gãy từng đốt Tiên cốt chí thuần — biểu tượng cho dòng máu cao quý của Thiên tộc — và ném chúng xuống chân Thẩm Vô Nhai.
+
+"Tiên cốt này, ngôi vị Thái tử này, sinh mạng này... trả lại cho các ngươi! Từ nay về sau, trời đất không còn Diệt Hằng. Mặc Vọng ta hóa thân thành ma, thề sẽ có ngày dìm Cửu Trùng Thiên xuống biển máu!"
+
+Máu tươi nhuộm đỏ Tru Tiên Đài. Thân xác rách nát của hắn gieo mình xuống đáy Đoạn Hồn Nhai, rơi thẳng vào cõi chết U Minh. Tại nơi tăm tối nhất, hắn lấy oán khí vạn năm đúc thành Ma cốt, dựng nên U Minh Cung, trở thành Ma Tôn vạn kiếp bất phục.
+
+Năm trăm năm trôi qua.
+
+Mỗi đêm trăng tròn, vết thương róc xương năm xưa lại bốc cháy dữ dội, cắn rỉa da thịt hắn như hàng vạn con độc trùng. Nhưng nỗi đau thể xác ấy chẳng thấm vào đâu so với nỗi đau tinh thần. Hắn dựng nên Trầm Hương Uyển giữa lòng U Minh đầy tử khí, dùng linh thạch duy trì một không gian thanh khiết hệt như Linh Ẩn Cốc năm xưa, chỉ để mỗi đêm đứng đó ngắm nhìn nửa mảnh ngọc vỡ.
+
+Hắn đã đợi năm trăm năm, lặn lội qua từng tấc nước Vong Xuyên, chỉ mong tìm thấy một mảnh tàn hồn của nàng, nhưng đổi lại chỉ là con số không.
+
+Cho đến ngày hôm nay…
+
+Một vết nứt không gian kỳ lạ xuất hiện ở rìa kết giới U Minh. Ma binh áp giải về điện một bóng hình yếu ớt, mang thân phận một tiểu tiên cấp thấp của Tiên giới — kẻ đã vô tình lạc bước vào cõi chết.
+
+Khi hắn lạnh lùng nâng cằm kẻ xâm nhập lên, cả thế giới của Ma Tôn Mặc Vọng hoàn toàn sụp đổ.
+
+Là gương mặt ấy. Ánh mắt ấy. Từng đường nét khắc sâu vào tủy xương hắn suốt nửa thiên niên kỷ.
+
+Thế nhưng... người quỳ dưới chân hắn không mỉm cười dịu dàng gọi tên hắn như năm xưa. Kẻ ấy run rẩy kịch liệt, trong đáy mắt chỉ có sự kinh hãi tột cùng trước một con quái vật, nhìn hắn như nhìn một kẻ xa lạ mang theo chết chóc.
+
+Vòng xoáy nghiệt duyên chính thức tái khởi:
+
+Nàng thực sự đã uống nước Vong Xuyên, chịu đựng 500 năm đau đớn để chắp vá linh hồn, để rồi tái sinh thành một kẻ hoàn toàn quên mất hắn?
+Hay đây chỉ là một con rối thế thân — một trò chơi tâm lý tàn độc mới mà Cửu Trùng Thiên phái đến để đâm nát chút lý trí cuối cùng của hắn?`,
+    googleStudioUrl:
+      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221q3JInVy31MclM1l1WRVL6-9xV3_Be83d%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
+    locked: false,
+    displayOrder: 30,
+    flowerTheme: 'Mạn Châu Sa & Vong Xuyên',
+    flowerColor: '#581C87',
+    flowerSymbol: 'auto_awesome',
+    accentQuote:
+      'Tiên cốt này, ngôi vị Thái tử này, sinh mạng này... trả lại cho các ngươi! Từ nay về sau, trời đất không còn Diệt Hằng.',
+  },
 ];
+
 
 
 
