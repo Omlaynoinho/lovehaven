@@ -149,7 +149,7 @@ import { Sound } from '../../services/sound';
             <span class="text-sm text-[#C98F9E]">୨୧</span>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
             
             <!-- 1. Facebook Link -->
             <a
@@ -225,43 +225,6 @@ import { Sound } from '../../services/sound';
 
               <div class="mt-4 pt-3 border-t border-[#F2E5E8] flex items-center gap-1 text-xs font-medium text-[#5865F2]">
                 <span>Tham gia Discord</span>
-                <mat-icon class="text-xs">arrow_forward</mat-icon>
-              </div>
-            </a>
-
-            <!-- 3. NGL Letter Link (New) -->
-            <a
-              href="https://ngl.link/omlaynoinho1"
-              target="_blank"
-              rel="noopener noreferrer"
-              (click)="onLinkClick()"
-              class="group p-5 rounded-2xl bg-gradient-to-br from-[#FFF5F7] to-white hover:from-[#FDEEF2] hover:to-white border border-[#F0BAC8] hover:border-[#C98F9E] transition-all duration-300 hover:shadow-md flex flex-col justify-between cursor-pointer"
-            >
-              <div>
-                <div class="flex items-center justify-between mb-3">
-                  <div class="w-10 h-10 rounded-xl bg-[#C98F9E]/15 text-[#A65B6D] flex items-center justify-center group-hover:scale-105 transition-transform">
-                    <mat-icon class="text-xl text-[#C98F9E]">favorite</mat-icon>
-                  </div>
-                  <span class="text-xs text-[#A65B6D] flex items-center gap-1 font-serif bg-white px-2 py-0.5 rounded-full border border-[#ECD9DE]">
-                    <span>Gửi thư ẩn danh</span>
-                    <mat-icon class="text-xs">mail_outline</mat-icon>
-                  </span>
-                </div>
-
-                <div class="flex items-center gap-1.5 text-sm font-bold text-[#5B464B] group-hover:text-[#A65B6D] transition-colors">
-                  <span class="text-[#C98F9E]">𐙚</span>
-                  <span>Lá thư tình yêu</span>
-                </div>
-                <p class="text-xs font-mono text-[#8E7479] mt-0.5 truncate">
-                  ngl.link/omlaynoinho1
-                </p>
-                <p class="text-xs text-[#78666A] mt-2.5 leading-relaxed font-serif">
-                  Gửi lá thư tình yêu, tâm sự ẩn danh và những lời nhắn nhủ ngọt ngào đến Yue.
-                </p>
-              </div>
-
-              <div class="mt-4 pt-3 border-t border-[#F2E5E8] flex items-center gap-1 text-xs font-medium text-[#A65B6D]">
-                <span>Gửi thư đến Yue ngay</span>
                 <mat-icon class="text-xs">arrow_forward</mat-icon>
               </div>
             </a>

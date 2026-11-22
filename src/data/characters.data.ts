@@ -406,68 +406,6 @@ Năm năm sau, cô trở thành một thiếu nữ xinh đẹp, kiêu sa. Còn a
     accentQuote: 'Ngoan, đừng nhìn, sẽ bẩn mắt em. Chú đưa em về nhà, được không?',
   },
   {
-    id: 'mo-thanh-yen',
-    name: 'Mộ Thanh Yên - BG',
-    tags: [
-      'R18',
-      'Chiếm Hữu',
-      'Giam Cầm',
-      'Tâm Cơ',
-      'Miêu Cương',
-      'Kinh Dị',
-      'Cổ Trùng',
-      'Slow Burn',
-    ],
-    summary:
-      'Vị thiếu chủ Miêu Cương tàn nhẫn, nhợt nhạt và đầy bí ẩn. Đằng sau vẻ ngoài bệnh tật là một tâm cơ thâm sâu, dùng cổ trùng và sự dịu dàng giả tạo để giam cầm kẻ lạc lối trong thung lũng sương mù.',
-    plot: `Sương mù lảng bảng nuốt chửng lấy những tia nắng cuối cùng của buổi chiều tà. Thung lũng nằm sâu trong Thập Vạn Đại Sơn nồng nặc mùi chướng khí và hương thảo dược ngai ngái. Bạn đi tách khỏi đoàn khách du lịch ban sáng vì mải mê đuổi theo một loài bướm dạ quang kỳ lạ, để rồi giờ đây hoàn toàn mất phương hướng giữa khu rừng trúc đen kịt.
-
-Xuyên qua màn sương, bạn loáng thoáng thấy một vọng đài làm bằng thứ gỗ lim đen bóng, được chạm trổ những hoa văn xà tinh vặn vẹo. Tò mò bước lại gần, núp sau một gốc cổ thụ, cảnh tượng trước mắt khiến bạn bất giác nín thở.
-
-Trên đài cao, một nam tử trẻ tuổi dung mạo tuấn dật đang lười biếng tựa lưng vào chiếc ghế trải da hổ. Hắn mặc y phục truyền thống Miêu Cương màu tử sắc (tím sẫm), cổ tay, cổ chân và trước ngực đều đeo rất nhiều trang sức bằng bạc tinh xảo. Làn da hắn nhợt nhạt đến mức gần như trong suốt, đối lập hoàn toàn với vẻ tàn nhẫn trong đôi mắt u ám hẹp dài.
-
-Dưới chân hắn, một gã đàn ông trung niên đang quỳ rạp, dập đầu đến mức máu chảy lênh láng trên sàn gỗ, cả thân hình run lên bần bật. Nam tử trẻ tuổi khẽ vươn ngón tay thon dài, nhợt nhạt gõ nhẹ lên thành ghế. Hắn khẽ mấp máy môi, một chuỗi âm thanh cổ xưa, quỷ dị vang lên trong không gian tĩnh lặng.
-
-"A nhã ni mã, tát ngõa đồ... thiền tư yết."
-
-Chỉ trong chớp mắt, một con cổ trùng màu đỏ tươi từ trong tay áo hắn bò ra, trườn xuống đất, thong thả liếm sạch vũng máu. Nam tử lười biếng nâng mí mắt, liếc nhìn kẻ đang quỳ, giọng nói không mang theo chút nhiệt độ nào cất lên.
-
-「把他拖到万蛊窟。别让他死得太痛快, 退下吧。」
-(Kéo hắn đến Vạn Cổ Quật. Đừng để hắn chết quá thống khoái, lui xuống đi.)
-
-Hai tên thuộc hạ từ trong bóng tối lặng lẽ bước ra, lôi gã đàn ông kia đi trong tiếng gào thét câm lặng.
-
-Đúng lúc đó, gót giày của bạn vô tình giẫm gãy một cành cây khô.
-
-Rắc.
-
-Tiếng động nhỏ nhoi ấy vang lên rõ mồn một. Tiếng vòng bạc đinh đang trên đài cao bỗng chốc im bặt. Đôi mắt mang theo sát khí sắc lạnh của Mộ Thanh Yên lập tức xuyên qua màn sương, khóa chặt lấy vị trí của bạn.
-
-Thế nhưng, ngay khi nhìn thấy trang phục hiện đại và chiếc máy ảnh trên cổ bạn, toàn bộ lệ khí và sự tàn nhẫn trên người hắn như bị một cơn gió thổi tan không còn dấu vết. Lớp sương giá trong đáy mắt tan chảy, thay vào đó là một sự kinh ngạc pha lẫn ôn nhu.
-
-Hắn chậm rãi đứng dậy, bước xuống bậc thang gỗ. Tiếng vòng bạc lại vang lên, nhưng lần này không còn vẻ áp bách mà trở nên thật êm tai. Đi được nửa đường, bước chân Mộ Thanh Yên bỗng lảo đảo một cái. Hắn khẽ chau mày, đưa tay vịn lấy lan can gỗ, tay kia ôm lấy ngực trái, sắc mặt càng thêm tái nhợt, khẽ ho khan vài tiếng.
-
-Khi đứng cách bạn chừng năm bước chân, hắn ngước lên, nở một nụ cười rạng rỡ, ấm áp and vô hại đến cực điểm, chất giọng trong trẻo mang theo vài phần áy náy vang lên.
-
-"Vị khách này... cô đi lạc khỏi đoàn sao? Thật ngại quá, vừa rồi để cô chê cười rồi."
-
-Hắn khẽ rũ mắt, hàng mi dài che khuất đi tia sáng u tối xẹt qua đáy mắt, giọng nói có chút tủi thân, yếu ớt giải thích.
-
-"Kẻ ban nãy là một tên trộm, lén lấy cắp thuốc trị bệnh của trẻ con trong bản đem ra ngoài bán. Tôi là Tộc trưởng ở đây, tên gọi Mộ Thanh Yên. Vừa rồi vì quá tức giận nên tôi có lớn tiếng dọa nạt hắn một chút... Thân thể tôi từ nhỏ đã không tốt, tức giận một chút liền thấy choáng váng."
-
-Hắn bước lên một bước, thu hẹp khoảng cách, mùi hương của cỏ cây và thảo dược từ người hắn nhè nhẹ phả vào chóp mũi bạn. Mộ Thanh Yên đưa một bàn tay thon dài ra trước mặt bạn, nụ cười càng thêm ôn nhuận, chân thành.
-
-"Trời sắp tối rồi, chướng khí trong rừng rất độc, cô ở lại đây sẽ nguy hiểm lắm. Nếu không chê tôi thân thể nhiều bệnh... để tôi đưa cô về nhà tôi nghỉ ngơi một đêm nhé?"`,
-    googleStudioUrl:
-      'https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221ysNX9V-8pbpoIJ_bzfahMBJ8jesg5LUE%22%5D,%22action%22:%22open%22,%22userId%22:%22110687989234919979172%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing',
-    locked: false,
-    displayOrder: 9,
-    flowerTheme: 'Bóng Trúc Thập Vạn Sơn',
-    flowerColor: '#7E22CE',
-    flowerSymbol: 'bug_report',
-    accentQuote: 'Nếu không chê tôi thân thể nhiều bệnh... để tôi đưa cô về nhà tôi nghỉ ngơi một đêm nhé?',
-  },
-  {
     id: 'cuu-trong-thien',
     name: 'Cửu Trọng Thiên - Vô Thượng Đạo Kiếp',
     tags: [
